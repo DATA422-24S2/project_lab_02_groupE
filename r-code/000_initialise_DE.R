@@ -24,20 +24,22 @@ vf_output_file <- paste0("./data/", current_date, ".clean-vf_data.csv")
 sp_output_file <- paste0("./data/", current_date, ".clean-sp_data.csv")
 
 # read vf_data.parquet file and save as a .csv
-vf_exists = file.exists(vf_file)
-if (vf_exists) {
+#
+if (file.exists(vf_file)) {
   vf_data <- read_parquet(vf_file)
   write_csv(vf_data, vf_output_file)
 } 
+head(vf_data)
 vf_exists = file.exists(vf_output_file)
 
 
 # read sp_data.csv.gz file and save as a .csv
-sp_exists = file.exists(sp_file)
-if (sp_exists) {
-  sp_data <- read_csv(sp_file)
+#
+if (file.exists(sp_file)) {
+  sp_data <- read_csv(sp_file, show_col_types = FALSE)
   write_csv(sp_data, sp_output_file)
 } 
+head(sp_data)
 sp_exists = file.exists(sp_output_file)
 
 # Print paths of the saved file
