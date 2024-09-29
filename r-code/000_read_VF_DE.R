@@ -1,14 +1,16 @@
-# File: readVF.R
+# File: read_VF_DE.R
 
 library(arrow)  
-
+library(readr)
 read_VF_parquet <- function( folder = "./data/", filename = "vf_data.parquet", write_RDS = FALSE) {
-  # Output folder for RDS files
- 
+  
+  # current date in YYYYMMDD format
+  current_date <- format(Sys.Date(), "%Y%m%d")
   
   # Input and output files
+  vf_output_rds <- paste0(current_date,"_clean_vp_data.rds")
+  vf_output_rds <- paste0(folder, vf_output_rds) 
   vf_input_file <- paste0(folder, filename)
-  vf_output_rds <- paste0(folder, "clean-vf_data.rds") 
   
   if (!file.exists(vf_input_file)) {
     cat("Error:", vf_input_file, " does not exist.\n")
@@ -20,36 +22,10 @@ read_VF_parquet <- function( folder = "./data/", filename = "vf_data.parquet", w
     cat("Error deleting ", vf_output_rds, "\n")
   }
   
-  result <- read_parquet(vf_input_file)
+  result <- arrow::read_parquet(vf_input_file)
+  
   #write rds file
   if(write_RDS) write_rds(result,vf_output_rds)
-  browser() 
-  # Return the result
-  return(result)
-}
-
-read_SP_gz <- function( folder = "./data/", filename = "sp_data.csv.gz", write_RDS = FALSE) {
-  # Output folder for RDS files
-  
-  
-  # Input and output files
-  sp_input_file <- paste0(folder, filename)
-  sp_output_rds <- paste0(folder, "clean-sp_data.rds") 
-  
-  if (!file.exists(sp_input_file)) {
-    cat("Error:", sp_input_file, " does not exist.\n")
-    return(NULL)  # Return NULL 
-  }
-  
-  # Remove existing output file if it exists
-  if (file.exists(sp_output_rds) && !file.remove(sp_output_rds)) {
-    cat("Error deleting ", sp_output_rds, "\n")
-  }
-  
-  result <- read_csv(sp_input_file, show_col_types = FALSE)
-  column_spec <- spec(result)
-  #write rds file
-  if(write_RDS) write_rds(result,sp_output_rds)
   browser() 
   # Return the result
   return(result)

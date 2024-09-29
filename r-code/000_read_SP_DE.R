@@ -1,16 +1,17 @@
-# File: readVF.R
-
-library(arrow)  
+# File: read_SP_DE.R
 
 
+library(readr)
 read_SP_gz <- function( folder = "./data/", filename = "sp_data.csv.gz", write_RDS = FALSE) {
-  # Output folder for RDS files
-  
+
+  # current date in YYYYMMDD format
+  current_date <- format(Sys.Date(), "%Y%m%d")
   
   # Input and output files
-  sp_input_file <- paste0(folder, filename)
-  sp_output_rds <- paste0(folder, "clean-sp_data.rds") 
-  
+  sp_output_rds <- paste0(current_date,"_clean_sp_data.rds")
+  sp_output_rds <- paste0(folder, sp_output_rds) 
+  sp_input_file <- paste0(folder, filename) 
+
   if (!file.exists(sp_input_file)) {
     cat("Error:", sp_input_file, " does not exist.\n")
     return(NULL)  # Return NULL 
