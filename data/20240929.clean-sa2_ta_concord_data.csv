@@ -1,0 +1,2396 @@
+SA2_Code,Area_Name,Relationship,TA_Code,TA_Name,X6
+100100,North Cape,Many To One Map,001,Far North District,NA
+100200,Rangaunu Harbour,Many To One Map,001,Far North District,NA
+100301,Inlets Far North District,Many To One Map,001,Far North District,NA
+100400,Karikari Peninsula,Many To One Map,001,Far North District,NA
+100500,Tangonge,Many To One Map,001,Far North District,NA
+100600,Ahipara,Many To One Map,001,Far North District,NA
+100700,Kaitaia East,Many To One Map,001,Far North District,NA
+100800,Kaitaia West,Many To One Map,001,Far North District,NA
+100900,Rangitihi,Many To One Map,001,Far North District,NA
+101000,Oruru-Parapara,Many To One Map,001,Far North District,NA
+101101,Doubtless Bay,Many To One Map,001,Far North District,NA
+101200,Herekino-Takahue,Many To One Map,001,Far North District,NA
+101300,Peria,Many To One Map,001,Far North District,NA
+101400,Taemaro-Oruaiti,Many To One Map,001,Far North District,NA
+101500,Whakapaku,Many To One Map,001,Far North District,NA
+101600,Hokianga North,Many To One Map,001,Far North District,NA
+101700,Kohukohu-Broadwood,Many To One Map,001,Far North District,NA
+101801,Whakarara,Many To One Map,001,Far North District,NA
+101900,Kaeo,Many To One Map,001,Far North District,NA
+102000,Omahuta Forest-Horeke,Many To One Map,001,Far North District,NA
+102100,Hokianga South,Many To One Map,001,Far North District,NA
+102201,Lake Manuwai-Kapiro,Many To One Map,001,Far North District,NA
+102300,Okaihau,Many To One Map,001,Far North District,NA
+102401,Rangitane-Purerua,Many To One Map,001,Far North District,NA
+102501,Waipapa,Many To One Map,001,Far North District,NA
+102600,Puketotara,Many To One Map,001,Far North District,NA
+102700,Waima Forest,Many To One Map,001,Far North District,NA
+102801,Riverview,Many To One Map,001,Far North District,NA
+102900,Waipoua Forest,Many To One Map,001,Far North District,NA
+103000,Kerikeri Central,Many To One Map,001,Far North District,NA
+103101,Kerikeri South,Many To One Map,001,Far North District,NA
+103200,Ohaeawai-Waimate North,Many To One Map,001,Far North District,NA
+103301,Puketona-Waitangi,Many To One Map,001,Far North District,NA
+103401,Ngapuhi,Many To One Map,001,Far North District,NA
+103501,Kaikohe,Many To One Map,001,Far North District,NA
+103600,Pakaraka,Many To One Map,001,Far North District,NA
+103700,Haruru,Many To One Map,001,Far North District,NA
+103800,Russell,Many To One Map,001,Far North District,NA
+103900,Paihia,Many To One Map,001,Far North District,NA
+104000,Mataraua Forest,Many To One Map,001,Far North District,NA
+104101,Matawaia-Taumarere,Many To One Map,001,Far North District,NA
+104200,Russell Peninsula,Many To One Map,001,Far North District,NA
+104301,Opua (Far North District),Many To One Map,001,Far North District,NA
+104400,Russell Forest-Rawhiti,Many To One Map,001,Far North District,NA
+104501,Moerewa,Many To One Map,001,Far North District,NA
+104600,Kawakawa,Many To One Map,001,Far North District,NA
+104700,Maromaku,Many To One Map,001,Far North District,NA
+104800,Mangakahia-Hukerenui,Many To One Map,002,Whangarei District,NA
+104900,Whangaruru,Many To One Map,002,Whangarei District,NA
+105001,Inlets other Whangarei District,Many To One Map,002,Whangarei District,NA
+105101,Matarau,Many To One Map,002,Whangarei District,NA
+105200,Hikurangi,Many To One Map,002,Whangarei District,NA
+105300,Kauri,Many To One Map,002,Whangarei District,NA
+105400,Maungatapere,Many To One Map,002,Whangarei District,NA
+105500,Kamo West,Many To One Map,002,Whangarei District,NA
+105601,Matapouri-Tutukaka,Many To One Map,002,Whangarei District,NA
+105700,Kiripaka,Many To One Map,002,Whangarei District,NA
+105800,Kamo East,Many To One Map,002,Whangarei District,NA
+105901,Granfield Reserve,Many To One Map,002,Whangarei District,NA
+106000,Kamo Central,Many To One Map,002,Whangarei District,NA
+106100,Whau Valley,Many To One Map,002,Whangarei District,NA
+106201,Tikipunga North,Many To One Map,002,Whangarei District,NA
+106301,Pukenui,Many To One Map,002,Whangarei District,NA
+106401,Otangarei,Many To One Map,002,Whangarei District,NA
+106501,Tikipunga South,Many To One Map,002,Whangarei District,NA
+106600,Kensington (Whangarei District),Many To One Map,002,Whangarei District,NA
+106700,Abbey Caves-Glenbervie,Many To One Map,002,Whangarei District,NA
+106800,Mairtown,Many To One Map,002,Whangarei District,NA
+106901,Maunu,Many To One Map,002,Whangarei District,NA
+106902,Horahora,Many To One Map,002,Whangarei District,NA
+107000,Woodhill-Vinetown,Many To One Map,002,Whangarei District,NA
+107100,Whangarei Central,Many To One Map,002,Whangarei District,NA
+107200,Riverside,Many To One Map,002,Whangarei District,NA
+107300,Raumanga,Many To One Map,002,Whangarei District,NA
+107401,Tarewa,Many To One Map,002,Whangarei District,NA
+107501,Morningside (Whangarei District),Many To One Map,002,Whangarei District,NA
+107600,Ngunguru,Many To One Map,002,Whangarei District,NA
+107700,Otaika-Portland,Many To One Map,002,Whangarei District,NA
+107800,Oakleigh-Mangapai,Many To One Map,002,Whangarei District,NA
+107901,Port-Limeburners,Many To One Map,002,Whangarei District,NA
+108000,Pataua,Many To One Map,002,Whangarei District,NA
+108100,Onerahi Park,Many To One Map,002,Whangarei District,NA
+108200,Sherwood Rise,Many To One Map,002,Whangarei District,NA
+108300,Onerahi,Many To One Map,002,Whangarei District,NA
+108400,Inlet Whangarei Harbour,Many To One Map,002,Whangarei District,NA
+108500,Parua Bay,Many To One Map,002,Whangarei District,NA
+108601,Bream Bay,Many To One Map,002,Whangarei District,NA
+108701,One Tree Point,Many To One Map,002,Whangarei District,NA
+108800,Ruakaka,Many To One Map,002,Whangarei District,NA
+108900,Bream Head,Many To One Map,002,Whangarei District,NA
+109003,Waipu,Many To One Map,002,Whangarei District,NA
+109004,Waipu Rural,Many To One Map,002,Whangarei District,NA
+109101,Kaipara Coastal,Many To One Map,003,Kaipara District,NA
+109200,Maungaru,Many To One Map,003,Kaipara District,NA
+109301,Dargaville,Many To One Map,003,Kaipara District,NA
+109400,Ruawai-Matakohe,Many To One Map,003,Kaipara District,NA
+109500,Otamatea (Kaipara District),Many To One Map,003,Kaipara District,NA
+109600,Maungaturoto,Many To One Map,003,Kaipara District,NA
+109700,Kaiwaka,Many To One Map,003,Kaipara District,NA
+109800,Mangawhai Rural,Many To One Map,003,Kaipara District,NA
+109900,Mangawhai Heads,Many To One Map,003,Kaipara District,NA
+110000,Inlet Mangawhai Harbour,Many To One Map,003,Kaipara District,NA
+110100,Mangawhai,Many To One Map,003,Kaipara District,NA
+110201,Okahukura Peninsula,Many To One Map,076,Auckland,NA
+110300,Inlet Kaipara Harbour South,Many To One Map,076,Auckland,NA
+110400,Cape Rodney,Many To One Map,076,Auckland,NA
+110501,Wellsford,Many To One Map,076,Auckland,NA
+110600,Oceanic Auckland Region East,Many To One Map,076,Auckland,NA
+110700,South Head,Many To One Map,076,Auckland,NA
+110800,Kaipara Hills,Many To One Map,076,Auckland,NA
+110900,Dome Valley-Matakana,Many To One Map,076,Auckland,NA
+111000,Oceanic Auckland Region West,Many To One Map,076,Auckland,NA
+111100,Warkworth West,Many To One Map,076,Auckland,NA
+111200,Puhoi Valley,Many To One Map,076,Auckland,NA
+111300,Warkworth East,Many To One Map,076,Auckland,NA
+111400,Sandspit,Many To One Map,076,Auckland,NA
+111500,Tawharanui Peninsula,Many To One Map,076,Auckland,NA
+111601,Kaukapakapa,Many To One Map,076,Auckland,NA
+111602,Kaukapakapa Rural,Many To One Map,076,Auckland,NA
+111700,Snells Beach,Many To One Map,076,Auckland,NA
+111801,Barrier Islands,Many To One Map,076,Auckland,NA
+111901,Mahurangi Peninsula,Many To One Map,076,Auckland,NA
+112001,Inlets other Auckland,Many To One Map,076,Auckland,NA
+112101,Wainui-Waiwera,Many To One Map,076,Auckland,NA
+112102,Ara Hill,Many To One Map,076,Auckland,NA
+112200,Parakai,Many To One Map,076,Auckland,NA
+112301,Helensville Rural,Many To One Map,076,Auckland,NA
+112401,Helensville,Many To One Map,076,Auckland,NA
+112500,Waitoki,Many To One Map,076,Auckland,NA
+112600,Waikoukou Valley,Many To One Map,076,Auckland,NA
+112701,Orewa North,Many To One Map,076,Auckland,NA
+112702,Orewa West,Many To One Map,076,Auckland,NA
+112800,Hatfields Beach,Many To One Map,076,Auckland,NA
+112901,Orewa South,Many To One Map,076,Auckland,NA
+112902,Millwater North,Many To One Map,076,Auckland,NA
+113000,Orewa Central,Many To One Map,076,Auckland,NA
+113101,Millwater Central,Many To One Map,076,Auckland,NA
+113201,Waipatukahu,Many To One Map,076,Auckland,NA
+113300,Millwater South,Many To One Map,076,Auckland,NA
+113401,Milldale,Many To One Map,076,Auckland,NA
+113402,Dairy Flat North,Many To One Map,076,Auckland,NA
+113500,Dairy Flat West,Many To One Map,076,Auckland,NA
+113600,Kingsway,Many To One Map,076,Auckland,NA
+113700,Riverhead Forest,Many To One Map,076,Auckland,NA
+113800,Silverdale Central (Auckland),Many To One Map,076,Auckland,NA
+113900,Red Beach West,Many To One Map,076,Auckland,NA
+114000,Red Beach East,Many To One Map,076,Auckland,NA
+114101,Silverdale South (Auckland),Many To One Map,076,Auckland,NA
+114102,Stillwater,Many To One Map,076,Auckland,NA
+114201,Waimauku,Many To One Map,076,Auckland,NA
+114300,Gulf Islands,Many To One Map,076,Auckland,NA
+114400,Vipond,Many To One Map,076,Auckland,NA
+114500,Muriwai,Many To One Map,076,Auckland,NA
+114600,Stanmore Bay West,Many To One Map,076,Auckland,NA
+114701,Kumeu Rural West,Many To One Map,076,Auckland,NA
+114801,Okura Bush,Many To One Map,076,Auckland,NA
+114901,Whangaparaoa Central,Many To One Map,076,Auckland,NA
+114902,Wade Heads-Arkles Bay,Many To One Map,076,Auckland,NA
+115001,Kumeu-Huapai North,Many To One Map,076,Auckland,NA
+115002,Kumeu-Huapai South,Many To One Map,076,Auckland,NA
+115100,Stanmore Bay East,Many To One Map,076,Auckland,NA
+115200,Manly West,Many To One Map,076,Auckland,NA
+115300,Muriwai Valley-Bethells Beach,Many To One Map,076,Auckland,NA
+115400,Tindalls-Matakatia,Many To One Map,076,Auckland,NA
+115501,Coatesville,Many To One Map,076,Auckland,NA
+115601,Dairy Flat South,Many To One Map,076,Auckland,NA
+115700,Gulf Harbour North,Many To One Map,076,Auckland,NA
+115800,Manly East,Many To One Map,076,Auckland,NA
+115901,Riverhead,Many To One Map,076,Auckland,NA
+116000,Army Bay,Many To One Map,076,Auckland,NA
+116101,Kumeu Rural East,Many To One Map,076,Auckland,NA
+116200,Gulf Harbour South,Many To One Map,076,Auckland,NA
+116300,Paremoremo West,Many To One Map,076,Auckland,NA
+116401,Taupaki,Many To One Map,076,Auckland,NA
+116500,Long Bay,Many To One Map,076,Auckland,NA
+116601,Paremoremo East,Many To One Map,076,Auckland,NA
+116701,Albany Heights,Many To One Map,076,Auckland,NA
+116801,Awaruku,Many To One Map,076,Auckland,NA
+116900,Fairview Heights,Many To One Map,076,Auckland,NA
+117001,Whenuapai,Many To One Map,076,Auckland,NA
+117002,Whenuapai West,Many To One Map,076,Auckland,NA
+117003,Massey Red Hills,Many To One Map,076,Auckland,NA
+117100,Waitakere Ranges North,Many To One Map,076,Auckland,NA
+117201,Torbay West,Many To One Map,076,Auckland,NA
+117202,Torbay East,Many To One Map,076,Auckland,NA
+117300,Albany Central,Many To One Map,076,Auckland,NA
+117400,Albany West,Many To One Map,076,Auckland,NA
+117500,Glamorgan,Many To One Map,076,Auckland,NA
+117600,Oteha East,Many To One Map,076,Auckland,NA
+117700,Northcross,Many To One Map,076,Auckland,NA
+117800,Oteha West,Many To One Map,076,Auckland,NA
+117900,Waiake,Many To One Map,076,Auckland,NA
+118001,Waitakere,Many To One Map,076,Auckland,NA
+118100,Albany South,Many To One Map,076,Auckland,NA
+118200,Browns Bay South West,Many To One Map,076,Auckland,NA
+118300,Browns Bay Central,Many To One Map,076,Auckland,NA
+118400,Schnapper Rock,Many To One Map,076,Auckland,NA
+118501,Pinehill North,Many To One Map,076,Auckland,NA
+118502,Pinehill South,Many To One Map,076,Auckland,NA
+118600,North Harbour,Many To One Map,076,Auckland,NA
+118700,Browns Bay South East,Many To One Map,076,Auckland,NA
+118800,Westgate Central,Many To One Map,076,Auckland,NA
+118900,Greenhithe West,Many To One Map,076,Auckland,NA
+119000,Rothesay Bay,Many To One Map,076,Auckland,NA
+119100,Greenhithe East,Many To One Map,076,Auckland,NA
+119201,Hobsonville,Many To One Map,076,Auckland,NA
+119301,Inlet Waitemata Harbour,Many To One Map,076,Auckland,NA
+119400,Greenhithe South,Many To One Map,076,Auckland,NA
+119500,Murrays Bay West,Many To One Map,076,Auckland,NA
+119600,Westgate South,Many To One Map,076,Auckland,NA
+119700,Windsor Park,Many To One Map,076,Auckland,NA
+119800,West Harbour West,Many To One Map,076,Auckland,NA
+119901,Unsworth Heights West,Many To One Map,076,Auckland,NA
+120000,Murrays Bay East,Many To One Map,076,Auckland,NA
+120101,Birdwood West,Many To One Map,076,Auckland,NA
+120201,Hobsonville Point Catalina Bay,Many To One Map,076,Auckland,NA
+120202,Hobsonville Point Park,Many To One Map,076,Auckland,NA
+120203,Hobsonville Scott Point,Many To One Map,076,Auckland,NA
+120301,West Harbour Clearwater Cove,Many To One Map,076,Auckland,NA
+120400,Unsworth Heights East,Many To One Map,076,Auckland,NA
+120500,Mairangi Bay North,Many To One Map,076,Auckland,NA
+120600,Massey Central,Many To One Map,076,Auckland,NA
+120701,West Harbour Luckens Point,Many To One Map,076,Auckland,NA
+120800,Mairangi Bay South,Many To One Map,076,Auckland,NA
+120900,Massey Royal Road West,Many To One Map,076,Auckland,NA
+121001,Bayview East (Auckland),Many To One Map,076,Auckland,NA
+121100,Swanson Rural,Many To One Map,076,Auckland,NA
+121200,Sunnynook South,Many To One Map,076,Auckland,NA
+121300,Sunnynook North,Many To One Map,076,Auckland,NA
+121401,Bayview West (Auckland),Many To One Map,076,Auckland,NA
+121500,Totara Vale North,Many To One Map,076,Auckland,NA
+121600,Royal Heights North,Many To One Map,076,Auckland,NA
+121701,Massey West,Many To One Map,076,Auckland,NA
+121800,Beach Haven West,Many To One Map,076,Auckland,NA
+121901,Totara Vale South,Many To One Map,076,Auckland,NA
+122001,Swanson,Many To One Map,076,Auckland,NA
+122101,Bayview South (Auckland),Many To One Map,076,Auckland,NA
+122200,Campbells Bay,Many To One Map,076,Auckland,NA
+122300,Royal Heights South,Many To One Map,076,Auckland,NA
+122400,Beach Haven East,Many To One Map,076,Auckland,NA
+122501,Massey Keegan,Many To One Map,076,Auckland,NA
+122600,Forrest Hill North,Many To One Map,076,Auckland,NA
+122700,Glenfield North,Many To One Map,076,Auckland,NA
+122801,Birkdale North,Many To One Map,076,Auckland,NA
+122802,Birkdale Central,Many To One Map,076,Auckland,NA
+122901,Massey South,Many To One Map,076,Auckland,NA
+123000,Ranui North,Many To One Map,076,Auckland,NA
+123100,Glenfield West,Many To One Map,076,Auckland,NA
+123200,Te Atatu Peninsula North West,Many To One Map,076,Auckland,NA
+123300,Glenfield South West,Many To One Map,076,Auckland,NA
+123400,Forrest Hill West,Many To One Map,076,Auckland,NA
+123500,Wairau Valley,Many To One Map,076,Auckland,NA
+123600,Forrest Hill East,Many To One Map,076,Auckland,NA
+123701,Castor Bay North,Many To One Map,076,Auckland,NA
+123702,Castor Bay South,Many To One Map,076,Auckland,NA
+123800,Ranui Domain,Many To One Map,076,Auckland,NA
+123900,Beach Haven South,Many To One Map,076,Auckland,NA
+124000,Glenfield Central,Many To One Map,076,Auckland,NA
+124100,Piha,Many To One Map,076,Auckland,NA
+124200,Ranui South West,Many To One Map,076,Auckland,NA
+124301,Henderson Larnoch,Many To One Map,076,Auckland,NA
+124401,Birkdale South,Many To One Map,076,Auckland,NA
+124500,Te Atatu Peninsula Central,Many To One Map,076,Auckland,NA
+124600,Glenfield East,Many To One Map,076,Auckland,NA
+124700,Henderson Valley,Many To One Map,076,Auckland,NA
+124800,Te Atatu Peninsula West,Many To One Map,076,Auckland,NA
+124900,Henderson Lincoln West,Many To One Map,076,Auckland,NA
+125000,Ranui South East,Many To One Map,076,Auckland,NA
+125100,Henderson Lincoln East,Many To One Map,076,Auckland,NA
+125201,Birkenhead West,Many To One Map,076,Auckland,NA
+125202,Birkenhead North West,Many To One Map,076,Auckland,NA
+125300,Te Atatu Peninsula East,Many To One Map,076,Auckland,NA
+125400,Milford West,Many To One Map,076,Auckland,NA
+125500,Westlake,Many To One Map,076,Auckland,NA
+125600,Hillcrest North (Auckland),Many To One Map,076,Auckland,NA
+125701,Henderson Lincoln South,Many To One Map,076,Auckland,NA
+125800,Hillcrest West (Auckland),Many To One Map,076,Auckland,NA
+125900,Milford Central,Many To One Map,076,Auckland,NA
+126000,Summerland South,Many To One Map,076,Auckland,NA
+126100,Summerland North,Many To One Map,076,Auckland,NA
+126200,Hillcrest East (Auckland),Many To One Map,076,Auckland,NA
+126300,Chatswood,Many To One Map,076,Auckland,NA
+126401,Te Atatu South-Edmonton,Many To One Map,076,Auckland,NA
+126500,Birkenhead North,Many To One Map,076,Auckland,NA
+126601,Takapuna West,Many To One Map,076,Auckland,NA
+126701,Henderson North,Many To One Map,076,Auckland,NA
+126702,Henderson West,Many To One Map,076,Auckland,NA
+126801,Takapuna Central,Many To One Map,076,Auckland,NA
+126901,Western Heights (Auckland),Many To One Map,076,Auckland,NA
+127001,Te Atatu South-North,Many To One Map,076,Auckland,NA
+127002,Te Atatu South-Central,Many To One Map,076,Auckland,NA
+127100,Northcote Central (Auckland),Many To One Map,076,Auckland,NA
+127200,Akoranga,Many To One Map,076,Auckland,NA
+127300,Northcote South (Auckland),Many To One Map,076,Auckland,NA
+127400,Birkenhead South,Many To One Map,076,Auckland,NA
+127500,Henderson Central,Many To One Map,076,Auckland,NA
+127601,Waiatarua,Many To One Map,076,Auckland,NA
+127701,Te Atatu South-McLeod North,Many To One Map,076,Auckland,NA
+127801,Henderson Valley Park,Many To One Map,076,Auckland,NA
+127900,Henderson North East,Many To One Map,076,Auckland,NA
+128000,Waitakere Ranges South,Many To One Map,076,Auckland,NA
+128101,Northcote Tuff Crater,Many To One Map,076,Auckland,NA
+128200,Northcote Point (Auckland),Many To One Map,076,Auckland,NA
+128301,McLaren Memorial Park,Many To One Map,076,Auckland,NA
+128401,Henderson East,Many To One Map,076,Auckland,NA
+128501,Te Atatu South-McLeod South,Many To One Map,076,Auckland,NA
+128601,Takapuna South,Many To One Map,076,Auckland,NA
+128700,Rosebank Peninsula,Many To One Map,076,Auckland,NA
+128800,Hauraki,Many To One Map,076,Auckland,NA
+128901,Glendene North West,Many To One Map,076,Auckland,NA
+128902,Glendene North East,Many To One Map,076,Auckland,NA
+129000,Sunnyvale West-Parrs Park,Many To One Map,076,Auckland,NA
+129101,Sunnyvale East,Many To One Map,076,Auckland,NA
+129201,Point Chevalier West,Many To One Map,076,Auckland,NA
+129300,Belmont (Auckland),Many To One Map,076,Auckland,NA
+129400,Bayswater,Many To One Map,076,Auckland,NA
+129501,Glendene South,Many To One Map,076,Auckland,NA
+129600,Glen Eden West,Many To One Map,076,Auckland,NA
+129700,Herne Bay,Many To One Map,076,Auckland,NA
+129800,Westmere North,Many To One Map,076,Auckland,NA
+129901,Point Chevalier North,Many To One Map,076,Auckland,NA
+129902,Point Chevalier East,Many To One Map,076,Auckland,NA
+130000,Oratia,Many To One Map,076,Auckland,NA
+130100,Glen Eden Rosier,Many To One Map,076,Auckland,NA
+130200,Saint Marys Bay,Many To One Map,076,Auckland,NA
+130300,Westmere South-Western Springs,Many To One Map,076,Auckland,NA
+130400,Ponsonby West,Many To One Map,076,Auckland,NA
+130500,Kelston North,Many To One Map,076,Auckland,NA
+130601,Avondale Rosebank (Auckland),Many To One Map,076,Auckland,NA
+130700,Narrow Neck,Many To One Map,076,Auckland,NA
+130801,Glen Eden North,Many To One Map,076,Auckland,NA
+130901,Glen Eden Woodglen,Many To One Map,076,Auckland,NA
+130902,Glen Eden Konini,Many To One Map,076,Auckland,NA
+131000,Kelston South,Many To One Map,076,Auckland,NA
+131100,Waterview,Many To One Map,076,Auckland,NA
+131200,Ponsonby East,Many To One Map,076,Auckland,NA
+131300,Wynyard-Viaduct,Many To One Map,076,Auckland,NA
+131400,Stanley Point,Many To One Map,076,Auckland,NA
+131500,Glen Eden Central,Many To One Map,076,Auckland,NA
+131600,Grey Lynn North,Many To One Map,076,Auckland,NA
+131700,Avondale West (Auckland),Many To One Map,076,Auckland,NA
+131801,Freemans Bay,Many To One Map,076,Auckland,NA
+131802,College Hill,Many To One Map,076,Auckland,NA
+131900,Mount Albert West,Many To One Map,076,Auckland,NA
+132001,Avondale North West (Auckland),Many To One Map,076,Auckland,NA
+132002,Avondale North East (Auckland),Many To One Map,076,Auckland,NA
+132100,Grey Lynn West,Many To One Map,076,Auckland,NA
+132200,Mount Albert North,Many To One Map,076,Auckland,NA
+132300,New Lynn North,Many To One Map,076,Auckland,NA
+132400,Victoria Park,Many To One Map,076,Auckland,NA
+132501,Konini Road,Many To One Map,076,Auckland,NA
+132600,New Lynn North West,Many To One Map,076,Auckland,NA
+132700,Hobson Ridge North,Many To One Map,076,Auckland,NA
+132800,Grey Lynn Central,Many To One Map,076,Auckland,NA
+132900,Fruitvale,Many To One Map,076,Auckland,NA
+133000,Devonport,Many To One Map,076,Auckland,NA
+133100,Avondale Central (Auckland),Many To One Map,076,Auckland,NA
+133200,Queen Street,Many To One Map,076,Auckland,NA
+133301,Quay Street-Customs Street,Many To One Map,076,Auckland,NA
+133400,Hobson Ridge Central,Many To One Map,076,Auckland,NA
+133500,Grey Lynn East,Many To One Map,076,Auckland,NA
+133600,Morningside (Auckland),Many To One Map,076,Auckland,NA
+133700,Shortland Street,Many To One Map,076,Auckland,NA
+133800,Hobson Ridge South,Many To One Map,076,Auckland,NA
+133900,New Lynn Central,Many To One Map,076,Auckland,NA
+134000,Cheltenham,Many To One Map,076,Auckland,NA
+134100,Queen Street South West,Many To One Map,076,Auckland,NA
+134200,Mount Albert Central,Many To One Map,076,Auckland,NA
+134301,Karangahape West,Many To One Map,076,Auckland,NA
+134302,Karangahape East,Many To One Map,076,Auckland,NA
+134400,Kingsland,Many To One Map,076,Auckland,NA
+134500,Anzac Avenue,Many To One Map,076,Auckland,NA
+134600,Waima-Woodlands Park,Many To One Map,076,Auckland,NA
+134700,Kaurilands,Many To One Map,076,Auckland,NA
+134800,Auckland-University,Many To One Map,076,Auckland,NA
+134900,New Lynn Seabrook,Many To One Map,076,Auckland,NA
+135000,Avondale South (Auckland),Many To One Map,076,Auckland,NA
+135100,Symonds Street North West,Many To One Map,076,Auckland,NA
+135200,Mount Albert South,Many To One Map,076,Auckland,NA
+135300,Symonds Street West,Many To One Map,076,Auckland,NA
+135401,Titirangi East,Many To One Map,076,Auckland,NA
+135500,Owairaka West,Many To One Map,076,Auckland,NA
+135600,New Lynn Central South,Many To One Map,076,Auckland,NA
+135700,The Strand,Many To One Map,076,Auckland,NA
+135800,St Lukes,Many To One Map,076,Auckland,NA
+135900,Symonds Street East,Many To One Map,076,Auckland,NA
+136001,Eden Terrace,Many To One Map,076,Auckland,NA
+136002,Grafton West,Many To One Map,076,Auckland,NA
+136100,Grafton,Many To One Map,076,Auckland,NA
+136200,Eden Park,Many To One Map,076,Auckland,NA
+136300,Sandringham North,Many To One Map,076,Auckland,NA
+136400,Parnell West,Many To One Map,076,Auckland,NA
+136501,New Lynn South,Many To One Map,076,Auckland,NA
+136502,New Lynn South East,Many To One Map,076,Auckland,NA
+136601,New Windsor North,Many To One Map,076,Auckland,NA
+136700,Titirangi South,Many To One Map,076,Auckland,NA
+136801,Owairaka East,Many To One Map,076,Auckland,NA
+136900,Eden Valley,Many To One Map,076,Auckland,NA
+137000,Sandringham Central,Many To One Map,076,Auckland,NA
+137100,Glenavon,Many To One Map,076,Auckland,NA
+137201,Blockhouse Bay North,Many To One Map,076,Auckland,NA
+137202,Blockhouse Bay Central,Many To One Map,076,Auckland,NA
+137300,Green Bay North,Many To One Map,076,Auckland,NA
+137400,Parnell East,Many To One Map,076,Auckland,NA
+137500,Laingholm,Many To One Map,076,Auckland,NA
+137600,Sandringham West,Many To One Map,076,Auckland,NA
+137701,Mount Eden North East,Many To One Map,076,Auckland,NA
+137800,Mount Eden North,Many To One Map,076,Auckland,NA
+137901,Wesley West,Many To One Map,076,Auckland,NA
+138000,Green Bay South,Many To One Map,076,Auckland,NA
+138100,Balmoral,Many To One Map,076,Auckland,NA
+138200,Sandringham East,Many To One Map,076,Auckland,NA
+138301,New Windsor South,Many To One Map,076,Auckland,NA
+138302,New Windsor East,Many To One Map,076,Auckland,NA
+138400,Mount Eden West,Many To One Map,076,Auckland,NA
+138501,Newmarket,Many To One Map,076,Auckland,NA
+138502,Newmarket Park,Many To One Map,076,Auckland,NA
+138600,Blockhouse Bay North East,Many To One Map,076,Auckland,NA
+138700,Epsom North,Many To One Map,076,Auckland,NA
+138800,Wesley South,Many To One Map,076,Auckland,NA
+138901,Blockhouse Bay South,Many To One Map,076,Auckland,NA
+139000,Mount Eden East,Many To One Map,076,Auckland,NA
+139100,Wesley East,Many To One Map,076,Auckland,NA
+139201,Orakei West,Many To One Map,076,Auckland,NA
+139300,Maungawhau,Many To One Map,076,Auckland,NA
+139400,Remuera West,Many To One Map,076,Auckland,NA
+139501,Blockhouse Bay East,Many To One Map,076,Auckland,NA
+139601,Mount Roskill West,Many To One Map,076,Auckland,NA
+139700,Mount Roskill North,Many To One Map,076,Auckland,NA
+139801,Mount Roskill White Swan,Many To One Map,076,Auckland,NA
+139802,Mount Roskill Nirvana,Many To One Map,076,Auckland,NA
+139900,Mount Eden South,Many To One Map,076,Auckland,NA
+140000,Remuera Waitaramoa,Many To One Map,076,Auckland,NA
+140100,Orakei East,Many To One Map,076,Auckland,NA
+140200,Epsom Central-North,Many To One Map,076,Auckland,NA
+140300,Mount St John,Many To One Map,076,Auckland,NA
+140400,Mount Roskill Central North,Many To One Map,076,Auckland,NA
+140500,Remuera North,Many To One Map,076,Auckland,NA
+140601,Mount Roskill North East,Many To One Map,076,Auckland,NA
+140700,Mount Roskill Central South,Many To One Map,076,Auckland,NA
+140800,Epsom Central-South,Many To One Map,076,Auckland,NA
+140901,Lynfield Central,Many To One Map,076,Auckland,NA
+140902,Lynfield Harbour View,Many To One Map,076,Auckland,NA
+141000,Remuera South,Many To One Map,076,Auckland,NA
+141101,Mission Bay,Many To One Map,076,Auckland,NA
+141102,Mission Bay Eastridge,Many To One Map,076,Auckland,NA
+141201,Three Kings North,Many To One Map,076,Auckland,NA
+141300,Mount Roskill South,Many To One Map,076,Auckland,NA
+141400,Inlet Manukau Harbour,Many To One Map,076,Auckland,NA
+141500,Epsom East,Many To One Map,076,Auckland,NA
+141600,Remuera Waiata,Many To One Map,076,Auckland,NA
+141700,Epsom South,Many To One Map,076,Auckland,NA
+141801,Kohimarama Bay,Many To One Map,076,Auckland,NA
+141802,Kohimarama Stadium,Many To One Map,076,Auckland,NA
+141900,Meadowbank West,Many To One Map,076,Auckland,NA
+142001,Three Kings South,Many To One Map,076,Auckland,NA
+142002,Hillsborough North (Auckland),Many To One Map,076,Auckland,NA
+142101,Mount Roskill Central East,Many To One Map,076,Auckland,NA
+142201,Greenlane North,Many To One Map,076,Auckland,NA
+142202,Greenlane Central,Many To One Map,076,Auckland,NA
+142301,Mount Roskill South East,Many To One Map,076,Auckland,NA
+142400,Remuera East,Many To One Map,076,Auckland,NA
+142501,Waikowhai Bay,Many To One Map,076,Auckland,NA
+142600,Royal Oak West (Auckland),Many To One Map,076,Auckland,NA
+142700,Saint Heliers West,Many To One Map,076,Auckland,NA
+142801,One Tree Hill Oranga,Many To One Map,076,Auckland,NA
+142802,One Tree Hill Amaru,Many To One Map,076,Auckland,NA
+142901,Hillsborough Central (Auckland),Many To One Map,076,Auckland,NA
+143000,Saint Heliers North,Many To One Map,076,Auckland,NA
+143100,Remuera Abbotts Park,Many To One Map,076,Auckland,NA
+143200,Meadowbank East,Many To One Map,076,Auckland,NA
+143301,Ellerslie Central,Many To One Map,076,Auckland,NA
+143400,Royal Oak East (Auckland),Many To One Map,076,Auckland,NA
+143500,Saint Heliers South,Many To One Map,076,Auckland,NA
+143600,Hillsborough South (Auckland),Many To One Map,076,Auckland,NA
+143700,Saint Johns West,Many To One Map,076,Auckland,NA
+143800,Greenlane South,Many To One Map,076,Auckland,NA
+143900,Remuera Waiatarua,Many To One Map,076,Auckland,NA
+144001,Glendowie North,Many To One Map,076,Auckland,NA
+144101,Onehunga West,Many To One Map,076,Auckland,NA
+144201,Ellerslie West,Many To One Map,076,Auckland,NA
+144300,Onehunga North,Many To One Map,076,Auckland,NA
+144400,Ellerslie East,Many To One Map,076,Auckland,NA
+144500,Saint Johns East,Many To One Map,076,Auckland,NA
+144600,Oneroa West,Many To One Map,076,Auckland,NA
+144700,Glen Innes West,Many To One Map,076,Auckland,NA
+144800,Ellerslie South,Many To One Map,076,Auckland,NA
+144900,Stonefields West,Many To One Map,076,Auckland,NA
+145000,Onehunga Central,Many To One Map,076,Auckland,NA
+145101,Glendowie South West,Many To One Map,076,Auckland,NA
+145102,Glendowie South East,Many To One Map,076,Auckland,NA
+145200,Oranga,Many To One Map,076,Auckland,NA
+145300,Mount Wellington North West,Many To One Map,076,Auckland,NA
+145400,Panmure Glen Innes Industrial,Many To One Map,076,Auckland,NA
+145500,Onehunga-Te Papapa Industrial,Many To One Map,076,Auckland,NA
+145600,Te Papapa,Many To One Map,076,Auckland,NA
+145700,Stonefields East,Many To One Map,076,Auckland,NA
+145800,Glen Innes East-Wai O Taiki Bay,Many To One Map,076,Auckland,NA
+145900,Penrose,Many To One Map,076,Auckland,NA
+146000,Mount Wellington North East,Many To One Map,076,Auckland,NA
+146100,Mangere Bridge Ambury,Many To One Map,076,Auckland,NA
+146201,Mount Wellington Ferndale,Many To One Map,076,Auckland,NA
+146301,Point England North,Many To One Map,076,Auckland,NA
+146302,Point England South,Many To One Map,076,Auckland,NA
+146400,Bucklands Beach North,Many To One Map,076,Auckland,NA
+146501,Mount Wellington East,Many To One Map,076,Auckland,NA
+146600,Mount Wellington West,Many To One Map,076,Auckland,NA
+146700,Panmure West,Many To One Map,076,Auckland,NA
+146800,Mangere Bridge,Many To One Map,076,Auckland,NA
+146900,Oneroa East-Palm Beach,Many To One Map,076,Auckland,NA
+147001,Tamaki West,Many To One Map,076,Auckland,NA
+147002,Tamaki East,Many To One Map,076,Auckland,NA
+147100,Panmure East,Many To One Map,076,Auckland,NA
+147201,Mount Wellington Central,Many To One Map,076,Auckland,NA
+147202,Mount Wellington Hamlin,Many To One Map,076,Auckland,NA
+147300,Bays Waiheke Island,Many To One Map,076,Auckland,NA
+147400,Sylvia Park,Many To One Map,076,Auckland,NA
+147500,Mangere Mountain View,Many To One Map,076,Auckland,NA
+147600,Surfdale,Many To One Map,076,Auckland,NA
+147700,Mount Wellington Industrial,Many To One Map,076,Auckland,NA
+147800,Half Moon Bay West,Many To One Map,076,Auckland,NA
+147900,Auckland Airport,Many To One Map,076,Auckland,NA
+148000,Eastern Beach,Many To One Map,076,Auckland,NA
+148101,Sunnyhills West,Many To One Map,076,Auckland,NA
+148102,Pakuranga North,Many To One Map,076,Auckland,NA
+148200,Favona North,Many To One Map,076,Auckland,NA
+148300,Bucklands Beach Central,Many To One Map,076,Auckland,NA
+148401,Farm Cove,Many To One Map,076,Auckland,NA
+148501,Mangere North,Many To One Map,076,Auckland,NA
+148600,Favona West,Many To One Map,076,Auckland,NA
+148700,Ostend,Many To One Map,076,Auckland,NA
+148800,Half Moon Bay North East,Many To One Map,076,Auckland,NA
+148901,Mangere West,Many To One Map,076,Auckland,NA
+149001,Pakuranga West,Many To One Map,076,Auckland,NA
+149100,Mount Wellington South West,Many To One Map,076,Auckland,NA
+149200,Sunnyhills East,Many To One Map,076,Auckland,NA
+149300,Half Moon Bay South East,Many To One Map,076,Auckland,NA
+149400,Favona East,Many To One Map,076,Auckland,NA
+149500,Mount Wellington South East,Many To One Map,076,Auckland,NA
+149600,Otahuhu Industrial,Many To One Map,076,Auckland,NA
+149701,Bucklands Beach Murvale,Many To One Map,076,Auckland,NA
+149702,Bucklands Beach South,Many To One Map,076,Auckland,NA
+149800,Pakuranga Central,Many To One Map,076,Auckland,NA
+149901,Awhitu,Many To One Map,076,Auckland,NA
+150000,Harania North,Many To One Map,076,Auckland,NA
+150101,Otahuhu Central,Many To One Map,076,Auckland,NA
+150200,Mangere Central,Many To One Map,076,Auckland,NA
+150301,Otahuhu North West,Many To One Map,076,Auckland,NA
+150302,Otahuhu North East,Many To One Map,076,Auckland,NA
+150400,Howick West,Many To One Map,076,Auckland,NA
+150500,Pakuranga Heights North West,Many To One Map,076,Auckland,NA
+150600,Mellons Bay,Many To One Map,076,Auckland,NA
+150700,Pakuranga Heights East,Many To One Map,076,Auckland,NA
+150800,Sutton Park,Many To One Map,076,Auckland,NA
+150900,Otahuhu East,Many To One Map,076,Auckland,NA
+151000,Mangere South,Many To One Map,076,Auckland,NA
+151100,Onetangi,Many To One Map,076,Auckland,NA
+151200,Harania South,Many To One Map,076,Auckland,NA
+151301,Highland Park (Auckland),Many To One Map,076,Auckland,NA
+151400,Otahuhu South West,Many To One Map,076,Auckland,NA
+151500,Pakuranga Heights South West,Many To One Map,076,Auckland,NA
+151600,Mangere Mascot,Many To One Map,076,Auckland,NA
+151700,Waiheke East,Many To One Map,076,Auckland,NA
+151800,Massey Road West,Many To One Map,076,Auckland,NA
+151900,Otahuhu South,Many To One Map,076,Auckland,NA
+152000,Howick Central,Many To One Map,076,Auckland,NA
+152101,Massey Road North,Many To One Map,076,Auckland,NA
+152201,Botany Downs West,Many To One Map,076,Auckland,NA
+152300,East Tamaki,Many To One Map,076,Auckland,NA
+152400,Howick East,Many To One Map,076,Auckland,NA
+152500,Burswood,Many To One Map,076,Auckland,NA
+152600,Massey Road South,Many To One Map,076,Auckland,NA
+152700,Middlemore,Many To One Map,076,Auckland,NA
+152800,Mangere South East,Many To One Map,076,Auckland,NA
+152900,Botany Downs East,Many To One Map,076,Auckland,NA
+153000,Grange,Many To One Map,076,Auckland,NA
+153100,Golflands,Many To One Map,076,Auckland,NA
+153200,Aorere North,Many To One Map,076,Auckland,NA
+153301,Mangere East,Many To One Map,076,Auckland,NA
+153400,Cockle Bay,Many To One Map,076,Auckland,NA
+153500,Otara West,Many To One Map,076,Auckland,NA
+153600,Aorere Central,Many To One Map,076,Auckland,NA
+153700,Northpark North,Many To One Map,076,Auckland,NA
+153800,Somerville,Many To One Map,076,Auckland,NA
+153900,Northpark South,Many To One Map,076,Auckland,NA
+154001,Papatoetoe North,Many To One Map,076,Auckland,NA
+154101,Dingwall,Many To One Map,076,Auckland,NA
+154201,Aorere South West,Many To One Map,076,Auckland,NA
+154202,Aorere South East,Many To One Map,076,Auckland,NA
+154300,Shelly Park,Many To One Map,076,Auckland,NA
+154400,Otara Central,Many To One Map,076,Auckland,NA
+154500,Huntington Park,Many To One Map,076,Auckland,NA
+154600,Botany Central,Many To One Map,076,Auckland,NA
+154701,Dannemora North-Shamrock Park,Many To One Map,076,Auckland,NA
+154801,Papatoetoe North West,Many To One Map,076,Auckland,NA
+154802,Papatoetoe West,Many To One Map,076,Auckland,NA
+154901,Papatoetoe Central West,Many To One Map,076,Auckland,NA
+154902,Papatoetoe Central East,Many To One Map,076,Auckland,NA
+155000,Sunkist Bay,Many To One Map,076,Auckland,NA
+155100,Otara East,Many To One Map,076,Auckland,NA
+155200,Redcastle,Many To One Map,076,Auckland,NA
+155301,Dannemora South,Many To One Map,076,Auckland,NA
+155401,Armoy,Many To One Map,076,Auckland,NA
+155500,Manukau Central,Many To One Map,076,Auckland,NA
+155601,Papatoetoe North East,Many To One Map,076,Auckland,NA
+155602,Papatoetoe East,Many To One Map,076,Auckland,NA
+155701,Otara South West,Many To One Map,076,Auckland,NA
+155702,Otara South,Many To One Map,076,Auckland,NA
+155801,Ferguson,Many To One Map,076,Auckland,NA
+155901,Papatoetoe South West,Many To One Map,076,Auckland,NA
+156000,Botany Junction,Many To One Map,076,Auckland,NA
+156101,Middlefield,Many To One Map,076,Auckland,NA
+156201,Papatoetoe South,Many To One Map,076,Auckland,NA
+156301,Point View,Many To One Map,076,Auckland,NA
+156400,Te Puru,Many To One Map,076,Auckland,NA
+156500,Puhinui North,Many To One Map,076,Auckland,NA
+156601,Savonna,Many To One Map,076,Auckland,NA
+156700,Puhinui South,Many To One Map,076,Auckland,NA
+156800,Rongomai West,Many To One Map,076,Auckland,NA
+156901,Baverstock,Many To One Map,076,Auckland,NA
+157000,Puhinui East,Many To One Map,076,Auckland,NA
+157101,Turanga,Many To One Map,076,Auckland,NA
+157200,Rongomai East,Many To One Map,076,Auckland,NA
+157301,Ormiston North,Many To One Map,076,Auckland,NA
+157400,Maraetai,Many To One Map,076,Auckland,NA
+157500,Chapel Downs,Many To One Map,076,Auckland,NA
+157600,Wiri West,Many To One Map,076,Auckland,NA
+157701,Clover Park North,Many To One Map,076,Auckland,NA
+157702,Clover Park East,Many To One Map,076,Auckland,NA
+157800,Mission Heights North,Many To One Map,076,Auckland,NA
+157901,Clover Park South,Many To One Map,076,Auckland,NA
+158001,Donegal Park West,Many To One Map,076,Auckland,NA
+158002,Donegal Park East,Many To One Map,076,Auckland,NA
+158101,Ormiston Central,Many To One Map,076,Auckland,NA
+158102,Ormiston South,Many To One Map,076,Auckland,NA
+158200,Mission Heights South,Many To One Map,076,Auckland,NA
+158300,Hilltop (Auckland),Many To One Map,076,Auckland,NA
+158401,Wiri North,Many To One Map,076,Auckland,NA
+158402,Wiri East,Many To One Map,076,Auckland,NA
+158501,Goodwood Heights West,Many To One Map,076,Auckland,NA
+158502,Goodwood Heights East,Many To One Map,076,Auckland,NA
+158601,Ormiston East,Many To One Map,076,Auckland,NA
+158602,Bremner Ridge,Many To One Map,076,Auckland,NA
+158603,Ormiston South East,Many To One Map,076,Auckland,NA
+158700,Clendon Park North,Many To One Map,076,Auckland,NA
+158800,Burbank,Many To One Map,076,Auckland,NA
+158900,Tuscany Heights,Many To One Map,076,Auckland,NA
+159000,Totara Heights,Many To One Map,076,Auckland,NA
+159101,Homai East,Many To One Map,076,Auckland,NA
+159201,Homai West,Many To One Map,076,Auckland,NA
+159202,Homai Central,Many To One Map,076,Auckland,NA
+159301,The Gardens (Auckland),Many To One Map,076,Auckland,NA
+159401,Clarks Beach,Many To One Map,076,Auckland,NA
+159500,Clendon Park West,Many To One Map,076,Auckland,NA
+159600,Hillpark North,Many To One Map,076,Auckland,NA
+159700,Clendon Park East,Many To One Map,076,Auckland,NA
+159801,Karaka Creek,Many To One Map,076,Auckland,NA
+159900,Rowandale West,Many To One Map,076,Auckland,NA
+160000,Rowandale East,Many To One Map,076,Auckland,NA
+160100,Manurewa Central,Many To One Map,076,Auckland,NA
+160201,Weymouth West,Many To One Map,076,Auckland,NA
+160202,Weymouth Central,Many To One Map,076,Auckland,NA
+160300,Hillpark South,Many To One Map,076,Auckland,NA
+160401,Alfriston,Many To One Map,076,Auckland,NA
+160501,Weymouth East,Many To One Map,076,Auckland,NA
+160601,Leabank,Many To One Map,076,Auckland,NA
+160700,Weymouth South,Many To One Map,076,Auckland,NA
+160800,Manurewa East,Many To One Map,076,Auckland,NA
+160901,Manurewa West,Many To One Map,076,Auckland,NA
+160902,Manurewa South,Many To One Map,076,Auckland,NA
+161000,Randwick Park East,Many To One Map,076,Auckland,NA
+161100,Wattle Downs West,Many To One Map,076,Auckland,NA
+161201,Wattle Downs North,Many To One Map,076,Auckland,NA
+161300,Randwick Park West,Many To One Map,076,Auckland,NA
+161400,Kingseat-Karaka,Many To One Map,076,Auckland,NA
+161500,Wattle Downs East,Many To One Map,076,Auckland,NA
+161600,Takanini North,Many To One Map,076,Auckland,NA
+161700,Takanini Industrial,Many To One Map,076,Auckland,NA
+161800,Conifer Grove West,Many To One Map,076,Auckland,NA
+161900,Conifer Grove East,Many To One Map,076,Auckland,NA
+162000,Takanini West,Many To One Map,076,Auckland,NA
+162101,Takanini South,Many To One Map,076,Auckland,NA
+162102,Takanini East,Many To One Map,076,Auckland,NA
+162200,Takanini Central,Many To One Map,076,Auckland,NA
+162300,Ardmore,Many To One Map,076,Auckland,NA
+162400,Glenbrook,Many To One Map,076,Auckland,NA
+162500,Hingaia,Many To One Map,076,Auckland,NA
+162601,Takanini South East,Many To One Map,076,Auckland,NA
+162602,Takanini McLennan,Many To One Map,076,Auckland,NA
+162701,Kawakawa Bay-Orere,Many To One Map,076,Auckland,NA
+162800,Papakura West,Many To One Map,076,Auckland,NA
+162901,Clevedon,Many To One Map,076,Auckland,NA
+163001,Papakura North,Many To One Map,076,Auckland,NA
+163100,Pahurehure,Many To One Map,076,Auckland,NA
+163200,Papakura Central,Many To One Map,076,Auckland,NA
+163301,Papakura North East,Many To One Map,076,Auckland,NA
+163302,Twin Parks Rise,Many To One Map,076,Auckland,NA
+163400,Karaka Lakes,Many To One Map,076,Auckland,NA
+163501,Papakura Kelvin,Many To One Map,076,Auckland,NA
+163502,Papakura Eastburn,Many To One Map,076,Auckland,NA
+163600,Papakura Massey Park,Many To One Map,076,Auckland,NA
+163700,Rosehill,Many To One Map,076,Auckland,NA
+163801,Patumahoe,Many To One Map,076,Auckland,NA
+163803,Patumahoe Rural,Many To One Map,076,Auckland,NA
+163901,Papakura East,Many To One Map,076,Auckland,NA
+163902,Harbour View Heights,Many To One Map,076,Auckland,NA
+164001,Opaheke,Many To One Map,076,Auckland,NA
+164100,Papakura Industrial,Many To One Map,076,Auckland,NA
+164201,Red Hill,Many To One Map,076,Auckland,NA
+164301,Drury West,Many To One Map,076,Auckland,NA
+164302,Drury East,Many To One Map,076,Auckland,NA
+164401,Tamakae,Many To One Map,076,Auckland,NA
+164500,Hamilton Estate,Many To One Map,076,Auckland,NA
+164601,Runciman,Many To One Map,076,Auckland,NA
+164602,Drury South Crossing,Many To One Map,076,Auckland,NA
+164603,Waihoehoe,Many To One Map,076,Auckland,NA
+164700,Waiuku Central,Many To One Map,076,Auckland,NA
+164800,Waiuku East,Many To One Map,076,Auckland,NA
+164900,Kendallvale,Many To One Map,076,Auckland,NA
+165001,Puni,Many To One Map,076,Auckland,NA
+165101,Ramarama,Many To One Map,076,Auckland,NA
+165200,Hunua,Many To One Map,076,Auckland,NA
+165301,Pukekohe North,Many To One Map,076,Auckland,NA
+165302,Pukekohe North West,Many To One Map,076,Auckland,NA
+165400,Anselmi Ridge,Many To One Map,076,Auckland,NA
+165501,Pukekohe West,Many To One Map,076,Auckland,NA
+165502,Pukekohe South West,Many To One Map,076,Auckland,NA
+165600,Cape Hill,Many To One Map,076,Auckland,NA
+165700,Rosa Birch Park,Many To One Map,076,Auckland,NA
+165800,Rooseville Park,Many To One Map,076,Auckland,NA
+165901,Cloverlea (Auckland),Many To One Map,076,Auckland,NA
+166000,Pukekohe Central,Many To One Map,076,Auckland,NA
+166100,Pukekohe Hospital,Many To One Map,076,Auckland,NA
+166200,Buckland,Many To One Map,076,Auckland,NA
+166301,Bombay Hills,Many To One Map,076,Auckland,NA
+166400,Ararimu,Many To One Map,076,Auckland,NA
+166500,Colville,Many To One Map,011,Thames-Coromandel District,NA
+166600,Islands Thames-Coromandel District,Many To One Map,011,Thames-Coromandel District,NA
+166700,Coromandel,Many To One Map,011,Thames-Coromandel District,NA
+166801,Inlets Thames-Coromandel District,Many To One Map,011,Thames-Coromandel District,NA
+166900,Mercury Bay North,Many To One Map,011,Thames-Coromandel District,NA
+167000,Whitianga North,Many To One Map,011,Thames-Coromandel District,NA
+167101,Whitianga South,Many To One Map,011,Thames-Coromandel District,NA
+167102,Whitianga Waterways,Many To One Map,011,Thames-Coromandel District,NA
+167200,Thames Coast,Many To One Map,011,Thames-Coromandel District,NA
+167300,Cooks Beach-Ferry Landing,Many To One Map,011,Thames-Coromandel District,NA
+167400,Mercury Bay South,Many To One Map,011,Thames-Coromandel District,NA
+167501,Kauaeranga,Many To One Map,011,Thames-Coromandel District,NA
+167600,Thames North,Many To One Map,011,Thames-Coromandel District,NA
+167700,Thames Central,Many To One Map,011,Thames-Coromandel District,NA
+167800,Thames South,Many To One Map,011,Thames-Coromandel District,NA
+167900,Hikuai,Many To One Map,011,Thames-Coromandel District,NA
+168001,Totora-Kopu,Many To One Map,011,Thames-Coromandel District,NA
+168101,Tairua,Many To One Map,011,Thames-Coromandel District,NA
+168200,Pauanui,Many To One Map,011,Thames-Coromandel District,NA
+168300,Matatoki-Puriri,Many To One Map,011,Thames-Coromandel District,NA
+168400,Whangamata Rural,Many To One Map,011,Thames-Coromandel District,NA
+168501,Whangamata West,Many To One Map,011,Thames-Coromandel District,NA
+168502,Whangamata East,Many To One Map,011,Thames-Coromandel District,NA
+168600,Miranda-Pukorokoro,Many To One Map,012,Hauraki District,NA
+168701,Hauraki Plains North,Many To One Map,012,Hauraki District,NA
+168800,Hauraki Plains East,Many To One Map,012,Hauraki District,NA
+168901,Ngatea,Many To One Map,012,Hauraki District,NA
+169000,Hauraki Plains South,Many To One Map,012,Hauraki District,NA
+169100,Paeroa Rural,Many To One Map,012,Hauraki District,NA
+169200,Paeroa,Many To One Map,012,Hauraki District,NA
+169301,Waihi Rural,Many To One Map,012,Hauraki District,NA
+169401,Waihi North,Many To One Map,012,Hauraki District,NA
+169500,Waihi East,Many To One Map,012,Hauraki District,NA
+169600,Waihi South,Many To One Map,012,Hauraki District,NA
+169700,Aka Aka,Many To One Map,013,Waikato District,NA
+169800,Mangatangi,Many To One Map,013,Waikato District,NA
+169901,Tuakau Rural,Many To One Map,013,Waikato District,NA
+170001,Tuakau North,Many To One Map,013,Waikato District,NA
+170101,Onewhero,Many To One Map,013,Waikato District,NA
+170201,Pokeno Rural,Many To One Map,013,Waikato District,NA
+170300,Tuakau South,Many To One Map,013,Waikato District,NA
+170400,Port Waikato-Waikaretu,Many To One Map,013,Waikato District,NA
+170501,Pokeno North,Many To One Map,013,Waikato District,NA
+170502,Pokeno South,Many To One Map,013,Waikato District,NA
+170600,Pukekawa,Many To One Map,013,Waikato District,NA
+170700,Maramarua,Many To One Map,013,Waikato District,NA
+170802,Te Kauwhata West,Many To One Map,013,Waikato District,NA
+170803,Whangamarino,Many To One Map,013,Waikato District,NA
+170901,Te Akau,Many To One Map,013,Waikato District,NA
+171000,Inlets Waikato District,Many To One Map,013,Waikato District,NA
+171101,Te Kauwhata East,Many To One Map,013,Waikato District,NA
+171201,Huntly Rural,Many To One Map,013,Waikato District,NA
+171300,Waerenga,Many To One Map,013,Waikato District,NA
+171400,Huntly West,Many To One Map,013,Waikato District,NA
+171501,Huntly East,Many To One Map,013,Waikato District,NA
+171502,Huntly South,Many To One Map,013,Waikato District,NA
+171601,Raglan,Many To One Map,013,Waikato District,NA
+171700,Whitikahu,Many To One Map,013,Waikato District,NA
+171801,Te Uku,Many To One Map,013,Waikato District,NA
+171803,Whale Bay,Many To One Map,013,Waikato District,NA
+171901,Taupiri-Lake Kainui,Many To One Map,013,Waikato District,NA
+172001,Ngaruawahia North,Many To One Map,013,Waikato District,NA
+172100,Ngaruawahia Central,Many To One Map,013,Waikato District,NA
+172201,Ngaruawahia South,Many To One Map,013,Waikato District,NA
+172300,Kainui-Gordonton,Many To One Map,013,Waikato District,NA
+172401,Te Kowhai,Many To One Map,013,Waikato District,NA
+172500,Whatawhata West,Many To One Map,013,Waikato District,NA
+172601,Horotiu,Many To One Map,013,Waikato District,NA
+172700,Horsham Downs,Many To One Map,013,Waikato District,NA
+172800,Whatawhata East,Many To One Map,013,Waikato District,NA
+172900,Rotokauri,Many To One Map,013,Waikato District,NA
+173000,Hamilton Park,Many To One Map,013,Waikato District,NA
+173100,Eureka-Tauwhare,Many To One Map,013,Waikato District,NA
+173201,Tamahere North,Many To One Map,013,Waikato District,NA
+173202,Tamahere West,Many To One Map,013,Waikato District,NA
+173300,Pukemoremore,Many To One Map,013,Waikato District,NA
+173400,Tamahere South,Many To One Map,013,Waikato District,NA
+173500,Tahuna-Mangateparu,Many To One Map,015,Matamata-Piako District,NA
+173600,Mangaiti,Many To One Map,015,Matamata-Piako District,NA
+173700,Tatuanui,Many To One Map,015,Matamata-Piako District,NA
+173801,Tahuroa,Many To One Map,015,Matamata-Piako District,NA
+173901,Morrinsville North,Many To One Map,015,Matamata-Piako District,NA
+173902,Morrinsville East,Many To One Map,015,Matamata-Piako District,NA
+174001,Morrinsville West,Many To One Map,015,Matamata-Piako District,NA
+174100,Te Aroha East,Many To One Map,015,Matamata-Piako District,NA
+174200,Te Aroha West,Many To One Map,015,Matamata-Piako District,NA
+174300,Waihou-Manawaru,Many To One Map,015,Matamata-Piako District,NA
+174400,Waitoa-Ngarua,Many To One Map,015,Matamata-Piako District,NA
+174500,Richmond Downs-Wardville,Many To One Map,015,Matamata-Piako District,NA
+174601,Waharoa-Peria,Many To One Map,015,Matamata-Piako District,NA
+174701,Okauia,Many To One Map,015,Matamata-Piako District,NA
+174801,Hinuera,Many To One Map,015,Matamata-Piako District,NA
+174901,Matamata North,Many To One Map,015,Matamata-Piako District,NA
+175001,Matamata West,Many To One Map,015,Matamata-Piako District,NA
+175002,Matamata East,Many To One Map,015,Matamata-Piako District,NA
+175100,Te Poi,Many To One Map,015,Matamata-Piako District,NA
+175201,Te Rapa North,Many To One Map,016,Hamilton City,NA
+175301,Flagstaff North West,Many To One Map,016,Hamilton City,NA
+175302,Flagstaff North East,Many To One Map,016,Hamilton City,NA
+175401,Burbush-Baverstock,Many To One Map,016,Hamilton City,NA
+175501,Flagstaff South,Many To One Map,016,Hamilton City,NA
+175601,Rototuna North,Many To One Map,016,Hamilton City,NA
+175700,Pukete West,Many To One Map,016,Hamilton City,NA
+175801,Flagstaff East,Many To One Map,016,Hamilton City,NA
+175901,Rototuna West,Many To One Map,016,Hamilton City,NA
+175902,Rototuna East,Many To One Map,016,Hamilton City,NA
+176000,Pukete East,Many To One Map,016,Hamilton City,NA
+176101,Te Manatu,Many To One Map,016,Hamilton City,NA
+176201,Rototuna South West,Many To One Map,016,Hamilton City,NA
+176202,Rototuna South East,Many To One Map,016,Hamilton City,NA
+176301,Te Rapa South,Many To One Map,016,Hamilton City,NA
+176400,Saint Andrews West,Many To One Map,016,Hamilton City,NA
+176500,Saint Andrews East,Many To One Map,016,Hamilton City,NA
+176600,Queenwood (Hamilton City),Many To One Map,016,Hamilton City,NA
+176700,St James,Many To One Map,016,Hamilton City,NA
+176800,Crawshaw,Many To One Map,016,Hamilton City,NA
+176900,Huntington,Many To One Map,016,Hamilton City,NA
+177000,Western Heights (Hamilton City),Many To One Map,016,Hamilton City,NA
+177100,Nawton West,Many To One Map,016,Hamilton City,NA
+177200,Nawton East,Many To One Map,016,Hamilton City,NA
+177300,Chartwell,Many To One Map,016,Hamilton City,NA
+177400,Forest Lake (Hamilton City),Many To One Map,016,Hamilton City,NA
+177500,Chedworth,Many To One Map,016,Hamilton City,NA
+177600,Beerescourt,Many To One Map,016,Hamilton City,NA
+177700,Miropiko,Many To One Map,016,Hamilton City,NA
+177800,Porritt,Many To One Map,016,Hamilton City,NA
+177901,Dinsdale North,Many To One Map,016,Hamilton City,NA
+178000,Maeroa,Many To One Map,016,Hamilton City,NA
+178100,Dinsdale South,Many To One Map,016,Hamilton City,NA
+178201,Fairfield North (Hamilton City),Many To One Map,016,Hamilton City,NA
+178202,Fairfield South (Hamilton City),Many To One Map,016,Hamilton City,NA
+178301,Whitiora,Many To One Map,016,Hamilton City,NA
+178400,Enderley North,Many To One Map,016,Hamilton City,NA
+178500,Fairview Downs,Many To One Map,016,Hamilton City,NA
+178600,Temple View,Many To One Map,016,Hamilton City,NA
+178701,Swarbrick,Many To One Map,016,Hamilton City,NA
+178800,Kahikatea,Many To One Map,016,Hamilton City,NA
+178901,Frankton Junction,Many To One Map,016,Hamilton City,NA
+179001,Kirikiriroa,Many To One Map,016,Hamilton City,NA
+179100,Enderley South,Many To One Map,016,Hamilton City,NA
+179201,Greenhill Park,Many To One Map,016,Hamilton City,NA
+179202,Ruakura,Many To One Map,016,Hamilton City,NA
+179300,Claudelands,Many To One Map,016,Hamilton City,NA
+179401,Hamilton Central,Many To One Map,016,Hamilton City,NA
+179501,Hamilton Lake North,Many To One Map,016,Hamilton City,NA
+179502,Hamilton Lake South,Many To One Map,016,Hamilton City,NA
+179600,Peachgrove,Many To One Map,016,Hamilton City,NA
+179700,Hamilton East Village,Many To One Map,016,Hamilton City,NA
+179801,Hamilton West,Many To One Map,016,Hamilton City,NA
+179901,Greensboro,Many To One Map,016,Hamilton City,NA
+180000,Hamilton East Cook,Many To One Map,016,Hamilton City,NA
+180100,Melville North,Many To One Map,016,Hamilton City,NA
+180200,Hamilton East,Many To One Map,016,Hamilton City,NA
+180300,Melville South,Many To One Map,016,Hamilton City,NA
+180400,Deanwell,Many To One Map,016,Hamilton City,NA
+180500,Bader,Many To One Map,016,Hamilton City,NA
+180601,Hillcrest West (Hamilton City),Many To One Map,016,Hamilton City,NA
+180700,Hillcrest East (Hamilton City),Many To One Map,016,Hamilton City,NA
+180800,Silverdale (Hamilton City),Many To One Map,016,Hamilton City,NA
+180900,Glenview,Many To One Map,016,Hamilton City,NA
+181000,Resthill,Many To One Map,016,Hamilton City,NA
+181101,Fitzroy (Hamilton City),Many To One Map,016,Hamilton City,NA
+181200,Riverlea,Many To One Map,016,Hamilton City,NA
+181301,Peacocke,Many To One Map,016,Hamilton City,NA
+181400,Te Pahu,Many To One Map,017,Waipa District,NA
+181500,Ngahinapouri,Many To One Map,017,Waipa District,NA
+181600,Lake Cameron,Many To One Map,017,Waipa District,NA
+181700,Lake Ngaroto,Many To One Map,017,Waipa District,NA
+181800,Kaipaki,Many To One Map,017,Waipa District,NA
+181900,Pirongia,Many To One Map,017,Waipa District,NA
+182000,Hautapu Rural,Many To One Map,017,Waipa District,NA
+182101,Pokuru,Many To One Map,017,Waipa District,NA
+182201,Te Rahu,Many To One Map,017,Waipa District,NA
+182300,Fencourt,Many To One Map,017,Waipa District,NA
+182400,Hautapu,Many To One Map,017,Waipa District,NA
+182500,Karapiro,Many To One Map,017,Waipa District,NA
+182600,Cambridge North,Many To One Map,017,Waipa District,NA
+182700,Cambridge West,Many To One Map,017,Waipa District,NA
+182800,Cambridge East,Many To One Map,017,Waipa District,NA
+182900,Cambridge Park-River Garden,Many To One Map,017,Waipa District,NA
+183000,Oaklands-St Kilda,Many To One Map,017,Waipa District,NA
+183101,Pukerimu,Many To One Map,017,Waipa District,NA
+183200,Cambridge Central,Many To One Map,017,Waipa District,NA
+183300,Te Awamutu North,Many To One Map,017,Waipa District,NA
+183401,Te Awamutu West,Many To One Map,017,Waipa District,NA
+183500,Leamington West,Many To One Map,017,Waipa District,NA
+183600,Goodfellow Park,Many To One Map,017,Waipa District,NA
+183701,Leamington South,Many To One Map,017,Waipa District,NA
+183800,Leamington Central,Many To One Map,017,Waipa District,NA
+183900,Leamington East,Many To One Map,017,Waipa District,NA
+184000,Te Awamutu Stadium,Many To One Map,017,Waipa District,NA
+184100,Te Awamutu Central,Many To One Map,017,Waipa District,NA
+184201,Pekerau,Many To One Map,017,Waipa District,NA
+184300,Fraser Street,Many To One Map,017,Waipa District,NA
+184400,Sherwin Park,Many To One Map,017,Waipa District,NA
+184501,St Leger,Many To One Map,017,Waipa District,NA
+184601,Rotoorangi,Many To One Map,017,Waipa District,NA
+184700,Tokanui,Many To One Map,017,Waipa District,NA
+184800,Kihikihi Central,Many To One Map,017,Waipa District,NA
+184900,Maungatautari,Many To One Map,017,Waipa District,NA
+185000,Rotongata,Many To One Map,017,Waipa District,NA
+185100,Inlets Otorohanga District,Many To One Map,018,Otorohanga District,NA
+185200,Pirongia Forest,Many To One Map,018,Otorohanga District,NA
+185300,Honikiwi,Many To One Map,018,Otorohanga District,NA
+185400,Te Kawa,Many To One Map,018,Otorohanga District,NA
+185500,Otorohanga,Many To One Map,018,Otorohanga District,NA
+185600,Maihiihi,Many To One Map,018,Otorohanga District,NA
+185700,Puniu,Many To One Map,018,Otorohanga District,NA
+185800,Tirau,Many To One Map,019,South Waikato District,NA
+185900,Putaruru Rural,Many To One Map,019,South Waikato District,NA
+186000,Putaruru,Many To One Map,019,South Waikato District,NA
+186100,Kinleith,Many To One Map,019,South Waikato District,NA
+186200,Paraonui,Many To One Map,019,South Waikato District,NA
+186300,Parkdale,Many To One Map,019,South Waikato District,NA
+186400,Matarawa,Many To One Map,019,South Waikato District,NA
+186500,Stanley Park,Many To One Map,019,South Waikato District,NA
+186600,Strathmore (South Waikato District),Many To One Map,019,South Waikato District,NA
+186700,Tokoroa Central,Many To One Map,019,South Waikato District,NA
+186800,Moananui,Many To One Map,019,South Waikato District,NA
+186900,Inlet Waitomo District,Many To One Map,020,Waitomo District,NA
+187000,Herangi,Many To One Map,020,Waitomo District,NA
+187100,Hangatiki,Many To One Map,020,Waitomo District,NA
+187200,Aria,Many To One Map,020,Waitomo District,NA
+187300,Te Kuiti West,Many To One Map,020,Waitomo District,NA
+187400,Te Kuiti East,Many To One Map,020,Waitomo District,NA
+187500,Waipa Valley,Many To One Map,020,Waitomo District,NA
+187600,Tiroa,Many To One Map,020,Waitomo District,NA
+187701,Marotiri,Many To One Map,021,Taupo District,NA
+187702,Mangakino,Many To One Map,021,Taupo District,NA
+187800,Ohakuri,Many To One Map,021,Taupo District,NA
+187900,Lake Taupo Bays,Many To One Map,021,Taupo District,NA
+188001,Mapara,Many To One Map,021,Taupo District,NA
+188002,Kinloch,Many To One Map,021,Taupo District,NA
+188100,Inland water Lake Taupo,Many To One Map,021,Taupo District,NA
+188200,Wairakei-Broadlands,Many To One Map,021,Taupo District,NA
+188300,Acacia Bay,Many To One Map,021,Taupo District,NA
+188400,Brentwood (Taupo District),Many To One Map,021,Taupo District,NA
+188501,Nukuhau,Many To One Map,021,Taupo District,NA
+188502,Rangatira Park,Many To One Map,021,Taupo District,NA
+188600,Taupo Central West,Many To One Map,021,Taupo District,NA
+188701,Tauhara,Many To One Map,021,Taupo District,NA
+188702,Centennial,Many To One Map,021,Taupo District,NA
+188800,Taupo Central East,Many To One Map,021,Taupo District,NA
+188900,Mountview,Many To One Map,021,Taupo District,NA
+189000,Bird Area,Many To One Map,021,Taupo District,NA
+189101,Hilltop (Taupo District),Many To One Map,021,Taupo District,NA
+189102,Invergarry,Many To One Map,021,Taupo District,NA
+189200,Waipahihi,Many To One Map,021,Taupo District,NA
+189300,Richmond Heights,Many To One Map,021,Taupo District,NA
+189400,Wharewaka,Many To One Map,021,Taupo District,NA
+189500,Kaimanawa,Many To One Map,021,Taupo District,NA
+189600,Waitahanui,Many To One Map,021,Taupo District,NA
+189700,Turangi,Many To One Map,021,Taupo District,NA
+189800,Rangataiki,Many To One Map,021,Taupo District,NA
+189900,Taharua,Many To One Map,021,Taupo District,NA
+190000,Te More,Many To One Map,021,Taupo District,NA
+190100,Waiau,Many To One Map,022,Western Bay of Plenty District,NA
+190200,Waihi Beach-Bowentown,Many To One Map,022,Western Bay of Plenty District,NA
+190300,Tahawai,Many To One Map,022,Western Bay of Plenty District,NA
+190400,Athenree,Many To One Map,022,Western Bay of Plenty District,NA
+190501,Aongatete,Many To One Map,022,Western Bay of Plenty District,NA
+190601,Katikati North,Many To One Map,022,Western Bay of Plenty District,NA
+190602,Katikati South,Many To One Map,022,Western Bay of Plenty District,NA
+190700,Inlet Tauranga Harbour North,Many To One Map,022,Western Bay of Plenty District,NA
+190800,Matakana Island,Many To One Map,022,Western Bay of Plenty District,NA
+190901,Pahoia West,Many To One Map,022,Western Bay of Plenty District,NA
+190902,Pahoia East,Many To One Map,022,Western Bay of Plenty District,NA
+191001,Omokoroa North,Many To One Map,022,Western Bay of Plenty District,NA
+191101,Omokoroa South,Many To One Map,022,Western Bay of Plenty District,NA
+191201,Te Puna,Many To One Map,022,Western Bay of Plenty District,NA
+191300,Minden,Many To One Map,022,Western Bay of Plenty District,NA
+191400,Kaimai,Many To One Map,022,Western Bay of Plenty District,NA
+191501,Kopurererua,Many To One Map,022,Western Bay of Plenty District,NA
+191502,Keenan Road,Many To One Map,023,Tauranga City,NA
+191601,Waitao,Many To One Map,022,Western Bay of Plenty District,NA
+191700,Waiorohi,Many To One Map,022,Western Bay of Plenty District,NA
+191801,Otawa,Many To One Map,022,Western Bay of Plenty District,NA
+191901,Te Puke West,Many To One Map,022,Western Bay of Plenty District,NA
+192000,Rangiuru,Many To One Map,022,Western Bay of Plenty District,NA
+192101,Te Puke East,Many To One Map,022,Western Bay of Plenty District,NA
+192102,Te Puke South,Many To One Map,022,Western Bay of Plenty District,NA
+192200,Inlets Maketu,Many To One Map,022,Western Bay of Plenty District,NA
+192300,Maketu,Many To One Map,022,Western Bay of Plenty District,NA
+192400,Pukehina Beach,Many To One Map,022,Western Bay of Plenty District,NA
+192500,Pongakawa,Many To One Map,022,Western Bay of Plenty District,NA
+192600,Matua North,Many To One Map,023,Tauranga City,NA
+192700,Inlet Tauranga Harbour South,Many To One Map,023,Tauranga City,NA
+192800,Mount Maunganui North,Many To One Map,023,Tauranga City,NA
+192900,Matua South,Many To One Map,023,Tauranga City,NA
+193000,Bethlehem North,Many To One Map,023,Tauranga City,NA
+193100,Bellevue,Many To One Map,023,Tauranga City,NA
+193201,Otumoetai North,Many To One Map,023,Tauranga City,NA
+193202,Otumoetai East,Many To One Map,023,Tauranga City,NA
+193301,Otumoetai South,Many To One Map,023,Tauranga City,NA
+193400,Brookfield West,Many To One Map,023,Tauranga City,NA
+193500,Bethlehem Central,Many To One Map,023,Tauranga City,NA
+193600,Brookfield East,Many To One Map,023,Tauranga City,NA
+193700,Mount Maunganui South,Many To One Map,023,Tauranga City,NA
+193800,Tauranga Central,Many To One Map,023,Tauranga City,NA
+193900,Mount Maunganui Central,Many To One Map,023,Tauranga City,NA
+194000,Judea,Many To One Map,023,Tauranga City,NA
+194100,Te Reti,Many To One Map,023,Tauranga City,NA
+194200,Bethlehem South,Many To One Map,023,Tauranga City,NA
+194300,Omanu Beach,Many To One Map,023,Tauranga City,NA
+194400,Tauranga Hospital,Many To One Map,023,Tauranga City,NA
+194500,Tauriko,Many To One Map,023,Tauranga City,NA
+194601,Gate Pa,Many To One Map,023,Tauranga City,NA
+194700,Greerton South,Many To One Map,023,Tauranga City,NA
+194801,Tauranga South,Many To One Map,023,Tauranga City,NA
+194802,Fraser Cove,Many To One Map,023,Tauranga City,NA
+194900,Arataki North,Many To One Map,023,Tauranga City,NA
+195000,Matapihi,Many To One Map,023,Tauranga City,NA
+195101,Pyes Pa North West,Many To One Map,023,Tauranga City,NA
+195102,Pyes Pa West,Many To One Map,023,Tauranga City,NA
+195200,Greerton North,Many To One Map,023,Tauranga City,NA
+195300,Yatton Park,Many To One Map,023,Tauranga City,NA
+195401,Pyes Pa North,Many To One Map,023,Tauranga City,NA
+195500,Arataki South,Many To One Map,023,Tauranga City,NA
+195601,Pyes Pa South,Many To One Map,023,Tauranga City,NA
+195700,Poike,Many To One Map,023,Tauranga City,NA
+195800,Te Maunga North,Many To One Map,023,Tauranga City,NA
+195900,Maungatapu,Many To One Map,023,Tauranga City,NA
+196000,Hairini,Many To One Map,023,Tauranga City,NA
+196100,Pyes Pa East,Many To One Map,023,Tauranga City,NA
+196201,Te Maunga South,Many To One Map,023,Tauranga City,NA
+196202,Pacific Lakes,Many To One Map,023,Tauranga City,NA
+196301,Kaitemako,Many To One Map,023,Tauranga City,NA
+196400,Ohauiti,Many To One Map,023,Tauranga City,NA
+196500,Baypark-Kairua,Many To One Map,023,Tauranga City,NA
+196600,Welcome Bay West,Many To One Map,023,Tauranga City,NA
+196700,Welcome Bay East,Many To One Map,023,Tauranga City,NA
+196800,Pacific View,Many To One Map,023,Tauranga City,NA
+196900,Welcome Bay South,Many To One Map,023,Tauranga City,NA
+197000,Palm Beach North,Many To One Map,023,Tauranga City,NA
+197100,Palm Beach South-Gravatt,Many To One Map,023,Tauranga City,NA
+197200,Papamoa Beach North,Many To One Map,023,Tauranga City,NA
+197300,Doncaster,Many To One Map,023,Tauranga City,NA
+197400,Papamoa Beach South,Many To One Map,023,Tauranga City,NA
+197500,Motiti,Many To One Map,023,Tauranga City,NA
+197601,Wairakei West,Many To One Map,023,Tauranga City,NA
+197602,Wairakei Central,Many To One Map,023,Tauranga City,NA
+197603,Wairakei East-Te Tumu,Many To One Map,023,Tauranga City,NA
+197700,Tui Ridge,Many To One Map,024,Rotorua District,NA
+197800,Arahiwi,Many To One Map,024,Rotorua District,NA
+197900,Ngongotaha Valley,Many To One Map,024,Rotorua District,NA
+198000,Hamurana,Many To One Map,024,Rotorua District,NA
+198100,Ngongotaha East,Many To One Map,024,Rotorua District,NA
+198200,Ngongotaha West,Many To One Map,024,Rotorua District,NA
+198300,Inland water Lake Rotorua,Many To One Map,024,Rotorua District,NA
+198400,Ngongotaha South,Many To One Map,024,Rotorua District,NA
+198500,Selwyn Heights,Many To One Map,024,Rotorua District,NA
+198600,Pleasant Heights,Many To One Map,024,Rotorua District,NA
+198700,Rotoiti-Rotoehu,Many To One Map,024,Rotorua District,NA
+198800,Kawaha,Many To One Map,024,Rotorua District,NA
+198900,Fairy Springs,Many To One Map,024,Rotorua District,NA
+199000,Western Heights (Rotorua District),Many To One Map,024,Rotorua District,NA
+199100,Pukehangi North,Many To One Map,024,Rotorua District,NA
+199200,Pukehangi South,Many To One Map,024,Rotorua District,NA
+199300,Mangakakahi Central,Many To One Map,024,Rotorua District,NA
+199400,Koutu,Many To One Map,024,Rotorua District,NA
+199500,Mangakakahi West,Many To One Map,024,Rotorua District,NA
+199600,Sunnybrook,Many To One Map,024,Rotorua District,NA
+199700,Fordlands,Many To One Map,024,Rotorua District,NA
+199800,Kuirau,Many To One Map,024,Rotorua District,NA
+199900,Utuhina,Many To One Map,024,Rotorua District,NA
+200000,Pomare,Many To One Map,024,Rotorua District,NA
+200100,Rotorua Central,Many To One Map,024,Rotorua District,NA
+200200,Hillcrest (Rotorua District),Many To One Map,024,Rotorua District,NA
+200300,Victoria,Many To One Map,024,Rotorua District,NA
+200401,Waiohewa,Many To One Map,024,Rotorua District,NA
+200500,Glenholme North,Many To One Map,024,Rotorua District,NA
+200600,Springfield South,Many To One Map,024,Rotorua District,NA
+200700,Springfield North,Many To One Map,024,Rotorua District,NA
+200800,Glenholme South,Many To One Map,024,Rotorua District,NA
+200900,Owhata West,Many To One Map,024,Rotorua District,NA
+201001,Holdens Bay-Rotokawa,Many To One Map,024,Rotorua District,NA
+201100,Ngapuna,Many To One Map,024,Rotorua District,NA
+201200,Fenton Park,Many To One Map,024,Rotorua District,NA
+201300,Tihiotonga-Whakarewarewa,Many To One Map,024,Rotorua District,NA
+201401,Owhata East,Many To One Map,024,Rotorua District,NA
+201501,Lynmore,Many To One Map,024,Rotorua District,NA
+201600,Ngakuru,Many To One Map,024,Rotorua District,NA
+201700,Kaingaroa-Whakarewarewa,Many To One Map,024,Rotorua District,NA
+201800,Golden Springs,Many To One Map,024,Rotorua District,NA
+201900,Manawahe,Many To One Map,025,Whakatane District,NA
+202000,Matata-Otakiri,Many To One Map,025,Whakatane District,NA
+202100,Onepu Spring,Many To One Map,025,Whakatane District,NA
+202200,Edgecumbe,Many To One Map,025,Whakatane District,NA
+202300,Thornton-Awakeri,Many To One Map,025,Whakatane District,NA
+202400,Te Teko Lakes,Many To One Map,025,Whakatane District,NA
+202500,Coastlands,Many To One Map,025,Whakatane District,NA
+202600,Whakatane West,Many To One Map,025,Whakatane District,NA
+202700,Whakatane Central,Many To One Map,025,Whakatane District,NA
+202800,Trident,Many To One Map,025,Whakatane District,NA
+202900,Allandale,Many To One Map,025,Whakatane District,NA
+203000,Mokorua Bush,Many To One Map,025,Whakatane District,NA
+203100,Wainui,Many To One Map,025,Whakatane District,NA
+203200,Ohope,Many To One Map,025,Whakatane District,NA
+203300,Inlet Ohiwa Harbour West,Many To One Map,025,Whakatane District,NA
+203400,Galatea,Many To One Map,025,Whakatane District,NA
+203500,Waingarara-Waimana,Many To One Map,025,Whakatane District,NA
+203600,Murupara,Many To One Map,025,Whakatane District,NA
+203700,Monika Reserve,Many To One Map,026,Kawerau District,NA
+203800,Kawerau Industrial,Many To One Map,026,Kawerau District,NA
+203901,Kawerau Central,Many To One Map,026,Kawerau District,NA
+203902,Tarawera Park,Many To One Map,026,Kawerau District,NA
+204000,Inlet Ohiwa Harbour East,Many To One Map,027,Opotiki District,NA
+204101,Waiotahe,Many To One Map,027,Opotiki District,NA
+204200,Cape Runaway,Many To One Map,027,Opotiki District,NA
+204301,Woodlands,Many To One Map,027,Opotiki District,NA
+204400,Opotiki,Many To One Map,027,Opotiki District,NA
+204500,Otara-Tirohanga,Many To One Map,027,Opotiki District,NA
+204600,Oponae,Many To One Map,027,Opotiki District,NA
+204700,East Cape,Many To One Map,028,Gisborne District,NA
+204800,Waipaoa,Many To One Map,028,Gisborne District,NA
+204900,Ruatoria-Raukumara,Many To One Map,028,Gisborne District,NA
+205000,Tokomaru,Many To One Map,028,Gisborne District,NA
+205100,Hangaroa,Many To One Map,028,Gisborne District,NA
+205201,Wharekaka,Many To One Map,028,Gisborne District,NA
+205300,Te Arai,Many To One Map,028,Gisborne District,NA
+205401,Hexton,Many To One Map,028,Gisborne District,NA
+205500,Lytton,Many To One Map,028,Gisborne District,NA
+205601,Makaraka-Awapuni,Many To One Map,028,Gisborne District,NA
+205700,Riverdale,Many To One Map,028,Gisborne District,NA
+205800,Te Hapara North,Many To One Map,028,Gisborne District,NA
+205900,Mangapapa North,Many To One Map,028,Gisborne District,NA
+206000,Elgin,Many To One Map,028,Gisborne District,NA
+206100,Te Hapara South,Many To One Map,028,Gisborne District,NA
+206200,Mangapapa East,Many To One Map,028,Gisborne District,NA
+206300,Mangapapa South,Many To One Map,028,Gisborne District,NA
+206400,Te Hapara East,Many To One Map,028,Gisborne District,NA
+206500,Centennial Crescent,Many To One Map,028,Gisborne District,NA
+206601,Whataupoko East,Many To One Map,028,Gisborne District,NA
+206700,Whataupoko West,Many To One Map,028,Gisborne District,NA
+206801,Gisborne Central,Many To One Map,028,Gisborne District,NA
+206802,Inlet Eastland Port,Many To One Map,028,Gisborne District,NA
+206900,Kaiti North,Many To One Map,028,Gisborne District,NA
+207000,Kaiti South,Many To One Map,028,Gisborne District,NA
+207100,Outer Kaiti,Many To One Map,028,Gisborne District,NA
+207200,Tamarau,Many To One Map,028,Gisborne District,NA
+207301,Wainui-Okitu,Many To One Map,028,Gisborne District,NA
+207400,Maungataniwha-Raupunga,Many To One Map,029,Wairoa District,NA
+207500,Inland water Lake Waikaremoana,Many To One Map,029,Wairoa District,NA
+207600,Frasertown-Ruakituri,Many To One Map,029,Wairoa District,NA
+207700,Whakaki,Many To One Map,029,Wairoa District,NA
+207800,Wairoa,Many To One Map,029,Wairoa District,NA
+207900,Mahia,Many To One Map,029,Wairoa District,NA
+208001,Puketitiri-Tutira,Many To One Map,030,Hastings District,NA
+208100,Sherenden-Crownthorpe,Many To One Map,030,Hastings District,NA
+208200,Maraekakaho,Many To One Map,030,Hastings District,NA
+208301,Puketapu-Eskdale,Many To One Map,030,Hastings District,NA
+208401,Omahu-Pakowhai,Many To One Map,030,Hastings District,NA
+208500,Bridge Pa,Many To One Map,030,Hastings District,NA
+208601,Twyford,Many To One Map,030,Hastings District,NA
+208700,Poukawa,Many To One Map,030,Hastings District,NA
+208800,Flaxmere West,Many To One Map,030,Hastings District,NA
+208901,Omahu Strip,Many To One Map,030,Hastings District,NA
+209000,Lochain Park,Many To One Map,030,Hastings District,NA
+209100,Flaxmere Park,Many To One Map,030,Hastings District,NA
+209201,Flaxmere South,Many To One Map,030,Hastings District,NA
+209301,Irongate,Many To One Map,030,Hastings District,NA
+209401,Frimley,Many To One Map,030,Hastings District,NA
+209500,Camberley,Many To One Map,030,Hastings District,NA
+209601,Clive,Many To One Map,030,Hastings District,NA
+209700,St Leonards,Many To One Map,030,Hastings District,NA
+209800,Mahora,Many To One Map,030,Hastings District,NA
+209901,Raureka,Many To One Map,030,Hastings District,NA
+210000,Cornwall Park,Many To One Map,030,Hastings District,NA
+210100,Tomoana,Many To One Map,030,Hastings District,NA
+210201,Longlands-Pukahu,Many To One Map,030,Hastings District,NA
+210300,Raceway Park,Many To One Map,030,Hastings District,NA
+210400,Karamu,Many To One Map,030,Hastings District,NA
+210500,Hastings Central,Many To One Map,030,Hastings District,NA
+210600,Tomoana Crossing,Many To One Map,030,Hastings District,NA
+210700,Akina Park,Many To One Map,030,Hastings District,NA
+210800,Queens Square,Many To One Map,030,Hastings District,NA
+210900,Mayfair,Many To One Map,030,Hastings District,NA
+211000,Parkhaven,Many To One Map,030,Hastings District,NA
+211100,Parkvale,Many To One Map,030,Hastings District,NA
+211201,Mangateretere,Many To One Map,030,Hastings District,NA
+211301,Haumoana,Many To One Map,030,Hastings District,NA
+211302,Te Awanga,Many To One Map,030,Hastings District,NA
+211401,Lucknow,Many To One Map,030,Hastings District,NA
+211500,Karanema-St Hill,Many To One Map,030,Hastings District,NA
+211600,Havelock North-Central,Many To One Map,030,Hastings District,NA
+211701,Brookvale,Many To One Map,030,Hastings District,NA
+211800,Iona,Many To One Map,030,Hastings District,NA
+211900,Hereworth,Many To One Map,030,Hastings District,NA
+212000,Te Mata Hills,Many To One Map,030,Hastings District,NA
+212100,Havelock Hills,Many To One Map,030,Hastings District,NA
+212201,Kahuranaki,Many To One Map,030,Hastings District,NA
+212301,Bay View (Napier City),Many To One Map,031,Napier City,NA
+212400,Poraiti Hills,Many To One Map,031,Napier City,NA
+212500,Poraiti Flat,Many To One Map,031,Napier City,NA
+212600,Westshore,Many To One Map,031,Napier City,NA
+212700,Inlet Napier City,Many To One Map,031,Napier City,NA
+212800,Onekawa West,Many To One Map,031,Napier City,NA
+212900,Ahuriri,Many To One Map,031,Napier City,NA
+213000,Taradale West,Many To One Map,031,Napier City,NA
+213100,Greenmeadows West,Many To One Map,031,Napier City,NA
+213200,Taradale South,Many To One Map,031,Napier City,NA
+213300,Bluff Hill,Many To One Map,031,Napier City,NA
+213400,Hospital Hill,Many To One Map,031,Napier City,NA
+213500,Tamatea West,Many To One Map,031,Napier City,NA
+213600,Tamatea North,Many To One Map,031,Napier City,NA
+213700,Taradale Central,Many To One Map,031,Napier City,NA
+213800,Tamatea East,Many To One Map,031,Napier City,NA
+213900,Marewa West,Many To One Map,031,Napier City,NA
+214000,Greenmeadows Central,Many To One Map,031,Napier City,NA
+214100,Onekawa Central,Many To One Map,031,Napier City,NA
+214200,Pirimai West,Many To One Map,031,Napier City,NA
+214300,Napier Central,Many To One Map,031,Napier City,NA
+214400,Greenmeadows South,Many To One Map,031,Napier City,NA
+214500,Nelson Park,Many To One Map,031,Napier City,NA
+214600,Bledisloe Park,Many To One Map,031,Napier City,NA
+214700,Pirimai East,Many To One Map,031,Napier City,NA
+214800,Onekawa East,Many To One Map,031,Napier City,NA
+214900,Tareha Reserve,Many To One Map,031,Napier City,NA
+215000,Marewa East,Many To One Map,031,Napier City,NA
+215101,Onekawa South,Many To One Map,031,Napier City,NA
+215200,McLean Park,Many To One Map,031,Napier City,NA
+215300,Maraenui,Many To One Map,031,Napier City,NA
+215401,Meeanee-Awatoto,Many To One Map,031,Napier City,NA
+215500,Mangaonuku,Many To One Map,032,Central Hawke's Bay District,NA
+215600,Makaretu,Many To One Map,032,Central Hawke's Bay District,NA
+215700,Waipawa,Many To One Map,032,Central Hawke's Bay District,NA
+215801,Waipukurau West,Many To One Map,032,Central Hawke's Bay District,NA
+215900,Mangarara,Many To One Map,032,Central Hawke's Bay District,NA
+216000,Waipukurau East,Many To One Map,032,Central Hawke's Bay District,NA
+216101,Taurekaitai,Many To One Map,032,Central Hawke's Bay District,NA
+216200,Port Taranaki,Many To One Map,033,New Plymouth District,NA
+216300,Spotswood,Many To One Map,033,New Plymouth District,NA
+216401,Omata,Many To One Map,033,New Plymouth District,NA
+216500,Oakura,Many To One Map,033,New Plymouth District,NA
+216600,Moturoa,Many To One Map,033,New Plymouth District,NA
+216700,Kaitake,Many To One Map,033,New Plymouth District,NA
+216800,Blagdon-Lynmouth,Many To One Map,033,New Plymouth District,NA
+216900,Kawaroa,Many To One Map,033,New Plymouth District,NA
+217000,New Plymouth Central,Many To One Map,033,New Plymouth District,NA
+217100,Marfell,Many To One Map,033,New Plymouth District,NA
+217201,Whalers Gate,Many To One Map,033,New Plymouth District,NA
+217300,Strandon,Many To One Map,033,New Plymouth District,NA
+217400,Westown,Many To One Map,033,New Plymouth District,NA
+217501,Bell Block West,Many To One Map,033,New Plymouth District,NA
+217502,Bell Block Central,Many To One Map,033,New Plymouth District,NA
+217601,Bell Block East-Puketapu,Many To One Map,033,New Plymouth District,NA
+217701,Waiwhakaiho-Bell Block South,Many To One Map,033,New Plymouth District,NA
+217800,Lower Vogeltown,Many To One Map,033,New Plymouth District,NA
+217901,Hurdon,Many To One Map,033,New Plymouth District,NA
+218001,Frankleigh Park,Many To One Map,033,New Plymouth District,NA
+218100,Merrilands,Many To One Map,033,New Plymouth District,NA
+218201,Ferndale,Many To One Map,033,New Plymouth District,NA
+218301,Welbourn,Many To One Map,033,New Plymouth District,NA
+218401,Fitzroy (New Plymouth District),Many To One Map,033,New Plymouth District,NA
+218402,Glen Avon,Many To One Map,033,New Plymouth District,NA
+218500,Waitara West,Many To One Map,033,New Plymouth District,NA
+218600,Upper Vogeltown,Many To One Map,033,New Plymouth District,NA
+218700,Highlands Park (New Plymouth District),Many To One Map,033,New Plymouth District,NA
+218801,Paraite,Many To One Map,033,New Plymouth District,NA
+218901,Waitara East,Many To One Map,033,New Plymouth District,NA
+219000,Lepperton-Brixton,Many To One Map,033,New Plymouth District,NA
+219100,Mangorei,Many To One Map,033,New Plymouth District,NA
+219200,Mount Messenger,Many To One Map,033,New Plymouth District,NA
+219301,Mangaoraka,Many To One Map,033,New Plymouth District,NA
+219401,Tikorangi,Many To One Map,033,New Plymouth District,NA
+219501,Everett Park,Many To One Map,033,New Plymouth District,NA
+219601,Inglewood,Many To One Map,033,New Plymouth District,NA
+219700,Tarata,Many To One Map,033,New Plymouth District,NA
+219800,Pembroke,Many To One Map,034,Stratford District,NA
+219900,Douglas,Many To One Map,034,Stratford District,NA
+220001,Toko,Many To One Map,034,Stratford District,NA
+220101,Stratford North,Many To One Map,034,Stratford District,NA
+220200,Whangamomona,Many To One Map,034,Stratford District,NA
+220301,Stratford Central,Many To One Map,034,Stratford District,NA
+220400,Stratford South,Many To One Map,034,Stratford District,NA
+220501,Parihaka,Many To One Map,035,South Taranaki District,NA
+220600,Taungatara,Many To One Map,035,South Taranaki District,NA
+220700,Opunake,Many To One Map,035,South Taranaki District,NA
+220800,Kaponga-Mangatoki,Many To One Map,035,South Taranaki District,NA
+220901,Manaia,Many To One Map,035,South Taranaki District,NA
+220902,Kapuni,Many To One Map,035,South Taranaki District,NA
+221001,Eltham,Many To One Map,035,South Taranaki District,NA
+221100,Okaiawa,Many To One Map,035,South Taranaki District,NA
+221201,Te Roti-Moeroa,Many To One Map,035,South Taranaki District,NA
+221301,Hawera West,Many To One Map,035,South Taranaki District,NA
+221401,Normanby (South Taranaki District),Many To One Map,035,South Taranaki District,NA
+221402,Tawhiti,Many To One Map,035,South Taranaki District,NA
+221500,Ohangai,Many To One Map,035,South Taranaki District,NA
+221600,Turuturu,Many To One Map,035,South Taranaki District,NA
+221700,King Edward Park,Many To One Map,035,South Taranaki District,NA
+221800,Ramanui,Many To One Map,035,South Taranaki District,NA
+221900,Hawera Central,Many To One Map,035,South Taranaki District,NA
+222000,Mangawhio,Many To One Map,035,South Taranaki District,NA
+222101,Manutahi-Waitotora,Many To One Map,035,South Taranaki District,NA
+222201,Patea,Many To One Map,035,South Taranaki District,NA
+222300,Otangiwai-Ohura,Many To One Map,036,Ruapehu District,NA
+222400,Ngapuke,Many To One Map,036,Ruapehu District,NA
+222500,Taumarunui North,Many To One Map,036,Ruapehu District,NA
+222600,Taumarunui Central,Many To One Map,036,Ruapehu District,NA
+222700,Taumarunui East,Many To One Map,036,Ruapehu District,NA
+222800,National Park,Many To One Map,036,Ruapehu District,NA
+222900,Tangiwai,Many To One Map,036,Ruapehu District,NA
+223000,Raetihi,Many To One Map,036,Ruapehu District,NA
+223100,Ohakune,Many To One Map,036,Ruapehu District,NA
+223200,Waiouru,Many To One Map,036,Ruapehu District,NA
+223300,Upper Whanganui,Many To One Map,037,Whanganui District,NA
+223400,Mowhanau,Many To One Map,037,Whanganui District,NA
+223501,Brunswick-Papaiti,Many To One Map,037,Whanganui District,NA
+223600,Castlecliff West,Many To One Map,037,Whanganui District,NA
+223701,Otamatea (Whanganui District),Many To One Map,037,Whanganui District,NA
+223800,Castlecliff East,Many To One Map,037,Whanganui District,NA
+223901,Springvale North,Many To One Map,037,Whanganui District,NA
+224000,Lower Aramoho,Many To One Map,037,Whanganui District,NA
+224100,St Johns Hill East,Many To One Map,037,Whanganui District,NA
+224200,St Johns Hill West,Many To One Map,037,Whanganui District,NA
+224301,Titoki,Many To One Map,037,Whanganui District,NA
+224401,Springvale West,Many To One Map,037,Whanganui District,NA
+224500,Springvale East,Many To One Map,037,Whanganui District,NA
+224600,Upper Aramoho,Many To One Map,037,Whanganui District,NA
+224700,Balgownie,Many To One Map,037,Whanganui District,NA
+224800,Laird Park,Many To One Map,037,Whanganui District,NA
+224900,Wembley Park,Many To One Map,037,Whanganui District,NA
+225000,College Estate,Many To One Map,037,Whanganui District,NA
+225100,Whanganui East-Williams Domain,Many To One Map,037,Whanganui District,NA
+225200,Gonville West,Many To One Map,037,Whanganui District,NA
+225300,Gonville North,Many To One Map,037,Whanganui District,NA
+225400,Cornmarket,Many To One Map,037,Whanganui District,NA
+225500,Whanganui East-Riverlands,Many To One Map,037,Whanganui District,NA
+225600,Kaitoke-Fordell,Many To One Map,037,Whanganui District,NA
+225700,Whanganui Central,Many To One Map,037,Whanganui District,NA
+225800,Gonville South,Many To One Map,037,Whanganui District,NA
+225900,Bastia-Durie Hill,Many To One Map,037,Whanganui District,NA
+226000,Putiki,Many To One Map,037,Whanganui District,NA
+226100,Mokai Patea,Many To One Map,038,Rangitikei District,NA
+226200,Ngamatea,Many To One Map,038,Rangitikei District,NA
+226300,Turakina,Many To One Map,038,Rangitikei District,NA
+226400,Otairi,Many To One Map,038,Rangitikei District,NA
+226500,Taihape,Many To One Map,038,Rangitikei District,NA
+226601,Marton Rural,Many To One Map,038,Rangitikei District,NA
+226701,Marton North,Many To One Map,038,Rangitikei District,NA
+226800,Parewanui,Many To One Map,038,Rangitikei District,NA
+226900,Marton South,Many To One Map,038,Rangitikei District,NA
+227000,Bulls,Many To One Map,038,Rangitikei District,NA
+227100,Kiwitea,Many To One Map,039,Manawatu District,NA
+227200,Tokorangi,Many To One Map,039,Manawatu District,NA
+227300,Ohakea-Sanson,Many To One Map,039,Manawatu District,NA
+227400,Oroua Downs,Many To One Map,039,Manawatu District,NA
+227500,Awahuri,Many To One Map,039,Manawatu District,NA
+227600,Pohangina-Apiti,Many To One Map,039,Manawatu District,NA
+227700,Mount Taylor,Many To One Map,039,Manawatu District,NA
+227800,Taikorea,Many To One Map,039,Manawatu District,NA
+227900,Makino,Many To One Map,039,Manawatu District,NA
+228000,Sandon,Many To One Map,039,Manawatu District,NA
+228100,Kimbolton North,Many To One Map,039,Manawatu District,NA
+228200,Warwick,Many To One Map,039,Manawatu District,NA
+228300,Kimbolton West,Many To One Map,039,Manawatu District,NA
+228400,Feilding Central,Many To One Map,039,Manawatu District,NA
+228500,Kimbolton South,Many To One Map,039,Manawatu District,NA
+228600,Kauwhata,Many To One Map,039,Manawatu District,NA
+228700,Taonui,Many To One Map,039,Manawatu District,NA
+228800,Newbury,Many To One Map,040,Palmerston North City,NA
+228901,Palmerston North Airport,Many To One Map,040,Palmerston North City,NA
+229001,Milson North,Many To One Map,040,Palmerston North City,NA
+229100,Cloverlea (Palmerston North City),Many To One Map,040,Palmerston North City,NA
+229201,Tremaine,Many To One Map,040,Palmerston North City,NA
+229300,Milson South,Many To One Map,040,Palmerston North City,NA
+229400,Whakarongo,Many To One Map,040,Palmerston North City,NA
+229500,Westbrook,Many To One Map,040,Palmerston North City,NA
+229600,Takaro North,Many To One Map,040,Palmerston North City,NA
+229700,Pioneer West,Many To One Map,040,Palmerston North City,NA
+229800,Palmerston North Hospital,Many To One Map,040,Palmerston North City,NA
+229900,Highbury East,Many To One Map,040,Palmerston North City,NA
+230000,Park West,Many To One Map,040,Palmerston North City,NA
+230100,Takaro South,Many To One Map,040,Palmerston North City,NA
+230200,Roslyn (Palmerston North City),Many To One Map,040,Palmerston North City,NA
+230300,Kelvin Grove West,Many To One Map,040,Palmerston North City,NA
+230400,Kelvin Grove North,Many To One Map,040,Palmerston North City,NA
+230500,Papaioea North,Many To One Map,040,Palmerston North City,NA
+230600,Palmerston North Central,Many To One Map,040,Palmerston North City,NA
+230700,Awapuni North,Many To One Map,040,Palmerston North City,NA
+230800,Terrace End,Many To One Map,040,Palmerston North City,NA
+230900,Maraetarata,Many To One Map,040,Palmerston North City,NA
+231000,Papaioea South,Many To One Map,040,Palmerston North City,NA
+231101,Royal Oak (Palmerston North City),Many To One Map,040,Palmerston North City,NA
+231200,West End,Many To One Map,040,Palmerston North City,NA
+231300,Awapuni South,Many To One Map,040,Palmerston North City,NA
+231400,Milverton,Many To One Map,040,Palmerston North City,NA
+231500,Ruamahanga,Many To One Map,040,Palmerston North City,NA
+231600,Esplanade,Many To One Map,040,Palmerston North City,NA
+231700,Hokowhitu Central,Many To One Map,040,Palmerston North City,NA
+231800,Hokowhitu East,Many To One Map,040,Palmerston North City,NA
+231900,Turitea,Many To One Map,040,Palmerston North City,NA
+232000,Ruahine,Many To One Map,040,Palmerston North City,NA
+232101,Linton Camp,Many To One Map,040,Palmerston North City,NA
+232200,Ashhurst,Many To One Map,040,Palmerston North City,NA
+232300,Hokowhitu South,Many To One Map,040,Palmerston North City,NA
+232400,Aokautere,Many To One Map,040,Palmerston North City,NA
+232501,Pihauatua,Many To One Map,040,Palmerston North City,NA
+232601,Aokautere Rural,Many To One Map,040,Palmerston North City,NA
+232701,Poutoa,Many To One Map,040,Palmerston North City,NA
+232702,Fitzherbert,Many To One Map,040,Palmerston North City,NA
+232800,Norsewood,Many To One Map,041,Tararua District,NA
+232900,Papatawa,Many To One Map,041,Tararua District,NA
+233000,Mangatainoka,Many To One Map,041,Tararua District,NA
+233100,Woodville,Many To One Map,041,Tararua District,NA
+233200,Dannevirke West,Many To One Map,041,Tararua District,NA
+233300,Dannevirke East,Many To One Map,041,Tararua District,NA
+233400,Waitahora,Many To One Map,041,Tararua District,NA
+233500,Kaitawa,Many To One Map,041,Tararua District,NA
+233600,Pahiatua,Many To One Map,041,Tararua District,NA
+233700,Nireaha-Eketahuna,Many To One Map,041,Tararua District,NA
+233801,Owahanga,Many To One Map,041,Tararua District,NA
+233900,Mara,Many To One Map,041,Tararua District,NA
+234001,Kere Kere,Many To One Map,042,Horowhenua District,NA
+234100,Foxton Beach,Many To One Map,042,Horowhenua District,NA
+234201,Foxton North,Many To One Map,042,Horowhenua District,NA
+234301,Foxton South,Many To One Map,042,Horowhenua District,NA
+234400,Waitarere,Many To One Map,042,Horowhenua District,NA
+234500,Waikawa (Horowhenua District),Many To One Map,042,Horowhenua District,NA
+234600,Miranui,Many To One Map,042,Horowhenua District,NA
+234700,Donnelly Park,Many To One Map,042,Horowhenua District,NA
+234801,Ohau-Manakau,Many To One Map,042,Horowhenua District,NA
+234900,Kawiu South,Many To One Map,042,Horowhenua District,NA
+235000,Makomako,Many To One Map,042,Horowhenua District,NA
+235100,Kawiu North,Many To One Map,042,Horowhenua District,NA
+235200,Levin Central,Many To One Map,042,Horowhenua District,NA
+235301,Tararua,Many To One Map,042,Horowhenua District,NA
+235400,Shannon,Many To One Map,042,Horowhenua District,NA
+235500,Queenwood (Horowhenua District),Many To One Map,042,Horowhenua District,NA
+235600,Playford Park,Many To One Map,042,Horowhenua District,NA
+235700,Fairfield (Horowhenua District),Many To One Map,042,Horowhenua District,NA
+235800,Taitoko,Many To One Map,042,Horowhenua District,NA
+235900,Waiopehu,Many To One Map,042,Horowhenua District,NA
+236000,Makahika,Many To One Map,042,Horowhenua District,NA
+236100,Kimberley,Many To One Map,042,Horowhenua District,NA
+236200,Kapiti Island,Many To One Map,043,Kapiti Coast District,NA
+236300,Otaki Beach,Many To One Map,043,Kapiti Coast District,NA
+236401,Forest Lakes (Kapiti Coast District),Many To One Map,043,Kapiti Coast District,NA
+236500,Otaki,Many To One Map,043,Kapiti Coast District,NA
+236600,Te Horo,Many To One Map,043,Kapiti Coast District,NA
+236701,Waitohu,Many To One Map,043,Kapiti Coast District,NA
+236800,Waikanae Beach,Many To One Map,043,Kapiti Coast District,NA
+236900,Peka Peka,Many To One Map,043,Kapiti Coast District,NA
+237001,Paraparaumu Beach North,Many To One Map,043,Kapiti Coast District,NA
+237100,Paraparaumu Beach West,Many To One Map,043,Kapiti Coast District,NA
+237200,Waikanae Park,Many To One Map,043,Kapiti Coast District,NA
+237300,Paraparaumu Beach East,Many To One Map,043,Kapiti Coast District,NA
+237401,Otaihanga,Many To One Map,043,Kapiti Coast District,NA
+237500,Paraparaumu North,Many To One Map,043,Kapiti Coast District,NA
+237600,Waikanae West,Many To One Map,043,Kapiti Coast District,NA
+237700,Otaki Forks,Many To One Map,043,Kapiti Coast District,NA
+237800,Paraparaumu Central,Many To One Map,043,Kapiti Coast District,NA
+237900,Maungakotukutuku,Many To One Map,043,Kapiti Coast District,NA
+238000,Raumati Beach West,Many To One Map,043,Kapiti Coast District,NA
+238100,Waikanae East,Many To One Map,043,Kapiti Coast District,NA
+238200,Tararua Forest Park,Many To One Map,043,Kapiti Coast District,NA
+238300,Raumati Beach East,Many To One Map,043,Kapiti Coast District,NA
+238400,Paraparaumu East,Many To One Map,043,Kapiti Coast District,NA
+238500,Raumati South,Many To One Map,043,Kapiti Coast District,NA
+238600,Paekakariki,Many To One Map,043,Kapiti Coast District,NA
+238700,Mana Island,Many To One Map,044,Porirua City,NA
+238800,Pukerua Bay,Many To One Map,044,Porirua City,NA
+238900,Paekakariki Hill,Many To One Map,044,Porirua City,NA
+239000,Plimmerton,Many To One Map,044,Porirua City,NA
+239100,Titahi Bay North,Many To One Map,044,Porirua City,NA
+239200,Titahi Bay South,Many To One Map,044,Porirua City,NA
+239300,Elsdon-Takapuwahia,Many To One Map,044,Porirua City,NA
+239401,Pauatahanui,Many To One Map,044,Porirua City,NA
+239500,Onepoto,Many To One Map,044,Porirua City,NA
+239600,Camborne,Many To One Map,044,Porirua City,NA
+239701,Inlet Porirua Harbour,Many To One Map,044,Porirua City,NA
+239801,Paremata,Many To One Map,044,Porirua City,NA
+239900,Porirua Central,Many To One Map,044,Porirua City,NA
+240000,Papakowhai,Many To One Map,044,Porirua City,NA
+240100,Aotea,Many To One Map,044,Porirua City,NA
+240201,Postgate,Many To One Map,044,Porirua City,NA
+240300,Ascot Park,Many To One Map,044,Porirua City,NA
+240401,Whitby,Many To One Map,044,Porirua City,NA
+240500,Porirua East,Many To One Map,044,Porirua City,NA
+240601,Endeavour West,Many To One Map,044,Porirua City,NA
+240602,Endeavour East,Many To One Map,044,Porirua City,NA
+240700,Cannons Creek North,Many To One Map,044,Porirua City,NA
+240801,Waitangirua Tairangi,Many To One Map,044,Porirua City,NA
+240802,Waitangirua Corinna,Many To One Map,044,Porirua City,NA
+240900,Ranui Heights,Many To One Map,044,Porirua City,NA
+241000,Cannons Creek East,Many To One Map,044,Porirua City,NA
+241100,Cannons Creek South,Many To One Map,044,Porirua City,NA
+241200,Akatarawa,Many To One Map,045,Upper Hutt City,NA
+241300,Riverstone Terraces,Many To One Map,045,Upper Hutt City,NA
+241400,Heretaunga,Many To One Map,045,Upper Hutt City,NA
+241500,Birchville-Brown Owl,Many To One Map,045,Upper Hutt City,NA
+241600,Poets Block,Many To One Map,045,Upper Hutt City,NA
+241700,Brentwood (Upper Hutt City),Many To One Map,045,Upper Hutt City,NA
+241800,Silverstream (Upper Hutt City),Many To One Map,045,Upper Hutt City,NA
+241900,Elderslea,Many To One Map,045,Upper Hutt City,NA
+242000,Trentham North,Many To One Map,045,Upper Hutt City,NA
+242100,Totara Park,Many To One Map,045,Upper Hutt City,NA
+242200,Trentham South,Many To One Map,045,Upper Hutt City,NA
+242300,Mangaroa,Many To One Map,045,Upper Hutt City,NA
+242400,Ebdentown,Many To One Map,045,Upper Hutt City,NA
+242500,Wallaceville,Many To One Map,045,Upper Hutt City,NA
+242600,Maoribank,Many To One Map,045,Upper Hutt City,NA
+242700,Te Marua,Many To One Map,045,Upper Hutt City,NA
+242800,Pinehaven,Many To One Map,045,Upper Hutt City,NA
+242900,Clouston Park,Many To One Map,045,Upper Hutt City,NA
+243000,Upper Hutt Central,Many To One Map,045,Upper Hutt City,NA
+243100,Belmont Park,Many To One Map,046,Lower Hutt City,NA
+243200,Maungaraki,Many To One Map,046,Lower Hutt City,NA
+243300,Korokoro,Many To One Map,046,Lower Hutt City,NA
+243400,Kelson,Many To One Map,046,Lower Hutt City,NA
+243500,Normandale,Many To One Map,046,Lower Hutt City,NA
+243600,Belmont (Lower Hutt City),Many To One Map,046,Lower Hutt City,NA
+243700,Petone Central,Many To One Map,046,Lower Hutt City,NA
+243800,Tirohanga,Many To One Map,046,Lower Hutt City,NA
+243900,Manor Park,Many To One Map,046,Lower Hutt City,NA
+244000,Alicetown-Melling,Many To One Map,046,Lower Hutt City,NA
+244100,Taita North,Many To One Map,046,Lower Hutt City,NA
+244200,Boulcott,Many To One Map,046,Lower Hutt City,NA
+244300,Hutt Central North,Many To One Map,046,Lower Hutt City,NA
+244400,Avalon West,Many To One Map,046,Lower Hutt City,NA
+244500,Stokes Valley Central,Many To One Map,046,Lower Hutt City,NA
+244600,Taita South,Many To One Map,046,Lower Hutt City,NA
+244700,Petone East,Many To One Map,046,Lower Hutt City,NA
+244800,Hutt Central South,Many To One Map,046,Lower Hutt City,NA
+244900,Stokes Valley North,Many To One Map,046,Lower Hutt City,NA
+245000,Petone Esplanade,Many To One Map,046,Lower Hutt City,NA
+245100,Epuni West,Many To One Map,046,Lower Hutt City,NA
+245200,Avalon East,Many To One Map,046,Lower Hutt City,NA
+245300,Woburn,Many To One Map,046,Lower Hutt City,NA
+245400,Naenae Central,Many To One Map,046,Lower Hutt City,NA
+245500,Waterloo West,Many To One Map,046,Lower Hutt City,NA
+245600,Epuni East,Many To One Map,046,Lower Hutt City,NA
+245700,Gracefield,Many To One Map,046,Lower Hutt City,NA
+245800,Moera,Many To One Map,046,Lower Hutt City,NA
+245900,Delaney,Many To One Map,046,Lower Hutt City,NA
+246001,Waiwhetu North,Many To One Map,046,Lower Hutt City,NA
+246002,Waiwhetu South,Many To One Map,046,Lower Hutt City,NA
+246100,Waterloo East,Many To One Map,046,Lower Hutt City,NA
+246200,Naenae North,Many To One Map,046,Lower Hutt City,NA
+246300,Manuka,Many To One Map,046,Lower Hutt City,NA
+246400,Naenae South,Many To One Map,046,Lower Hutt City,NA
+246500,Towai,Many To One Map,046,Lower Hutt City,NA
+246600,Arakura,Many To One Map,046,Lower Hutt City,NA
+246700,Eastern Bays,Many To One Map,046,Lower Hutt City,NA
+246800,Pencarrow,Many To One Map,046,Lower Hutt City,NA
+246900,Wainuiomata West,Many To One Map,046,Lower Hutt City,NA
+247000,Glendale,Many To One Map,046,Lower Hutt City,NA
+247100,Wainuiomata Central,Many To One Map,046,Lower Hutt City,NA
+247200,Eastbourne,Many To One Map,046,Lower Hutt City,NA
+247300,Homedale East,Many To One Map,046,Lower Hutt City,NA
+247400,Homedale West,Many To One Map,046,Lower Hutt City,NA
+247501,Makara-Ohariu,Many To One Map,047,Wellington City,NA
+247600,Tawa North,Many To One Map,047,Wellington City,NA
+247700,Linden,Many To One Map,047,Wellington City,NA
+247800,Tawa South,Many To One Map,047,Wellington City,NA
+247900,Tawa Central,Many To One Map,047,Wellington City,NA
+248000,Grenada North,Many To One Map,047,Wellington City,NA
+248101,Churton Park North,Many To One Map,047,Wellington City,NA
+248102,Glenside-Churton Park East,Many To One Map,047,Wellington City,NA
+248200,Takapu-Horokiwi,Many To One Map,047,Wellington City,NA
+248301,Churton Park South,Many To One Map,047,Wellington City,NA
+248400,Johnsonville West,Many To One Map,047,Wellington City,NA
+248500,Grenada Village,Many To One Map,047,Wellington City,NA
+248600,Johnsonville North,Many To One Map,047,Wellington City,NA
+248701,Paparangi,Many To One Map,047,Wellington City,NA
+248800,Ngaio North,Many To One Map,047,Wellington City,NA
+248900,Johnsonville Central,Many To One Map,047,Wellington City,NA
+249000,Broadmeadows,Many To One Map,047,Wellington City,NA
+249101,Crofton Downs,Many To One Map,047,Wellington City,NA
+249200,Johnsonville South,Many To One Map,047,Wellington City,NA
+249300,Khandallah Reserve,Many To One Map,047,Wellington City,NA
+249401,Karori Park,Many To One Map,047,Wellington City,NA
+249402,Karori West,Many To One Map,047,Wellington City,NA
+249501,Newlands North,Many To One Map,047,Wellington City,NA
+249600,Ngaio South,Many To One Map,047,Wellington City,NA
+249701,Newlands South,Many To One Map,047,Wellington City,NA
+249702,Newlands East,Many To One Map,047,Wellington City,NA
+249800,Woodridge,Many To One Map,047,Wellington City,NA
+249900,Karori North,Many To One Map,047,Wellington City,NA
+250000,Khandallah North,Many To One Map,047,Wellington City,NA
+250100,Wilton,Many To One Map,047,Wellington City,NA
+250200,Khandallah South,Many To One Map,047,Wellington City,NA
+250300,Wadestown,Many To One Map,047,Wellington City,NA
+250401,Karori South,Many To One Map,047,Wellington City,NA
+250500,Onslow,Many To One Map,047,Wellington City,NA
+250600,Karori East,Many To One Map,047,Wellington City,NA
+250700,Pipitea-Kaiwharawhara,Many To One Map,047,Wellington City,NA
+250800,Northland (Wellington City),Many To One Map,047,Wellington City,NA
+250901,Thorndon North,Many To One Map,047,Wellington City,NA
+250902,Thorndon South,Many To One Map,047,Wellington City,NA
+251000,Wellington Botanic Gardens,Many To One Map,047,Wellington City,NA
+251100,Kelburn,Many To One Map,047,Wellington City,NA
+251200,Aro Valley,Many To One Map,047,Wellington City,NA
+251300,Wellington University,Many To One Map,047,Wellington City,NA
+251400,Wellington Central,Many To One Map,047,Wellington City,NA
+251500,Brooklyn North,Many To One Map,047,Wellington City,NA
+251601,Dixon Street West,Many To One Map,047,Wellington City,NA
+251602,Dixon Street East,Many To One Map,047,Wellington City,NA
+251700,Vivian West,Many To One Map,047,Wellington City,NA
+251800,Courtenay,Many To One Map,047,Wellington City,NA
+251900,Brooklyn East,Many To One Map,047,Wellington City,NA
+252001,Mount Cook North,Many To One Map,047,Wellington City,NA
+252002,Mount Cook South,Many To One Map,047,Wellington City,NA
+252100,Vivian East,Many To One Map,047,Wellington City,NA
+252200,Brooklyn South,Many To One Map,047,Wellington City,NA
+252300,Oriental Bay,Many To One Map,047,Wellington City,NA
+252400,Mount Cook East,Many To One Map,047,Wellington City,NA
+252501,Mount Victoria North,Many To One Map,047,Wellington City,NA
+252502,Mount Victoria South,Many To One Map,047,Wellington City,NA
+252600,Roseneath,Many To One Map,047,Wellington City,NA
+252700,Owhiro Bay,Many To One Map,047,Wellington City,NA
+252800,Kingston-Mornington-Vogeltown,Many To One Map,047,Wellington City,NA
+252900,Newtown North,Many To One Map,047,Wellington City,NA
+253000,Newtown West,Many To One Map,047,Wellington City,NA
+253101,Hataitai North West,Many To One Map,047,Wellington City,NA
+253102,Hataitai North East,Many To One Map,047,Wellington City,NA
+253200,Evans Bay,Many To One Map,047,Wellington City,NA
+253300,Berhampore,Many To One Map,047,Wellington City,NA
+253400,Hataitai South,Many To One Map,047,Wellington City,NA
+253501,Maupuia,Many To One Map,047,Wellington City,NA
+253600,Newtown South,Many To One Map,047,Wellington City,NA
+253700,Kilbirnie Central,Many To One Map,047,Wellington City,NA
+253800,Island Bay West,Many To One Map,047,Wellington City,NA
+253900,Melrose,Many To One Map,047,Wellington City,NA
+254000,Island Bay East,Many To One Map,047,Wellington City,NA
+254100,Miramar North,Many To One Map,047,Wellington City,NA
+254200,Kilbirnie East,Many To One Map,047,Wellington City,NA
+254300,Lyall Bay,Many To One Map,047,Wellington City,NA
+254401,Miramar Central,Many To One Map,047,Wellington City,NA
+254500,Southgate,Many To One Map,047,Wellington City,NA
+254600,Karaka Bay-Worser Bay,Many To One Map,047,Wellington City,NA
+254700,Houghton Bay,Many To One Map,047,Wellington City,NA
+254800,Miramar East,Many To One Map,047,Wellington City,NA
+254900,Miramar South,Many To One Map,047,Wellington City,NA
+255000,Rongotai,Many To One Map,047,Wellington City,NA
+255100,Strathmore (Wellington City),Many To One Map,047,Wellington City,NA
+255200,Seatoun,Many To One Map,047,Wellington City,NA
+255300,Kopuaranga,Many To One Map,048,Masterton District,NA
+255401,Upper Plain,Many To One Map,048,Masterton District,NA
+255501,Opaki,Many To One Map,048,Masterton District,NA
+255601,Ngaumutawa,Many To One Map,048,Masterton District,NA
+255700,Solway North,Many To One Map,048,Masterton District,NA
+255800,Lansdowne West,Many To One Map,048,Masterton District,NA
+255900,Masterton Central,Many To One Map,048,Masterton District,NA
+256000,Kuripuni,Many To One Map,048,Masterton District,NA
+256100,Douglas Park,Many To One Map,048,Masterton District,NA
+256200,Solway South,Many To One Map,048,Masterton District,NA
+256301,Lansdowne East,Many To One Map,048,Masterton District,NA
+256400,Cameron and Soldiers Park,Many To One Map,048,Masterton District,NA
+256500,Whareama,Many To One Map,048,Masterton District,NA
+256600,Homebush-Te Ore Ore,Many To One Map,048,Masterton District,NA
+256700,McJorrow Park,Many To One Map,048,Masterton District,NA
+256800,Mount Holdsworth,Many To One Map,049,Carterton District,NA
+256900,Carterton North,Many To One Map,049,Carterton District,NA
+257000,Kokotau,Many To One Map,049,Carterton District,NA
+257100,Carterton South,Many To One Map,049,Carterton District,NA
+257200,Gladstone (Carterton District),Many To One Map,049,Carterton District,NA
+257300,Tauherenikau,Many To One Map,050,South Wairarapa District,NA
+257400,Kahutara,Many To One Map,050,South Wairarapa District,NA
+257500,Featherston,Many To One Map,050,South Wairarapa District,NA
+257600,Inland water Lake Wairarapa,Many To One Map,050,South Wairarapa District,NA
+257700,Greytown,Many To One Map,050,South Wairarapa District,NA
+257801,Aorangi Forest,Many To One Map,050,South Wairarapa District,NA
+257901,Martinborough,Many To One Map,050,South Wairarapa District,NA
+258000,Oceanic Three Kings Islands,Many To One Map,999,Area Outside Territorial Authority,NA
+258100,Three Kings Islands,Many To One Map,999,Area Outside Territorial Authority,NA
+258200,Oceanic Northland Region,Many To One Map,999,Area Outside Territorial Authority,NA
+258300,Inlet Doubtless Bay,Many To One Map,999,Area Outside Territorial Authority,NA
+258400,Inlet Kaipara Harbour North,Many To One Map,999,Area Outside Territorial Authority,NA
+258500,Oceanic Waikato Region East,Many To One Map,999,Area Outside Territorial Authority,NA
+258600,Inlets Waikato Region,Many To One Map,999,Area Outside Territorial Authority,NA
+258700,Oceanic Waikato Region West,Many To One Map,999,Area Outside Territorial Authority,NA
+258800,Oceanic Bay of Plenty Region,Many To One Map,999,Area Outside Territorial Authority,NA
+258900,Islands Bay of Plenty Region,Many To One Map,999,Area Outside Territorial Authority,NA
+259000,Oceanic Taranaki Region,Many To One Map,999,Area Outside Territorial Authority,NA
+259100,Inlet Port Taranaki,Many To One Map,999,Area Outside Territorial Authority,NA
+259200,Oceanic Gisborne Region,Many To One Map,999,Area Outside Territorial Authority,NA
+259300,Oceanic Manawatu-Whanganui Region West,Many To One Map,999,Area Outside Territorial Authority,NA
+259400,Oceanic Hawke's Bay Region,Many To One Map,999,Area Outside Territorial Authority,NA
+259500,Inlet Port Napier,Many To One Map,999,Area Outside Territorial Authority,NA
+259600,Oceanic Wellington Region,Many To One Map,999,Area Outside Territorial Authority,NA
+259700,Inlet Wellington Harbour,Many To One Map,999,Area Outside Territorial Authority,NA
+259800,Bare Island,Many To One Map,999,Area Outside Territorial Authority,NA
+259900,Oceanic Manawatu-Whanganui Region East,Many To One Map,999,Area Outside Territorial Authority,NA
+300200,Oceanic Tasman Region,Many To One Map,051,Tasman District,NA
+300301,Golden Bay/Mohua,Many To One Map,051,Tasman District,NA
+300401,Inlets Golden Bay,Many To One Map,051,Tasman District,NA
+300500,Takaka,Many To One Map,051,Tasman District,NA
+300601,Pohara-Abel Tasman,Many To One Map,051,Tasman District,NA
+300700,Takaka Hills,Many To One Map,051,Tasman District,NA
+300801,Kaiteriteri-Riwaka,Many To One Map,051,Tasman District,NA
+300900,Upper Moutere,Many To One Map,051,Tasman District,NA
+301000,Lower Moutere,Many To One Map,051,Tasman District,NA
+301101,Motueka North,Many To One Map,051,Tasman District,NA
+301200,Motueka West,Many To One Map,051,Tasman District,NA
+301301,Motueka East,Many To One Map,051,Tasman District,NA
+301401,Inlets Motueka,Many To One Map,051,Tasman District,NA
+301500,Golden Downs,Many To One Map,051,Tasman District,NA
+301601,Moutere Hills,Many To One Map,051,Tasman District,NA
+301602,Waimea Inlet,Many To One Map,051,Tasman District,NA
+301703,Ruby Bay,Many To One Map,051,Tasman District,NA
+301704,Mapua,Many To One Map,051,Tasman District,NA
+301800,Murchison-Nelson Lakes,Many To One Map,051,Tasman District,NA
+301900,Inlet Waimea West,Many To One Map,051,Tasman District,NA
+302000,Islands Tasman District,Many To One Map,051,Tasman District,NA
+302101,Waimea West,Many To One Map,051,Tasman District,NA
+302201,Appleby (Tasman District),Many To One Map,051,Tasman District,NA
+302300,Wakefield,Many To One Map,051,Tasman District,NA
+302400,Richmond West (Tasman District),Many To One Map,051,Tasman District,NA
+302500,Wakefield Rural,Many To One Map,051,Tasman District,NA
+302600,Brightwater,Many To One Map,051,Tasman District,NA
+302701,Hope,Many To One Map,051,Tasman District,NA
+302800,Richmond Central (Tasman District),Many To One Map,051,Tasman District,NA
+302900,Ben Cooper Park,Many To One Map,051,Tasman District,NA
+303001,Richmond South (Tasman District),Many To One Map,051,Tasman District,NA
+303100,Wilkes Park,Many To One Map,051,Tasman District,NA
+303200,Templemore,Many To One Map,051,Tasman District,NA
+303300,Easby Park,Many To One Map,051,Tasman District,NA
+303400,Fairose,Many To One Map,051,Tasman District,NA
+303500,Aniseed Valley,Many To One Map,051,Tasman District,NA
+303600,Nelson Rural,Many To One Map,052,Nelson City,NA
+303701,Inlets Nelson City,Many To One Map,052,Nelson City,NA
+303800,Marybank,Many To One Map,052,Nelson City,NA
+303901,Port Nelson,Many To One Map,052,Nelson City,NA
+304000,Nelson Airport,Many To One Map,052,Nelson City,NA
+304100,Tahunanui,Many To One Map,052,Nelson City,NA
+304200,Britannia,Many To One Map,052,Nelson City,NA
+304300,Atawhai,Many To One Map,052,Nelson City,NA
+304400,Broadgreen-Monaco,Many To One Map,052,Nelson City,NA
+304500,Washington,Many To One Map,052,Nelson City,NA
+304600,Tahuna Hills,Many To One Map,052,Nelson City,NA
+304700,Nelson Central-Trafalgar,Many To One Map,052,Nelson City,NA
+304800,The Wood,Many To One Map,052,Nelson City,NA
+304900,Toi Toi,Many To One Map,052,Nelson City,NA
+305000,Nayland,Many To One Map,052,Nelson City,NA
+305100,Aldinga,Many To One Map,052,Nelson City,NA
+305200,Victory,Many To One Map,052,Nelson City,NA
+305300,Rutherford,Many To One Map,052,Nelson City,NA
+305400,Maitlands,Many To One Map,052,Nelson City,NA
+305500,Maitai,Many To One Map,052,Nelson City,NA
+305600,Grampians,Many To One Map,052,Nelson City,NA
+305700,Saxton,Many To One Map,052,Nelson City,NA
+305800,Suffolk,Many To One Map,052,Nelson City,NA
+305900,Omaio,Many To One Map,052,Nelson City,NA
+306000,Enner Glynn,Many To One Map,052,Nelson City,NA
+306100,Daelyn,Many To One Map,052,Nelson City,NA
+306200,The Brook,Many To One Map,052,Nelson City,NA
+306301,Marlborough Sounds West,Many To One Map,053,Marlborough District,NA
+306401,Marlborough Sounds Coastal Marine,Many To One Map,053,Marlborough District,NA
+306501,Marlborough Sounds East,Many To One Map,053,Marlborough District,NA
+306600,Upper Wairau,Many To One Map,053,Marlborough District,NA
+306701,Waikawa (Marlborough District),Many To One Map,053,Marlborough District,NA
+306801,Waitohi (Marlborough District),Many To One Map,053,Marlborough District,NA
+306900,Tuamarina,Many To One Map,053,Marlborough District,NA
+307000,Awatere,Many To One Map,053,Marlborough District,NA
+307100,Renwick,Many To One Map,053,Marlborough District,NA
+307200,Lower Wairau,Many To One Map,053,Marlborough District,NA
+307301,Woodbourne,Many To One Map,053,Marlborough District,NA
+307400,Spring Creek-Grovetown,Many To One Map,053,Marlborough District,NA
+307501,Springlands,Many To One Map,053,Marlborough District,NA
+307601,Yelverton,Many To One Map,053,Marlborough District,NA
+307700,Mayfield,Many To One Map,053,Marlborough District,NA
+307801,Whitney West,Many To One Map,053,Marlborough District,NA
+307802,Burleigh,Many To One Map,053,Marlborough District,NA
+307900,Blenheim Central,Many To One Map,053,Marlborough District,NA
+308000,Riversdale-Islington,Many To One Map,053,Marlborough District,NA
+308100,Whitney East,Many To One Map,053,Marlborough District,NA
+308200,Redwoodtown West,Many To One Map,053,Marlborough District,NA
+308300,Witherlea West,Many To One Map,053,Marlborough District,NA
+308400,Redwoodtown East,Many To One Map,053,Marlborough District,NA
+308500,Riverlands,Many To One Map,053,Marlborough District,NA
+308600,Witherlea East,Many To One Map,053,Marlborough District,NA
+308700,Inlet Wairau River,Many To One Map,053,Marlborough District,NA
+308800,Kaikoura Ranges,Many To One Map,054,Kaikoura District,NA
+308900,Kaikoura,Many To One Map,054,Kaikoura District,NA
+309000,Karamea,Many To One Map,055,Buller District,NA
+309101,Inlets Buller District,Many To One Map,055,Buller District,NA
+309201,Westport North,Many To One Map,055,Buller District,NA
+309300,Westport Rural,Many To One Map,055,Buller District,NA
+309400,Westport South,Many To One Map,055,Buller District,NA
+309500,Buller Coalfields,Many To One Map,055,Buller District,NA
+309600,Charleston (Buller District),Many To One Map,055,Buller District,NA
+309700,Inangahua,Many To One Map,055,Buller District,NA
+309800,Reefton,Many To One Map,055,Buller District,NA
+309900,Barrytown,Many To One Map,056,Grey District,NA
+310000,Runanga,Many To One Map,056,Grey District,NA
+310101,Cobden,Many To One Map,056,Grey District,NA
+310102,Inlet Grey River,Many To One Map,056,Grey District,NA
+310200,Blaketown,Many To One Map,056,Grey District,NA
+310300,Greymouth Central,Many To One Map,056,Grey District,NA
+310400,King Park,Many To One Map,056,Grey District,NA
+310500,Marsden,Many To One Map,056,Grey District,NA
+310600,Karoro,Many To One Map,056,Grey District,NA
+310700,Rutherglen-Camerons,Many To One Map,056,Grey District,NA
+310801,Greymouth Rural,Many To One Map,056,Grey District,NA
+310901,Dobson,Many To One Map,056,Grey District,NA
+311000,Nelson Creek,Many To One Map,056,Grey District,NA
+311101,Lake Brunner,Many To One Map,056,Grey District,NA
+311200,Haast,Many To One Map,057,Westland District,NA
+311300,Westland Glaciers-Bruce Bay,Many To One Map,057,Westland District,NA
+311401,Arahura-Kumara,Many To One Map,057,Westland District,NA
+311501,Hokitika,Many To One Map,057,Westland District,NA
+311600,Inlets Westland District,Many To One Map,057,Westland District,NA
+311701,Hokitika Rural,Many To One Map,057,Westland District,NA
+311800,Waitaha,Many To One Map,057,Westland District,NA
+311900,Whataroa-Harihari,Many To One Map,057,Westland District,NA
+312001,Hokitika Valley-Otira,Many To One Map,057,Westland District,NA
+312100,Hanmer Range,Many To One Map,058,Hurunui District,NA
+312200,Amuri,Many To One Map,058,Hurunui District,NA
+312300,Hanmer Springs,Many To One Map,058,Hurunui District,NA
+312400,Upper Hurunui,Many To One Map,058,Hurunui District,NA
+312500,Parnassus,Many To One Map,058,Hurunui District,NA
+312600,Ashley Forest,Many To One Map,058,Hurunui District,NA
+312700,Omihi,Many To One Map,058,Hurunui District,NA
+312801,Balcairn,Many To One Map,058,Hurunui District,NA
+312901,Amberley,Many To One Map,058,Hurunui District,NA
+313000,Okuku,Many To One Map,059,Waimakariri District,NA
+313100,Ashley Gorge,Many To One Map,059,Waimakariri District,NA
+313200,Oxford,Many To One Map,059,Waimakariri District,NA
+313300,Starvation Hill-Cust,Many To One Map,059,Waimakariri District,NA
+313400,Loburn,Many To One Map,059,Waimakariri District,NA
+313500,Eyrewell,Many To One Map,059,Waimakariri District,NA
+313600,West Eyreton,Many To One Map,059,Waimakariri District,NA
+313700,Ashley-Sefton,Many To One Map,059,Waimakariri District,NA
+313801,Fernside,Many To One Map,059,Waimakariri District,NA
+313900,Rangiora North West,Many To One Map,059,Waimakariri District,NA
+314000,Kingsbury,Many To One Map,059,Waimakariri District,NA
+314100,Ashgrove,Many To One Map,059,Waimakariri District,NA
+314200,Rangiora North East,Many To One Map,059,Waimakariri District,NA
+314301,Oxford Estate,Many To One Map,059,Waimakariri District,NA
+314400,Rangiora Central,Many To One Map,059,Waimakariri District,NA
+314501,Rangiora South West,Many To One Map,059,Waimakariri District,NA
+314600,Lilybrook,Many To One Map,059,Waimakariri District,NA
+314701,Waikuku,Many To One Map,059,Waimakariri District,NA
+314702,Ravenswood,Many To One Map,059,Waimakariri District,NA
+314703,Waikuku Beach,Many To One Map,059,Waimakariri District,NA
+314801,Mandeville,Many To One Map,059,Waimakariri District,NA
+314802,Ohoka,Many To One Map,059,Waimakariri District,NA
+314900,Rangiora South East,Many To One Map,059,Waimakariri District,NA
+315001,Southbrook,Many To One Map,059,Waimakariri District,NA
+315100,Swannanoa-Eyreton,Many To One Map,059,Waimakariri District,NA
+315200,Tuahiwi,Many To One Map,059,Waimakariri District,NA
+315301,Woodend,Many To One Map,059,Waimakariri District,NA
+315400,Pegasus,Many To One Map,059,Waimakariri District,NA
+315500,Clarkville,Many To One Map,059,Waimakariri District,NA
+315601,Pegasus Bay,Many To One Map,059,Waimakariri District,NA
+315700,Kaiapoi North West,Many To One Map,059,Waimakariri District,NA
+315800,Silverstream (Waimakariri District),Many To One Map,059,Waimakariri District,NA
+315901,Sovereign Palms,Many To One Map,059,Waimakariri District,NA
+316000,Kaiapoi West,Many To One Map,059,Waimakariri District,NA
+316100,Kaiapoi Central,Many To One Map,059,Waimakariri District,NA
+316200,Kaiapoi South,Many To One Map,059,Waimakariri District,NA
+316300,Kaiapoi East,Many To One Map,059,Waimakariri District,NA
+316401,McLeans Island,Many To One Map,060,Christchurch City,NA
+316500,Paparua,Many To One Map,060,Christchurch City,NA
+316600,Yaldhurst,Many To One Map,060,Christchurch City,NA
+316700,Christchurch Airport,Many To One Map,060,Christchurch City,NA
+316800,Clearwater,Many To One Map,060,Christchurch City,NA
+316900,Belfast West,Many To One Map,060,Christchurch City,NA
+317000,Harewood,Many To One Map,060,Christchurch City,NA
+317100,Brooklands-Spencerville,Many To One Map,060,Christchurch City,NA
+317201,Styx,Many To One Map,060,Christchurch City,NA
+317301,Belfast East,Many To One Map,060,Christchurch City,NA
+317400,Northwood,Many To One Map,060,Christchurch City,NA
+317501,Burnside West,Many To One Map,060,Christchurch City,NA
+317600,Regents Park,Many To One Map,060,Christchurch City,NA
+317701,Russley,Many To One Map,060,Christchurch City,NA
+317800,Bishopdale North,Many To One Map,060,Christchurch City,NA
+317900,Casebrook,Many To One Map,060,Christchurch City,NA
+318000,Bishopdale West,Many To One Map,060,Christchurch City,NA
+318100,Templeton,Many To One Map,060,Christchurch City,NA
+318200,Islington,Many To One Map,060,Christchurch City,NA
+318300,Burnside Park,Many To One Map,060,Christchurch City,NA
+318401,Marshland,Many To One Map,060,Christchurch City,NA
+318402,Burlington-Oakbridge,Many To One Map,060,Christchurch City,NA
+318501,Avonhead North,Many To One Map,060,Christchurch City,NA
+318600,Redwood North,Many To One Map,060,Christchurch City,NA
+318700,Broomfield,Many To One Map,060,Christchurch City,NA
+318800,Redwood West,Many To One Map,060,Christchurch City,NA
+318901,Avonhead West,Many To One Map,060,Christchurch City,NA
+319000,Bishopdale South,Many To One Map,060,Christchurch City,NA
+319101,Islington-Hornby Industrial,Many To One Map,060,Christchurch City,NA
+319200,Burnside,Many To One Map,060,Christchurch City,NA
+319300,Hei Hei,Many To One Map,060,Christchurch City,NA
+319400,Papanui North,Many To One Map,060,Christchurch City,NA
+319500,Avonhead East,Many To One Map,060,Christchurch City,NA
+319600,Redwood East,Many To One Map,060,Christchurch City,NA
+319700,Avonhead South,Many To One Map,060,Christchurch City,NA
+319800,Riccarton Racecourse,Many To One Map,060,Christchurch City,NA
+319900,Bryndwr North,Many To One Map,060,Christchurch City,NA
+320000,Northlands (Christchurch City),Many To One Map,060,Christchurch City,NA
+320100,Papanui West,Many To One Map,060,Christchurch City,NA
+320200,Ilam North,Many To One Map,060,Christchurch City,NA
+320300,Hornby West,Many To One Map,060,Christchurch City,NA
+320400,Hornby Central,Many To One Map,060,Christchurch City,NA
+320501,Northcote (Christchurch City),Many To One Map,060,Christchurch City,NA
+320600,Jellie Park,Many To One Map,060,Christchurch City,NA
+320700,Ilam South,Many To One Map,060,Christchurch City,NA
+320800,Bryndwr South,Many To One Map,060,Christchurch City,NA
+320900,Papanui East,Many To One Map,060,Christchurch City,NA
+321000,Sockburn North,Many To One Map,060,Christchurch City,NA
+321101,Hornby South,Many To One Map,060,Christchurch City,NA
+321102,Branston,Many To One Map,060,Christchurch City,NA
+321200,Ilam University,Many To One Map,060,Christchurch City,NA
+321301,Prestons,Many To One Map,060,Christchurch City,NA
+321302,Prestons Park,Many To One Map,060,Christchurch City,NA
+321400,Strowan,Many To One Map,060,Christchurch City,NA
+321500,Fendalton,Many To One Map,060,Christchurch City,NA
+321600,Waitikiri,Many To One Map,060,Christchurch City,NA
+321701,Mairehau North,Many To One Map,060,Christchurch City,NA
+321800,Bush Inn,Many To One Map,060,Christchurch City,NA
+321901,Awatea North,Many To One Map,060,Christchurch City,NA
+322000,Upper Riccarton,Many To One Map,060,Christchurch City,NA
+322100,Malvern,Many To One Map,060,Christchurch City,NA
+322200,Rutland,Many To One Map,060,Christchurch City,NA
+322300,Sockburn South,Many To One Map,060,Christchurch City,NA
+322400,Deans Bush,Many To One Map,060,Christchurch City,NA
+322500,Wigram North,Many To One Map,060,Christchurch City,NA
+322600,Holmwood,Many To One Map,060,Christchurch City,NA
+322700,Wharenui,Many To One Map,060,Christchurch City,NA
+322800,Wigram West,Many To One Map,060,Christchurch City,NA
+322900,Awatea South,Many To One Map,060,Christchurch City,NA
+323000,Merivale,Many To One Map,060,Christchurch City,NA
+323100,Mairehau South,Many To One Map,060,Christchurch City,NA
+323200,Mona Vale,Many To One Map,060,Christchurch City,NA
+323300,Riccarton West,Many To One Map,060,Christchurch City,NA
+323400,Shirley West,Many To One Map,060,Christchurch City,NA
+323500,Middleton,Many To One Map,060,Christchurch City,NA
+323600,Wigram South,Many To One Map,060,Christchurch City,NA
+323700,Queenspark,Many To One Map,060,Christchurch City,NA
+323800,St Albans North,Many To One Map,060,Christchurch City,NA
+323900,St Albans West,Many To One Map,060,Christchurch City,NA
+324001,Burwood North,Many To One Map,060,Christchurch City,NA
+324100,Wigram East,Many To One Map,060,Christchurch City,NA
+324200,Riccarton Central,Many To One Map,060,Christchurch City,NA
+324300,Oaklands West,Many To One Map,060,Christchurch City,NA
+324400,Riccarton South,Many To One Map,060,Christchurch City,NA
+324501,Halswell West,Many To One Map,060,Christchurch City,NA
+324502,Halswell South West,Many To One Map,060,Christchurch City,NA
+324600,Shirley East,Many To One Map,060,Christchurch City,NA
+324700,Broken Run,Many To One Map,060,Christchurch City,NA
+324800,St Albans East,Many To One Map,060,Christchurch City,NA
+324900,Hagley Park,Many To One Map,060,Christchurch City,NA
+325000,Hillmorton,Many To One Map,060,Christchurch City,NA
+325100,Parklands,Many To One Map,060,Christchurch City,NA
+325200,Riccarton East,Many To One Map,060,Christchurch City,NA
+325301,Edgeware North,Many To One Map,060,Christchurch City,NA
+325302,Edgeware South,Many To One Map,060,Christchurch City,NA
+325400,Aidanfield,Many To One Map,060,Christchurch City,NA
+325500,Tower Junction,Many To One Map,060,Christchurch City,NA
+325601,Burwood South,Many To One Map,060,Christchurch City,NA
+325700,Christchurch Central-West,Many To One Map,060,Christchurch City,NA
+325800,Christchurch Central-North,Many To One Map,060,Christchurch City,NA
+325900,Richmond North (Christchurch City),Many To One Map,060,Christchurch City,NA
+326000,Waimairi Beach,Many To One Map,060,Christchurch City,NA
+326100,Addington West,Many To One Map,060,Christchurch City,NA
+326200,Otakaro-Avon River Corridor,Many To One Map,060,Christchurch City,NA
+326301,Oaklands East,Many To One Map,060,Christchurch City,NA
+326400,Addington North,Many To One Map,060,Christchurch City,NA
+326500,Dallington,Many To One Map,060,Christchurch City,NA
+326600,Christchurch Central,Many To One Map,060,Christchurch City,NA
+326701,Hoon Hay West,Many To One Map,060,Christchurch City,NA
+326800,Richmond South (Christchurch City),Many To One Map,060,Christchurch City,NA
+326900,Spreydon West,Many To One Map,060,Christchurch City,NA
+327000,Christchurch Central-East,Many To One Map,060,Christchurch City,NA
+327100,Christchurch Central-South,Many To One Map,060,Christchurch City,NA
+327200,North Beach,Many To One Map,060,Christchurch City,NA
+327301,Halswell North,Many To One Map,060,Christchurch City,NA
+327400,Addington East,Many To One Map,060,Christchurch City,NA
+327500,Avondale (Christchurch City),Many To One Map,060,Christchurch City,NA
+327600,Spreydon North,Many To One Map,060,Christchurch City,NA
+327700,Hoon Hay East,Many To One Map,060,Christchurch City,NA
+327800,Avonside,Many To One Map,060,Christchurch City,NA
+327901,Stanmore,Many To One Map,060,Christchurch City,NA
+327902,Linwood Central,Many To One Map,060,Christchurch City,NA
+328001,Halswell South,Many To One Map,060,Christchurch City,NA
+328100,Sydenham Central,Many To One Map,060,Christchurch City,NA
+328200,Spreydon South,Many To One Map,060,Christchurch City,NA
+328300,Rawhiti,Many To One Map,060,Christchurch City,NA
+328400,Wainoni,Many To One Map,060,Christchurch City,NA
+328500,Linwood North,Many To One Map,060,Christchurch City,NA
+328600,Aranui,Many To One Map,060,Christchurch City,NA
+328700,Sydenham West,Many To One Map,060,Christchurch City,NA
+328800,Lancaster Park,Many To One Map,060,Christchurch City,NA
+328900,Phillipstown,Many To One Map,060,Christchurch City,NA
+329001,Kennedys Bush,Many To One Map,060,Christchurch City,NA
+329002,Halswell South East,Many To One Map,060,Christchurch City,NA
+329100,Somerfield East,Many To One Map,060,Christchurch City,NA
+329200,Somerfield West,Many To One Map,060,Christchurch City,NA
+329300,Linwood East,Many To One Map,060,Christchurch City,NA
+329400,Sydenham North,Many To One Map,060,Christchurch City,NA
+329500,Hoon Hay South,Many To One Map,060,Christchurch City,NA
+329600,Charleston (Christchurch City),Many To One Map,060,Christchurch City,NA
+329700,Sydenham South,Many To One Map,060,Christchurch City,NA
+329800,Bexley,Many To One Map,060,Christchurch City,NA
+329900,Waltham,Many To One Map,060,Christchurch City,NA
+330000,Westmorland,Many To One Map,060,Christchurch City,NA
+330100,Woolston North,Many To One Map,060,Christchurch City,NA
+330200,New Brighton,Many To One Map,060,Christchurch City,NA
+330300,Cashmere West,Many To One Map,060,Christchurch City,NA
+330400,Bromley South,Many To One Map,060,Christchurch City,NA
+330500,Ensors,Many To One Map,060,Christchurch City,NA
+330600,Beckenham,Many To One Map,060,Christchurch City,NA
+330700,Bromley North,Many To One Map,060,Christchurch City,NA
+330800,St Martins,Many To One Map,060,Christchurch City,NA
+330900,Opawa,Many To One Map,060,Christchurch City,NA
+331000,Woolston West,Many To One Map,060,Christchurch City,NA
+331100,Woolston East,Many To One Map,060,Christchurch City,NA
+331200,Huntsbury,Many To One Map,060,Christchurch City,NA
+331300,Cashmere East,Many To One Map,060,Christchurch City,NA
+331400,Hillsborough (Christchurch City),Many To One Map,060,Christchurch City,NA
+331500,Woolston South,Many To One Map,060,Christchurch City,NA
+331600,Port Hills,Many To One Map,060,Christchurch City,NA
+331700,South New Brighton,Many To One Map,060,Christchurch City,NA
+331801,Brookhaven-Ferrymead,Many To One Map,060,Christchurch City,NA
+331900,Heathcote Valley,Many To One Map,060,Christchurch City,NA
+332000,Mount Pleasant,Many To One Map,060,Christchurch City,NA
+332100,Redcliffs,Many To One Map,060,Christchurch City,NA
+332200,Governors Bay,Many To One Map,060,Christchurch City,NA
+332301,Inlets other Christchurch City,Many To One Map,060,Christchurch City,NA
+332400,Clifton Hill,Many To One Map,060,Christchurch City,NA
+332501,Lyttelton,Many To One Map,060,Christchurch City,NA
+332601,Inlet Port Lyttelton,Many To One Map,060,Christchurch City,NA
+332700,Sumner,Many To One Map,060,Christchurch City,NA
+332801,Teddington,Many To One Map,060,Christchurch City,NA
+332901,Diamond Harbour,Many To One Map,060,Christchurch City,NA
+333000,Inland water Lake Ellesmere/Te Waihora South,Many To One Map,060,Christchurch City,NA
+333100,Banks Peninsula South,Many To One Map,060,Christchurch City,NA
+333201,Banks Peninsula Eastern Bays,Many To One Map,060,Christchurch City,NA
+333300,Akaroa Harbour,Many To One Map,060,Christchurch City,NA
+333400,Inlet Akaroa Harbour,Many To One Map,060,Christchurch City,NA
+333500,Akaroa,Many To One Map,060,Christchurch City,NA
+333600,Craigieburn,Many To One Map,062,Selwyn District,NA
+333700,Torlesse,Many To One Map,062,Selwyn District,NA
+333800,Glenroy-Hororata,Many To One Map,062,Selwyn District,NA
+333901,Glentunnel,Many To One Map,062,Selwyn District,NA
+334001,Darfield,Many To One Map,062,Selwyn District,NA
+334100,Kirwee,Many To One Map,062,Selwyn District,NA
+334200,Bankside,Many To One Map,062,Selwyn District,NA
+334300,Charing Cross,Many To One Map,062,Selwyn District,NA
+334400,Halkett,Many To One Map,062,Selwyn District,NA
+334501,Newtons Road,Many To One Map,062,Selwyn District,NA
+334601,West Melton,Many To One Map,062,Selwyn District,NA
+334700,Burnham Camp,Many To One Map,062,Selwyn District,NA
+334801,Rolleston Izone,Many To One Map,062,Selwyn District,NA
+334901,Rolleston North Central,Many To One Map,062,Selwyn District,NA
+335001,Springston,Many To One Map,062,Selwyn District,NA
+335101,Rolleston Central,Many To One Map,062,Selwyn District,NA
+335201,Rolleston Tauwharekakaho,Many To One Map,062,Selwyn District,NA
+335202,Rolleston North East,Many To One Map,062,Selwyn District,NA
+335301,Rolleston South West,Many To One Map,062,Selwyn District,NA
+335302,Rolleston South Central,Many To One Map,062,Selwyn District,NA
+335400,Southbridge,Many To One Map,062,Selwyn District,NA
+335501,Faringdon,Many To One Map,062,Selwyn District,NA
+335502,Rolleston South East,Many To One Map,062,Selwyn District,NA
+335600,Trents,Many To One Map,062,Selwyn District,NA
+335701,Prebbleton North,Many To One Map,062,Selwyn District,NA
+335702,Prebbleton South,Many To One Map,062,Selwyn District,NA
+335800,Irwell,Many To One Map,062,Selwyn District,NA
+335901,Ladbrooks,Many To One Map,062,Selwyn District,NA
+336001,Lincoln West,Many To One Map,062,Selwyn District,NA
+336002,Lincoln South,Many To One Map,062,Selwyn District,NA
+336101,Lincoln North,Many To One Map,062,Selwyn District,NA
+336102,Lincoln East,Many To One Map,062,Selwyn District,NA
+336200,Leeston,Many To One Map,062,Selwyn District,NA
+336301,Tai Tapu,Many To One Map,062,Selwyn District,NA
+336400,Motukarara,Many To One Map,062,Selwyn District,NA
+336500,Inland water Lake Ellesmere/Te Waihora North,Many To One Map,062,Selwyn District,NA
+336600,Ashburton Lakes,Many To One Map,063,Ashburton District,NA
+336701,Cairnbrae,Many To One Map,063,Ashburton District,NA
+336800,Ashburton Forks,Many To One Map,063,Ashburton District,NA
+336901,Methven,Many To One Map,063,Ashburton District,NA
+337000,Ealing-Lowcliffe,Many To One Map,063,Ashburton District,NA
+337100,Eiffelton,Many To One Map,063,Ashburton District,NA
+337200,Chertsey,Many To One Map,063,Ashburton District,NA
+337301,Winchmore-Wakanui,Many To One Map,063,Ashburton District,NA
+337400,Allenton North,Many To One Map,063,Ashburton District,NA
+337500,Allenton South,Many To One Map,063,Ashburton District,NA
+337600,Rakaia,Many To One Map,063,Ashburton District,NA
+337700,Ashburton North,Many To One Map,063,Ashburton District,NA
+337800,Allenton East,Many To One Map,063,Ashburton District,NA
+337900,Tinwald North,Many To One Map,063,Ashburton District,NA
+338000,Ashburton Central,Many To One Map,063,Ashburton District,NA
+338100,Ashburton West,Many To One Map,063,Ashburton District,NA
+338200,Tinwald South,Many To One Map,063,Ashburton District,NA
+338300,Ashburton East,Many To One Map,063,Ashburton District,NA
+338401,Netherby,Many To One Map,063,Ashburton District,NA
+338501,Hampstead,Many To One Map,063,Ashburton District,NA
+338600,Ben McLeod,Many To One Map,064,Timaru District,NA
+338700,Arundel,Many To One Map,064,Timaru District,NA
+338800,Levels Valley,Many To One Map,064,Timaru District,NA
+338901,Geraldine,Many To One Map,064,Timaru District,NA
+339002,Rangitata,Many To One Map,064,Timaru District,NA
+339100,Waitohi (Timaru District),Many To One Map,064,Timaru District,NA
+339200,Pleasant Point,Many To One Map,064,Timaru District,NA
+339300,Temuka West,Many To One Map,064,Timaru District,NA
+339400,Hadlow,Many To One Map,064,Timaru District,NA
+339500,Levels,Many To One Map,064,Timaru District,NA
+339600,Temuka East,Many To One Map,064,Timaru District,NA
+339700,Gleniti North,Many To One Map,064,Timaru District,NA
+339800,Washdyke,Many To One Map,064,Timaru District,NA
+339900,Fairview,Many To One Map,064,Timaru District,NA
+340000,Gleniti South,Many To One Map,064,Timaru District,NA
+340100,Glenwood,Many To One Map,064,Timaru District,NA
+340200,Marchwiel West,Many To One Map,064,Timaru District,NA
+340300,Marchwiel East,Many To One Map,064,Timaru District,NA
+340400,Highfield North,Many To One Map,064,Timaru District,NA
+340500,Highfield South,Many To One Map,064,Timaru District,NA
+340601,Waimataitai-Maori Hill,Many To One Map,064,Timaru District,NA
+340700,Fraser Park,Many To One Map,064,Timaru District,NA
+340801,Seaview,Many To One Map,064,Timaru District,NA
+340900,Inlet Port Timaru,Many To One Map,064,Timaru District,NA
+341000,Watlington,Many To One Map,064,Timaru District,NA
+341101,Timaru Central,Many To One Map,064,Timaru District,NA
+341201,Timaru East,Many To One Map,064,Timaru District,NA
+341300,Parkside,Many To One Map,064,Timaru District,NA
+341400,Kensington (Timaru District),Many To One Map,064,Timaru District,NA
+341501,Mackenzie Lakes,Many To One Map,065,Mackenzie District,NA
+341600,Inland water Lake Pukaki,Many To One Map,065,Mackenzie District,NA
+341700,Inland water Lake Tekapo,Many To One Map,065,Mackenzie District,NA
+341801,Twizel,Many To One Map,065,Mackenzie District,NA
+341900,Opua (Mackenzie District),Many To One Map,065,Mackenzie District,NA
+342000,Fairlie,Many To One Map,065,Mackenzie District,NA
+342100,Hakataramea,Many To One Map,066,Waimate District,NA
+342200,Maungati,Many To One Map,066,Waimate District,NA
+342300,Lyalldale,Many To One Map,066,Waimate District,NA
+342400,Makikihi-Willowbridge,Many To One Map,066,Waimate District,NA
+342500,Waimate North,Many To One Map,066,Waimate District,NA
+342600,Morven-Glenavy-Ikawai,Many To One Map,066,Waimate District,NA
+342700,Waimate West,Many To One Map,066,Waimate District,NA
+342800,Waimate East,Many To One Map,066,Waimate District,NA
+342900,Oceanic Chatham Islands,Many To One Map,067,Chatham Islands Territory,NA
+343000,Chatham Islands,Many To One Map,067,Chatham Islands Territory,NA
+343100,Aviemore,Many To One Map,068,Waitaki District,NA
+343200,Inland water Lake Ohau,Many To One Map,068,Waitaki District,NA
+343300,Danseys Pass,Many To One Map,068,Waitaki District,NA
+343400,Ngapara,Many To One Map,068,Waitaki District,NA
+343501,Lower Waitaki,Many To One Map,068,Waitaki District,NA
+343600,Waihemo,Many To One Map,068,Waitaki District,NA
+343700,Maheno,Many To One Map,068,Waitaki District,NA
+343801,Weston,Many To One Map,068,Waitaki District,NA
+343900,Oamaru North Milner Park,Many To One Map,068,Waitaki District,NA
+344000,Oamaru North Orana Park,Many To One Map,068,Waitaki District,NA
+344100,Oamaru Gardens,Many To One Map,068,Waitaki District,NA
+344200,Glen Warren,Many To One Map,068,Waitaki District,NA
+344300,Holmes Hill,Many To One Map,068,Waitaki District,NA
+344400,Oamaru Central,Many To One Map,068,Waitaki District,NA
+344500,South Hill,Many To One Map,068,Waitaki District,NA
+344600,Inlet Port Oamaru,Many To One Map,068,Waitaki District,NA
+344700,Palmerston,Many To One Map,068,Waitaki District,NA
+344800,Lindis-Nevis Valleys,Many To One Map,069,Central Otago District,NA
+344900,Cromwell West,Many To One Map,069,Central Otago District,NA
+345000,Cromwell East,Many To One Map,069,Central Otago District,NA
+345100,Manuherikia-Ida Valleys,Many To One Map,069,Central Otago District,NA
+345200,Earnscleugh,Many To One Map,069,Central Otago District,NA
+345300,Dunstan-Galloway,Many To One Map,069,Central Otago District,NA
+345400,Clyde,Many To One Map,069,Central Otago District,NA
+345500,Alexandra North,Many To One Map,069,Central Otago District,NA
+345600,Alexandra South,Many To One Map,069,Central Otago District,NA
+345700,Maniototo,Many To One Map,069,Central Otago District,NA
+345800,Teviot Valley,Many To One Map,069,Central Otago District,NA
+345900,Outer Wanaka,Many To One Map,070,Queenstown-Lakes District,NA
+346000,Glenorchy,Many To One Map,070,Queenstown-Lakes District,NA
+346100,Inland water Lake Wanaka,Many To One Map,070,Queenstown-Lakes District,NA
+346201,Outer Wakatipu,Many To One Map,070,Queenstown-Lakes District,NA
+346300,Inland water Lake Hawea,Many To One Map,070,Queenstown-Lakes District,NA
+346400,Cardrona,Many To One Map,070,Queenstown-Lakes District,NA
+346500,Inland water Lake Wakatipu,Many To One Map,070,Queenstown-Lakes District,NA
+346600,Wanaka Waterfront,Many To One Map,070,Queenstown-Lakes District,NA
+346701,Wanaka North,Many To One Map,070,Queenstown-Lakes District,NA
+346702,Northlake,Many To One Map,070,Queenstown-Lakes District,NA
+346800,Wanaka West,Many To One Map,070,Queenstown-Lakes District,NA
+346901,Albert Town,Many To One Map,070,Queenstown-Lakes District,NA
+347000,Wanaka Central,Many To One Map,070,Queenstown-Lakes District,NA
+347101,Lake Hawea,Many To One Map,070,Queenstown-Lakes District,NA
+347201,Upper Clutha Valley,Many To One Map,070,Queenstown-Lakes District,NA
+347300,Kingston,Many To One Map,070,Queenstown-Lakes District,NA
+347401,Arthurs Point,Many To One Map,070,Queenstown-Lakes District,NA
+347501,Wakatipu Basin,Many To One Map,070,Queenstown-Lakes District,NA
+347600,Queenstown Hill,Many To One Map,070,Queenstown-Lakes District,NA
+347700,Warren Park,Many To One Map,070,Queenstown-Lakes District,NA
+347801,Sunshine Bay-Fernhill,Many To One Map,070,Queenstown-Lakes District,NA
+347901,Arrowtown,Many To One Map,070,Queenstown-Lakes District,NA
+348000,Quail Rise,Many To One Map,070,Queenstown-Lakes District,NA
+348100,Queenstown Central,Many To One Map,070,Queenstown-Lakes District,NA
+348200,Queenstown East,Many To One Map,070,Queenstown-Lakes District,NA
+348300,Frankton Arm,Many To One Map,070,Queenstown-Lakes District,NA
+348400,Frankton,Many To One Map,070,Queenstown-Lakes District,NA
+348500,Lake Hayes,Many To One Map,070,Queenstown-Lakes District,NA
+348600,Kelvin Heights,Many To One Map,070,Queenstown-Lakes District,NA
+348700,Shotover Country,Many To One Map,070,Queenstown-Lakes District,NA
+348801,Lake Hayes Estate,Many To One Map,070,Queenstown-Lakes District,NA
+348901,Jacks Point,Many To One Map,070,Queenstown-Lakes District,NA
+349000,Strath Taieri,Many To One Map,071,Dunedin City,NA
+349100,Bucklands Crossing,Many To One Map,071,Dunedin City,NA
+349200,Waikouaiti,Many To One Map,071,Dunedin City,NA
+349300,Momona,Many To One Map,071,Dunedin City,NA
+349401,Taieri,Many To One Map,071,Dunedin City,NA
+349500,Inlets other Dunedin City,Many To One Map,071,Dunedin City,NA
+349601,Mount Cargill,Many To One Map,071,Dunedin City,NA
+349700,Bush Road,Many To One Map,071,Dunedin City,NA
+349801,Mosgiel East,Many To One Map,071,Dunedin City,NA
+349900,Mosgiel Central,Many To One Map,071,Dunedin City,NA
+350000,Seddon Park,Many To One Map,071,Dunedin City,NA
+350100,Wingatui,Many To One Map,071,Dunedin City,NA
+350201,Saddle Hill-Chain Hills,Many To One Map,071,Dunedin City,NA
+350300,East Taieri,Many To One Map,071,Dunedin City,NA
+350401,Halfway Bush,Many To One Map,071,Dunedin City,NA
+350500,Helensburgh,Many To One Map,071,Dunedin City,NA
+350600,Glenleith,Many To One Map,071,Dunedin City,NA
+350700,Fairfield (Dunedin City),Many To One Map,071,Dunedin City,NA
+350801,Inlet Otago Harbour,Many To One Map,071,Dunedin City,NA
+350900,Brockville,Many To One Map,071,Dunedin City,NA
+351000,Wakari,Many To One Map,071,Dunedin City,NA
+351100,Abbotsford,Many To One Map,071,Dunedin City,NA
+351200,Brighton,Many To One Map,071,Dunedin City,NA
+351300,Pine Hill-Dalmore,Many To One Map,071,Dunedin City,NA
+351400,Kaikorai-Bradford,Many To One Map,071,Dunedin City,NA
+351500,Maori Hill,Many To One Map,071,Dunedin City,NA
+351600,Roslyn (Dunedin City),Many To One Map,071,Dunedin City,NA
+351700,North East Valley Chingford,Many To One Map,071,Dunedin City,NA
+351801,Roseneath-Sawyers Bay,Many To One Map,071,Dunedin City,NA
+351901,Normanby (Dunedin City),Many To One Map,071,Dunedin City,NA
+352000,North East Valley Knox,Many To One Map,071,Dunedin City,NA
+352100,Belleknowes,Many To One Map,071,Dunedin City,NA
+352200,Gardens (Dunedin City),Many To One Map,071,Dunedin City,NA
+352300,Kenmure,Many To One Map,071,Dunedin City,NA
+352400,Campus West,Many To One Map,071,Dunedin City,NA
+352500,Waldronville,Many To One Map,071,Dunedin City,NA
+352600,Green Island,Many To One Map,071,Dunedin City,NA
+352701,Port Chalmers,Many To One Map,071,Dunedin City,NA
+352800,Royal Terrace,Many To One Map,071,Dunedin City,NA
+352900,Arthur Street,Many To One Map,071,Dunedin City,NA
+353000,Opoho,Many To One Map,071,Dunedin City,NA
+353100,Campus North,Many To One Map,071,Dunedin City,NA
+353200,Campus South,Many To One Map,071,Dunedin City,NA
+353300,Mornington,Many To One Map,071,Dunedin City,NA
+353400,Dunedin Central,Many To One Map,071,Dunedin City,NA
+353500,Maryhill,Many To One Map,071,Dunedin City,NA
+353600,Ravensbourne-St Leonards,Many To One Map,071,Dunedin City,NA
+353701,Harbourside,Many To One Map,071,Dunedin City,NA
+353800,Fernhill,Many To One Map,071,Dunedin City,NA
+353900,Otago Peninsula,Many To One Map,071,Dunedin City,NA
+354000,Concord,Many To One Map,071,Dunedin City,NA
+354100,Calton Hill,Many To One Map,071,Dunedin City,NA
+354200,Caversham,Many To One Map,071,Dunedin City,NA
+354300,Hillside-Portsmouth Drive,Many To One Map,071,Dunedin City,NA
+354400,Kew (Dunedin City),Many To One Map,071,Dunedin City,NA
+354500,Corstorphine,Many To One Map,071,Dunedin City,NA
+354600,Forbury,Many To One Map,071,Dunedin City,NA
+354701,South Dunedin,Many To One Map,071,Dunedin City,NA
+354800,St Clair,Many To One Map,071,Dunedin City,NA
+354901,Waverley (Dunedin City),Many To One Map,071,Dunedin City,NA
+355000,Macandrew Bay-Company Bay,Many To One Map,071,Dunedin City,NA
+355100,Broad Bay-Portobello,Many To One Map,071,Dunedin City,NA
+355200,St Kilda South,Many To One Map,071,Dunedin City,NA
+355300,Musselburgh,Many To One Map,071,Dunedin City,NA
+355400,Shiel Hill,Many To One Map,071,Dunedin City,NA
+355500,St Kilda North,Many To One Map,071,Dunedin City,NA
+355600,Andersons Bay,Many To One Map,071,Dunedin City,NA
+355700,Tainui,Many To One Map,071,Dunedin City,NA
+355800,West Otago,Many To One Map,072,Clutha District,NA
+355900,Tuapeka,Many To One Map,072,Clutha District,NA
+356000,Clinton,Many To One Map,072,Clutha District,NA
+356100,Clutha Valley,Many To One Map,072,Clutha District,NA
+356200,Bruce,Many To One Map,072,Clutha District,NA
+356300,Catlins,Many To One Map,072,Clutha District,NA
+356400,Milton,Many To One Map,072,Clutha District,NA
+356500,Balclutha South,Many To One Map,072,Clutha District,NA
+356600,Balclutha North,Many To One Map,072,Clutha District,NA
+356700,Benhar-Stirling,Many To One Map,072,Clutha District,NA
+356800,Kaitangata-Matau,Many To One Map,072,Clutha District,NA
+356900,Inlet Catlins,Many To One Map,072,Clutha District,NA
+357000,Fiordland,Many To One Map,073,Southland District,NA
+357100,Inlets Fiordland,Many To One Map,073,Southland District,NA
+357200,Inland water Lake Te Anau,Many To One Map,073,Southland District,NA
+357300,Mararoa,Many To One Map,073,Southland District,NA
+357400,Inland water Lake Manapouri,Many To One Map,073,Southland District,NA
+357501,Te Anau,Many To One Map,073,Southland District,NA
+357601,Whitestone,Many To One Map,073,Southland District,NA
+357700,Mossburn,Many To One Map,073,Southland District,NA
+357800,Inland water Lake Hauroko,Many To One Map,073,Southland District,NA
+357900,Longwood Forest,Many To One Map,073,Southland District,NA
+358000,Ohai-Nightcaps,Many To One Map,073,Southland District,NA
+358100,Riversdale-Piano Flat,Many To One Map,073,Southland District,NA
+358200,Lumsden-Balfour,Many To One Map,073,Southland District,NA
+358300,Oreti River,Many To One Map,073,Southland District,NA
+358400,Otautau,Many To One Map,073,Southland District,NA
+358500,Hedgehope,Many To One Map,073,Southland District,NA
+358600,Winton,Many To One Map,073,Southland District,NA
+358700,Waianiwa,Many To One Map,073,Southland District,NA
+358801,Riverton,Many To One Map,073,Southland District,NA
+358900,Wallacetown,Many To One Map,073,Southland District,NA
+359000,Grove Bush,Many To One Map,073,Southland District,NA
+359100,Edendale-Woodlands,Many To One Map,073,Southland District,NA
+359201,Inlets other Southland District,Many To One Map,073,Southland District,NA
+359300,Stewart Island,Many To One Map,073,Southland District,NA
+359400,Awarua Plains,Many To One Map,073,Southland District,NA
+359500,Wyndham-Catlins,Many To One Map,073,Southland District,NA
+359600,Waikaka,Many To One Map,074,Gore District,NA
+359700,Waimumu-Kaiwera,Many To One Map,074,Gore District,NA
+359800,Gore North,Many To One Map,074,Gore District,NA
+359900,Gore West,Many To One Map,074,Gore District,NA
+360000,East Gore,Many To One Map,074,Gore District,NA
+360100,Gore Central,Many To One Map,074,Gore District,NA
+360200,Gore Main,Many To One Map,074,Gore District,NA
+360300,Gore South,Many To One Map,074,Gore District,NA
+360400,Mataura,Many To One Map,074,Gore District,NA
+360500,West Plains-Makarewa,Many To One Map,075,Invercargill City,NA
+360601,Prestonville-Grasmere,Many To One Map,075,Invercargill City,NA
+360701,Waikiwi,Many To One Map,075,Invercargill City,NA
+360801,Myross Bush,Many To One Map,075,Invercargill City,NA
+360900,Otatara,Many To One Map,075,Invercargill City,NA
+361000,Invercargill Central,Many To One Map,075,Invercargill City,NA
+361100,Gladstone (Invercargill City),Many To One Map,075,Invercargill City,NA
+361201,Rosedale-Hargest,Many To One Map,075,Invercargill City,NA
+361300,Avenal,Many To One Map,075,Invercargill City,NA
+361501,Windsor,Many To One Map,075,Invercargill City,NA
+361502,Waverley (Invercargill City),Many To One Map,075,Invercargill City,NA
+361601,Richmond (Invercargill City),Many To One Map,075,Invercargill City,NA
+361701,Glengarry,Many To One Map,075,Invercargill City,NA
+361800,Inlet New River Estuary,Many To One Map,075,Invercargill City,NA
+361900,Turnbull Thompson Park,Many To One Map,075,Invercargill City,NA
+362001,Appleby North (Invercargill City),Many To One Map,075,Invercargill City,NA
+362100,Georgetown,Many To One Map,075,Invercargill City,NA
+362201,Appleby South (Invercargill City),Many To One Map,075,Invercargill City,NA
+362301,Kennington-Tisbury,Many To One Map,075,Invercargill City,NA
+362401,Newfield,Many To One Map,075,Invercargill City,NA
+362402,Rockdale,Many To One Map,075,Invercargill City,NA
+362501,Strathern,Many To One Map,075,Invercargill City,NA
+362601,Heidelberg,Many To One Map,075,Invercargill City,NA
+362901,Kingswell,Many To One Map,075,Invercargill City,NA
+363001,Clifton-Kew,Many To One Map,075,Invercargill City,NA
+363100,Woodend-Greenhills,Many To One Map,075,Invercargill City,NA
+363201,Inlet Bluff Harbour,Many To One Map,075,Invercargill City,NA
+363301,Bluff,Many To One Map,075,Invercargill City,NA
+363400,Oceanic West Coast Region,Many To One Map,999,Area Outside Territorial Authority,NA
+363500,Oceanic Nelson Region,Many To One Map,999,Area Outside Territorial Authority,NA
+363600,Oceanic Marlborough Region,Many To One Map,999,Area Outside Territorial Authority,NA
+363700,Oceanic Southland Region,Many To One Map,999,Area Outside Territorial Authority,NA
+363800,Oceanic Canterbury Region,Many To One Map,999,Area Outside Territorial Authority,NA
+363900,Oceanic Otago Region,Many To One Map,999,Area Outside Territorial Authority,NA
+364000,Motunau Island,Many To One Map,999,Area Outside Territorial Authority,NA
+400001,New Zealand Economic Zone,Many To One Map,999,Area Outside Territorial Authority,NA
+400002,Oceanic Kermadec Islands,Many To One Map,999,Area Outside Territorial Authority,NA
+400003,Kermadec Islands,Many To One Map,999,Area Outside Territorial Authority,NA
+400004,Oceanic Oil Rig Taranaki,Many To One Map,999,Area Outside Territorial Authority,NA
+400005,Oceanic Campbell Island,Many To One Map,999,Area Outside Territorial Authority,NA
+400006,Campbell Island,Many To One Map,999,Area Outside Territorial Authority,NA
+400007,Oceanic Oil Rig Southland,Many To One Map,999,Area Outside Territorial Authority,NA
+400008,Oceanic Auckland Islands,Many To One Map,999,Area Outside Territorial Authority,NA
+400009,Auckland Islands,Many To One Map,999,Area Outside Territorial Authority,NA
+400010,Oceanic Bounty Islands,Many To One Map,999,Area Outside Territorial Authority,NA
+400011,Bounty Islands,Many To One Map,999,Area Outside Territorial Authority,NA
+400012,Oceanic Snares Islands,Many To One Map,999,Area Outside Territorial Authority,NA
+400013,Snares Islands,Many To One Map,999,Area Outside Territorial Authority,NA
+400014,Oceanic Antipodes Islands,Many To One Map,999,Area Outside Territorial Authority,NA
+400015,Antipodes Islands,Many To One Map,999,Area Outside Territorial Authority,NA
+400016,Ross Dependency,Many To One Map,999,Area Outside Territorial Authority,NA
