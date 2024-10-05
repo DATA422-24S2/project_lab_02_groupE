@@ -71,4 +71,5 @@ read_SP_gz <- function( folder = "./data/", filename = "sp_data.csv.gz", write_R
   return(result)
 }
 
-
+vf_data = read_VF_parquet()
+sp_data = read_SP_gz()

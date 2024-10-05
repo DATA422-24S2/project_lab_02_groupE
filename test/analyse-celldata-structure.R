@@ -1,10 +1,10 @@
 # File: analyse-celldata-structure.R
 # NOTE: 
 # NOTE: 
-# NOTE: Although this is provided for use by the team, I recommend you make your
-# NOTE: own version of this as I am tailoring this to the files I work on
-# NOTE: and it may not work in a generic case in the future. 
-# NOTE: 
+# NOTE: This script is created to allow for analysis of the celldata structures.
+# NOTE: Although this is provided for use by the team, I recommend you make 
+# NOTE: a different version to tailor for working on other structures. This 
+# NOTE: script is meant to be standalone and not sourced in other scripts. 
 # NOTE: 
 # NOTE: 
 
@@ -25,7 +25,7 @@ library(arrow)
 library(vroom)
 
 struct_df <- function(x,tb_name="not-specified", folder = "./data", print_tail = FALSE, saveas_RDS = FALSE) {  # what is the structure of a dataframe? 
-#struct_df <- function(x,name="not-specified", folder = "./data", print_tail = FALSE, saveas_RDS = FALSE) {  # what is the structure of a dataframe? 
+
     #browser()
   cat("\nclass(",tb_name,"):\n")
   print(class(x))
