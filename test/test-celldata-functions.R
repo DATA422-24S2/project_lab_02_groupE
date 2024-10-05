@@ -4,7 +4,7 @@
 browser()
 source("./r-code/00_initialise.R")
 source("./r-code/01_import.R")
-source("./r-code/002_clean_celldata.R")
+source("./test/002_clean_celldata.R")
 source("./r-code/003_analyse_celldata.R")
 source("./r-code/004_visualise_celldata.R")
 
