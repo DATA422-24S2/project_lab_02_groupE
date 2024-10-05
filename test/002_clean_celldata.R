@@ -173,7 +173,7 @@ time_bound <- function(tb, time_start, time_end) {
     filter(datetime >= time_start & datetime <= time_end) %>%
     mutate(datetime = with_tz(datetime, "Pacific/Auckland")) %>%
     
-  rename(NZST = datetime)
+  rename(NZST = datetime) 
     
   result <- result %>%
     mutate(
@@ -196,7 +196,7 @@ time_bound <- function(tb, time_start, time_end) {
   cat("\nstart_time ", ftime_start,  " : ", as.numeric(time_start))
   cat("\nfirst()    ", fvalue0,      " : ", as.numeric(value0))
   cat("\nend_time   ", ftime_end,    " : ", as.numeric(time_end))
-  cat("\nlast()     ", fvaluen,      " : ", as.numeric(valuen),"\n")
+  cat("\nlast()     ", fvaluen,      " : ", as.numeric(valuen),"\n\n")
   
   return(result)
 }

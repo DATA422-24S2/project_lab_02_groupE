@@ -48,7 +48,7 @@ holiday_week_stop  <- as.POSIXct("2024-06-16 23:59:00", tz = "Pacific/Auckland")
 vf_data = read_VF_parquet()              ## performed in  ./r-code/01_import.R
 struct_df(vf_data,"vf_data",print_tail = TRUE)
 vf_prep = preprocess_vf_data(vf_data)
-struct_df(vf_prep,"vf_prep")
+struct_df(vf_prep,"vf_prep") 
 
 
 sp_data = read_SP_gz()                   ## performed in  ./r-code/01_import.R
