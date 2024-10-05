@@ -4,7 +4,7 @@
 #print(sys.calls()[sapply(calls, function(x) "source" %in% as.character(x))])
 # Filter only for 'source' calls
 
-browser()
+#browser()
 
 # Print the filtered source calls
 #print(source_calls)
@@ -115,6 +115,24 @@ add_NA0 <- function(tb) {
   return(result)
 }
 
+remove_NA0 <- function(tb) {
+  result <- tb %>%
+    select(-has_NA, -has_00)  # Remove the has_NA and has_00 columns
+  
+  return(result)
+}
+
+remove_istimed <- function(tb) {
+  result <- tb %>%
+    select(-is_after_start, -is_before_end)  # Remove the has_NA and has_00 columns
+  
+  return(result)
+}
+
+
+
+
+
 # preprocess vf_data 
 # the renaming is unnecessary at this point, however, 
 # it makes things clear for the team. 
@@ -147,15 +165,45 @@ preprocess_sp_data <- function(tb) {
 
 
 
-# time bound one of the preprocessed tibbles 
-#
-time_bound <- function(tb, start_time, end_time) {
+
+
+time_bound <- function(tb, time_start, time_end) {
+  # Filter and mutate the datetime column, convert it to NZST
   result <- tb %>%
-    filter(datetime >= start_time & datetime <= end_time)
+    filter(datetime >= time_start & datetime <= time_end) %>%
+    mutate(datetime = with_tz(datetime, "Pacific/Auckland")) %>%
+    
+  rename(NZST = datetime)
+    
+  result <- result %>%
+    mutate(
+      is_after_start = as.numeric(NZST >= time_start), 
+      is_before_end  = as.numeric(NZST <= time_end)     
+    )
+  
+  
+  # Capture the first and last row of the datetime column safely
+  value0      <- result %>% pull(NZST) %>% first() 
+  valuen      <- result %>% pull(NZST) %>% last() 
+  fvalue0     <- format(result %>% pull(NZST) %>% first(), "%Y-%m-%d %H:%M:%S")  
+  fvaluen     <- format(result %>% pull(NZST) %>% last() , "%Y-%m-%d %H:%M:%S")
+  ftime_start <- format(time_start                       , "%Y-%m-%d %H:%M:%S")  
+  ftime_end   <- format(time_end                         , "%Y-%m-%d %H:%M:%S")
+  
+  # Output for debugging
+  browser()
+  
+  cat("\nstart_time ", ftime_start,  " : ", as.numeric(time_start))
+  cat("\nfirst()    ", fvalue0,      " : ", as.numeric(value0))
+  cat("\nend_time   ", ftime_end,    " : ", as.numeric(time_end))
+  cat("\nlast()     ", fvaluen,      " : ", as.numeric(valuen),"\n")
   
   return(result)
 }
-  
+
+
+
+
 
 # Assume the first week in the data is a regular working week and the following week is a week of school holidays.
 #

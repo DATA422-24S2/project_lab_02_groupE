@@ -24,7 +24,7 @@ library(dplyr)
 library(arrow)  
 library(vroom)
 
-struct_df <- function(x,tb_name="not-specified", folder = "./data", print_tail = FALSE, saveas_RDS = FALSE) {  # what is the structure of a dataframe? 
+struct_df <- function(x,tb_name="not-specified", folder = "./data", print_tail = TRUE, saveas_RDS = FALSE) {  # what is the structure of a dataframe? 
 
     #browser()
   cat("\nclass(",tb_name,"):\n")
@@ -47,25 +47,27 @@ struct_df <- function(x,tb_name="not-specified", folder = "./data", print_tail =
   if(print_tail == FALSE){
     print(head(x, n = 10))
   } else {
+    cat("\nhead:\n")
     print(head(x, n = 10))
+    cat("\ntail:\n")
     print(tail(x, n = 10))
-    browser()
+  # browser()
   }
   
   #----------------------------------------
   # SAVEAS_RDS
   #
   save_RDS <- (saveas_RDS == TRUE) && (tb_name != "")
-  browser()
+# browser()
   if(save_RDS){
-  # rds_file <- paste0(format(Sys.Date(), "%Y%m%d"),".",tb_name,".RDS")
+#   rds_file <- paste0(format(Sys.Date(), "%Y%m%d"),".",tb_name,".RDS")
     rds_file <- paste0(as.numeric(Sys.time()), ".", tb_name, ".RDS")
     rds_file <- file.path(folder, rds_file)
-    browser()
+#   browser()
     saveRDS(x,rds_file)
     cat(rds_file, " :saved\n")
   }
-  browser()
+# browser()
 }
 
 struct_file <- function(filename,df_name = "") {  # what is the structure in the file? 
