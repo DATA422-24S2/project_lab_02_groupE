@@ -1,5 +1,6 @@
-# Load necessary libraries
+# Load the necessary libraries
 library(dplyr)
+library(tibble)
 
 # Load the dataset
 subnational_pop <- read.csv("./data/subnational_pop_ests.csv")
@@ -39,21 +40,26 @@ str(subnational_pop_cleaned)
 View(subnational_pop_cleaned)
 
 #---------------------------
-#clean the sa2_2023 
 # Load the dataset
 sa2_2023 <- read.csv("./data/sa2_2023.csv", stringsAsFactors = FALSE)
-View(sa2_2023)
 
-# Step 1: Remove the first 6 rows
+# Remove the first 6 rows
 sa2_2023_clean <- sa2_2023[-c(1:6), ]
-
-# Step 2: Rename columns to 'SA2_Code' and 'Area_Name'
-colnames(sa2_2023_clean) <- c("SA2_Code", "Area_Name")
-
-# Step 3: Convert SA2_Code to numeric and remove non-numeric entries
-sa2_2023_clean <- sa2_2023_clean %>%
-  mutate(SA2_Code = as.numeric(SA2_Code)) %>%
-  filter(!is.na(SA2_Code))                      
-
 View(sa2_2023_clean)
+
+# Remove the second column (assuming it exists) and rename the first column
+sa2_2023_clean <- sa2_2023_clean %>%
+  select(-2) %>%                      # Remove second column
+  rename(Names = Classification.report)  # Rename first column to Names (ensure this matches the column name)
+View(sa2_2023_clean)
+
+# Convert row names to a column (Area_Code)
+sa2_2023_clean <- sa2_2023_clean %>%
+  rownames_to_column(var = "Area_Code")  # Move row names to Area_Code column
+View(sa2_2023_clean)
+
+# Convert Area_Code from character to numeric
+sa2_2023_clean$Area_Code <- as.numeric(sa2_2023_clean$Area_Code)
+
+# Check the structure of the cleaned data
 str(sa2_2023_clean)
