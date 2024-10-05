@@ -55,17 +55,27 @@ sp_data = read_SP_gz()                   ## performed in  ./r-code/01_import.R
 struct_df(sp_data,"sp_data",print_tail = TRUE)
 sp_prep = preprocess_sp_data(sp_data)
 struct_df(sp_prep,"sp_prep")
+
+
+normal_week_start  <- as.POSIXct("2024-06-03 00:00:00")
+normal_week_stop   <- as.POSIXct("2024-06-09 23:59:59")
+holiday_week_start <- as.POSIXct("2024-06-10 00:00:00")
+holiday_week_stop  <- as.POSIXct("2024-06-16 23:59:00")
+
 #browser()
 
-vf_worked = time_bound(vf_prep,normal_week_start,holiday_week_stop)
-vf_worked = time_bound(sp_prep,normal_week_start,holiday_week_stop)
+vf_timed = time_bound(vf_prep, tb_name = "vf_timed",normal_week_start,holiday_week_stop)
+sp_timed = time_bound(sp_prep, tb_name = "sp_timed",normal_week_start,holiday_week_stop)
 struct_df(vf_timed,"vf_timed",print_tail = TRUE)
 struct_df(sp_timed,"sp_timed",print_tail = TRUE)
-browser()
+#browser()
 vf_timed <- remove_NA0(vf_timed)
 sp_timed <- remove_NA0(sp_timed)
 vf_timed <- remove_istimed(vf_timed)
 sp_timed <- remove_istimed(sp_timed)
+
+struct_df(vf_timed,"vf_timed",print_tail = TRUE)
+struct_df(sp_timed,"sp_timed",print_tail = TRUE)
 
 # Check for duplicates 
 duplicates_in_tb(vf_timed,"vf_timed")

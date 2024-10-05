@@ -131,8 +131,6 @@ remove_istimed <- function(tb) {
 
 
 
-
-
 # preprocess vf_data 
 # the renaming is unnecessary at this point, however, 
 # it makes things clear for the team. 
@@ -164,11 +162,10 @@ preprocess_sp_data <- function(tb) {
 }
 
 
-
-
-
-time_bound <- function(tb, time_start, time_end) {
+time_bound <- function(tb, time_start, time_end, tb_name = "") {
   # Filter and mutate the datetime column, convert it to NZST
+  # browser()
+  
   result <- tb %>%
     filter(datetime >= time_start & datetime <= time_end) %>%
     mutate(datetime = with_tz(datetime, "Pacific/Auckland")) %>%
@@ -181,23 +178,27 @@ time_bound <- function(tb, time_start, time_end) {
       is_before_end  = as.numeric(NZST <= time_end)     
     )
   
-  
-  # Capture the first and last row of the datetime column safely
-  value0      <- result %>% pull(NZST) %>% first() 
-  valuen      <- result %>% pull(NZST) %>% last() 
-  fvalue0     <- format(result %>% pull(NZST) %>% first(), "%Y-%m-%d %H:%M:%S")  
-  fvaluen     <- format(result %>% pull(NZST) %>% last() , "%Y-%m-%d %H:%M:%S")
-  ftime_start <- format(time_start                       , "%Y-%m-%d %H:%M:%S")  
-  ftime_end   <- format(time_end                         , "%Y-%m-%d %H:%M:%S")
-  
-  # Output for debugging
-  browser()
-  
-  cat("\nstart_time ", ftime_start,  " : ", as.numeric(time_start))
-  cat("\nfirst()    ", fvalue0,      " : ", as.numeric(value0))
-  cat("\nend_time   ", ftime_end,    " : ", as.numeric(time_end))
-  cat("\nlast()     ", fvaluen,      " : ", as.numeric(valuen),"\n\n")
-  
+  if(tb_name != ""){
+   #browser()
+
+    # Capture the first and last row of the datetime column safely
+    value0      <- result %>% pull(NZST) %>% first() 
+    valuen      <- result %>% pull(NZST) %>% last() 
+    fvalue0     <- format(result %>% pull(NZST) %>% first(), "%Y-%m-%d %H:%M:%S")  
+    fvaluen     <- format(result %>% pull(NZST) %>% last() , "%Y-%m-%d %H:%M:%S")
+    ftime_start <- format(time_start                       , "%Y-%m-%d %H:%M:%S")  
+    ftime_end   <- format(time_end                         , "%Y-%m-%d %H:%M:%S")
+    
+    # Output for debugging
+    #browser()
+    cat("time_bound() ", tb_name, ftime_start,"::", ftime_end )
+    cat("\nclass(",tb_name,"):\n")
+    print(class(result))
+    cat("\nstart_time ", ftime_start,  " : ", as.numeric(time_start))
+    cat("\nfirst()    ", fvalue0,      " : ", as.numeric(value0))
+    cat("\nend_time   ", ftime_end,    " : ", as.numeric(time_end))
+    cat("\nlast()     ", fvaluen,      " : ", as.numeric(valuen),"\n\n")
+  }
   return(result)
 }
 
@@ -205,33 +206,14 @@ time_bound <- function(tb, time_start, time_end) {
 
 
 
-# Assume the first week in the data is a regular working week and the following week is a week of school holidays.
-#
-#
-# Normal week:
-#  
-#  Start: "2024-06-03 00:00:00"
-#
-# End: "2024-06-09 23:59:00"
-#
-# Holiday week:
-#  
-#  Start: "2024-06-10 00:00:00"
-#
-# End: "2024-06-16 23:59:00"
-
-normal_week_start  <- as.POSIXct("2024-06-03 00:00:00")
-normal_week_stop   <- as.POSIXct("2024-06-09 23:59:59")
-holiday_week_start <- as.POSIXct("2024-06-10 00:00:00")
-holiday_week_stop  <- as.POSIXct("2024-06-16 23:59:00")
 
 
 merge_cellphone_data <- function(tb1, tb2) {
   browser()
   result <- tb1 %>%
-    inner_join(tb2, by = c("datetime", "sa2")) %>%  # where 'datetime' and 'sa2' match 
-    mutate(sum = tb1$count + tb2$count) %>%         # Sum the counts
-    select(datetime, sa2, sum)                      #  'datetime', 'sa2', and new 'sum' column
+    inner_join(tb2, by = c("NZST", "sa2")) %>%  # where 'NZST' and 'sa2' match 
+    mutate(sum = tb1$count + tb2$count) %>%     # Sum the counts
+    select(NZST, sa2, sum)                      #  'NZST', 'sa2', and new 'sum' column
   
   return(result)
 }
@@ -239,7 +221,7 @@ merge_cellphone_data <- function(tb1, tb2) {
 duplicates_in_tb <- function(tb, name = "not-specified") {
   cat("\nduplicates_in_tb(",name,"):\n")
   result <- tb %>%
-    group_by(datetime, sa2) %>%
+    group_by(NZST, sa2) %>%
     summarise(duplicates = n()) %>%
     filter(duplicates > 1)
   browser()

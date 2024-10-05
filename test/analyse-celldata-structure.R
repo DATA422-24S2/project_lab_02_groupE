@@ -24,7 +24,7 @@ library(dplyr)
 library(arrow)  
 library(vroom)
 
-struct_df <- function(x,tb_name="not-specified", folder = "./data", print_tail = TRUE, saveas_RDS = FALSE) {  # what is the structure of a dataframe? 
+struct_df <- function(x, folder = "./data", print_tail = TRUE, saveas_RDS = FALSE,tb_name="not-specified") {  # what is the structure of a dataframe? 
 
     #browser()
   cat("\nclass(",tb_name,"):\n")
