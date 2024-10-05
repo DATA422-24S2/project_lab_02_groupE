@@ -2,3 +2,7 @@
 .Rhistory
 .RData
 .Ruserdata
+/data/2024*csv
+/data/*.rds
+
+
