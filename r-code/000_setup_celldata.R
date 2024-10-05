@@ -28,4 +28,4 @@ conflict_prefer("problems", "vroom",quiet=TRUE)
 
 
 # for analysis only 
-source("./test/analyse-celldata-structure.R")
+# source("./test/analyse-celldata-structure.R")
