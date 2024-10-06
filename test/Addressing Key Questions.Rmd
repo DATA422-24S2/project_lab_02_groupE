@@ -1,0 +1,32 @@
+---
+title: "Data 201 Report 2"
+output: pdf_document
+date: "2024-10-05"
+---
+Introduction:
+
+In this report, this is discussing the project of the roadworks and giving insights to the data. This report is useful for the Fulton Hogan and councils or other people that are important in roadworks in the CBD areas. 
+
+Key Questions:
+
+In this section, we will answer the key questions provided for in this analysis. We will back them up with some visualisations.
+
+Does it make sense to plan roadworks for school holidays in CBD areas?
+```{r setup, include=FALSE}
+```
+
+
+Which days are best if roadworks must be completed during the day?
+```{r cars}
+summary(cars)
+```
+ 
+
+Are there any geographical differences between CBDs we must be aware of?
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+
+Conclusion:
+
