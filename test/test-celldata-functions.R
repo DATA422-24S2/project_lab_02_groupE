@@ -50,7 +50,6 @@ struct_df(vf_data,"vf_data",print_tail = TRUE)
 vf_prep = preprocess_vf_data(vf_data)
 struct_df(vf_prep,"vf_prep") 
 
-
 sp_data = read_SP_gz()                   ## also performed in  ./r-code/01_import.R
 struct_df(sp_data,"sp_data",print_tail = TRUE)
 sp_prep = preprocess_sp_data(sp_data)

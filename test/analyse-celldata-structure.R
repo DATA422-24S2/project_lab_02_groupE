@@ -8,8 +8,8 @@
 # NOTE: 
 # NOTE: 
 
-library(rstudioapi)
-print(sys.frame(1)$ofile)
+#library(rstudioapi) 
+#print(sys.frame(1)$ofile)
 if(!require(arrow)) {
   install.packages("arrow")}
 if(!require(vroom)) {

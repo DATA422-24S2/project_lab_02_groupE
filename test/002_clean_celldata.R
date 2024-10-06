@@ -138,8 +138,6 @@ remove_istimed <- function(tb) {
   return(result)
 }
 
-
-
 # preprocess vf_data 
 # the renaming is unnecessary at this point, however, 
 # it makes things clear for the team. 
@@ -158,6 +156,7 @@ preprocess_vf_data <- function(tb) {
     filter(has_00 == 0) %>%  
     return(result)
 }
+
 # preprocess sp_data
 # the renaming is unnecessary at this point, however, 
 # it makes things clear for the team. 
