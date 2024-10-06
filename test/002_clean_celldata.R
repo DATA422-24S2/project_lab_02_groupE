@@ -1,4 +1,7 @@
 # 002_clean_cellphone_data.R
+# 
+# This set of functions are provided to do the following:
+# 
 #library(rstudioapi)
 #calls <- sys.calls()
 #print(sys.calls()[sapply(calls, function(x) "source" %in% as.character(x))])
@@ -105,6 +108,8 @@
 
 # Add  columns has_NA and has_00
 add_NA0 <- function(tb) {
+  if(DEEBUG_CELLDATA ==TRUE) cat("\n add_NA0 \n")
+  
   result <- tb %>%
     mutate(
       
@@ -116,6 +121,8 @@ add_NA0 <- function(tb) {
 }
 
 remove_NA0 <- function(tb) {
+  if(DEEBUG_CELLDATA ==TRUE) cat("\n remove_NA0 \n")
+  
   result <- tb %>%
     select(-has_NA, -has_00)  # Remove the has_NA and has_00 columns
   
@@ -123,6 +130,8 @@ remove_NA0 <- function(tb) {
 }
 
 remove_istimed <- function(tb) {
+  if(DEEBUG_CELLDATA ==TRUE) cat("\n remove_istimed \n")
+  
   result <- tb %>%
     select(-is_after_start, -is_before_end)  # Remove the has_NA and has_00 columns
   
@@ -135,6 +144,8 @@ remove_istimed <- function(tb) {
 # the renaming is unnecessary at this point, however, 
 # it makes things clear for the team. 
 preprocess_vf_data <- function(tb) {
+  if(DEEBUG_CELLDATA ==TRUE) cat("\n preprocess_vf_data \n")
+  
   result <- tb %>%
     rename(sa2 = area) %>%             # Rename 'area' to 'sa2'
     mutate(sa2 = as.numeric(sa2)) %>%  # Convert 'sa2' (renamed) to numeric
@@ -151,6 +162,8 @@ preprocess_vf_data <- function(tb) {
 # the renaming is unnecessary at this point, however, 
 # it makes things clear for the team. 
 preprocess_sp_data <- function(tb) {
+  if(DEEBUG_CELLDATA ==TRUE) cat("\n preprocess_sp_data \n")
+  
   result <- tb %>%
     rename(datetime = ts)  %>%         # Rename 'dt' to 'datetime'
     rename(count = cnt)            # Rename 'dt' to 'datetime'
@@ -164,7 +177,7 @@ preprocess_sp_data <- function(tb) {
 
 time_bound <- function(tb, time_start, time_end, tb_name = "") {
   # Filter and mutate the datetime column, convert it to NZST
-  # browser()
+  if(DEEBUG_CELLDATA ==TRUE) cat("\n time_bound \n")
   
   result <- tb %>%
     filter(datetime >= time_start & datetime <= time_end) %>%
@@ -209,6 +222,8 @@ time_bound <- function(tb, time_start, time_end, tb_name = "") {
 
 
 merge_cellphone_data <- function(tb1, tb2) {
+  if(DEEBUG_CELLDATA ==TRUE) cat("\n merge_cellphone_data \n")
+  
   browser()
   result <- tb1 %>%
     inner_join(tb2, by = c("NZST", "sa2")) %>%  # where 'NZST' and 'sa2' match 
@@ -219,6 +234,8 @@ merge_cellphone_data <- function(tb1, tb2) {
 }
 
 duplicates_in_tb <- function(tb, name = "not-specified") {
+  if(DEEBUG_CELLDATA ==TRUE) cat("\n merge_cellphone_data \n")
+  
   cat("\nduplicates_in_tb(",name,"):\n")
   result <- tb %>%
     group_by(NZST, sa2) %>%

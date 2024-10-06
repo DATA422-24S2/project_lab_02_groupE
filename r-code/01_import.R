@@ -2,6 +2,8 @@
 
 
 read_VF_parquet <- function( folder = "./data/", filename = "vf_data.parquet", write_RDS = FALSE) {
+  if(DEEBUG_CELLDATA ==TRUE) cat("\n read_VF_parquet \n")
+  
   #browser()
   # current date in YYYYMMDD format
   current_date <- format(Sys.Date(), "%Y%m%d")
@@ -37,6 +39,8 @@ read_VF_parquet <- function( folder = "./data/", filename = "vf_data.parquet", w
 }
 
 read_SP_gz <- function( folder = "./data/", filename = "sp_data.csv.gz", write_RDS = FALSE) {
+  if(DEEBUG_CELLDATA ==TRUE) cat("\n read_SP_gz \n")
+  
   #browser()
   # current date in YYYYMMDD format
   current_date <- format(Sys.Date(), "%Y%m%d")

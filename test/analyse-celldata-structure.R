@@ -24,9 +24,10 @@ library(dplyr)
 library(arrow)  
 library(vroom)
 
-struct_df <- function(x, folder = "./data", print_tail = TRUE, saveas_RDS = FALSE,tb_name="not-specified") {  # what is the structure of a dataframe? 
-
-    #browser()
+struct_df <- function(x, folder = "./data", print_tail = TRUE, saveas_RDS = FALSE,tb_name="not-specified") {  # what is the structure of a dataframe?
+  if(DEEBUG_CELLDATA ==TRUE) cat("\n struct_df \n")
+  
+  #browser()
   cat("\nclass(",tb_name,"):\n")
   print(class(x))
   #browser()
@@ -71,6 +72,9 @@ struct_df <- function(x, folder = "./data", print_tail = TRUE, saveas_RDS = FALS
 }
 
 struct_file <- function(filename,df_name = "") {  # what is the structure in the file? 
+  if(DEEBUG_CELLDATA ==TRUE) cat("\n struct_file \n")
+  
+  #browser()
   cat("========================================\n")
   cat("file:",filename,"\n")
   #browser()
@@ -105,7 +109,9 @@ struct_file <- function(filename,df_name = "") {  # what is the structure in the
   }
 }
 
-show_file_structs <- function(files) {
+show_file_structs <- function(files) {  
+  if(DEEBUG_CELLDATA ==TRUE) print("show_file_structs\n")
+  
   folder <- "./data" 
   for (file in files) {
     #
