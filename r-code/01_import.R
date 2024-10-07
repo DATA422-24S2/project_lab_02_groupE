@@ -1,5 +1,8 @@
-
-
+# 01_import.R
+#
+# Once you merge, run .test/INTEGRATION_TEST_celldata.R to ensure celldata is still working
+#
+#
 read_VF_parquet <- function( folder = "./data/", filename = "vf_data.parquet", write_RDS = FALSE) {
   if(DEEBUG_CELLDATA ==TRUE) cat("\n read_VF_parquet \n")
   

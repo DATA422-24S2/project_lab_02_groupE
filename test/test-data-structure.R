@@ -1,8 +1,8 @@
 # File: test-datafile-structure.R
-library(rstudioapi)
-print(rstudioapi::getSourceEditorContext()$path)
+#library(rstudioapi)
+#print(rstudioapi::getSourceEditorContext()$path)
 
-source("C:/GitHub/DATA422-LAB 02 GROUP E/test/analyse-data-structure.R")
+source("./test/analyse-data-structure.R")
 
 
 #my list of files, you may have a differnt one. 

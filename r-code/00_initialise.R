@@ -1,3 +1,9 @@
+# 00_initialse.R
+#
+# Once you merge, run .test/INTEGRATION_TEST_celldata.R to ensure celldata is still working
+#
+#
+
 if(!require(dplyr)) {
   install.packages("tidyverse")}
 if(!require(tools)) {

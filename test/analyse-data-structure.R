@@ -55,7 +55,7 @@ struct_file <- function(name) {  # what is the structure in the file?
   if (ext %in% c("GZ", "CSV")){ 
     cat("----------------------------------------\n")
     cat("vroom\n")
-    x <- suppressWarnings(vroom(name, show_col_types = FALSE))
+    x <- suppressWarnings(vroom(name, show_col_types = FALSE, delim = ","))
     issues <- suppressWarnings(problems(x))
     suppressWarnings(print(issues))
     #browser()
