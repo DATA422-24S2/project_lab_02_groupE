@@ -36,7 +36,7 @@ library(lubridate)
 conflict_prefer("filter", "dplyr",quiet=TRUE) 
 conflict_prefer("problems", "vroom",quiet=TRUE) 
 
-DEEBUG_CELLDATA <- TRUE # NORMAL OPERATION, SET TO TRUE FOR DEBUGGING. 
+DEEBUG_CELLDATA <- FALSE # NORMAL OPERATION, SET TO TRUE FOR DEBUGGING. 
 
 
 # for analysis only 
