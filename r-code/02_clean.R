@@ -1,4 +1,29 @@
 # 02_clean.R
+
+
+######################-Somebody elses code -###################################################
+
+
+
+
+
+
+######################-somebody other than whomever put code in beside the first person #######
+
+
+
+
+
+
+######################-someone elses code #####################################################
+
+
+
+
+
+######################-celldata clean  functions ##############################################
+
+
 #
 # Once you merge, run .test/INTEGRATION_TEST_celldata.R to ensure celldata is still working
 #
@@ -40,7 +65,8 @@ holiday_week_stop  <- as.POSIXct("2024-06-16 23:59:00", tz = "Pacific/Auckland")
 
 
 
-
+# 002_clean_cellphone_data.R
+# 
 # This set of functions are provided to do the following:
 # 
 #library(rstudioapi)
@@ -104,14 +130,7 @@ holiday_week_stop  <- as.POSIXct("2024-06-16 23:59:00", tz = "Pacific/Auckland")
 #    <dttm>              <chr>    <dbl>
 #  1 2024-06-03 00:00:00 100100    340.
 #  2 2024-06-03 01:00:00 100100    318.
-#  3 2024-06-03 02:00:00 100100    528.
-#  4 2024-06-03 03:00:00 100100    411.
-#  5 2024-06-03 04:00:00 100100    486.
-#  6 2024-06-03 05:00:00 100100    284.
-#  7 2024-06-03 06:00:00 100100    208.
-#  8 2024-06-03 07:00:00 100100    416.
-#  9 2024-06-03 08:00:00 100100    359.
-# 10 2024-06-03 09:00:00 100100    380.
+#  3 2024-06-03 02:00:00 100100    528. 
 #========================================
 
 #========================================
@@ -135,19 +154,15 @@ holiday_week_stop  <- as.POSIXct("2024-06-16 23:59:00", tz = "Pacific/Auckland")
 #    <dttm>               <dbl> <dbl>
 #  1 2024-06-02 12:00:00 100100  793.
 #  2 2024-06-02 13:00:00 100100  742.
-#  3 2024-06-02 14:00:00 100100 1233.
-#  4 2024-06-02 15:00:00 100100  959.
-#  5 2024-06-02 16:00:00 100100 1134.
-#  6 2024-06-02 17:00:00 100100  663.
-#  7 2024-06-02 18:00:00 100100  485.
-#  8 2024-06-02 19:00:00 100100  970.
-#  9 2024-06-02 20:00:00 100100  837.
-# 10 2024-06-02 21:00:00 100100  887.
+#  3 2024-06-02 14:00:00 100100 1233. 
 #=========================================
 
 
-
-# Add  columns has_NA and has_00
+##############################################################################
+# Add  columns has_NA and has_00:
+#   has_NA - row having NA in the count
+#   has_00 - row having zero in the count
+#
 add_NA0 <- function(tb) {
   if(DEEBUG_CELLDATA ==TRUE) cat("\n add_NA0 \n")
   
@@ -161,6 +176,11 @@ add_NA0 <- function(tb) {
   return(result)
 }
 
+
+
+##############################################################################
+# remove  columns has_NA and has_00 
+#
 remove_NA0 <- function(tb) {
   if(DEEBUG_CELLDATA ==TRUE) cat("\n remove_NA0 \n")
   
@@ -170,6 +190,11 @@ remove_NA0 <- function(tb) {
   return(result)
 }
 
+
+
+##############################################################################
+# remove columsn is_after_start and is before end
+#
 remove_istimed <- function(tb) {
   if(DEEBUG_CELLDATA ==TRUE) cat("\n remove_istimed \n")
   
@@ -179,17 +204,19 @@ remove_istimed <- function(tb) {
   return(result)
 }
 
+##############################################################################
 # preprocess vf_data 
 # the renaming is unnecessary at this point, however, 
 # it makes things clear for the team. 
+#
 preprocess_vf_data <- function(tb) {
   if(DEEBUG_CELLDATA ==TRUE) cat("\n preprocess_vf_data \n")
   
   result <- tb %>%
-    rename(sa2 = area) %>%             # Rename 'area' to 'sa2' 
-    mutate(sa2 = as.numeric(sa2)) %>%  # Convert 'sa2' (renamed) to numeric - required
-    rename(datetime = dt)  %>%         # Rename 'dt' to 'datetime' 
-    rename(count = devices)            # Rename 'dt' to 'datetime' 
+    rename(sa2 = area) %>%             # Rename 'area' to 'sa2'
+    mutate(sa2 = as.numeric(sa2)) %>%  # Convert 'sa2' (renamed) to numeric
+    rename(datetime = dt)  %>%         # Rename 'dt' to 'datetime'
+    rename(count = devices)            # Rename 'dt' to 'datetime'
   
   #browser()
   result <- add_NA0(result) %>%  
@@ -198,14 +225,16 @@ preprocess_vf_data <- function(tb) {
     return(result)
 }
 
+##############################################################################
 # preprocess sp_data
 # the renaming is unnecessary at this point, however, 
 # it makes things clear for the team. 
+#
 preprocess_sp_data <- function(tb) {
   if(DEEBUG_CELLDATA ==TRUE) cat("\n preprocess_sp_data \n")
   
   result <- tb %>%
-    rename(datetime = ts)  %>%     # Rename 'dt' to 'datetime'
+    rename(datetime = ts)  %>%         # Rename 'dt' to 'datetime'
     rename(count = cnt)            # Rename 'dt' to 'datetime'
   #browser()
   result <- add_NA0(result) %>%  
@@ -215,9 +244,17 @@ preprocess_sp_data <- function(tb) {
 }
 
 
+##############################################################################
 time_bound <- function(tb, time_start, time_end, tb_name = "") {
   # Filter and mutate the datetime column, convert it to NZST
   if(DEEBUG_CELLDATA ==TRUE) cat("\n time_bound \n")
+  
+  if (time_end < time_start) {
+    cat("\n time_bound \n")
+    cat("\nstart_time ", time_start,  " : ", as.numeric(time_start))
+    cat("\nend_time   ", time_end,    " : ", as.numeric(time_end))
+    return(NULL)
+  }
   
   result <- tb %>%
     filter(datetime >= time_start & datetime <= time_end) %>%
@@ -243,19 +280,161 @@ time_bound <- function(tb, time_start, time_end, tb_name = "") {
     ftime_end   <- format(time_end                         , "%Y-%m-%d %H:%M:%S")
     
     # Output for debugging
-    #browser()
-    cat("time_bound() ", tb_name, ftime_start,"::", ftime_end )
-    cat("\nclass(",tb_name,"):\n")
-    print(class(result))
-    cat("\nstart_time ", ftime_start,  " : ", as.numeric(time_start))
-    cat("\nfirst()    ", fvalue0,      " : ", as.numeric(value0))
-    cat("\nend_time   ", ftime_end,    " : ", as.numeric(time_end))
-    cat("\nlast()     ", fvaluen,      " : ", as.numeric(valuen),"\n\n")
+    if(DEEBUG_CELLDATA ==TRUE){
+      
+      #browser()
+      cat("time_bound() ", tb_name, ftime_start,"::", ftime_end )
+      cat("\nclass(",tb_name,"):\n")
+      print(class(result))
+      cat("\nstart_time ", ftime_start,  " : ", as.numeric(time_start))
+      cat("\nfirst()    ", fvalue0,      " : ", as.numeric(value0))
+      cat("\nend_time   ", ftime_end,    " : ", as.numeric(time_end))
+      cat("\nlast()     ", fvaluen,      " : ", as.numeric(valuen),"\n\n")
+    }
   }
   return(result)
 }
 
+##############################################################################
+merge_processed_celldata <- function(tb1, tb2) {
+  if (DEEBUG_CELLDATA == TRUE) cat("\n merge_processed_celldata \n")
+  
+  # Perform the full join to retain all rows
+  result <- tb1 %>%
+    full_join(tb2, by = c("NZST", "sa2"), suffix = c(".tb1", ".tb2")) %>%  # Merge on 'NZST' and 'sa2'
+    
+    # Remove rows where one of the counts is missing
+    filter(!is.na(count.tb1) & !is.na(count.tb2)) %>%
+    
+    # Sum the counts from both tibbles
+    mutate(sum = count.tb1 + count.tb2) %>%
+    
+    # Select the necessary columns
+    select(NZST, sa2, sum)
+  
+  return(result)
+}
 
+
+##############################################################################
+sum_unique_duplicates <- function(tb, name = "not-specified") {
+  if (DEEBUG_CELLDATA == TRUE) cat("\ndeduplicate_and_sum_unique(", name, "):\n")
+  
+  
+  
+  # Group by NZST and sa2, and sum only unique count values
+  result <- tb %>%
+    group_by(NZST, sa2) %>%
+    distinct(count, .keep_all = TRUE) %>%  # for duplicates, keep only distinct `count` values
+    summarise(count = sum(count), .groups = 'drop')  # Sum the unique count values
+  
+  # Print the result (optional)
+  browser()
+  print(result)
+  
+  return(result)
+}
+
+
+##############################################################################
+duplicates_in_tb <- function(tb, name = "not-specified") {
+  if (DEEBUG_CELLDATA == TRUE) cat("\n duplicates_in_tb \n")
+  
+  
+  
+  result <- tb %>%
+    group_by(NZST, sa2) %>%
+    summarise(duplicates = n(), .groups = "drop") %>%
+    filter(duplicates > 1)
+  
+  # Check if result has rows
+  if (nrow(result) == 0) {
+    cat("No duplicates found in", name, "\n")
+    return(invisible(NULL))  # Exit if no duplicates
+  }
+  
+  print(result)
+  
+  for (i in 1:nrow(result)) {
+    v_dt  <- result$NZST[i]
+    v_sa2 <- result$sa2[i]
+    
+    # Print only unique rows by 'count'
+    cat("\nUnique rows in", name, ", datetime =", v_dt, "and sa2 =", v_sa2, ":\n")
+    unique_rows <- tb %>%
+      filter(NZST == v_dt & sa2 == v_sa2) %>%
+      distinct(count, .keep_all = TRUE)   # Keep only distinct 'count' values
+    
+    print(unique_rows)
+  }
+}
+
+
+##############################################################################
+process_duplicates <- function(tb, name = "not-specified") {
+  if (DEEBUG_CELLDATA == TRUE) cat("\n process_duplicates \n")
+  
+  
+  
+  
+  result <- tb %>%
+    group_by(NZST, sa2) %>%                           # Group by NZST and sa2, 
+    summarise(duplicates = n(), .groups = "drop") %>% 
+    filter(duplicates > 1)
+  
+  # If no duplicates are found
+  if (nrow(result) == 0) {
+    cat("No duplicates found in", name, "\n")
+    return(tb)  # Return the original dataframe 
+  }
+  
+  # Limit to the first 5 duplicate sets for printing
+  first_5_duplicates <- head(result, 5)
+  
+  # Show the process for the first 5 duplicates
+  for (i in 1:nrow(first_5_duplicates)) {
+    v_dt  <- first_5_duplicates$NZST[i]
+    v_sa2 <- first_5_duplicates$sa2[i]
+    
+    # Print only unique rows by 'count'
+    cat("\nUnique rows in", name, ", datetime =", v_dt, "and sa2 =", v_sa2, ":\n")
+    unique_rows <- tb %>%
+      filter(NZST == v_dt & sa2 == v_sa2) %>%
+      distinct(count, .keep_all = TRUE)  # Keep only distinct 'count' values
+    
+    print(unique_rows)  # Print the unique rows
+    
+    # Apply sum_unique_duplicates to the unique rows
+    cat("\nSumming unique counts for", name, ", datetime =", v_dt, "and sa2 =", v_sa2, ":\n")
+    summed_result <- sum_unique_duplicates(unique_rows, name)
+    print(summed_result)  # Print the summed result
+  }
+  
+  # Now deduplicate the entire dataframe
+  deduplicated_tb <- tb %>%
+    group_by(NZST, sa2) %>%
+    distinct(count, .keep_all = TRUE) %>%  # Keep only distinct count values
+    summarise(count = sum(count), .groups = "drop")  # Sum the unique counts
+  
+  return(deduplicated_tb)  # Return the deduplicated dataframe
+}
+
+
+
+##############################################################################
+
+# Function to sum only unique duplicates
+sum_unique_duplicates <- function(tb, name = "not-specified") {
+  if (DEEBUG_CELLDATA == TRUE) cat("\ndeduplicate_and_sum_unique(", name, "):\n")
+  
+  # Group by NZST and sa2, and sum only unique count values
+  result <- tb %>%
+    group_by(NZST, sa2) %>%
+    distinct(count, .keep_all = TRUE) %>%            # Keep  distinct `count` values
+    summarise(count = sum(count), .groups = 'drop')  # Sum the unique count values
+  
+  return(result)
+}
 
 
 
