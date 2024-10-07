@@ -1,3 +1,5 @@
+library("sf")
+library("readr")
 #Reading CSV file and renaming dataframe columns
 
 sa2_ta_concord <- "./data/sa2_ta_concord_2023.csv"
