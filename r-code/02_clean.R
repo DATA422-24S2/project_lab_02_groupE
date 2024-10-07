@@ -318,7 +318,7 @@ merge_processed_celldata <- function(tb1, tb2) {
 
 ##############################################################################
 sum_unique_duplicates <- function(tb, name = "not-specified") {
-  if (DEEBUG_CELLDATA == TRUE) cat("\ndeduplicate_and_sum_unique(", name, "):\n")
+  if (DEEBUG_CELLDATA == TRUE) cat("\n sum_unique_duplicates(", name, "):\n")
   
   
   
@@ -392,7 +392,7 @@ process_duplicates <- function(tb, name = "not-specified") {
   first_5_duplicates <- head(result, 5)
   
   # Show the process for the first 5 duplicates
-  for (i in 1:nrow(first_5_duplicates)) {
+  if (DEEBUG_CELLDATA == TRUE) for (i in 1:nrow(first_5_duplicates)) {
     v_dt  <- first_5_duplicates$NZST[i]
     v_sa2 <- first_5_duplicates$sa2[i]
     
@@ -425,7 +425,7 @@ process_duplicates <- function(tb, name = "not-specified") {
 
 # Function to sum only unique duplicates
 sum_unique_duplicates <- function(tb, name = "not-specified") {
-  if (DEEBUG_CELLDATA == TRUE) cat("\ndeduplicate_and_sum_unique(", name, "):\n")
+  if (DEEBUG_CELLDATA == TRUE) cat("\n sum_unique_duplicates(", name, "):\n")
   
   # Group by NZST and sa2, and sum only unique count values
   result <- tb %>%
@@ -435,6 +435,26 @@ sum_unique_duplicates <- function(tb, name = "not-specified") {
   
   return(result)
 }
+vf_prep = preprocess_vf_data(vf_data)
+sp_prep = preprocess_sp_data(sp_data)
+#browser()
+vf_timed = time_bound(vf_prep, tb_name = "vf_timed",normal_week_start,holiday_week_stop)
+sp_timed = time_bound(sp_prep, tb_name = "sp_timed",normal_week_start,holiday_week_stop)
+
+#browser()
+vf_timed <- remove_NA0(vf_timed)
+sp_timed <- remove_NA0(sp_timed)
+
+#browser()
+vf_timed <- remove_istimed(vf_timed)
+sp_timed <- remove_istimed(sp_timed)
+
+#browser()
+vf_processed <- process_duplicates(vf_timed,"vf_timed")
+sp_processed <- process_duplicates(sp_timed,"sp_timed")
+
+#browser()
+cellphone_data <- merge_processed_celldata(vf_processed,sp_processed)
 
 
 

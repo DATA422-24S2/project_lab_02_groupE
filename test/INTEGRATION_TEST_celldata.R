@@ -16,7 +16,7 @@ source("./r-code/004_visualise_celldata.R")
 source("./test/analyse-celldata-structure.R")
 # time bound one of the preprocessed tibbles 
 #
-
+DEEBUG_CELLDATA <- TRUE # NORMAL OPERATION, SET TO TRUE FOR DEBUGGING. 
 # REQUIRED TIME VALUES
 # REQUIRED TIME VALUES
 #
@@ -46,10 +46,10 @@ holiday_week_stop  <- as.POSIXct("2024-06-16 23:59:00", tz = "Pacific/Auckland")
 
 #browser()
 vf_data = read_VF_parquet()              ## also performed in  ./r-code/01_import.R
-struct_df(vf_data,"vf_data",print_tail = TRUE)
+Qstruct_df(vf_data,"vf_data",print_tail = TRUE)
 vf_prep = preprocess_vf_data(vf_data)
 struct_df(vf_prep,"vf_prep") 
-
+browser()
 sp_data = read_SP_gz()                   ## also performed in  ./r-code/01_import.R
 struct_df(sp_data,"sp_data",print_tail = TRUE)
 sp_prep = preprocess_sp_data(sp_data)

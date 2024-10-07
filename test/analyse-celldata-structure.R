@@ -25,7 +25,7 @@ library(arrow)
 library(vroom)
 
 struct_df <- function(x, folder = "./data", print_tail = TRUE, saveas_RDS = FALSE,tb_name="not-specified") {  # what is the structure of a dataframe?
-  if(DEEBUG_CELLDATA ==TRUE) cat("\n struct_df \n")
+  cat("\n struct_df \n")
   
   #browser()
   cat("\nclass(",tb_name,"):\n")
