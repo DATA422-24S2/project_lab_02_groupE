@@ -24,6 +24,11 @@ library(dplyr)
 library(arrow)  
 library(vroom)
 
+get_tb_names <- function(tb_list) {
+  names_list <- sapply(substitute(tb_list)[-1], deparse)
+  return(names_list)
+}
+
 struct_df <- function(x, folder = "./data", print_tail = TRUE, saveas_RDS = FALSE,tb_name="not-specified") {  # what is the structure of a dataframe?
   cat("\n struct_df \n")
   
@@ -128,6 +133,20 @@ show_file_structs <- function(files) {
   }
 }
 
+show_tb_structure <- function(tb_list){
+  #browser()
+  
+  # If tb_list already has names, you can use them directly
+  if (is.null(names(tb_list))) {
+    stop("The list of dataframes must have names.")
+  }
+  
+  # Loop through the list and apply struct_df to each dataframe
+  for (i in seq_along(tb_list)){
+    tb_name <- names(tb_list)[[i]]  # Get the name of the dataframe
+    struct_df(tb_list[[i]], print_tail = TRUE, tb_name= tb_name)  
+  }
+}
 
 
 
