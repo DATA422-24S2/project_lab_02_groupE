@@ -7,10 +7,13 @@
 #
 #
 
-#browser()
+browser()
 source("./r-code/00_initialise.R")
-source("./r-code/01_import.R")
-source("./r-code/02_clean.R")
+browser()
+source("./r-code/001_import_celldata.R")
+browser()
+source("./r-code/002_clean_celldata.R")
+browser()
 source("./r-code/003_analyse_celldata.R")
 source("./r-code/004_visualise_celldata.R")
 source("./test/analyse-celldata-structure.R")
@@ -44,9 +47,10 @@ holiday_week_start <- as.POSIXct("2024-06-10 00:00:00", tz = "Pacific/Auckland")
 holiday_week_stop  <- as.POSIXct("2024-06-16 23:59:00", tz = "Pacific/Auckland")
 
 
-#browser()
+browser()
 vf_data = read_VF_parquet()              ## also performed in  ./r-code/01_import.R
-Qstruct_df(vf_data,"vf_data",print_tail = TRUE)
+browser()
+struct_df(vf_data,"vf_data",print_tail = TRUE)
 vf_prep = preprocess_vf_data(vf_data)
 struct_df(vf_prep,"vf_prep") 
 browser()
