@@ -82,9 +82,9 @@ sp_processed <- process_duplicates(sp_timed,"sp_timed")
 #browser()
 vf_test_duplicates = has_duplicates(vf_processed,"vf_processed")
 sp_test_duplicates = has_duplicates(sp_processed,"sp_processed")
-cellphone_data <- merge_processed_celldata(vf_processed,sp_processed)
-#browser()
-#cellphone_data <- merge_cellphone_data(vp_resoved_duplicates,sp_resoved_duplicates)
+#cellphone_data <- merge_processed_celldata(vf_processed,sp_processed,saveas_RDS = TRUE) #geneate a cellphone_data.RDS file
+ cellphone_data <- merge_processed_celldata(vf_processed,sp_processed)
+browser()
 #struct_df(cellphone_data,"cellphone_data",TRUE)
 
 test_sa_file = "./data/urban_rural_to_indicator_2023.csv"
@@ -93,12 +93,12 @@ test_sa_file = "./data/sa2_2023.csv"
 #
 #
 
-df <- vroom(test_sa_file, delim = ',', show_col_types = FALSE)
-
-parsing_issues <- problems(df)
-cat("parsing issues start")
-print(parsing_issues)  #  parsing problems
-cat("parsing issues end")
+test_df <- read_csv(test_sa_file,  show_col_types = FALSE)
+test_cell_data <- 
+#parsing_issues <- problems(df)
+#cat("parsing issues start")
+#print(parsing_issues)  #  parsing problems
+#cat("parsing issues end")
 
 
 test_tb <- df %>%

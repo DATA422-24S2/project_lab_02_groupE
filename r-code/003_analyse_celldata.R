@@ -98,6 +98,7 @@
 ##############################################################################
 # get_cell_plotdata
 #
+
 get_cell_plotdata <- function(tb, sa, time_start, time_stop) {
   
   time_max = .Machine$integer.max

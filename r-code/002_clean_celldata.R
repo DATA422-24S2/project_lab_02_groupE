@@ -229,22 +229,27 @@ time_bound <- function(tb, time_start, time_end, tb_name = "") {
 }
 
 ##############################################################################
-merge_processed_celldata <- function(tb1, tb2) {
+merge_processed_celldata <- function(tb1, tb2, folder = "./data",  saveas_RDS = FALSE) { 
   if (DEEBUG_CELLDATA == TRUE) cat("\n merge_processed_celldata \n")
   
   # Perform the full join to retain all rows
   result <- tb1 %>%
     full_join(tb2, by = c("NZST", "sa2"), suffix = c(".tb1", ".tb2")) %>%  # Merge on 'NZST' and 'sa2'
-    
-    # Remove rows where one of the counts is missing
-    filter(!is.na(count.tb1) & !is.na(count.tb2)) %>%
-    
-    # Sum the counts from both tibbles
-    mutate(sum = count.tb1 + count.tb2) %>%
-    
-    # Select the necessary columns
-    select(NZST, sa2, sum)
+    filter(!is.na(count.tb1) & !is.na(count.tb2)) %>% # Remove rows where one of the counts is missing
+      mutate(sum = count.tb1 + count.tb2) %>%         # Sum the counts from both tibbles
+      select(NZST, sa2, sum)                          # Select  columns
   
+  #----------------------------------------
+  # SAVEAS_RDS
+  #
+ 
+  browser()
+  if(saveas_RDS == TRUE){
+    rds_file <- paste0(as.numeric(Sys.time()), ".cellphone_data.RDS")
+    rds_file <- file.path(folder, rds_file)
+    #   browser()
+    saveRDS(result,rds_file)
+    cat(rds_file, " :saved\n")  }
   return(result)
 }
 
