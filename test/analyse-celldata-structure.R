@@ -23,13 +23,12 @@ install.packages("readr")}
 library(dplyr)
 library(arrow)  
 library(vroom)
+##################################################################
+struct_df <- function(x,tb_name="not-specified", folder = "./data", print_tail = TRUE, saveas_RDS = FALSE) {  # what is the structure of a dataframe?
 
-struct_df <- function(x, folder = "./data", print_tail = TRUE, saveas_RDS = FALSE,tb_name="not-specified") {  # what is the structure of a dataframe?
-  cat("\n struct_df \n")
-  
-  #browser()
-  cat("\nclass(",tb_name,"):\n")
-  print(class(x))
+  cat("\n-------------------------------------\n")
+  cat("struct_df(",tb_name,"): ",class(x))
+  #print()
   #browser()
   n <- ncol(x)
   l <- max(nchar(colnames(x)))
@@ -68,9 +67,9 @@ struct_df <- function(x, folder = "./data", print_tail = TRUE, saveas_RDS = FALS
     saveRDS(x,rds_file)
     cat(rds_file, " :saved\n")
   }
-# browser()
+ #cat("-------------------------------------\n")
 }
-
+#############################################################################
 struct_file <- function(filename,df_name = "") {  # what is the structure in the file? 
   if(DEEBUG_CELLDATA ==TRUE) cat("\n struct_file \n")
   
@@ -108,9 +107,9 @@ struct_file <- function(filename,df_name = "") {  # what is the structure in the
     struct_df(x,saveas_RDS = TRUE)
   }
 }
-
+######################################################################
 show_file_structs <- function(files) {  
-  if(DEEBUG_CELLDATA ==TRUE) print("show_file_structs\n")
+  print("\n show_file_structs \n")
   
   folder <- "./data" 
   for (file in files) {
@@ -127,7 +126,20 @@ show_file_structs <- function(files) {
     #browser()
   }
 }
-
+##################################################################
+show_tb_structure <- function(tb_list){
+  print("show_tb_structure \n")
+  
+  # tibbles must have names
+  if (is.null(names(tb_list)))  { stop("The list of tibbles must have names." ) }
+ 
+  
+  # Loop through the list and apply struct_df to each tibble
+  for (i in seq_along(tb_list)){
+    tibble <- names(tb_list)[[i]]  # Get the name of the tibble
+    struct_df(tibble[[i]], folder = "./data", print_tail = TRUE, saveas_RDS = FALSE, df_name)
+  }
+}
 
 
 

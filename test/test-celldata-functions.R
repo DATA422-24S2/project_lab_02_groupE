@@ -9,11 +9,14 @@
 
 #browser()
 source("./r-code/00_initialise.R")
-source("./r-code/01_import.R")
-source("./test/002_clean_celldata.R")
+source("./r-code/001_import_celldata.R")
+source("./r-code/002_clean_celldata.R")
 source("./r-code/003_analyse_celldata.R")
 source("./r-code/004_visualise_celldata.R")
 source("./test/analyse-celldata-structure.R")
+
+DEEBUG_CELLDATA = TRUE
+
 # time bound one of the preprocessed tibbles 
 #
 
@@ -56,12 +59,8 @@ sp_prep = preprocess_sp_data(sp_data)
 struct_df(sp_prep,"sp_prep")
 
 
-normal_week_start  <- as.POSIXct("2024-06-03 00:00:00")
-normal_week_stop   <- as.POSIXct("2024-06-09 23:59:59")
-holiday_week_start <- as.POSIXct("2024-06-10 00:00:00")
-holiday_week_stop  <- as.POSIXct("2024-06-16 23:59:00")
 
-#browser()
+browser()
 
 vf_timed = time_bound(vf_prep, tb_name = "vf_timed",normal_week_start,holiday_week_stop)
 sp_timed = time_bound(sp_prep, tb_name = "sp_timed",normal_week_start,holiday_week_stop)
@@ -81,8 +80,8 @@ struct_df(sp_timed,"sp_timed",print_tail = TRUE)
 vf_processed <- process_duplicates(vf_timed,"vf_timed")
 sp_processed <- process_duplicates(sp_timed,"sp_timed")
 #browser()
-vf_test_duplicates = duplicates_in_tb(vf_processed,"vf_processed")
-sp_test_duplicates = duplicates_in_tb(sp_processed,"sp_processed")
+vf_test_duplicates = has_duplicates(vf_processed,"vf_processed")
+sp_test_duplicates = has_duplicates(sp_processed,"sp_processed")
 cellphone_data <- merge_processed_celldata(vf_processed,sp_processed)
 #browser()
 #cellphone_data <- merge_cellphone_data(vp_resoved_duplicates,sp_resoved_duplicates)

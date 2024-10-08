@@ -270,10 +270,7 @@ sum_unique_duplicates <- function(tb, name = "not-specified") {
 
 
 ##############################################################################
-duplicates_in_tb <- function(tb, name = "not-specified") {
-  if (DEEBUG_CELLDATA == TRUE) cat("\n duplicates_in_tb \n")
-  
-  
+has_duplicates <- function(tb, name = "not-specified") { 
   
   result <- tb %>%
     group_by(NZST, sa2) %>%
@@ -282,9 +279,10 @@ duplicates_in_tb <- function(tb, name = "not-specified") {
   
   # Check if result has rows
   if (nrow(result) == 0) {
-    cat("No duplicates found in", name, "\n")
+    if (DEEBUG_CELLDATA == TRUE) { cat("\n has_duplicates (",name,") No duplicates found \n") }
     return(invisible(NULL))  # Exit if no duplicates
   }
+  if (DEEBUG_CELLDATA == TRUE) { cat("\n has_duplicates (",name,") ",nrow(result)," duplicates found \n") }
   
   print(result)
   
@@ -305,11 +303,10 @@ duplicates_in_tb <- function(tb, name = "not-specified") {
 
 ##############################################################################
 process_duplicates <- function(tb, name = "not-specified") {
-  if (DEEBUG_CELLDATA == TRUE) cat("\n process_duplicates \n")
-  
-  
-  
-  
+  if (DEEBUG_CELLDATA == TRUE) { 
+    cat("=====================================================")
+    cat("\n process_duplicates(",name,"\n") 
+  }
   result <- tb %>%
     group_by(NZST, sa2) %>%                           # Group by NZST and sa2, 
     summarise(duplicates = n(), .groups = "drop") %>% 
@@ -358,7 +355,7 @@ process_duplicates <- function(tb, name = "not-specified") {
 
 # Function to sum only unique duplicates
 sum_unique_duplicates <- function(tb, name = "not-specified") {
-  if (DEEBUG_CELLDATA == TRUE) cat("\n sum_unique_duplicates(", name, "):\n")
+  if (DEEBUG_CELLDATA == TRUE) { cat("\n sum_unique_duplicates(", name, "):\n") }
   
   # Group by NZST and sa2, and sum only unique count values
   result <- tb %>%
