@@ -33,12 +33,12 @@ df_list3 <- list(
   sp_processed   = sp_processed, 
   cellphone_data = cellphone_data
   )
-browser()
+#browser()
 #cat("========================================\n")
 
-show_celldata_structs(df_list1) 
-show_celldata_structs(df_list2) 
-show_celldata_structs(df_list3) 
+show_tb_structure(df_list1) 
+show_tb_structure(df_list2) 
+show_tb_structure(df_list3) 
 cat("========================================\n")
 
 

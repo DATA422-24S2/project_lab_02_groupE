@@ -305,7 +305,7 @@ has_duplicates <- function(tb, name = "not-specified") {
 process_duplicates <- function(tb, name = "not-specified") {
   if (DEEBUG_CELLDATA == TRUE) { 
     cat("=====================================================")
-    cat("\n process_duplicates(",name,"\n") 
+    cat("\n process_duplicates(",name,")\n") 
   }
   result <- tb %>%
     group_by(NZST, sa2) %>%                           # Group by NZST and sa2, 

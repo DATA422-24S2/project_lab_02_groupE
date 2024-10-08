@@ -25,7 +25,7 @@ library(arrow)
 library(vroom)
 ##################################################################
 struct_df <- function(x,tb_name="not-specified", folder = "./data", print_tail = TRUE, saveas_RDS = FALSE) {  # what is the structure of a dataframe?
-# browser()
+
   cat("\n-------------------------------------\n")
   cat("struct_df(",tb_name,"): ",class(x))
   #print()
@@ -33,7 +33,6 @@ struct_df <- function(x,tb_name="not-specified", folder = "./data", print_tail =
   n <- ncol(x)
   l <- max(nchar(colnames(x)))
   cat("\nclass for each of ",n,"columns:\n")
-# browser()
   for (i in 1:n) {
     
     column_name  <- colnames(x)[i]
@@ -109,7 +108,7 @@ struct_file <- function(filename,df_name = "") {  # what is the structure in the
   }
 }
 ######################################################################
-show_file_structure <- function(files) {  
+show_file_structs <- function(files) {  
   print("\n show_file_structs \n")
   
   folder <- "./data" 
@@ -130,22 +129,18 @@ show_file_structure <- function(files) {
 ##################################################################
 show_tb_structure <- function(tb_list){
   print("show_tb_structure \n")
-#  browser()
+  
   # tibbles must have names
   if (is.null(names(tb_list)))  { stop("The list of tibbles must have names." ) }
+ 
   
   # Loop through the list and apply struct_df to each tibble
   for (i in seq_along(tb_list)){
-    tibble_name <- names(tb_list)[i]      # Get the name of the tibble
-    tibble_data <- tb_list[[i]]           # Get the tibble itself
-    
-    cat("tibble:", tibble_name, "\n")
-    # call struct_df on the  tibble
-    struct_df(tibble_data, folder = "./data", print_tail = TRUE, saveas_RDS = FALSE)
-    
-   
+    tibble <- names(tb_list)[[i]]  # Get the name of the tibble
+    struct_df(tibble[[i]], folder = "./data", print_tail = TRUE, saveas_RDS = FALSE, df_name)
   }
 }
+
 
 
 

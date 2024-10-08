@@ -60,7 +60,7 @@ struct_df(sp_prep,"sp_prep")
 
 
 
-browser()
+#browser()
 
 vf_timed = time_bound(vf_prep, tb_name = "vf_timed",normal_week_start,holiday_week_stop)
 sp_timed = time_bound(sp_prep, tb_name = "sp_timed",normal_week_start,holiday_week_stop)
@@ -86,3 +86,44 @@ cellphone_data <- merge_processed_celldata(vf_processed,sp_processed)
 #browser()
 #cellphone_data <- merge_cellphone_data(vp_resoved_duplicates,sp_resoved_duplicates)
 #struct_df(cellphone_data,"cellphone_data",TRUE)
+
+test_sa_file = "./data/urban_rural_to_indicator_2023.csv"
+test_sa_file = "./data/urban_rural_to_sa2_concord_2023.csv"
+test_sa_file = "./data/sa2_2023.csv"
+#
+#
+
+df <- vroom(test_sa_file, delim = ',', show_col_types = FALSE)
+
+parsing_issues <- problems(df)
+cat("parsing issues start")
+print(parsing_issues)  #  parsing problems
+cat("parsing issues end")
+
+
+test_tb <- df %>%
+  slice(-1:-10) %>%
+  rename(SA2 = `Classification report`, location = `...2`) %>%
+  mutate(SA2 = as.numeric(SA2)) %>%
+  slice(1:10)
+
+
+print("cellphone_data:")
+print(head(cellphone_data))
+print("test_tb:")
+print(head(test_tb))
+
+# Check if SA2 columns match in both datasets before join
+common_SA2 <- intersect(cellphone_data$sa2, test_tb$SA2)
+print("Common SA2 values:")
+print(common_SA2)
+
+# Proceed with the join if there are common SA2 values
+if(length(common_SA2) > 0) {
+  result <- get_cell_plotdata(cellphone_data, test_tb, normal_week_start, holiday_week_stop)
+  print("Result:")
+  print(head(result))
+} else {
+  print("No matching SA2 values found.")
+}
+browser()

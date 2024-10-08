@@ -71,17 +71,19 @@ struct_file <- function(name) {  # what is the structure in the file?
     cat("----------------------------------------\n")
     cat("read_parquet\n")
   }
-  if (is.null(x)) {
-    cat("\n",name,"\n")
-
+  if (is.null(x)) { 
     cat("\n",name, " is NOT a filetype for this analysis\n")
-  } else { 
+    return(invisible(NULL)) 
+    } else { 
     struct_df(x,name)
-    
-  }
+    View(x)  
+    browser()
+    return(x)
+    }
 }
 
-show_file_structs <- function(files) {
+show_file_structure <- function(files) {
+# browser()
   folder <- "./data" 
   for (file in files) {
     #
@@ -96,6 +98,7 @@ show_file_structs <- function(files) {
       } 
     #browser()
   }
+  return()
 }
 
 

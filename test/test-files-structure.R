@@ -28,7 +28,7 @@ files <- c( "sa2_2023.csv",
 #fileset7 <-  c("20241001.urban_rural_to_sa2_concord_2023.csv", "urban_rural_to_sa2_concord_2023.csv")
 
 
-show_file_structs(files) 
+show_file_structure(files) 
 #cat("========================================\n")
 #show_file_structs(fileset1) 
 #show_file_structs(fileset2) 
