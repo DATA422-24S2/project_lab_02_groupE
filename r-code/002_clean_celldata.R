@@ -243,7 +243,7 @@ merge_processed_celldata <- function(tb1, tb2, folder = "./data",  saveas_RDS = 
   # SAVEAS_RDS
   #
  
-  browser()
+# browser()
   if(saveas_RDS == TRUE){
     rds_file <- paste0(as.numeric(Sys.time()), ".cellphone_data.RDS")
     rds_file <- file.path(folder, rds_file)
