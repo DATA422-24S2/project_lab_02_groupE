@@ -1,9 +1,9 @@
 # Format the date to match the filename format
-today_date <- format(Sys.Date(), "%Y%m%d")  # YYYYMMDD format
+
 
 
 # Construct the filename
-filename <- paste0(today_date,  ".clean-sa2_ta_concord_data.csv")
+filename <- "./data/clean_sa2_ta_concord_data.csv"
 
 # Load the file
 data <- read.csv(filename, header = TRUE, sep = ",", row.names = NULL)
