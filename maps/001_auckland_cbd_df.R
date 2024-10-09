@@ -1,22 +1,12 @@
-# Format the date to match the filename format
-today_date <- format(Sys.Date(), "%Y%m%d")  # YYYYMMDD format
-
-
-# Construct the filename
-filename <- paste0(today_date,  ".clean-sa2_ta_concord_data.csv")
-
-# Load the file
-data <- read.csv(filename, header = TRUE, sep = ",", row.names = NULL)
-View(data)
-
-# Create a separate dataframe where TA_Name == "Auckland"
-auckland_data <- subset(data, TA_Name == "Auckland")
-
-# View the new dataframe
-View(auckland_data)
 
 # Load dplyr package if not already loaded
 library(dplyr)
+library("readr")
+# Load the file
+data <- read_csv("./data/clean_sa2_ta_concord_data.csv")
+
+# Create a separate dataframe where TA_Name == "Auckland"
+auckland_data <- subset(data, TA_Name == "Auckland")
 
 # Filter the auckland_data dataframe for specific area names
 auckland_cbd_areas <- c("Quay Street-Customs Street", "Wynyard-Viaduct", "Victoria Park", 
@@ -30,4 +20,4 @@ auckland_cbd_sa2_data <- auckland_data %>%
 auckland_cbd_sa2_codes <- auckland_cbd_sa2_data$SA2_Code
 
 # Print the SA2 codes
-print(auckland_cbd_sa2_codes)
+#print(auckland_cbd_sa2_codes)
