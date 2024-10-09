@@ -1,7 +1,7 @@
 # clean_data.R
 
 # Source the import functions from the import_data.R script
-source("./test/000_read_files_BD.R")
+source("./r-code/000_read_files_BD.R")
 
 # Load necessary libraries
 library(dplyr)
@@ -28,7 +28,7 @@ if (!is.null(sub_pop_data_2)) {
       SA2_Code = AREA_POPES_SUB_006
     ) %>%
     mutate(
-      SA2_Code = as.character(SA2_Code)
+      SA2_Code = as.integer(SA2_Code)
     ) %>%
     filter(!is.na(SA2_Code), !is.na("Observation Value")) %>%
     filter(grepl("^\\d+$", SA2_Code))  # Keep numeric Area_Code
