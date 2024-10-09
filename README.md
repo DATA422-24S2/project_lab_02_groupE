@@ -41,7 +41,7 @@ Before we start with the project, the data gets imported into R.
 XXXX is responsible for importing the data we need. Some require functions inorder to read the data as they are not all in CSV files
 
 ## 2. Cleaning Data
-XXXX is responsible for cleaning the telecommunications data. We remove any duplicates and NA values within the data.
+David Ewing (82171165 – dew59 ),  is responsible for cleaning the telecommunications data. We remove any duplicates and NA values within the data.
 XXXX cleans the data by also removing any unecessary columns and data points that aren't relevant to the CBD
 
 ## 3. Creating visualizations
