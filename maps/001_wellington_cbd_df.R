@@ -11,7 +11,7 @@ sa2_ta <- read_csv('./data/clean_sa2_ta_concord_data.csv')
 #Import the shapefile
 read_shapefile <- './data/statistical-area-2-2023-generalised.shp'
 shapefile_data <- st_read(read_shapefile)
-View(shapefile_data)
+
 
 #Ensure shapefile columns have correct types
 sa2_ta$SA2_Code <- as.character(sa2_ta$SA2_Code)
