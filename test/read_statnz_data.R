@@ -12,11 +12,11 @@ str(shapefile_data)
 summary(shapefile_data)
 
 # Ensure consistent data types for the SA2 columns
-sa2_t_c_data2$SA2_Code <- as.character(sa2_t_c_data2$SA2_Code)
+sa2_t_c_data$SA2_Code <- as.character(sa2_t_c_data$SA2_Code)
 shapefile_data$SA22023_V1 <- as.character(shapefile_data$SA22023_V1)
 
 #reading concord data
-merge_map_data <- left_join(shapefile_data, sa2_t_c_data2, by = c("SA22023_V1" = "SA2_Code"))
+merge_map_data <- left_join(shapefile_data, sa2_t_c_data, by = c("SA22023_V1" = "SA2_Code"))
 
 ## Create a new column to indicate polygons to highlight
 #highlight_data <- merge_map_data %>%
@@ -26,11 +26,5 @@ merge_map_data <- left_join(shapefile_data, sa2_t_c_data2, by = c("SA22023_V1" =
 wellington_data <- merge_map_data %>%
   filter(Area_Name == "Wellington Central")
 
-# Plot the Wellington region
-ggplot(data = wellington_data) +
-  geom_sf() +
-  geom_sf_text(aes(label = SA22023_V1), size = 3, color = "black") +
-  ggtitle("Map of Wellington CBD") +
-  theme_void()
 
 

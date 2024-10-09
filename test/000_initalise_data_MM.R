@@ -5,7 +5,6 @@ library("readr")
 sa2_ta_concord <- "./data/sa2_ta_concord_2023.csv"
 urban_rr_i <- "./data/urban_rural_to_indicator_2023.csv"
 
-
 # output file paths
 sa2_t_c_output_file <- paste0("./data/", "clean_sa2_ta_concord_data.csv")
 urban_rr_i_output_file <- paste0("./data/", "clean_urban_rr_indicator_data.csv")
@@ -19,14 +18,16 @@ sa2_t_c_data2 <- read_csv(sa2_ta_concord, skip=7, col_names = sa2_column_names, 
 urban_rr_i_data2 <- read_csv(urban_rr_i, skip = 7, col_names = urb_column_names, show_col_types = FALSE)
 
 #removing unnecessary column
-sa2_t_c_data2 <- sa2_t_c_data[, !names(sa2_t_c_data) %in% c("X6")]
-urban_rr_i_data2 <- urban_rr_i_data[, !names(urban_rr_i_data) %in% c("X6")]
+sa2_t_c_data2 <- sa2_t_c_data2[, !names(sa2_t_c_data2) %in% c("X6")]
+urban_rr_i_data2 <- urban_rr_i_data2[, !names(urban_rr_i_data2) %in% c("X6")]
 
 # Writing the cleaned data frames to new CSV files
-write_csv(sa2_t_c_data2, sa2_t_c_output_file)
-write_csv(urban_rr_i_data2, urban_rr_i_output_file)
+#write_csv(sa2_t_c_data2, sa2_t_c_output_file)
+#write_csv(urban_rr_i_data2, urban_rr_i_output_file)
 
 # Success messages
 cat("Cleaned SA2 to TA data written to:", sa2_t_c_output_file, "\n")
 cat("Cleaned Urban to Rural Indicator data written to:", urban_rr_i_output_file, "\n")
+
+
 
