@@ -6,6 +6,12 @@ library("dplyr")
 
 #reading the csv file containing necessary data
 sa2_ta <- read_csv('./data/clean_sa2_ta_concord_data.csv')
+
+#Import the shapefile
+read_shapefile <- './data/statistical-area-2-2023-generalised.shp'
+shapefile_data <- st_read(read_shapefile)
+
+
 # Ensure consistent data types for the SA2 columns. Will be used later to create ggplot map
 sa2_ta$SA2_Code <- as.character(sa2_ta$SA2_Code)
 shapefile_data$SA22023_V1 <- as.character(shapefile_data$SA22023_V1)
