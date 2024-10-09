@@ -63,5 +63,5 @@ read_subnational_pop <- function( folder = "./data/", filename = "subnational_po
 sa2_2023_data_2 = read_sa2_2023()
 sub_pop_data_2 = read_subnational_pop()
 
-View(sa2_2023_data_2)
-View(sub_pop_data_2)
+#View(sa2_2023_data_2)
+#View(sub_pop_data_2)
