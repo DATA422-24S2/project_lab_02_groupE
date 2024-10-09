@@ -13,6 +13,7 @@ source("./r-code/001_import_celldata.R")
 source("./r-code/002_clean_celldata.R")
 source("./r-code/003_analyse_celldata.R")
 source("./r-code/004_visualise_celldata.R")
+source("./r-code/005_export_celldata.R")
 source("./test/analyse-celldata-structure.R")
 
 DEEBUG_CELLDATA = TRUE

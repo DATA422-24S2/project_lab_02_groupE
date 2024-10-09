@@ -16,6 +16,12 @@ source("./r-code/004_visualise_celldata.R")
 source("./test/analyse-celldata-structure.R")
 
 DEEBUG_CELLDATA = TRUE
+folder_data = "./data/"
+file_AKL_sa = "assigment.AKL_sa.RDS"
+file_WLG_sa = "assigment.AKL_sa.RDS"
+file_CHC_sa = "assigment.AKL_sa.RDS"
+
+browser()
 
 # time bound one of the preprocessed tibbles 
 #
@@ -65,7 +71,7 @@ test_sa <- test_sa_data %>%
   rename(SA2 = `Classification report`, location = `...2`) %>%
   mutate(SA2 = as.numeric(SA2)) %>%
   slice(1:10)
-
+saveRDS(test_sa, )
 
 print("test_celldata:")
 print(head(test_celldata))

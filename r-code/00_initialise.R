@@ -36,8 +36,12 @@ library(lubridate)
 conflict_prefer("filter", "dplyr",quiet=TRUE) 
 conflict_prefer("problems", "vroom",quiet=TRUE) 
 
+# global variables 
 DEEBUG_CELLDATA <- FALSE # NORMAL OPERATION, SET TO TRUE FOR DEBUGGING. 
 
+folder_data   <- "./data/"
+folder_map    <- "./map/"
+file_celldata <- "assignment.celldata.RDS"
 
 # for analysis only 
 # source("./test/analyse-celldata-structure.R")

@@ -5,7 +5,9 @@
 # 
 #
 #
-# This file runs the final application
+# This script generates the celldata file that can be used with the SA2 codes 
+# for the CBDs to generate the data necessary for ggplot() to generate 
+# bar chart and line charts.
 #
 #
 
@@ -13,7 +15,7 @@
 source("./r-code/00_initialise.R")
 source("./r-code/01_import.R")
 source("./r-code/02_clean.R")
-#source("./r-code/03_analsye.R")
-#Source("./r-code/04_visulaise.R")
-#source("./r-code/04_export.R")
+source("./r-code/03_analyse.R")
+#Source("./r-code/04_visualise.R")
+source("./r-code/05_export.R")
 
