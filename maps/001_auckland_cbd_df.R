@@ -19,5 +19,5 @@ auckland_cbd_sa2_data <- auckland_data %>%
 # Extract the SA2_Code values for these areas
 auckland_cbd_sa2_codes <- auckland_cbd_sa2_data$SA2_Code
 
-# Print the SA2 codes
-#print(auckland_cbd_sa2_codes)
+
+saveRDS(auckland_cbd_sa2_data, file = "assignment.AKL.RDS")
