@@ -19,6 +19,7 @@ christchurch_cbd_sa2_data <- sa2_ta %>%
 
 #filtering cbd data to get only sa2 codes
 christchurch_cbd_sa2_codes <- christchurch_cbd_sa2_data$SA2_Code
-  
 
+
+saveRDS(christchurch_cbd_sa2_data, file = "assignment.CHC.RDS")
 
