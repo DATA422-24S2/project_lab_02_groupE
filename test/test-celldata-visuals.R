@@ -46,13 +46,13 @@ normal_week_stop   <- as.POSIXct("2024-06-09 23:59:59", tz = "Pacific/Auckland")
 holiday_week_start <- as.POSIXct("2024-06-10 00:00:00", tz = "Pacific/Auckland")
 holiday_week_stop  <- as.POSIXct("2024-06-16 23:59:00", tz = "Pacific/Auckland")
  
-test_sa_file  =  "./data/urban_rural_to_indicator_2023.csv"
-test_sa_file  =  "./data/urban_rural_to_sa2_concord_2023.csv"
-test_sa_file  =  "./data/sa2_2023.csv"
-test_celldata =  "./data/test.cellphone_data.RDS"
+test_sa_file   =  "./data/urban_rural_to_indicator_2023.csv"
+test_sa_file   =  "./data/urban_rural_to_sa2_concord_2023.csv"
+#test_sa_file   =  "./data/sa2_2023.csv"
+test_cell_file =  "./data/test.cellphone_data.RDS"
 
-
-test_sa_data   <- read_csv(test_sa_file,  show_col_types = FALSE)
+browser()
+test_sa_data  <- read_csv(test_sa_file,  show_col_types = FALSE)
 test_celldata <- read_rds(test_celldata)
 #parsing_issues <- problems(df)
 #cat("parsing issues start")
@@ -94,9 +94,9 @@ if(length(common_SA2) > 0) {
     #  join between the filtered tb and sa based on the  SA and SA2 columns match
     #  group by NZST and calculate the sum of the 'sum' column from tb
     result <- filtered_tb %>%
-      inner_join(sa, by = c("SA2" = "sa2")) %>%    # Join on matching SA and SA2 columns
+      inner_join(sa, by = c("sa2" = "SA2")) %>%    # Join on matching SA and SA2 columns
       group_by(NZST) %>%                         # Group by NZST (time)
-      summarise(SA2 = min(SA2),                     # Keep the minimum SA value for each group
+      summarise(Sa2 = min(Sa2),                     # Keep the minimum SA value for each group
          total_sum = sum(sum))             # Sum the 'sum' column for each time entry
     
     
