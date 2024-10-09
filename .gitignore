@@ -1,8 +1,13 @@
+# Ignore common R project files
 .Rproj.user
 .Rhistory
 .RData
 .Ruserdata
-/data/2024*csv
-/data/*.rds
+
+# Ignore all .csv files in the data folder that start with 2024
+data/2024*.csv
+
+# Allow only assignment.*.rds files in the data folder
+!data/assignment.*.rds
 
 
