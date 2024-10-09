@@ -13,7 +13,7 @@
 #----------------------------------------
 
 write_assignment_celldata <- function(folder="./data/",filename="assignment.celldata.RDS",tb) { 
-  browser()
+#  browser()
   file_export <- file.path(folder, filename)
   saveRDS(tb,file_export)
 }

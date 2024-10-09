@@ -66,7 +66,7 @@ sp_timed <- remove_istimed(sp_timed)
 vf_processed <- process_duplicates(vf_timed,"vf_timed")
 sp_processed <- process_duplicates(sp_timed,"sp_timed")
 
-browser()
+#browser()
 cellphone_data <- merge_processed_celldata(vf_processed,sp_processed)
 #
 #

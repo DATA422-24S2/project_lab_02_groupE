@@ -34,7 +34,7 @@
 #
 #
 #
-browser()
+#browser()
 source("./r-code/005_export_celldata.R")
 
 #

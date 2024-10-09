@@ -231,7 +231,7 @@ time_bound <- function(tb, time_start, time_end, tb_name = "") {
 ##############################################################################
 merge_processed_celldata <- function(tb1, tb2, folder = "./data",  saveas_RDS = FALSE) { 
   if (DEEBUG_CELLDATA == TRUE) cat("\n merge_processed_celldata \n")
-browser()
+#browser()
   # Perform the full join to retain all rows
   result <- tb1 %>%
     full_join(tb2, by = c("NZST", "sa2"), suffix = c(".tb1", ".tb2")) %>%  # Merge on 'NZST' and 'sa2'

@@ -35,7 +35,7 @@
 #  this write is done prior to the visualisation such that others can use the data
 #  as a means of generating their visualisations (bar charts line graphs etc.)
 #
-browser()
+#browser()
 
 source("./r-code/003_analyse_celldata.R")
 
