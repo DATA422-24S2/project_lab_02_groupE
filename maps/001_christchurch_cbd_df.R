@@ -1,8 +1,5 @@
 #installing necessary packages
-library(leaflet)
-library("sf")
-library("ggplot2")
-library("dplyr")
+
 library("readr")
 
 #reading the csv file containing necessary data

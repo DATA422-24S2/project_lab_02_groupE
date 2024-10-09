@@ -1,8 +1,5 @@
 # Load required libraries
-library(leaflet)
-library(sf)
-library(ggplot2)
-library(dplyr)
+
 library(readr)
 
 #source("./test/002_clean_files_BD.R")
