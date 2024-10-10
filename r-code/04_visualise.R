@@ -6,26 +6,30 @@
 # Also, write your own Integration test and PUT ITS NAME HERE so we can 
 # ensure we dont affect your work 
 #
-#
+library(dplyr)
+library("readr")
+library(sf)
 
 
 
-######################-Somebody elses code -###################################################
+######################-akl map visualizations##########################################
+source("./maps/000_auckland_cbd.R")
+akl_leaflet_map
+auckland_region
+
+
+
+######################chc map visualizations##########################################
+
+source("./maps/000_christchurch_cbd.R")
 
 
 
 
-
-
-######################-somebody other than whomever put code in beside the first person #######
-
-
-
-
-
-
-######################-someone elses code #####################################################
-
+#####################wlg map visualizations##########################################
+source("./maps/000_wellington_cbd.R")
+wlg_leaflet_map
+wellington_cbd
 
 
 

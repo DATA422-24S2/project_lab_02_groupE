@@ -18,7 +18,7 @@ wellington_bounds <- list(
 )
 
 # Create a leaflet map and plot the Wellington CBD boundary
-leaflet() %>%
+wlg_leaflet_map <-leaflet() %>%
   addTiles() %>%
   addPolygons(
     lng = sapply(wellington_bounds, function(x) x[1]),
@@ -30,21 +30,13 @@ leaflet() %>%
     popup = "Wellington CBD (251400)"
   ) %>%
   setView(lng = 174.7762, lat = -41.2865, zoom = 14)  # Centered in the Wellington CBD
+wlg_leaflet_map
 
-#Wellington Central(251400)
-# Define the Wellington Central boundary coordinates as a data frame
-wellington_central_df <- data.frame(
-  lng = sapply(wellington_bounds, function(x) x[1]),
-  lat = sapply(wellington_bounds, function(x) x[2])
-)
-
-# Display the data frame
-#print(wellington_central_df)
 
 ####The purpose of this code is to display the Wellington CBD SA2 Codes
 
 #source("./test/002_clean_files_BD.R")
-sa2_ta <- read_csv('./data/clean_sa2_ta_concord_data.csv')
+sa2_ta <- clean_sa2_ta_concord
 
 #Import the shapefile
 read_shapefile <- './data/statistical-area-2-2023-generalised.shp'
@@ -55,9 +47,6 @@ shapefile_data <- st_read(read_shapefile)
 sa2_ta$SA2_Code <- as.integer(sa2_ta$SA2_Code)
 shapefile_data$SA22023_V1 <- as.integer(shapefile_data$SA22023_V1)
 
-#Filter for Wellington Central specifically (SA22023_V1 = 251400)
-wellington_data <- sa2_ta %>%
-  filter(Area_Name == "Wellington Central")
 
 #merging csv file with shapefile with SA2 Code
 wellington_map_data <- right_join(shapefile_data, wellington_data, by = c("SA22023_V1" = "SA2_Code"))

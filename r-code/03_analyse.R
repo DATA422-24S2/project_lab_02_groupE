@@ -18,18 +18,6 @@ source("./maps/001_christchurch_cbd_df.R")
 
 
 
-######################-somebody other than whomever put code in beside the first person #######
-
-
-
-
-
-
-###################### #####################################################
-
-
-
-
 
 ######################-celldata analysis code ##############################################
 #
