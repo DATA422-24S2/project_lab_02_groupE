@@ -1,4 +1,4 @@
-# 03_export.R
+# 04_visualise.R
 #
 # Once you merge, run .test/INTEGRATION_TEST_celldata.R to ensure celldata 
 # is still working
@@ -35,9 +35,9 @@
 #  this write is done prior to the visualisation such that others can use the data
 #  as a means of generating their visualisations (bar charts line graphs etc.)
 #
-#browse()
-source("./r-code/004_visualise_celldata.R")
-write_assignment_celldata(folder_data,file_celldata,cellphone_data)
+# browse()
+# source("./r-code/004_visualise_celldata.R")
+# write_assignment_celldata(folder_data,file_celldata,cellphone_data)
 #
 #
 #

@@ -36,7 +36,7 @@ source("./r-code/002_clean_celldata.R")
 # REQUIRED TIME VALUES  (this may need to be in run.R)
 # REQUIRED TIME VALUES  (this may need to be in run.R)
 #
-#normal_week_start  <- as.POSIXct("2024-06-03 00:00:00", tz = "Pacific/Auckland")
+normal_week_start  <- as.POSIXct("2024-06-03 00:00:00", tz = "Pacific/Auckland")
 #normal_week_stop   <- as.POSIXct("2024-06-09 23:59:59", tz = "Pacific/Auckland")
 #holiday_week_start <- as.POSIXct("2024-06-10 00:00:00", tz = "Pacific/Auckland")
 #holiday_week_stop  <- as.POSIXct("2024-06-16 23:59:00", tz = "Pacific/Auckland")
