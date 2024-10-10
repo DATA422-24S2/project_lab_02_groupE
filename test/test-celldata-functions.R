@@ -90,11 +90,11 @@ sp_test_duplicates = has_duplicates(sp_processed,"sp_processed")
 test_sa_file  =  "./data/urban_rural_to_indicator_2023.csv"
 test_sa_file  =  "./data/urban_rural_to_sa2_concord_2023.csv"
 test_sa_file  =  "./data/sa2_2023.csv"
-test_celldata =  "./data/test.cellphone_data.RDS"
+test_cellfile =  "./data/assignment.celldata.RDS"  
+#browser()
 
-
-test_sa_data   <- read_csv(test_sa_file,  show_col_types = FALSE)
-test_celldata <- read_rds(test_celldata)
+test_sa_data   <- suppressWarnings(read_csv(test_sa_file,  show_col_types = FALSE))
+test_celldata  <- read_rds(test_cellfile)
 #parsing_issues <- problems(df)
 #cat("parsing issues start")
 #print(parsing_issues)  #  parsing problems
@@ -119,30 +119,30 @@ print("Common SA2 values:")
 print(common_SA2)
 
 # Proceed with join if there are common SA2 values
-if(length(common_SA2) > 0) {
-  browser()
-  tb         = test_celldata
-  sa         = test_sa  
-  time_start = normal_week_= start
-  time_stop  = holiday_week_stop
-  
-
-    
-    # tb rows within the time range (inclusive)
-  filtered_tb <- tb %>%
-      filter(NZST >= time_start & NZST <= time_stop)
-    
-    #  join between the filtered tb and sa based on the  SA and SA2 columns match
-    #  group by NZST and calculate the sum of the 'sum' column from tb
-    result <- filtertbed_tb %>%
-      inner_join(sa, by = c("SA2" = "sa2")) %>%    # Join on matching SA and SA2 columns
-      group_by(NZST) %>%                         # Group by NZST (time)
-      summarise(SA2 = min(SA2),                     # Keep the minimum SA value for each group
-         total_sum = sum(sum))             # Sum the 'sum' column for each time entry
-    
-    
-  }
-  print("Result:")
-  print(head(result))
-
-browser()
+#if(length(common_SA2) > 0) {
+#  browser()
+#  tb         = test_celldata
+#  sa         = test_sa  
+#  time_start = normal_week_start
+#  time_stop  = holiday_week_stop
+#  
+#
+#    
+#    # tb rows within the time range (inclusive)
+#  filtered_tb <- tb %>%
+#      filter(NZST >= time_start & NZST <= time_stop)
+#    
+#    #  join between the filtered tb and sa based on the  SA and SA2 columns match
+#    #  group by NZST and calculate the sum of the 'sum' column from tb
+#    result <- filtered_tb %>%
+#      inner_join(sa, by = c("SA2" = "sa2")) %>%    # Join on matching SA and SA2 columns
+#      group_by(NZST) %>%                         # Group by NZST (time)
+#      summarise(SA2 = min(SA2),                     # Keep the minimum SA value for each group
+#         total_sum = sum(sum))             # Sum the 'sum' column for each time entry
+#    
+#    
+#  }
+#  print("Result:")
+#  print(head(result))
+#
+# browser()
