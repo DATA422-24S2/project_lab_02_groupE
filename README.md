@@ -1,10 +1,14 @@
 # Introduction
-This project analyzes population density data for various Central Business Districts (CBDs) in New Zealand using telecommunications data. The goal is to visualize population trends and create maps for Auckland, Wellington, and Christchurch. The project utilizes R for data cleaning, analysis, and visualization. The purpose of this project is to provide insights for the appropriate period to do roadworks in Auckland, Wellington and Christchurch.
+This project aims to answer these key questions:
 
-The project aims to answer these key questions:
 • Does it make sense to plan roadworks for school holidays in CBD areas ?
+
 • Which days are best if roadworks must be completed during the day ?
+
 • Are there any geographical differences between CBDs we must be aware of ?
+
+This project analyses population density data for three Central Business Districts (CBDs) in New Zealand using telecommunications data. The goal is to visualize population trends and create maps for Auckland, Wellington, and Christchurch. The project utilizes R for data cleaning, analysis, and visualization. The purpose of this project is to provide insights for the appropriate period to do roadworks in Auckland, Wellington and Christchurch.
+
 
 # Technologies
 This project was created using:
@@ -76,7 +80,7 @@ A ggplot map is created to show the SA2 regions contained within the boundary al
 Example of the scripts being ran: 000_auckland_cbd.R takes the CBD data from the previous script ran (03_analyse.R) and creates a ggplot map based on the SA2 codes
 
 ## 6. Exporting the data
-05_export.R exports the data to ...
+Placeholder.
 
 # Contributors
 David Ewing
