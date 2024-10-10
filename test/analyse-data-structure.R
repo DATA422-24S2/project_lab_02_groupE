@@ -18,7 +18,6 @@ if(!require(dplyr)) {
 if(!require(readr)) {
 install.packages("readr")}
 
-
 library(dplyr)
 library(arrow)  
 library(vroom)
@@ -77,7 +76,7 @@ struct_file <- function(name) {  # what is the structure in the file?
     } else { 
     struct_df(x,name)
     View(x)  
-    browser()
+#    browser()
     return(x)
     }
 }

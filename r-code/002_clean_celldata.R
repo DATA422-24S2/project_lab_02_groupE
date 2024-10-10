@@ -228,6 +228,7 @@ time_bound <- function(tb, time_start, time_end, tb_name = "") {
   return(result)
 }
 
+
 ##############################################################################
 merge_processed_celldata <- function(tb1, tb2, folder = "./data",  saveas_RDS = FALSE) { 
   if (DEEBUG_CELLDATA == TRUE) cat("\n merge_processed_celldata \n")
@@ -302,6 +303,7 @@ has_duplicates <- function(tb, name = "not-specified") {
       distinct(count, .keep_all = TRUE)   # Keep only distinct 'count' values
     
     print(unique_rows)
+    return(results)
   }
 }
 

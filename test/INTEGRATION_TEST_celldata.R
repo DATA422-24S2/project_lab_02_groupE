@@ -17,7 +17,7 @@ browser()
 source("./r-code/003_analyse_celldata.R")
 source("./r-code/004_visualise_celldata.R")
 source("./test/analyse-celldata-structure.R")
-# time bound one of the preprocessed tibbles 
+# 
 #
 DEEBUG_CELLDATA <- TRUE # NORMAL OPERATION, SET TO TRUE FOR DEBUGGING. 
 # REQUIRED TIME VALUES
@@ -25,27 +25,23 @@ DEEBUG_CELLDATA <- TRUE # NORMAL OPERATION, SET TO TRUE FOR DEBUGGING.
 #
 # Assume the first week in the data is a regular working week and the following week is a week of school holidays.
 #
-#
 # Normal week:
 #  
 #  Start: "2024-06-03 00:00:00"
-#
-# End: "2024-06-09 23:59:00"
+#    End: "2024-06-09 23:59:00"
 #
 # Holiday week:
 #  
 #  Start: "2024-06-10 00:00:00"
+#    End: "2024-06-16 23:59:00"
 #
-# End: "2024-06-16 23:59:00"
-#
-# REQUIRED TIME VALUES
-# REQUIRED TIME VALUES
+# REQUIRED TIME VALUES // TEST 
+# REQUIRED TIME VALUES // TEST
 #
 normal_week_start  <- as.POSIXct("2024-06-03 00:00:00", tz = "Pacific/Auckland")
 normal_week_stop   <- as.POSIXct("2024-06-09 23:59:59", tz = "Pacific/Auckland")
 holiday_week_start <- as.POSIXct("2024-06-10 00:00:00", tz = "Pacific/Auckland")
 holiday_week_stop  <- as.POSIXct("2024-06-16 23:59:00", tz = "Pacific/Auckland")
-
 
 browser()
 vf_data = read_VF_parquet()              ## also performed in  ./r-code/01_import.R
@@ -58,19 +54,16 @@ sp_data = read_SP_gz()                   ## also performed in  ./r-code/01_impor
 struct_df(sp_data,"sp_data",print_tail = TRUE)
 sp_prep = preprocess_sp_data(sp_data)
 struct_df(sp_prep,"sp_prep")
+browser()
 
 
-normal_week_start  <- as.POSIXct("2024-06-03 00:00:00")
-normal_week_stop   <- as.POSIXct("2024-06-09 23:59:59")
-holiday_week_start <- as.POSIXct("2024-06-10 00:00:00")
-holiday_week_stop  <- as.POSIXct("2024-06-16 23:59:00")
-
-#browser()
+browser()
 
 vf_timed = time_bound(vf_prep, tb_name = "vf_timed",normal_week_start,holiday_week_stop)
 sp_timed = time_bound(sp_prep, tb_name = "sp_timed",normal_week_start,holiday_week_stop)
 struct_df(vf_timed,"vf_timed",print_tail = TRUE)
 struct_df(sp_timed,"sp_timed",print_tail = TRUE)
+browser()
 #browser()
 vf_timed <- remove_NA0(vf_timed)
 sp_timed <- remove_NA0(sp_timed)
@@ -85,8 +78,10 @@ struct_df(sp_timed,"sp_timed",print_tail = TRUE)
 vf_processed <- process_duplicates(vf_timed,"vf_timed")
 sp_processed <- process_duplicates(sp_timed,"sp_timed")
 #browser()
-vf_test_duplicates = duplicates_in_tb(vf_processed,"vf_processed")
-sp_test_duplicates = duplicates_in_tb(sp_processed,"sp_processed")
+vf_test_duplicates = has_duplicates(vf_processed,"vf_processed")
+browser()
+sp_test_duplicates = has_duplicates(sp_processed,"sp_processed")
+browser()
 cellphone_data <- merge_processed_celldata(vf_processed,sp_processed)
 #browser()
 #cellphone_data <- merge_cellphone_data(vp_resoved_duplicates,sp_resoved_duplicates)
