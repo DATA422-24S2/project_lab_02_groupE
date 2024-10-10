@@ -16,5 +16,5 @@ wellington_cbd_sa2_data <- sa2_ta %>%
 wellington_cbd_sa2_code <- wellington_cbd_sa2_data$SA2_Code
 
 
-saveRDS(wellington_cbd_sa2_data, file = "assignment.WLG.RDS")
+#saveRDS(wellington_cbd_sa2_data, file = "assignment.WLG.RDS")
 

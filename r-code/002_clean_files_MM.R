@@ -1,4 +1,4 @@
-
+#Cleans the files for sa2_ta_concord and urban_rr_indicator
 
 #removing unnecessary column
 sa2_ta_concord <- sa2_ta_concord[, !names(sa2_ta_concord) %in% c("X6")]
