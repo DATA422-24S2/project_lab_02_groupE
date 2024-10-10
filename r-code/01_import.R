@@ -8,27 +8,21 @@
 #
 #
 
-
+  
 
 ######################-Somebody elses code -###################################################
+source("./r-code/000_read_files_BD.R")
+#ignore parsing issue
+sa2_2023_data_2 = read_sa2_2023()
+sub_pop_data_2 = read_subnational_pop()
+
+######################sa2_ta_concord and urban_rural_to_indicator files#######
+
+source("./r-code/000_initialise_MM.R")
 
 
-
-
-
-
-######################-somebody other than whomever put code in beside the first person #######
-
-
-
-
-
-
-######################-someone elses code #####################################################
-
-
-
-
+sa2_ta_concord = read_sa2_ta_concord()
+urban_rr_indicator = read_urban_rural_indicator()
 
 ######################-celldata import functions ##############################################
 #

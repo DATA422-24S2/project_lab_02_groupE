@@ -2,37 +2,66 @@
 if(!require(RPostgres)) {
   install.packages("RPostgres")}
 
-#Reading CSV file and renaming dataframe columns
-sa2_ta_concord <- "./data/sa2_ta_concord_2023.csv"
-urban_rr_i <- "./data/urban_rural_to_indicator_2023.csv"
+read_sa2_ta_concord <- function(folder = "./data/", filename = "sa2_ta_concord_2023.csv", write_RDS = FALSE) {
+  # current date in YYYYMMDD format
+  current_date <- format(Sys.Date(), "%Y%m%d")
+  
+  # Input and output files
+  sa2_ta_concord_rds <- paste0(current_date, "_sa2_ta_concord.rds")
+  sa2_ta_concord_rds <- file.path(folder, sa2_ta_concord_rds) 
+  sa2_ta_concord_input_file <- file.path(folder, filename) 
+  
+  if (!file.exists(sa2_ta_concord_input_file)) {
+    cat("Error:", sa2_ta_concord_input_file, " does not exist.\n")
+    return(NULL)  # Return NULL 
+  }
+  
+  # Remove existing output file if it exists
+  if (file.exists(sa2_ta_concord_rds) && !file.remove(sa2_ta_concord_rds)) {
+    cat("Error deleting ", sa2_ta_concord_rds, "\n")
+    return(NULL)
+  }
+  
+  # Read the CSV file
+  result <- read_csv(sa2_ta_concord_input_file, show_col_types = FALSE)
+  
+  # Save the result as an RDS file if needed
+  if (write_RDS) {
+    write_rds(result, sa2_ta_concord_rds)
+  }
+  
+  # Return the result (the read data)
+  return(result)
+}
 
-# output file paths
-sa2_t_c_output_file <- paste0("./data/", "clean_sa2_ta_concord_data.csv")
-urban_rr_i_output_file <- paste0("./data/", "clean_urban_rr_indicator_data.csv")
-
-#col names for sa2_t_c_data
-sa2_column_names <- c("SA2_Code", "Area_Name", "Relationship", "TA_Code", "TA_Name")
-urb_column_names <- c("UR_Code", "Area_Name", "Relationship", "Indicator_Code", "Indicator_Description")
-
-# reading CSV files, skip the correct number of rows (adjust skip value based on file structure)
-sa2_t_c_data <- read_csv(sa2_ta_concord, skip=7, col_names = sa2_column_names, show_col_types = FALSE)
-urban_rr_i_data <- read_csv(urban_rr_i, skip = 7, col_names = urb_column_names, show_col_types = FALSE)
-
-#removing unnecessary column
-sa2_t_c_data <- sa2_t_c_data[, !names(sa2_t_c_data) %in% c("X6")]
-urban_rr_i_data <- urban_rr_i_data[, !names(urban_rr_i_data) %in% c("X6")]
-
-# Writing the cleaned data frames to new CSV files
-#write_csv(sa2_t_c_data2, sa2_t_c_output_file)
-#write_csv(urban_rr_i_data2, urban_rr_i_output_file)
-
-
-#checking whether file exists or not
-sa2_t_c_exists <- file.exists(sa2_t_c_output_file)
-urban_rr_i_exists <- file.exists(urban_rr_i_output_file)
-
-
-# Print message to show paths of the saved file
-cat("Files saved successfully:\n",
-    "New sa2_ta_concord data csvfile: ", sa2_t_c_output_file, "exists:", sa2_t_c_exists, "\n",
-    "New urban_rr_i data csvfile: ", urban_rr_i_output_file, "exists:", urban_rr_i_exists, "\n")
+read_urban_rural_indicator <- function(folder = "./data/", filename = "urban_rural_to_indicator_2023.csv", write_RDS = FALSE) {
+  # current date in YYYYMMDD format
+  current_date <- format(Sys.Date(), "%Y%m%d")
+  
+  # Input and output files
+  urban_rural_rds <- paste0(current_date, "_urban_rural_indicator.rds")
+  urban_rural_rds <- file.path(folder, urban_rural_rds) 
+  urban_rural_input_file <- file.path(folder, filename) 
+  
+  if (!file.exists(urban_rural_input_file)) {
+    cat("Error:", urban_rural_input_file, " does not exist.\n")
+    return(NULL)  # Return NULL 
+  }
+  
+  # Remove existing output file if it exists
+  if (file.exists(urban_rural_rds) && !file.remove(urban_rural_rds)) {
+    cat("Error deleting ", urban_rural_rds, "\n")
+    return(NULL)
+  }
+  
+  # Read the CSV file
+  result <- read_csv(urban_rural_input_file, show_col_types = FALSE)
+  
+  # Save the result as an RDS file if needed
+  if (write_RDS) {
+    write_rds(result, urban_rural_rds)
+  }
+  
+  # Return the result (the read data)
+  return(result)
+}
