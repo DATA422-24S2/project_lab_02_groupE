@@ -14,13 +14,22 @@ output:
 
 ### Executive Summary
 
+The report presents an analysis conducted for Fulton Hogan to determine the most suitable time to plan roadworks in the Central Business District (CBD) of Auckland, Wellington and Christchurch, using telecommunications data from spark and Vodafone. The project aims to optimize roadwork scheduling by minimizing traffic disruption, reducing costs, and ensuring safety for both workers and road users. 
+
+Data from multiple soruces was used, including Telecommunications data from spark and Vodafone, Statistical Area and Territorial Authority Data, Populations estimates and urban rural indicators. 
+
+The data preprocessing phase involved cleaning and preparing these datasets to ensure accuracy and consistency. Challenges such as missing or duplicate data were resolved through validation. Functions were developed to handle standardization of data, flagging, removing errors and merging datasets. We generated a map for each of the CBDs to find and identify the regions in each CBD. One it was found, the process for analysis could begin. 
 
 ---
 
 ### Introduction
-Fulton Hogan Conduct significant roadworks in the busy cities across the country. It can be disruptive due to many occasions such as costs, management in traffic and dangers. 
+Fulton Hogan conducts significant roadworks in the busy cities across the country. It can be disruptive due to many variables such as costs, management in traffic and dangers. We are investigating largely in Auckland, Wellington and Christchurch in this investigation.  
 
-This report outlines the data processing pipeline used in analysing telecommunication data from spark and Vodafone, focusing on traffic management across key regions such as Auckland, Wellington and Christchurch. The goal is to ensure accurate, reliable data to assist in planning roadworks and managing disruptions. 
+Due to the busy environment of the CBD’s, roadworks often deteriorate over time or require upgrades to accommodate any increase in traffic or newer projects within the district. It’s important that roads are maintained to ensure safe driving conditions for all road users, improve or maintain good traffic flow, adapting to newer infrastructure and upgrades. 
+
+The objective of this investigation is to determine the appropriate time to plan roadworks around the Central Business Districts (CBD). Since CBD’s are usually busy areas, performing this investigation works towards minimizing costs, improving work safety and reducing any disruption to traffic.  
+
+To do this, we will be using Telecommunication data provided by Spark and Vodafone, as well as Statistical (SA2) and Territorial (TA) Area data which provide information on the cellphones present within specific SA2 regions.  
 
 ---
 
@@ -249,17 +258,19 @@ The second input file urban_rural_to_indicator_2023.csv is dynamically generated
 
 ## Building of the Map
 
-Here is the process of the map generated for the visualisations. We used sa2_ta_concord_2023 csv file to refer and used the Statistical Level 2 website to find what were the CBDs for Christchurch, Auckland and Wellington. It was generated in a file to read and call in order to separately generate the map for each city. 
+To locate the Central Business Districts of the 3 cities (Auckland, Wellington and Christchurch), we need to find the areas that compile each of these regions in the city. This has been proceeded in 3 steps: 
 
-**Wellington Map**
+  **1. Creating a polygon of the CBD**: 
+  
+To get a clear picture of which regions exactly are covered to give the polygon of each CBD, we have found the boundary region coordinates of each CBD, which gave CBD polygon on the map of New Zealand.  
 
-The Wellington CBD only had one region that defined it, which was Wellington Central. We used coordinates to mark and pinpoint the map of it. We called the read_shapefile to then create a left-join to combine. 
+  **2. Finding the SA2 Codes for the CBD**: 
+  
+The polygon found in the previous step created a boundary that could be used to find the corresponding SA2 codes. To help us graph the SA2 codes, we used a map of New Zealand comprised of polygons that surround the Statistical Areas (SA2). This map was found on StatNZ, and by clicking on the polygons that are within the polygon found earlier, we found the SA2 codes. 
 
-**Auckland Map**
-
-
-
-**Christchurch Map**
+  **3. Creating a dataframe for the CBD**: 
+  
+After finding the correct SA2 codes for each CBD, we create a dataframe for Auckland, Wellington and Christchurch CBD by filtering out data that wasn’t within the CBD boundaries. 
 
 ---
 

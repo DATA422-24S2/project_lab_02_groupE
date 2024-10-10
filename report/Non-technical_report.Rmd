@@ -130,6 +130,8 @@ ggplot(comparison_data, aes(x = factor(day), y = total_sum, fill = week_type)) +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
 ```
 
+This is a comparison of how the cell data of the population is collected during the Holiday and School term period across the weekdays in all the CBD regions. There is an increase in the number of people active in the CBDs during the holidays than during the school term. Possibly that high school students, families and workers are all driving or travelling through the CBDs. Yet the difference between holiday and normal week are not strong. They are almost the same amount. A normal week would have workers coming to and from work, people taking buses, parents taking their children to school and back and other people making their own lives. We have included the five days of the week for the weekdays as they are significant as the weekdays could be highly more chances of cell data than the weekends. This gives an insight into whether it makes sense to plan roadworks in CBD areas, and which day is best to complete roadworks during the day.
+
 **2. Daytime vs Nighttime**:
 
 The First half day:
@@ -201,7 +203,7 @@ ggplot(comparison_data, aes(x = factor(hour), y = total_sum, fill = week_type)) 
 
 The second half day:
 
-```{r}
+```{r echo=FALSE}
 # Filter for normal and holiday weeks and CBD regions, removing NA values in 'date' and 'sa2' columns
 normal_week_data <- cell_data %>%
   filter(!is.na(NZST), !is.na(sa2), 
@@ -253,11 +255,18 @@ ggplot(comparison_data, aes(x = factor(hour), y = total_sum, fill = week_type)) 
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
 ```
 
+This is the daytime comparison of cell data activities which show population in CBD regions in the morning 12am to 12pm. It can be seen that during the normal week there is a higher usage of cell data in the early hours which decreases compared to the holiday week. People are usually more active during specific times.  In the normal week, people would use data mostly during these working hours which is less in comparison to the holiday week. 
+
+During normal weeks, cell data collection exhibits a steady increase starting from 06:00, reaching its first peak between 11:00 and 12:00. A second significant rise in activity is observed during the late afternoon, particularly around hours 16:00 to 20:00. 
+
+In contrast, during holiday weeks, the overall volume of cell data collected is lower. However, a similar pattern of activity is evident, with increased data collection observed during the same peak hours, albeit at reduced levels compared to normal weeks.
+
 **3. Differences between each CBD daily**:
 
 ```{r echo=FALSE, warning=FALSE}
 # Load required libraries
 library(scales)  # For better formatting of y-axis labels
+library(ggplot2)
 
 # Combine CBD SA2 codes from all regions
 cbd_sa2_codes <- bind_rows(
@@ -302,22 +311,14 @@ ggplot(holiday_week_summary, aes(x = day, y = total_sum, color = CBD, group = CB
   scale_y_continuous(labels = label_number(scale_cut = cut_short_scale())) +  # Format y-axis without scientific notation
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
 ```
+  
+Here shows the line chart trend analysis for each CBD area during the holiday week. Wellingtons CBD is the lowest being less than 100k volume of cellphone data. It has a dip in the 5th day of the holiday week and onwards. While Wellington has one region in the CBD it has a small gap between Christchurch, with 3 CBDs. The pattern for the holiday week of Christchurch is not quite significant, which suggests that the cell data activity is stable. Auckland has the highest collection among the 3 CBDs. The data remains fairly consitent from day 1 to day 4, with a slight decrease till day 7, which could be explained by a reduction in activity towards the end of the week. 
+
 ---
 
 ### Key Findings
 
-Using the visuals we have made, we can find key points and highlights that are most important. 
-
-**1. Comparison For the Daily Cell Data: Normal vs Holiday week**:
-
-
-  
-**2. Daytime vs Nighttime**:
-
-
-
-**3. Differences between each CBD daily**:
-
+Using the visuals we have made, we can find key points and highlights that are most important.
 
 ---
 
