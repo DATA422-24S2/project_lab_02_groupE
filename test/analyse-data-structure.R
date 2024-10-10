@@ -18,7 +18,6 @@ if(!require(dplyr)) {
 if(!require(readr)) {
 install.packages("readr")}
 
-
 library(dplyr)
 library(arrow)  
 library(vroom)
