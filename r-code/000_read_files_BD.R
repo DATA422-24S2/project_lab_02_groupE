@@ -21,7 +21,8 @@ read_sa2_2023 <- function( folder = "./data/", filename = "sa2_2023.csv", write_
     return(NULL)
   }
   
-  result <- read_csv(sa2_2023_input_file, skip = 6, show_col_types = FALSE)
+  sa2_2023_col_name <- c("SA2_Code", "Area_Name")
+  result <- read_csv(sa2_2023_input_file, col_names = sa2_2023_col_name, skip = 6, show_col_types = FALSE)
   column_spec <- spec(result)
   #write rds file
   if(write_RDS) write_rds(result,sa2_2023_output_rds)

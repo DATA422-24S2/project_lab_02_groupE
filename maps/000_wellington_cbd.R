@@ -38,15 +38,6 @@ wlg_leaflet_map
 #source("./test/002_clean_files_BD.R")
 sa2_ta <- clean_sa2_ta_concord
 
-#Import the shapefile
-read_shapefile <- './data/statistical-area-2-2023-generalised.shp'
-shapefile_data <- st_read(read_shapefile)
-
-
-#Ensure shapefile columns have correct types
-sa2_ta$SA2_Code <- as.integer(sa2_ta$SA2_Code)
-shapefile_data$SA22023_V1 <- as.integer(shapefile_data$SA22023_V1)
-
 
 #merging csv file with shapefile with SA2 Code
 wellington_map_data <- right_join(shapefile_data, wellington_data, by = c("SA22023_V1" = "SA2_Code"))

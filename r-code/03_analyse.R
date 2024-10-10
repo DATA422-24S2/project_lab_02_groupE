@@ -16,7 +16,7 @@ sa2_ta <- clean_sa2_ta_concord
 
 #Import the shapefile
 read_shapefile <- './data/statistical-area-2-2023-generalised.shp'
-shapefile_data <- st_read(read_shapefile)
+shapefile_data <- st_read(read_shapefile, quiet = TRUE)
 
 
 # Ensure consistent data types for the SA2 columns. Will be used later to create ggplot map
