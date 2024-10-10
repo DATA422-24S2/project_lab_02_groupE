@@ -302,6 +302,7 @@ has_duplicates <- function(tb, name = "not-specified") {
       distinct(count, .keep_all = TRUE)   # Keep only distinct 'count' values
     
     print(unique_rows)
+    return(results)
   }
 }
 
