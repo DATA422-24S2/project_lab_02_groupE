@@ -17,4 +17,7 @@ total_na_urban_rr <- sum(is.na(urban_rr_indicator))
 clean_sa2_ta_concord <- na.omit(sa2_ta_concord)
 clean_urban_rr_indicator <- na.omit(urban_rr_indicator)
 
+#Turning SA2 codes into integers
+clean_sa2_ta_concord$SA2_Code <- as.integer(clean_sa2_ta_concord$SA2_Code)
+
 

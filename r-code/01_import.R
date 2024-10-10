@@ -18,7 +18,6 @@ source("./r-code/000_read_files_BD.R")
 
 source("./r-code/000_initialise_MM.R")
 
-
 sa2_ta_concord = read_sa2_ta_concord()
 urban_rr_indicator = read_urban_rural_indicator()
 
