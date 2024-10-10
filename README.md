@@ -36,19 +36,18 @@ vf_data.parquet contains Vodafone telecommunications data that must be cleaned
 Data from StatNZ was used to generate maps for CBD regions via their SA2 Codes. The link is as follows: https://datafinder.stats.govt.nz/layer/111227-statistical-area-2-2023-generalised/
 
 # Scripts overview
-## 1. Importing Data
-Before we start with the project, the data gets imported into R.
-XXXX is responsible for importing the data we need. Some require functions inorder to read the data as they are not all in CSV files
+### All these scripts should be ran. run.R contains all of the necessary scripts to run
+## 1. Importing necessary packages
+Before we start with the project, the necessary packages must be imported to ensure the project works correctly
+00_initialise.R is responsible for importing the packages we need. Run this function
+## 2. Importing files
+01_import.R imports all of the required files by sourcing 'read' and 'initialise' files. The files get read and put in a dataframe.
 
-## 2. Cleaning Data
+## 3. Cleaning the files 
+02_clean.R is responsible for cleaning the data by removing any extra columns, duplicated values, na values etc.
+  
 David Ewing (82171165 – dew59 ),  is responsible for cleaning the telecommunications data. We remove any duplicates and NA values within the data.
-XXXX cleans the data by also removing any unecessary columns and data points that aren't relevant to the CBD
 
-## 3. Creating visualizations
-XXXX creates maps using leaflet which shows the Central Business district areas according to the internet
-XXXX uses Data from StatNZ to help show the specific SA2 codes the Central Business District is comprised of
-XXXX creates bar charts to visually show the cellphone data within a particular Statistical Area #WORK ON THIS#
-XXXX creates a line graph which shows the trends of the cellphone data over time #WORK ON THIS#
 
 # Contributors
 
