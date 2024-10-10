@@ -15,7 +15,7 @@ library(sf)
 ######################-akl map visualizations##########################################
 source("./maps/000_auckland_cbd.R")
 akl_leaflet_map
-auckland_region
+auckland_cbd
 
 
 

@@ -20,6 +20,6 @@ source("./r-code/00_initialise.R")
 source("./r-code/01_import.R")
 source("./r-code/02_clean.R")
 source("./r-code/03_analyse.R")
-#Source("./r-code/04_visualise.R")
+source("./r-code/04_visualise.R")
 source("./r-code/05_export.R")
 
