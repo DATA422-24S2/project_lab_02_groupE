@@ -54,7 +54,10 @@ The rscripts being sourced in this file read the raw datasets and return them in
 02_clean.R is responsible for cleaning the data by removing any extra columns, duplicated values, na values etc.
   
 David Ewing (82171165 – dew59 ),  is responsible for cleaning the telecommunications data. We remove any duplicates and NA values within the data.
+
 Telecommunication data require functions to retrieve the data from different formats (parquet and gz)
+
+Example: The sourced file 002_clean_files removes any NA values and ensures the necessary columns are named, and others are removed
 
 ## 4. Analysing the data
 03_analyse.R helps with getting the necessary data to do analysis with. It involves getting the correct SA2 Codes for the required CBD's; Auckland, Wellington and Christchurch.
@@ -64,14 +67,23 @@ This script runs a function to join the celldata coming from the sp and vf data 
 The rscripts that obtain the SA2 codes for each individual CBD e.g 001_auckland_cbd_df.R require a shapefile which can be downloaded from the StatNZ website (provided in the Data Sources section)
 
 ## 5. Visualising the data
-04_visualise.R is where all of the visualisations for graphs occur using the data from the analyzed files. Bar charts and line graphs can be created here.
+04_visualise.R is where all of the visualisations for graphs occur using the data from the analyzed files. Maps are created in this file. To call it, copy the line of code below the source functions. To see how it looks, just remove the hashtags in the 04_visualise.R file.
+
+Maps created: A leaflet map is created to show the general boundary of the CBD. This also allows the user to see what the boundary looks like in an actual interactive map.
+
+A ggplot map is created to show the SA2 regions contained within the boundary along with their code. 
+
+Example of the scripts being ran: 000_auckland_cbd.R takes the CBD data from the previous script ran (03_analyse.R) and creates a ggplot map based on the SA2 codes
 
 ## 6. Exporting the data
 05_export.R exports the data to ...
 
 # Contributors
 David Ewing
+
 Ann Benji
+
 Brayden Davies
+
 Matthew Madriaga
 
