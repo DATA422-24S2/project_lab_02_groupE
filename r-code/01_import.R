@@ -12,9 +12,9 @@
 
 ######################-Somebody elses code -###################################################
 source("./r-code/000_read_files_BD.R")
-#ignore parsing issue
 
-######################sa2_ta_concord and urban_rural_to_indicator files#######
+
+######################sa2_ta_concord and urban_rural_to_indicator files########
 
 source("./r-code/000_initialise_MM.R")
 
