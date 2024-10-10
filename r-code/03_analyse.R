@@ -16,7 +16,9 @@ source("./maps/001_wellington_cbd_df.R")
 source("./maps/001_auckland_cbd_df.R")
 source("./maps/001_christchurch_cbd_df.R")
 
-
+auckland_data <- filter_auckland_sa2_data()
+wellington_data <- filter_wellington_cbd_data()
+christchurch_data <- filter_christchurch_cbd_data()
 
 
 ######################-celldata analysis code ##############################################
