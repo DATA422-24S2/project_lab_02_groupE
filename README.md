@@ -39,15 +39,25 @@ Data from StatNZ was used to generate maps for CBD regions via their SA2 Codes. 
 ### All these scripts should be ran. run.R contains all of the necessary scripts to run
 ## 1. Importing necessary packages
 Before we start with the project, the necessary packages must be imported to ensure the project works correctly
+
 00_initialise.R is responsible for importing the packages we need. Run this function
 ## 2. Importing files
 01_import.R imports all of the required files by sourcing 'read' and 'initialise' files. The files get read and put in a dataframe.
 
-## 3. Cleaning the files 
+## 3. Cleaning the data
 02_clean.R is responsible for cleaning the data by removing any extra columns, duplicated values, na values etc.
   
 David Ewing (82171165 – dew59 ),  is responsible for cleaning the telecommunications data. We remove any duplicates and NA values within the data.
 
+## 4. Analysing the data
+03_analyse.R helps with getting the necessary data to do analysis with. It involves getting the correct SA2 Codes for the required CBD's; Auckland, Wellington and Christchurch.
+This script runs a function to join the celldata coming from the sp and vf data with the SA2 data to make ggplots.
+
+## 5. Visualising the data
+04_visualise.R is where all of the visualisations for graphs occur using the data from the analyzed files. Bar charts and line graphs can be created here.
+
+## 6. Exporting the data
+05_export.R exports the data to ...
 
 # Contributors
 
