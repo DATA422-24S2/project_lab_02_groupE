@@ -14,7 +14,7 @@ chch_cbd_hagley_coords <- list(
 
 
 # Create a leaflet map and plot the Christchurch CBD boundary
-leaflet() %>%
+chc_leaflet_map <- leaflet() %>%
   addTiles() %>%
   addPolygons(
     lng = sapply(chch_cbd_hagley_coords, function(x) x[1]),
@@ -43,14 +43,8 @@ shapefile_data <- st_read(read_shapefile)
 sa2_ta$SA2_Code <- as.integer(sa2_ta$SA2_Code)
 shapefile_data$SA22023_V1 <- as.integer(shapefile_data$SA22023_V1)
 
-
-#Area names for chch cbd
-chch_cbd_names <- c("Christchurch Central", "Christchurch Central-West", "Christchurch Central-East",
-                    "Christchurch Central-North", "Christchurch Central-South", "Hagley Park")
 #filtering to find chch cbd
-christchurch_data <- sa2_ta %>%
-  filter(Area_Name %in% chch_cbd_names)
-
+christchurch_data 
 #merging filtered data with shapefile with SA2 Code
 merge_map_data <- right_join(shapefile_data, christchurch_data, by = c("SA22023_V1" = "SA2_Code"))
 
