@@ -14,22 +14,25 @@ library(sf)
 
 ######################-akl map visualizations##########################################
 source("./maps/000_auckland_cbd.R")
-akl_leaflet_map
-auckland_cbd
+#remove hashtag to check maps
+#akl_leaflet_map
+#auckland_cbd
 
 
 
 ######################chc map visualizations##########################################
 
 source("./maps/000_christchurch_cbd.R")
-
-
+#unhashtag to check the maps
+#chc_leaflet_map
+#christchurch_cbd
 
 
 #####################wlg map visualizations##########################################
 source("./maps/000_wellington_cbd.R")
-wlg_leaflet_map
-wellington_cbd
+#remove hashtag to check mapss
+#wlg_leaflet_map
+#wellington_cbd
 
 
 
