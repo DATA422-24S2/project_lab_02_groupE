@@ -19,7 +19,7 @@ if (!is.null(sa2_2023_data_2)) {
     select(SA2_Code, Area_Name)
   
   # View the cleaned data
-  View(sa2_2023_clean)
+  #View(sa2_2023_clean)
 }
 
 if (!is.null(sub_pop_data_2)) {
@@ -28,11 +28,11 @@ if (!is.null(sub_pop_data_2)) {
     rename(
       SA2_Code = AREA_POPES_SUB_006
     ) %>%
-    mutate(
-      SA2_Code = as.integer(SA2_Code)
-    ) %>%
     filter(!is.na(SA2_Code), !is.na("Observation Value")) %>%
     filter(grepl("^\\d+$", SA2_Code))  # Keep numeric Area_Code
+  
+  #Turning SA2 code into integer code (helps work with other files)
+  sub_pop_clean$SA2_Code <- as.integer(sub_pop_clean$SA2_Code)
   
   # Remove the two columns by specifying their names
   sub_pop_clean <- sub_pop_clean %>%

@@ -14,6 +14,7 @@
 
 source("./maps/001_wellington_cbd_df.R")
 source("./maps/001_auckland_cbd_df.R")
+source("./maps/001_christchurch_cbd_df.R")
 
 
 
