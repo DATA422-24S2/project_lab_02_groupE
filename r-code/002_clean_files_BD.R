@@ -10,12 +10,13 @@ library(tibble)
 # Check if the data was loaded
 if (!is.null(sa2_2023_data_2)) {
   # Print column names for debugging
-  print(colnames(sa2_2023_data_2))
+  #print(colnames(sa2_2023_data_2))
   
   # Clean SA2 2023 data
-  sa2_2023_clean <- sa2_2023_data_2[-c(1:6), ] %>%
-    rename(Code = "Classification report",
-           Names = "...2")
+  sa2_2023_clean <- sa2_2023_data_2 %>%
+    rename("SA2_Code" = "Code" ,
+           "Area_Name" = "Descriptor") %>%
+    select(SA2_Code, Area_Name)
   
   # View the cleaned data
   View(sa2_2023_clean)
@@ -38,8 +39,8 @@ if (!is.null(sub_pop_data_2)) {
     select(-Area, -"Observation value")  # Replace 'column1' and 'column2' with actual column names
   
   # Print the structure of the cleaned data
-  print(str(sub_pop_clean))
+  #print(str(sub_pop_clean))
   
   # View the cleaned data
-  View(sub_pop_clean)
+  #View(sub_pop_clean)
 }

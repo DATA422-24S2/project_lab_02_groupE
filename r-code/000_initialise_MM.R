@@ -2,9 +2,14 @@
 if(!require(RPostgres)) {
   install.packages("RPostgres")}
 
-read_sa2_ta_concord <- function(folder = "./data/", filename = "sa2_ta_concord_2023.csv", write_RDS = FALSE) {
+read_sa2_ta_concord <- function(folder = "./data/", filename = "sa2_ta_concord_2023.csv", write_RDS = FALSE,
+                                show_col_types = FALSE) {
   # current date in YYYYMMDD format
   current_date <- format(Sys.Date(), "%Y%m%d")
+  
+  #col names for sa2_t_c_data
+  sa2_col_names <- c("SA2_Code", "Area_Name", "Relationship", "TA_Code", "TA_Name")
+  
   
   # Input and output files
   sa2_ta_concord_rds <- paste0(current_date, "_sa2_ta_concord.rds")
@@ -23,7 +28,7 @@ read_sa2_ta_concord <- function(folder = "./data/", filename = "sa2_ta_concord_2
   }
   
   # Read the CSV file
-  result <- read_csv(sa2_ta_concord_input_file, show_col_types = FALSE)
+  result <- read_csv(sa2_ta_concord_input_file, col_names = sa2_col_names, skip = 7, show_col_types = FALSE)
   
   # Save the result as an RDS file if needed
   if (write_RDS) {
@@ -34,9 +39,13 @@ read_sa2_ta_concord <- function(folder = "./data/", filename = "sa2_ta_concord_2
   return(result)
 }
 
-read_urban_rural_indicator <- function(folder = "./data/", filename = "urban_rural_to_indicator_2023.csv", write_RDS = FALSE) {
+read_urban_rural_indicator <- function(folder = "./data/", filename = "urban_rural_to_indicator_2023.csv", write_RDS = FALSE,
+                                       show_col_types = FALSE) {
   # current date in YYYYMMDD format
   current_date <- format(Sys.Date(), "%Y%m%d")
+  
+  # col names for urban_rural_indicator file
+  urb_col_names <- c("UR_Code", "Area_Name", "Relationship", "Indicator_Code", "Indicator_Description")
   
   # Input and output files
   urban_rural_rds <- paste0(current_date, "_urban_rural_indicator.rds")
@@ -55,7 +64,7 @@ read_urban_rural_indicator <- function(folder = "./data/", filename = "urban_rur
   }
   
   # Read the CSV file
-  result <- read_csv(urban_rural_input_file, show_col_types = FALSE)
+  result <- read_csv(urban_rural_input_file, col_names = urb_col_names, skip = 7, show_col_types = FALSE)
   
   # Save the result as an RDS file if needed
   if (write_RDS) {
