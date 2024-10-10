@@ -13,8 +13,6 @@
 ######################-Somebody elses code -###################################################
 source("./r-code/000_read_files_BD.R")
 #ignore parsing issue
-sa2_2023_data_2 = read_sa2_2023()
-sub_pop_data_2 = read_subnational_pop()
 
 ######################sa2_ta_concord and urban_rural_to_indicator files#######
 

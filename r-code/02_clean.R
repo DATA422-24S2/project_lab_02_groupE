@@ -1,21 +1,14 @@
 # 02_clean.R
 
-
-######################-Somebody elses code -###################################################
-
-
+######################Cleaning SA2_2023 and Subnational population estimate data###############
+source("./r-code/002_clean_files_BD.R")
 
 
 
 
-######################-somebody other than whomever put code in beside the first person #######
+######################Cleaning SA2 and Urban Rural Indicator###################################
+source("./r-code/002_clean_files_MM.R")
 
-
-
-
-
-
-######################-someone elses code #####################################################
 
 ######################-celldata clean  functions ##############################################
 #
