@@ -1,0 +1,32 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+Dummy testing for something. 
+
+```{r}
+# Load required libraries
+library(ggplot2)
+library(dplyr)
+library(lubridate)
+library(readr)
+library(here)
+
+# Use here() to build the file paths
+akl_cbd <- readRDS(here("data", "assignment.AKL.RDS"))
+wlg_cbd <- readRDS(here("data", "assignment.WLG.RDS"))
+chc_cbd <- readRDS(here("data", "assignment.CHC.RDS"))
+cell_data <- readRDS(here("data", "assignment.celldata.RDS"))
+
+
+# Combine CBD SA2 codes from all regions
+cbd_sa2_codes <- bind_rows(
+  akl_cbd %>% select(SA2_Code),
+  wlg_cbd %>% select(SA2_Code),
+  chc_cbd %>% select(SA2_Code)
+) %>% distinct()
+
+```
+
+If this works for everyone then i will push the non-technical report. If not someone else will. 
