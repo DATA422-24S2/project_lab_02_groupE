@@ -1,5 +1,10 @@
 # Introduction
-This project analyzes population density data for various Central Business Districts (CBDs) in New Zealand using telecommunications data. The goal is to visualize population trends and create maps for Auckland, Wellington, and Christchurch. The project utilizes R for data cleaning, analysis, and visualization.
+This project analyzes population density data for various Central Business Districts (CBDs) in New Zealand using telecommunications data. The goal is to visualize population trends and create maps for Auckland, Wellington, and Christchurch. The project utilizes R for data cleaning, analysis, and visualization. The purpose of this project is to provide insights for the appropriate period to do roadworks in Auckland, Wellington and Christchurch.
+
+The project aims to answer these key questions:
+• Does it make sense to plan roadworks for school holidays in CBD areas ?
+• Which days are best if roadworks must be completed during the day ?
+• Are there any geographical differences between CBDs we must be aware of ?
 
 # Technologies
 This project was created using:
@@ -43,15 +48,20 @@ Before we start with the project, the necessary packages must be imported to ens
 00_initialise.R is responsible for importing the packages we need. Run this function
 ## 2. Importing files
 01_import.R imports all of the required files by sourcing 'read' and 'initialise' files. The files get read and put in a dataframe.
+The rscripts being sourced in this file read the raw datasets and return them in a usable dataframe for future use.
 
 ## 3. Cleaning the data
 02_clean.R is responsible for cleaning the data by removing any extra columns, duplicated values, na values etc.
   
 David Ewing (82171165 – dew59 ),  is responsible for cleaning the telecommunications data. We remove any duplicates and NA values within the data.
+Telecommunication data require functions to retrieve the data from different formats (parquet and gz)
 
 ## 4. Analysing the data
 03_analyse.R helps with getting the necessary data to do analysis with. It involves getting the correct SA2 Codes for the required CBD's; Auckland, Wellington and Christchurch.
+
 This script runs a function to join the celldata coming from the sp and vf data with the SA2 data to make ggplots.
+
+The rscripts that obtain the SA2 codes for each individual CBD e.g 001_auckland_cbd_df.R require a shapefile which can be downloaded from the StatNZ website (provided in the Data Sources section)
 
 ## 5. Visualising the data
 04_visualise.R is where all of the visualisations for graphs occur using the data from the analyzed files. Bar charts and line graphs can be created here.
@@ -60,5 +70,8 @@ This script runs a function to join the celldata coming from the sp and vf data 
 05_export.R exports the data to ...
 
 # Contributors
-
+David Ewing
+Ann Benji
+Brayden Davies
+Matthew Madriaga
 
