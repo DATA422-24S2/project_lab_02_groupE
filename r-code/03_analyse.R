@@ -10,7 +10,7 @@
 
 
 ######################-Importing the shapefile data-###############################
-
+library("sf")
 #reading the csv file containing necessary data
 sa2_ta <- clean_sa2_ta_concord
 
