@@ -1,0 +1,329 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+  # **Non-Technical Report: R-Language Data Science Project**
+  
+- **title: Celldata Analysis**
+- **author(s): David Ewing, Ann Benji, Matthew Madriaga and Brayden Davies **
+- **client/organisations: Fulton Hogan **
+- **date: 11th October **
+
+---
+
+### Executive Summary
+
+
+---
+
+### Introduction
+
+Fulton Hogan plays an important role in keeping connections in our cities by improving and maintaining roads, especially in high traffic central business districts (CBDs). However, roadworks result in higher traffic than usual causing a lot of disruption daily, which affects the local economy. This report provides valuable insights to help Fulton Hogan, the key stakeholders and other councils to understand when these disruptions could be minimised.
+Using cellphone data from the three key regions of interest, which are Auckland, Christchurch and Wellington, the report explores the population patterns across the three CBDs of the cities. By identifying how people commute across these areas during two specific periods, during school term breaks and school- term, we can visualise the population pattern in these areas during these periods and sets the stage for further analysis around the best time to carry out roadworks.
+---
+
+### Data Description
+
+The data for this project consists of seven files that provide valuable insights into population movements across the country. This includes telecommunications data from Spark and Vodafone, which is used to track population activity in the key areas of interest. Additionally, there are supporting documents containing important details about Statistical Area Level 2 (SA2) codes, which represent specific functional areas within New Zealand. These documents also link SA2 areas to their corresponding Territorial Authorities (TA names), allowing the data to focus specifically on the central business districts (CBDs) for analysis. 
+
+---
+
+### Data Preprocessing
+
+To prepare the data for analysis, several essential preprocessing steps were conducted. This involved cleaning, standardizing and integrating data from various sources to ensure that the information is accurate, consistent, and focused on the Central Business Districts (CBDs) of Auckland, Wellington and Christchurch. 
+
+We addressed missing data and removed duplicate entries to maintain data integrity. Also, the geographic identifiers have been thoroughly verified to ensure they accurately link among the files required. This also made sure that the analysis remains aligned with your specific objectives. Following these steps, the data has been rigorously validated for accuracy, which made it ready for detailed analysis and providing actionable insights to answer the key questions outlined in this project. 
+
+---
+
+### Exploratory Data Analysis
+
+Here are some visuals we have outputted for our data exploration. Here is the call for the dataframes we use for the analysis. 
+
+**1. Comparison For the Daily Cell Data: Normal vs Holiday week**:
+  
+```{r echo=FALSE}
+# Load required libraries
+library(ggplot2)
+library(dplyr)
+library(lubridate)
+library(readr)
+library(here)
+
+# Use here() to build the file paths
+akl_cbd <- readRDS(here("data", "assignment.AKL.RDS"))
+wlg_cbd <- readRDS(here("data", "assignment.WLG.RDS"))
+chc_cbd <- readRDS(here("data", "assignment.CHC.RDS"))
+cell_data <- readRDS(here("data", "assignment.celldata.RDS"))
+
+
+# Combine CBD SA2 codes from all regions
+cbd_sa2_codes <- bind_rows(
+  akl_cbd %>% select(SA2_Code),
+  wlg_cbd %>% select(SA2_Code),
+  chc_cbd %>% select(SA2_Code)
+) %>% distinct()
+
+# Define the date ranges for normal and holiday weeks (8-day period)
+normal_week_start  <- as.POSIXct("2024-06-03 00:00:00", tz = "Pacific/Auckland")
+normal_week_stop   <- as.POSIXct("2024-06-10 23:59:59", tz = "Pacific/Auckland")
+holiday_week_start <- as.POSIXct("2024-06-11 00:00:00", tz = "Pacific/Auckland")
+holiday_week_stop  <- as.POSIXct("2024-06-18 23:59:59", tz = "Pacific/Auckland")
+
+# Convert the NZST column to just dates to avoid hourly data
+cell_data <- cell_data %>%
+  mutate(date = as.Date(NZST, tz = "Pacific/Auckland"))
+
+# Filter for normal and holiday weeks and CBD regions, removing NA values in 'date' and 'sa2' columns
+normal_week_data <- cell_data %>%
+  filter(!is.na(date), !is.na(sa2), 
+         date >= as.Date(normal_week_start) & date <= as.Date(normal_week_stop),
+         sa2 %in% cbd_sa2_codes$SA2_Code)
+
+holiday_week_data <- cell_data %>%
+  filter(!is.na(date), !is.na(sa2), 
+         date >= as.Date(holiday_week_start) & date <= as.Date(holiday_week_stop),
+         sa2 %in% cbd_sa2_codes$SA2_Code)
+
+# Create a "Day" column that represents Day 1 to Day 8 relative to the start of the week
+normal_week_data <- normal_week_data %>%
+  mutate(day = as.numeric(difftime(date, as.Date(normal_week_start), units = "days")) + 1)
+
+holiday_week_data <- holiday_week_data %>%
+  mutate(day = as.numeric(difftime(date, as.Date(holiday_week_start), units = "days")) + 1)
+
+# Summarize by day for normal and holiday weeks (no hourly aggregation)
+normal_week_summary <- normal_week_data %>%
+  group_by(day) %>%
+  summarize(total_sum = sum(sum)) %>%
+  mutate(week_type = "Normal Week")
+
+holiday_week_summary <- holiday_week_data %>%
+  group_by(day) %>%
+  summarize(total_sum = sum(sum)) %>%
+  mutate(week_type = "Holiday Week")
+
+# Combine both summaries, ensuring there are no NA values in 'day' and filter for days 2 to 5
+comparison_data <- bind_rows(normal_week_summary, holiday_week_summary) %>%
+  filter(!is.na(day) & day >= 2 & day <= 6)
+
+# Rename Day 2 to 5 as Day 1 to 5 and remove Day 6
+comparison_data <- comparison_data %>%
+  mutate(day = case_when(
+    day == 2 ~ 1,
+    day == 3 ~ 2,
+    day == 4 ~ 3,
+    day == 5 ~ 4,
+    day == 6 ~ 5
+  ))
+
+# Plot the histogram comparing the two weeks for the renamed days (Day 1 to Day 5)
+ggplot(comparison_data, aes(x = factor(day), y = total_sum, fill = week_type)) +
+  geom_bar(stat = "identity", position = "dodge", alpha = 0.7) +
+  labs(title = "Comparison of Daily Cell Data: Normal vs Holiday Week (Day 1 to Day 5)",
+       x = "Day",
+       y = "Total Cell Data Collected",
+       fill = "Week Type") +
+  theme_minimal() +
+  scale_x_discrete(labels = paste("Day", 1:5)) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
+
+**2. Daytime vs Nighttime**:
+
+The First half day:
+
+```{r echo=FALSE, warning=FALSE}
+# Combine CBD SA2 codes from all regions
+cbd_sa2_codes <- bind_rows(
+  akl_cbd %>% select(SA2_Code),
+  wlg_cbd %>% select(SA2_Code),
+  chc_cbd %>% select(SA2_Code)
+) %>% distinct()
+
+# Define the date ranges for normal and holiday weeks (for time range 00:00:00 - 12:00:00)
+normal_week_start  <- as.POSIXct("2024-06-03 00:00:00", tz = "Pacific/Auckland")
+normal_week_stop   <- as.POSIXct("2024-06-10 23:59:59", tz = "Pacific/Auckland")
+holiday_week_start <- as.POSIXct("2024-06-11 00:00:00", tz = "Pacific/Auckland")
+holiday_week_stop  <- as.POSIXct("2024-06-18 23:59:59", tz = "Pacific/Auckland")
+
+# Filter for normal and holiday weeks and CBD regions, removing NA values in 'date' and 'sa2' columns
+normal_week_data <- cell_data %>%
+  filter(!is.na(NZST), !is.na(sa2), 
+         NZST >= normal_week_start & NZST <= normal_week_stop,
+         sa2 %in% cbd_sa2_codes$SA2_Code)
+
+holiday_week_data <- cell_data %>%
+  filter(!is.na(NZST), !is.na(sa2), 
+         NZST >= holiday_week_start & NZST <= holiday_week_stop,
+         sa2 %in% cbd_sa2_codes$SA2_Code)
+
+# Filter for time range from 00:00:00 till 12:00:00
+normal_week_data <- normal_week_data %>%
+  filter(format(NZST, "%H:%M:%S") >= "00:00:00" & format(NZST, "%H:%M:%S") <= "12:00:00")
+
+holiday_week_data <- holiday_week_data %>%
+  filter(format(NZST, "%H:%M:%S") >= "00:00:00" & format(NZST, "%H:%M:%S") <= "12:00:00")
+
+# Create an "Hour" column for the time part only
+normal_week_data <- normal_week_data %>%
+  mutate(hour = as.numeric(format(NZST, "%H")))
+
+holiday_week_data <- holiday_week_data %>%
+  mutate(hour = as.numeric(format(NZST, "%H")))
+
+# Summarize by hour for normal and holiday weeks
+normal_week_summary <- normal_week_data %>%
+  group_by(hour) %>%
+  summarize(total_sum = sum(sum)) %>%
+  mutate(week_type = "Normal Week")
+
+holiday_week_summary <- holiday_week_data %>%
+  group_by(hour) %>%
+  summarize(total_sum = sum(sum)) %>%
+  mutate(week_type = "Holiday Week")
+
+# Combine both summaries
+comparison_data <- bind_rows(normal_week_summary, holiday_week_summary)
+
+# Plot the histogram comparing the two weeks on an hourly basis from 00:00:00 till 12:00:00
+ggplot(comparison_data, aes(x = factor(hour), y = total_sum, fill = week_type)) +
+  geom_bar(stat = "identity", position = "dodge", alpha = 0.7) +
+  labs(title = "Comparison of Cell Data: Normal vs Holiday Week (00:00:00 to 12:00:00)",
+       x = "Hour of the Day",
+       y = "Total Cell Data Collected",
+       fill = "Week Type") +
+  theme_minimal() +
+  scale_x_discrete(labels = paste("Hour", 0:12)) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
+
+The second half day:
+
+```{r}
+# Filter for normal and holiday weeks and CBD regions, removing NA values in 'date' and 'sa2' columns
+normal_week_data <- cell_data %>%
+  filter(!is.na(NZST), !is.na(sa2), 
+         NZST >= normal_week_start & NZST <= normal_week_stop,
+         sa2 %in% cbd_sa2_codes$SA2_Code)
+
+holiday_week_data <- cell_data %>%
+  filter(!is.na(NZST), !is.na(sa2), 
+         NZST >= holiday_week_start & NZST <= holiday_week_stop,
+         sa2 %in% cbd_sa2_codes$SA2_Code)
+
+# Filter for time range from 12:00:00 till 23:59:59
+normal_week_data <- normal_week_data %>%
+  filter(format(NZST, "%H:%M:%S") >= "12:00:00" & format(NZST, "%H:%M:%S") <= "23:59:59")
+
+holiday_week_data <- holiday_week_data %>%
+  filter(format(NZST, "%H:%M:%S") >= "12:00:00" & format(NZST, "%H:%M:%S") <= "23:59:59")
+
+# Create an "Hour" column for the time part only
+normal_week_data <- normal_week_data %>%
+  mutate(hour = as.numeric(format(NZST, "%H")))
+
+holiday_week_data <- holiday_week_data %>%
+  mutate(hour = as.numeric(format(NZST, "%H")))
+
+# Summarize by hour for normal and holiday weeks
+normal_week_summary <- normal_week_data %>%
+  group_by(hour) %>%
+  summarize(total_sum = sum(sum)) %>%
+  mutate(week_type = "Normal Week")
+
+holiday_week_summary <- holiday_week_data %>%
+  group_by(hour) %>%
+  summarize(total_sum = sum(sum)) %>%
+  mutate(week_type = "Holiday Week")
+
+# Combine both summaries
+comparison_data <- bind_rows(normal_week_summary, holiday_week_summary)
+
+# Plot the histogram comparing the two weeks on an hourly basis from 12:00:00 till 23:59:59
+ggplot(comparison_data, aes(x = factor(hour), y = total_sum, fill = week_type)) +
+  geom_bar(stat = "identity", position = "dodge", alpha = 0.7) +
+  labs(title = "Comparison of Cell Data: Normal vs Holiday Week (12:00:00 to 23:59:59)",
+       x = "Hour of the Day",
+       y = "Total Cell Data Collected",
+       fill = "Week Type") +
+  theme_minimal() +
+  scale_x_discrete(labels = paste("Hour", 12:23)) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
+
+**3. Differences between each CBD daily**:
+
+```{r echo=FALSE, warning=FALSE}
+# Load required libraries
+library(scales)  # For better formatting of y-axis labels
+
+# Combine CBD SA2 codes from all regions
+cbd_sa2_codes <- bind_rows(
+  akl_cbd %>% select(SA2_Code) %>% mutate(CBD = "Auckland"),
+  wlg_cbd %>% select(SA2_Code) %>% mutate(CBD = "Wellington"),
+  chc_cbd %>% select(SA2_Code) %>% mutate(CBD = "Christchurch")
+)
+
+# Define the date ranges for the holiday week
+holiday_week_start <- as.Date("2024-06-11", tz = "Pacific/Auckland")
+holiday_week_stop  <- as.Date("2024-06-18", tz = "Pacific/Auckland")
+
+# Convert the NZST column to just dates
+cell_data <- cell_data %>%
+  mutate(date = as.Date(NZST, tz = "Pacific/Auckland"))
+
+# Filter for the holiday week and the CBD regions, and join to add CBD information
+holiday_week_data <- cell_data %>%
+  filter(date >= holiday_week_start & date <= holiday_week_stop, 
+         sa2 %in% cbd_sa2_codes$SA2_Code) %>%
+  left_join(cbd_sa2_codes, by = c("sa2" = "SA2_Code"))
+
+# Create a "Day" column representing each day in the holiday week
+holiday_week_data <- holiday_week_data %>%
+  mutate(day = as.numeric(difftime(date, holiday_week_start, units = "days")) + 1)
+
+# Summarize the data by day and CBD (summing up the cell data for each CBD per day)
+holiday_week_summary <- holiday_week_data %>%
+  group_by(CBD, day) %>%
+  summarize(total_sum = sum(sum), .groups = 'drop')
+
+# Plot the line graph comparing the daily cell data for each CBD during the holiday week
+ggplot(holiday_week_summary, aes(x = day, y = total_sum, color = CBD, group = CBD)) +
+  geom_line(linewidth = 1.2) +  # Use linewidth for the line size
+  geom_point(size = 2) +
+  labs(title = "Daily Cell Data for Each CBD During the Holiday Week",
+       x = "Day of Holiday Week",
+       y = "Total Cell Data Collected",
+       color = "CBD") +
+  theme_minimal() +
+  scale_x_continuous(breaks = 1:7, labels = paste("Day", 1:7)) +
+  scale_y_continuous(labels = label_number(scale_cut = cut_short_scale())) +  # Format y-axis without scientific notation
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
+---
+
+### Key Findings
+
+Using the visuals we have made, we can find key points and highlights that are most important. 
+
+**1. Comparison For the Daily Cell Data: Normal vs Holiday week**:
+
+
+  
+**2. Daytime vs Nighttime**:
+
+
+
+**3. Differences between each CBD daily**:
+
+
+---
+
+### Recommendations
+
+Based on the findings we have made, here are some recommendations and actions to be taken. 
+
+
+---

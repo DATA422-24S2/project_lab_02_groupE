@@ -1,0 +1,268 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+  # **Technical Report: R-Language Data Science Project**
+
+- **title: Technical Report for Fulton Hogan**
+- **author(s): David Ewing, Ann Benji, Matthew Madriaga and Brayden Davies **
+- **client/organisations: Fulton Hogan **
+- **date: 11th October **
+
+---
+
+### Executive Summary
+
+
+---
+
+### Introduction
+Fulton Hogan Conduct significant roadworks in the busy cities across the country. It can be disruptive due to many occasions such as costs, management in traffic and dangers. 
+
+This report outlines the data processing pipeline used in analysing telecommunication data from spark and Vodafone, focusing on traffic management across key regions such as Auckland, Wellington and Christchurch. The goal is to ensure accurate, reliable data to assist in planning roadworks and managing disruptions. 
+
+---
+
+### Data Description
+The data we were given was collected from these data files: 
+
+- **sp_data.csv.gz** - Telecommunications data from Spark
+- **vf_data.parquet** - Telecommunications data from Vodafone 
+- **sa2_2023.csv** - This file contains the Statistical Area Level 2 (SA2) codes with their corresponding regions recorded in 2023.
+- **sa2_ta_concord_2023.csv** - This concordance report contains the SA2 codes with their corresponding regions. Additionally, it has the Territorial Authority (TA) code corresponding to its territory name. We also get the relationship of the SA2 codes to the TA codes on the map.
+- **subnational_pop_ests.csv** - The subnational population estimates contain population information like gender, age and population information for the corresponding SA2 regions.
+- **urban_rural_to_indicator_2023.csv** - This CSV file gives us an insight into the various types of settlement across the statistical regions of New Zealand.
+- **urban_rural_to_sa2_concord_2023.csv** - This concordance report gives the relationship between the urban rural code and the SA2 code for all the regions in New Zealand.
+
+---
+
+### Data Preprocessing
+
+This section explains the whole process in all the data files and cleaning. Some of the data files may not be useful for the analysis.  
+
+The following is the work performed on the cellphone data from Vodaphone and Spark. 
+
+- **Initialisation Phase (00_initialise.R)**
+
+An initialisation script that sets up essential configurations and imports the libraries for the entire pipeline. The script sets up environment configurations, such as establishing paths, defining global variables, and importing libraries like dplyr, ggplot2, and vroom that are used throughout the process.
+
+- **Importing Cell Data (001_import_celldata.R)**
+
+The import phase brings raw data into the R environment from sources like CSV files, RDS files, or Parquet files using  utilities like read_csv(), read_rds(), or arrow::read_parquet() to import the data. It also includes data checks such as validating file existence and confirming that data is correctly formatted, with the expected number of columns and column names.
+
+- **Overview of Functions in 002_clean_celldata.R**
+The functions in 002_clean_celldata.R are designed to clean and preprocess data from two vendors' cellphone datasets, each containing columns representing time, SA2 codes, and the number of calls on an hourly basis for two weeks. Given the numerous issues with NA and zero values, as well as multiple duplicate entries in the data, these functions are structured to handle cleaning, validation, and filtering in a stepwise manner. Below is a detailed description of each function along with their interactions as they are called in the overarching script run.R.
+  1. add_NA0(tb)
+Purpose: Adds two columns, has_NA and has_00, to mark if a row has NA values or zero in the count column, respectively.
+Debugging: This function starts by printing a message if debugging is enabled (DEEBUG_CELLDATA == TRUE). It uses the mutate() function to add columns based on conditions, allowing easy identification of problematic rows for subsequent processing.
+  2. remove_NA0(tb)
+Purpose: Removes the columns has_NA and has_00 from the given dataframe.
+Debugging: The function prints the current operation and uses select(-has_NA, -has_00) to ensure the columns are effectively dropped.
+  3. remove_istimed(tb)
+Purpose: Removes the columns is_after_start and is_before_end, used to determine whether each entry falls within a specified time range.
+Debugging: This function helps in cleaning the dataframe to reduce redundancy after the specific information is no longer required.
+  4. preprocess_vf_data(tb)
+Purpose: Processes Vodafone data by renaming columns to make them more consistent across datasets, converts sa2 to numeric, and filters rows with missing or zero values.
+Steps:
+Rename: Columns area to sa2, dt to datetime, and devices to count.
+NA and Zero Handling: Calls add_NA0() to add flags, then filters out rows with has_NA or has_00 set to 1.
+Debugging: The function includes debug print statements and a call to browser() to allow stepwise inspection. Browser is normally commented out during production runs. 
+  5. preprocess_sp_data(tb)
+Purpose: Similar to preprocess_vf_data(), this function renames columns for Spark data to make it compatible for merging and further processing.
+Steps: Renames ts to datetime and cnt to count. Calls add_NA0(), and removes rows with NA or zero values.
+Debugging: Debug messages and browser calls allow tracing each stage of the transformation.
+  6. time_bound(tb, time_start, time_end, tb_name)
+Purpose: Filters the dataframe to retain only rows within a specified time range. It also converts time column to NZST and adds indicators (is_after_start, is_before_end) to mark boundaries.
+Debugging: Uses cat() calls for detailed logging, helping ensure correct filtering. Variables like value0 and valuen are pulled for the start and end times, formatted, and printed to verify correctness.
+  7. merge_processed_celldata(tb1, tb2, folder, saveas_RDS)
+Purpose: Merges the preprocessed Vodafone and Spark data by performing a full join on NZST and sa2 columns. The function then filters rows to ensure both data sources are present and sums the counts.
+Debugging: The browser() call lets you step through each stage of the join and filter process. Debug messages indicate when the RDS file is saved and where.
+  8. sum_unique_duplicates(tb, name)
+Purpose: Groups data by NZST and sa2 columns and sums only the unique count values. This is used for handling duplicates while avoiding over-counting.
+Debugging: Uses a browser() and detailed print statements to ensure only unique counts are considered for summation. The debugging prints the dataframe structure before and after deduplication to provide transparency.
+  9. has_duplicates(tb, name)
+Purpose: Identifies whether there are duplicate entries for NZST and sa2 combinations in the dataset and prints them.
+Debugging: If duplicates are found, the function prints the unique rows by count to make it easier to understand what types of duplicates exist.
+  10. process_duplicates(tb, name)
+Purpose: Handles the deduplication of the dataframe. It finds the first five sets of duplicates and prints out detailed information about the unique rows, followed by summing these unique counts.
+Debugging: Includes multiple print statements and a loop to print each duplicate row and its corresponding summed result. This function effectively provides insight into the impact of deduplication before modifying the entire dataset.
+  11. sum_unique_duplicates(tb, name)
+Purpose: Another implementation for summing unique duplicates, called within process_duplicates() to ensure no duplicated information is included.
+Debugging: Allows verification of unique rows and sums by adding debug statements that detail how counts are aggregated.
+
+Sequence of Function Calls in Run.R relative to the cellphone data development
+
+  **1. Initialisation and Import**: 
+  
+The script begins by loading the data and initialising the settings.
+
+  **2. Preprocessing**:
+  
+  a. preprocess_vf_data() and preprocess_sp_data() are called to standardise and clean the Vodafone and Spark datasets.
+  b. Each preprocessing function calls add_NA0() to flag missing and zero values, then filters them out.
+
+  **3. Time Bounding**:
+  
+The time_bound() function is invoked next, which limits the dataset to a specific timeframe and converts datetime columns to NZST. It also flags records that fall within start and end times. It also converts every entry to "Pacific/Auckland" representation of the long integer of seconds. 
+
+  **4. Data Merging**:
+  
+The function merge_processed_celldata() is used to merge both processed Vodafone and Spark datasets by matching records with common NZST and sa2 values. If any count is missing from either vendor, those rows are discarded, and only matching data is considered.
+
+  **5. Duplicate Handling**:
+  
+  a. Once merged, has_duplicates() is used to determine if duplicate entries exist in the merged dataset.
+  b. If duplicates are present, process_duplicates() is called to handle them, printing out the first five sets of duplicates and summing their counts using sum_unique_duplicates().
+
+  **6. Clean-up Functions**:
+  
+After the data is processed, columns that were added for flagging purposes are removed using remove_NA0() and remove_istimed().
+
+These functions work in tandem to ensure the data is fully cleaned, deduplicated, and ready for analysis or visualisation. The debugging process ensures transparency throughout, allowing stepwise verification of data transformations and making it easier to catch and resolve issues at each stage.
+
+**Debugging Details of Clean Functions in 002_clean_celldata.R**
+
+The cleaning functions in 002_clean_celldata.R contain several debugging mechanisms to ensure correctness during the data processing workflow. This document provides a detailed breakdown of how debugging is implemented in these functions, as well as guidance on interpreting debugging information.
+
+**Debugging Details of Clean Functions**
+
+  **1. Debug Flag (DEEBUG_CELLDATA)**
+  
+  a. All the functions in 002_clean_celldata.R use a global variable named DEEBUG_CELLDATA. This is a logical flag that, when set to TRUE, activates detailed debugging messages.
+  b. The flag ensures that detailed output is only produced when required, which helps to avoid cluttering the console during normal execution.
+  
+  **2. cat()  (built-in function)**
+  
+  a. Functions use cat() statements to print messages that indicate when a specific function is being called.
+  b. For example, the function add_NA0(tb) prints the message "/n add_NA0 /n" when called, if DEEBUG_CELLDATA is set to TRUE.
+  c. Similar cat() statements exist for all other functions, helping to track the sequence of calls and easily identify the active functions.
+  
+  **3. browser() (built-in function)**
+  
+  a. Several functions include a browser() call, particularly during key data transformations. This allows the user to pause execution and interactively inspect the state of the variables at that point in the code.
+  b. Functions like preprocess_vf_data(), preprocess_sp_data(), and sum_unique_duplicates() include browser() statements, providing developers with the opportunity to explore the state of the intermediate results.
+  c. During a browser() session, users can type commands in the R console to explore variables, check their values, or proceed to the next step. This is helpful in finding and fixing unexpected issues.
+  d. browser() is normally commented out in production runs. 
+  
+  **4. Debug Output During Data Processing**:
+  
+  a. Some functions also print information about the dataframe’s structure to help verify correctness.
+  b. For example, in time_bound(), the function captures and prints the first and last row values in the datetime column after applying transformations. This information is crucial for verifying that the filtered data range is correct.
+  c. The function prints these values in a formatted way, including both the date string (fvalue0 and fvaluen) and the numeric timestamp (as.numeric(value0) and as.numeric(valuen)). This helps in ensuring that time conversions (e.g., UTC to NZST) are correct.
+  
+  **5. Error Handling and Early Exits**:
+  
+  a. Several functions use conditional checks to ensure validity before proceeding further.
+  b. For instance, time_bound(tb, time_start, time_end) has an early exit if time_end is less than time_start. It prints the values of time_start and time_end to help debug incorrect inputs.
+  c. Similarly, has_duplicates() checks if any duplicates are found and prints detailed messages accordingly. If no duplicates are found, the function exits early using return(invisible(NULL)).
+  
+  **6. Selective Printing of Results**:
+  
+  a. The process_duplicates() function is designed to print detailed information for the first five sets of duplicates. This is useful for understanding the nature of the duplicated data without overwhelming the console with too much output.
+  b. It prints unique rows and the summed values for each of the first five duplicates using sum_unique_duplicates(), providing a clear, step-by-step overview of how duplicates are being handled.
+  
+  **7. Printing Debugging Information**:
+  
+  a. Debugging output often includes:
+    i. The class of dataframes being processed using print(class(result)).
+    ii. The first and last row values using the format() function to provide readable date and time strings.
+    iii. The name of the dataframe being processed, which helps in keeping track when multiple datasets are used.
+
+**Example Debug Flow**
+
+Here’s an example of what debugging might look like while using these functions:
+
+- Step 1: You run the script with DEEBUG_CELLDATA set to TRUE.
+- Step 2: The preprocess_vf_data() function is called, and it prints:
+add_NA0
+indicating that the function add_NA0() is being executed.
+- Step 3: During preprocessing, a browser() call is triggered. The R session pauses, allowing you to interactively inspect the current state. For example:
+Browse[1]> head(tb)
+allows you to view the first few rows of the dataframe.
+- Step 4: After the preprocessing, the time_bound() function is called to filter the data by a specified time range. During the execution, it prints:
+start_time  2024-06-03 00:00:00 : xxxxxxxxxxxxxxxxL
+end_time    2024-06-09 23:59:59 : xxxxxxxxxxxxxxxxL
+This helps verify that the input time values and the filtered dataframe match expectations.
+- Step 5: The has_duplicates() function runs, and if duplicates exist, you get a message like:
+
+has_duplicates (vf_timed) 5 duplicates found
+indicating the number of duplicate sets found in the dataframe.
+
+**Summary of Debugging Tools**
+
+  1. DEEBUG_CELLDATA (a Boolean flag) , controls whether debugging information is printed.
+  2. cat()  (built-in function) Print function names and information to track progress.
+  3. browser() ( a built-in function), allow interactive exploration of variables at key points in the script.
+  4. Error Handling and Conditional Printing: Helps exit early in case of invalid data or prints detailed information on specific conditions.
+  5. Selective Printing: Provides a summary of processing, focusing on problematic entries such as the first five duplicates.
+
+These debugging tools, and the cleaning functions provide a way to trace the flow of data, inspect transformations, and ensure correctness at each stage of the processing. The debugging information is instrumental in identifying problems such as incorrect column values, duplicates, NA/zero handling issues, and incorrect merges, especially when dealing with large and complex datasets like the cellpone data files.
+
+The following files performed are the subnational_pop_ests and sa2_2023 files.  
+
+**Read Phase (000_read_files_BD.R)** 
+
+We have a code script that contains all the imported libraries needed for the pipeline. Once we have that we have a read files where it reads and writes out the whole two files. I created a function that I can easy use to call. Both files get read and it also checks whether or not the files does exist in the directory. Then writes the files and creates a dataframe for the overall data file. While not at the best of it, we then use the cleaning to proceed.  
+
+**Clean Phase (002_clean_files_BD.R)** 
+
+The cleaning phase was to check any data quality issues that was in the two files. There was names that was invalid and not correct to define the columns, missing values that have NA's, duplicate data which were repetitive. The first process was to call the read files so that it knows what data file it needs to read and clean.  
+
+  1. sa2_2023.csv Clean 
+
+The sa2_2023 had names that doesn't define the columns. The names were "Clasification report" and "...2". There rows that didn't need to be part of the final dataset such as the first 6. So we had to rename them to fit the columns. The names are "Code" which represents the code number corresponding to the region name. "Name" represents the name of the region. Then deleted the first 6 rows as they were not relevant to the dataset.  
+
+  2. subnational_pop_ests.csv Clean 
+
+The subnatinal_pop_ests had two duplicates that had the same meaning, but the duplicated column had NA all the way. Had to check if every Area to which is similar to sa2_code had a number and no other type of data. The columns needed to be deleted as they can go, so "Area" and "Observation value" were removed. The Year and Age variables had duplicates but decided to keep it for safety. Some of the variables were kept in case it needed to be used such as the Action and Age. For consistency, the name AREA_POPES_SUB_006 was renamed to "SA2_Code" to match the sa2_2023 data file. The type of data for SA2_Code was changed to integer since it needed to to match the other data files as they were converted to integers. Then for removing any non-integers were done to avoid errors. 
+
+The following files performed is urban_rural_to_sa2_concord_2023.
+
+**Read Phase (000_initialise_AB.R)**
+
+This pipeline begins with loading two key libraries: readr and tidyverse to perform data reading and writing operations. Then, it captures the current system date to create a unique, time- stamped filename when saving the processed data. Then it reads the input CSV file to keep it in memory in case it is needed for further processing or analysis and written to a new file which omits row names to improve compatibility with other files. However, since most of the information was not required, further analysis of the file was halted. 
+
+**Read_phase(000_read_CONCORD_AB.R)**
+
+This pipeline is read a CSV file "urban_rural_to_sa2_concord_2023.csv", along with a boolean to save the resulting data as a RDS file. The input and output file paths are constructed dynamically with the specified folder and filenames, which includes the date, ensuring that the output file is unique to the day it is created, helping with version control and avoids files not to be overwritten. It further checks that no operations are performed on missing files and removes existing RDS file of the same name, ensuring that outdated or incorrect files are not in the directory. Eventually, it extracts the column specification, which allows the user to inspect or work with the column types later during processing. The resulting dataset is saved as an RDS file, which is efficient for storing R data objects and often preferred during processing. 
+
+The following files performed are the sa2_ta_concord_2023 and urban_rural_to_indicator_2023 files.
+
+**Read_phase(000_initialise_MM.R)**
+
+The pipeline begins by conditionally loading packages only if it is required, which makes the script portable and reproducible on different systems. This pipeline processes 2 specific CSV files which are processed separately.  
+
+The first input file sa2_ta_concord_2023.csv and output file is dynamically named to ensure version control. Following which it checks if the file exists or halts if the file is missing. To prevent overwriting, it removed the RDS file with the same name. The concordance data is read into a tibble and the RDS file is compressed for optimized for loading in following workflows. The final processed data returns a tibble for immediate use. 
+
+The second input file urban_rural_to_indicator_2023.csv has defined output and RDS files like before along with including the current date for clear version control. The pipeline checks in case of missing files to avoid further errors. This also removes pre – existing RDS files with the same name to avoid confusion from older versions. Following, this is read into memory as a tibble in order to be easily manipulated further and saved as an RDS file for long term storage and returns for downstream analysis. 
+
+**Clean_phase (002_cleam_MM.R)**
+
+The pipeline below is designed to save the cleaned data to new CSV files. 
+
+The first input file, sa2_ta_concord_2023.csv is dynamically generated to ensure flexibility. We define new columns to provide clear and meaningful identifiers for each column, thus improving readability and maintaining the data. Further, we skipped the first 7 rows to apply the new column names and saved to the new CSV file clean_sa2_ta_concord_data.csv. 
+
+The second input file urban_rural_to_indicator_2023.csv is dynamically generated to generate flexibility while handling further analysis. We define new column names for each data field, making sure that the dataset is easily interpretable, and the information is well – organised. Again, the first seven rows are skipped, and the new column names are applied, removing an unnecessary column to keep only relevant columns for analysis. Finally, the cleaned dataset is saved to the new CSV file clean_urban_rr_indicator_data.csv 
+
+---
+
+## Building of the Map
+
+Here is the process of the map generated for the visualisations. We used sa2_ta_concord_2023 csv file to refer and used the Statistical Level 2 website to find what were the CBDs for Christchurch, Auckland and Wellington. It was generated in a file to read and call in order to separately generate the map for each city. 
+
+**Wellington Map**
+
+The Wellington CBD only had one region that defined it, which was Wellington Central. We used coordinates to mark and pinpoint the map of it. We called the read_shapefile to then create a left-join to combine. 
+
+**Auckland Map**
+
+
+
+**Christchurch Map**
+
+---
+
+## References
+
+**1. Ewing, D. (2024). Narrative and debugging overview of cellphone data cleaning functions.**
