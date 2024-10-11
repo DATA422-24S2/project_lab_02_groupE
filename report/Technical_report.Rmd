@@ -3,34 +3,35 @@ output:
   pdf_document: default
   html_document: default
 ---
-  # **Technical Report: R-Language Data Science Project**
+  **Fulton Hogan Roadway Construction Analysis**
 
-- **title: Technical Report for Fulton Hogan**
-- **author(s): Brayden Davies, David Ewing, Ann Benji and Matthew Madriaga **
-- **client/organisations: Fulton Hogan **
-- **date: 11th October **
+**Technical** 
+
+**Authors**: Brayden Davies (74597743, bda79), David Ewing (82171165, dew59), Ann Benji (), Matthew Madriaga (11720432, jma538) 
+
+**Date**: 11th October 2024
 
 ---
 
 ### Executive Summary
 
+The report presents an analysis conducted for Fulton Hogan to determine the most suitable time for scheduling roadworks in the Central Business District (CBD) of Auckland, Wellington and Christchurch, using telecommunications data from spark and Vodafone. The goal of this project is to optimize roadwork scheduling by minimizing traffic disruption, reducing costs, and ensuring safety for both workers and road users.  
 
+Data from multiple sources, including Telecommunications data from spark and Vodafone, Statistical Area and Territorial Authority Data, Populations estimates and urban rural indicators was utilised. The data pre processing phase involved cleaning and preparing these data sets to ensure accuracy and consistency. Challenges such as missing or duplicate data were resolved through validation. Functions were developed to standardise data, flag, and remove errors and merging data sets. We generated maps for each CBD to identify the relevant regions, after which the analytical process could begin. 
 
 ---
 
 ### Introduction
-Fulton Hogan conducts significant roadworks in the busy cities across the country. It can be disruptive due to many variables such as costs, management in traffic and dangers. We are investigating largely in Auckland, Wellington and Christchurch in this investigation.  
+Fulton Hogan undertakes significant roadworks across major cities in New Zealand, including Auckland, Wellington and Christchurch. These roadworks can be highly disruptive due to a variety of factors, such as costs, traffic management, and safety risks. This investigation focuses on finding the most appropriate time to plan roadworks in these cities' CBDs.
 
-Due to the busy environment of the CBD’s, roadworks often deteriorate over time or require upgrades to accommodate any increase in traffic or newer projects within the district. It’s important that roads are maintained to ensure safe driving conditions for all road users, improve or maintain good traffic flow, adapting to newer infrastructure and upgrades. 
+Roads in these busy urban centres often deteriorate over time or require upgrades to accomodate increasing traffic or new development projects. Regular maintenance is essential to ensure safe driving conditions, improve traffic flow, and adapt to new infrastructure requirements. The objective of this investigation is to identify optimal roadwork schedules that minimises costs, improve worker safety, and reduce traffic disruption.
 
-The objective of this investigation is to determine the appropriate time to plan roadworks around the Central Business Districts (CBD). Since CBD’s are usually busy areas, performing this investigation works towards minimizing costs, improving work safety and reducing any disruption to traffic.  
-
-To do this, we will be using Telecommunication data provided by Spark and Vodafone, as well as Statistical (SA2) and Territorial (TA) Area data which provide information on the cellphones present within specific SA2 regions.  
+We achieve this by leveraging telecommunications data from Spark and Vodafone, along with Statistical (SA2) and Territorial (TA) Area data, to determine the number of mobile phones present within specific SA2 regions.  
 
 ---
 
 ### Data Description
-The data we were given was collected from these data files: 
+The data sets used in the analysis include: 
 
 - **sp_data.csv.gz** - Telecommunications data from Spark
 - **vf_data.parquet** - Telecommunications data from Vodafone 
@@ -44,10 +45,12 @@ The data we were given was collected from these data files:
 
 ### Data Preprocessing
 
-This section explains the whole process in all the data files and cleaning. Some of the data files may not be useful for the analysis.  
+This section outlines the data preparation process, which included cleaning and validating the datasets. Challenges such as missing values, deuplicate records, and incorrect column names were addressed using a series of scripts developed for standardising the data. 
 
-Follow the reference of Ewing, D. (2024). Narrative and debugging overview of cellphone data cleaning functions.
+Refer to Ewing, D. (2024). Narrative and debugging overview of cellphone data cleaning functions for a detailed description of the data cleaning process. 
 (20241010_Narrative_and_Debugging_Overview_of_Cellphone_Data_Cleaning_Functions.pdf)
+
+----
 
 The following files performed are the subnational_pop_ests and sa2_2023 files.  
 
@@ -67,6 +70,8 @@ The sa2_2023 had names that doesn't define the columns. The names were "Clasific
 
 The subnatinal_pop_ests had two duplicates that had the same meaning, but the duplicated column had NA all the way. Had to check if every Area to which is similar to sa2_code had a number and no other type of data. The columns needed to be deleted as they can go, so "Area" and "Observation value" were removed. The Year and Age variables had duplicates but decided to keep it for safety. Some of the variables were kept in case it needed to be used such as the Action and Age. For consistency, the name AREA_POPES_SUB_006 was renamed to "SA2_Code" to match the sa2_2023 data file. The type of data for SA2_Code was changed to integer since it needed to to match the other data files as they were converted to integers. Then for removing any non-integers were done to avoid errors. 
 
+----
+
 The following files performed is urban_rural_to_sa2_concord_2023.
 
 **Read Phase (000_initialise_AB.R)**
@@ -76,6 +81,8 @@ This pipeline begins with loading two key libraries: readr and tidyverse to perf
 **Read_phase(000_read_CONCORD_AB.R)**
 
 This pipeline is read a CSV file "urban_rural_to_sa2_concord_2023.csv", along with a boolean to save the resulting data as a RDS file. The input and output file paths are constructed dynamically with the specified folder and filenames, which includes the date, ensuring that the output file is unique to the day it is created, helping with version control and avoids files not to be overwritten. It further checks that no operations are performed on missing files and removes existing RDS file of the same name, ensuring that outdated or incorrect files are not in the directory. Eventually, it extracts the column specification, which allows the user to inspect or work with the column types later during processing. The resulting dataset is saved as an RDS file, which is efficient for storing R data objects and often preferred during processing. 
+
+----
 
 The following files performed are the sa2_ta_concord_2023 and urban_rural_to_indicator_2023 files.
 
@@ -99,7 +106,7 @@ The second input file urban_rural_to_indicator_2023.csv is dynamically generated
 
 ## Building of the Map
 
-To locate the Central Business Districts of the 3 cities (Auckland, Wellington and Christchurch), we need to find the areas that compile each of these regions in the city. This has been proceeded in 3 steps: 
+To identify the CBD regions of Auckland, Wellington and Christchurch, the process was completed in three steps: 
 
   **1. Creating a polygon of the CBD**: 
   
