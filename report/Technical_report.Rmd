@@ -6,7 +6,7 @@ output:
   # **Technical Report: R-Language Data Science Project**
 
 - **title: Technical Report for Fulton Hogan**
-- **author(s): David Ewing, Ann Benji, Matthew Madriaga and Brayden Davies **
+- **author(s): Brayden Davies, David Ewing, Ann Benji and Matthew Madriaga **
 - **client/organisations: Fulton Hogan **
 - **date: 11th October **
 
@@ -14,11 +14,7 @@ output:
 
 ### Executive Summary
 
-The report presents an analysis conducted for Fulton Hogan to determine the most suitable time to plan roadworks in the Central Business District (CBD) of Auckland, Wellington and Christchurch, using telecommunications data from spark and Vodafone. The project aims to optimize roadwork scheduling by minimizing traffic disruption, reducing costs, and ensuring safety for both workers and road users. 
 
-Data from multiple soruces was used, including Telecommunications data from spark and Vodafone, Statistical Area and Territorial Authority Data, Populations estimates and urban rural indicators. 
-
-The data preprocessing phase involved cleaning and preparing these datasets to ensure accuracy and consistency. Challenges such as missing or duplicate data were resolved through validation. Functions were developed to handle standardization of data, flagging, removing errors and merging datasets. We generated a map for each of the CBDs to find and identify the regions in each CBD. One it was found, the process for analysis could begin. 
 
 ---
 
@@ -50,163 +46,8 @@ The data we were given was collected from these data files:
 
 This section explains the whole process in all the data files and cleaning. Some of the data files may not be useful for the analysis.  
 
-The following is the work performed on the cellphone data from Vodaphone and Spark. 
-
-- **Initialisation Phase (00_initialise.R)**
-
-An initialisation script that sets up essential configurations and imports the libraries for the entire pipeline. The script sets up environment configurations, such as establishing paths, defining global variables, and importing libraries like dplyr, ggplot2, and vroom that are used throughout the process.
-
-- **Importing Cell Data (001_import_celldata.R)**
-
-The import phase brings raw data into the R environment from sources like CSV files, RDS files, or Parquet files using  utilities like read_csv(), read_rds(), or arrow::read_parquet() to import the data. It also includes data checks such as validating file existence and confirming that data is correctly formatted, with the expected number of columns and column names.
-
-- **Overview of Functions in 002_clean_celldata.R**
-The functions in 002_clean_celldata.R are designed to clean and preprocess data from two vendors' cellphone datasets, each containing columns representing time, SA2 codes, and the number of calls on an hourly basis for two weeks. Given the numerous issues with NA and zero values, as well as multiple duplicate entries in the data, these functions are structured to handle cleaning, validation, and filtering in a stepwise manner. Below is a detailed description of each function along with their interactions as they are called in the overarching script run.R.
-  1. add_NA0(tb)
-Purpose: Adds two columns, has_NA and has_00, to mark if a row has NA values or zero in the count column, respectively.
-Debugging: This function starts by printing a message if debugging is enabled (DEEBUG_CELLDATA == TRUE). It uses the mutate() function to add columns based on conditions, allowing easy identification of problematic rows for subsequent processing.
-  2. remove_NA0(tb)
-Purpose: Removes the columns has_NA and has_00 from the given dataframe.
-Debugging: The function prints the current operation and uses select(-has_NA, -has_00) to ensure the columns are effectively dropped.
-  3. remove_istimed(tb)
-Purpose: Removes the columns is_after_start and is_before_end, used to determine whether each entry falls within a specified time range.
-Debugging: This function helps in cleaning the dataframe to reduce redundancy after the specific information is no longer required.
-  4. preprocess_vf_data(tb)
-Purpose: Processes Vodafone data by renaming columns to make them more consistent across datasets, converts sa2 to numeric, and filters rows with missing or zero values.
-Steps:
-Rename: Columns area to sa2, dt to datetime, and devices to count.
-NA and Zero Handling: Calls add_NA0() to add flags, then filters out rows with has_NA or has_00 set to 1.
-Debugging: The function includes debug print statements and a call to browser() to allow stepwise inspection. Browser is normally commented out during production runs. 
-  5. preprocess_sp_data(tb)
-Purpose: Similar to preprocess_vf_data(), this function renames columns for Spark data to make it compatible for merging and further processing.
-Steps: Renames ts to datetime and cnt to count. Calls add_NA0(), and removes rows with NA or zero values.
-Debugging: Debug messages and browser calls allow tracing each stage of the transformation.
-  6. time_bound(tb, time_start, time_end, tb_name)
-Purpose: Filters the dataframe to retain only rows within a specified time range. It also converts time column to NZST and adds indicators (is_after_start, is_before_end) to mark boundaries.
-Debugging: Uses cat() calls for detailed logging, helping ensure correct filtering. Variables like value0 and valuen are pulled for the start and end times, formatted, and printed to verify correctness.
-  7. merge_processed_celldata(tb1, tb2, folder, saveas_RDS)
-Purpose: Merges the preprocessed Vodafone and Spark data by performing a full join on NZST and sa2 columns. The function then filters rows to ensure both data sources are present and sums the counts.
-Debugging: The browser() call lets you step through each stage of the join and filter process. Debug messages indicate when the RDS file is saved and where.
-  8. sum_unique_duplicates(tb, name)
-Purpose: Groups data by NZST and sa2 columns and sums only the unique count values. This is used for handling duplicates while avoiding over-counting.
-Debugging: Uses a browser() and detailed print statements to ensure only unique counts are considered for summation. The debugging prints the dataframe structure before and after deduplication to provide transparency.
-  9. has_duplicates(tb, name)
-Purpose: Identifies whether there are duplicate entries for NZST and sa2 combinations in the dataset and prints them.
-Debugging: If duplicates are found, the function prints the unique rows by count to make it easier to understand what types of duplicates exist.
-  10. process_duplicates(tb, name)
-Purpose: Handles the deduplication of the dataframe. It finds the first five sets of duplicates and prints out detailed information about the unique rows, followed by summing these unique counts.
-Debugging: Includes multiple print statements and a loop to print each duplicate row and its corresponding summed result. This function effectively provides insight into the impact of deduplication before modifying the entire dataset.
-  11. sum_unique_duplicates(tb, name)
-Purpose: Another implementation for summing unique duplicates, called within process_duplicates() to ensure no duplicated information is included.
-Debugging: Allows verification of unique rows and sums by adding debug statements that detail how counts are aggregated.
-
-Sequence of Function Calls in Run.R relative to the cellphone data development
-
-  **1. Initialisation and Import**: 
-  
-The script begins by loading the data and initialising the settings.
-
-  **2. Preprocessing**:
-  
-  a. preprocess_vf_data() and preprocess_sp_data() are called to standardise and clean the Vodafone and Spark datasets.
-  b. Each preprocessing function calls add_NA0() to flag missing and zero values, then filters them out.
-
-  **3. Time Bounding**:
-  
-The time_bound() function is invoked next, which limits the dataset to a specific timeframe and converts datetime columns to NZST. It also flags records that fall within start and end times. It also converts every entry to "Pacific/Auckland" representation of the long integer of seconds. 
-
-  **4. Data Merging**:
-  
-The function merge_processed_celldata() is used to merge both processed Vodafone and Spark datasets by matching records with common NZST and sa2 values. If any count is missing from either vendor, those rows are discarded, and only matching data is considered.
-
-  **5. Duplicate Handling**:
-  
-  a. Once merged, has_duplicates() is used to determine if duplicate entries exist in the merged dataset.
-  b. If duplicates are present, process_duplicates() is called to handle them, printing out the first five sets of duplicates and summing their counts using sum_unique_duplicates().
-
-  **6. Clean-up Functions**:
-  
-After the data is processed, columns that were added for flagging purposes are removed using remove_NA0() and remove_istimed().
-
-These functions work in tandem to ensure the data is fully cleaned, deduplicated, and ready for analysis or visualisation. The debugging process ensures transparency throughout, allowing stepwise verification of data transformations and making it easier to catch and resolve issues at each stage.
-
-**Debugging Details of Clean Functions in 002_clean_celldata.R**
-
-The cleaning functions in 002_clean_celldata.R contain several debugging mechanisms to ensure correctness during the data processing workflow. This document provides a detailed breakdown of how debugging is implemented in these functions, as well as guidance on interpreting debugging information.
-
-**Debugging Details of Clean Functions**
-
-  **1. Debug Flag (DEEBUG_CELLDATA)**
-  
-  a. All the functions in 002_clean_celldata.R use a global variable named DEEBUG_CELLDATA. This is a logical flag that, when set to TRUE, activates detailed debugging messages.
-  b. The flag ensures that detailed output is only produced when required, which helps to avoid cluttering the console during normal execution.
-  
-  **2. cat()  (built-in function)**
-  
-  a. Functions use cat() statements to print messages that indicate when a specific function is being called.
-  b. For example, the function add_NA0(tb) prints the message "/n add_NA0 /n" when called, if DEEBUG_CELLDATA is set to TRUE.
-  c. Similar cat() statements exist for all other functions, helping to track the sequence of calls and easily identify the active functions.
-  
-  **3. browser() (built-in function)**
-  
-  a. Several functions include a browser() call, particularly during key data transformations. This allows the user to pause execution and interactively inspect the state of the variables at that point in the code.
-  b. Functions like preprocess_vf_data(), preprocess_sp_data(), and sum_unique_duplicates() include browser() statements, providing developers with the opportunity to explore the state of the intermediate results.
-  c. During a browser() session, users can type commands in the R console to explore variables, check their values, or proceed to the next step. This is helpful in finding and fixing unexpected issues.
-  d. browser() is normally commented out in production runs. 
-  
-  **4. Debug Output During Data Processing**:
-  
-  a. Some functions also print information about the dataframe’s structure to help verify correctness.
-  b. For example, in time_bound(), the function captures and prints the first and last row values in the datetime column after applying transformations. This information is crucial for verifying that the filtered data range is correct.
-  c. The function prints these values in a formatted way, including both the date string (fvalue0 and fvaluen) and the numeric timestamp (as.numeric(value0) and as.numeric(valuen)). This helps in ensuring that time conversions (e.g., UTC to NZST) are correct.
-  
-  **5. Error Handling and Early Exits**:
-  
-  a. Several functions use conditional checks to ensure validity before proceeding further.
-  b. For instance, time_bound(tb, time_start, time_end) has an early exit if time_end is less than time_start. It prints the values of time_start and time_end to help debug incorrect inputs.
-  c. Similarly, has_duplicates() checks if any duplicates are found and prints detailed messages accordingly. If no duplicates are found, the function exits early using return(invisible(NULL)).
-  
-  **6. Selective Printing of Results**:
-  
-  a. The process_duplicates() function is designed to print detailed information for the first five sets of duplicates. This is useful for understanding the nature of the duplicated data without overwhelming the console with too much output.
-  b. It prints unique rows and the summed values for each of the first five duplicates using sum_unique_duplicates(), providing a clear, step-by-step overview of how duplicates are being handled.
-  
-  **7. Printing Debugging Information**:
-  
-  a. Debugging output often includes:
-    i. The class of dataframes being processed using print(class(result)).
-    ii. The first and last row values using the format() function to provide readable date and time strings.
-    iii. The name of the dataframe being processed, which helps in keeping track when multiple datasets are used.
-
-**Example Debug Flow**
-
-Here’s an example of what debugging might look like while using these functions:
-
-- Step 1: You run the script with DEEBUG_CELLDATA set to TRUE.
-- Step 2: The preprocess_vf_data() function is called, and it prints:
-add_NA0
-indicating that the function add_NA0() is being executed.
-- Step 3: During preprocessing, a browser() call is triggered. The R session pauses, allowing you to interactively inspect the current state. For example:
-Browse[1]> head(tb)
-allows you to view the first few rows of the dataframe.
-- Step 4: After the preprocessing, the time_bound() function is called to filter the data by a specified time range. During the execution, it prints:
-start_time  2024-06-03 00:00:00 : xxxxxxxxxxxxxxxxL
-end_time    2024-06-09 23:59:59 : xxxxxxxxxxxxxxxxL
-This helps verify that the input time values and the filtered dataframe match expectations.
-- Step 5: The has_duplicates() function runs, and if duplicates exist, you get a message like:
-
-has_duplicates (vf_timed) 5 duplicates found
-indicating the number of duplicate sets found in the dataframe.
-
-**Summary of Debugging Tools**
-
-  1. DEEBUG_CELLDATA (a Boolean flag) , controls whether debugging information is printed.
-  2. cat()  (built-in function) Print function names and information to track progress.
-  3. browser() ( a built-in function), allow interactive exploration of variables at key points in the script.
-  4. Error Handling and Conditional Printing: Helps exit early in case of invalid data or prints detailed information on specific conditions.
-  5. Selective Printing: Provides a summary of processing, focusing on problematic entries such as the first five duplicates.
-
-These debugging tools, and the cleaning functions provide a way to trace the flow of data, inspect transformations, and ensure correctness at each stage of the processing. The debugging information is instrumental in identifying problems such as incorrect column values, duplicates, NA/zero handling issues, and incorrect merges, especially when dealing with large and complex datasets like the cellpone data files.
+Follow the reference of Ewing, D. (2024). Narrative and debugging overview of cellphone data cleaning functions.
+(20241010_Narrative_and_Debugging_Overview_of_Cellphone_Data_Cleaning_Functions.pdf)
 
 The following files performed are the subnational_pop_ests and sa2_2023 files.  
 

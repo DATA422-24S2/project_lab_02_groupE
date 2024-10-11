@@ -6,7 +6,7 @@ output:
   # **Non-Technical Report: R-Language Data Science Project**
   
 - **title: Celldata Analysis**
-- **author(s): David Ewing, Ann Benji, Matthew Madriaga and Brayden Davies **
+- **author(s): Brayden Davies, David Ewing, Ann Benji and Matthew Madriaga **
 - **client/organisations: Fulton Hogan **
 - **date: 11th October **
 
@@ -19,13 +19,18 @@ output:
 
 ### Introduction
 
-Fulton Hogan plays an important role in keeping connections in our cities by improving and maintaining roads, especially in high traffic central business districts (CBDs). However, roadworks result in higher traffic than usual causing a lot of disruption daily, which affects the local economy. This report provides valuable insights to help Fulton Hogan, the key stakeholders and other councils to understand when these disruptions could be minimised.
-Using cellphone data from the three key regions of interest, which are Auckland, Christchurch and Wellington, the report explores the population patterns across the three CBDs of the cities. By identifying how people commute across these areas during two specific periods, during school term breaks and school- term, we can visualise the population pattern in these areas during these periods and sets the stage for further analysis around the best time to carry out roadworks.
+Fulton Hogan plays an important role in keeping connections in our cities by improving and maintaining roads, especially in high traffic central business districts (CBDs). However, roadworks result in higher traffic than usual causing a lot of disruption daily, which affects the local economy. This report provides valuable insights to help Fulton Hogan, the key stakeholders and other councils to understand when these disruptions could be minimised.  
+
+Using cellphone data from the three key regions of interest, which are Auckland, Christchurch and Wellington, the report explores the population density across the three CBDs of the cities. By identifying how people commute across these areas during two specific periods, during school term breaks and school- term, we can visualize any patterns in the population in these areas during these periods and sets the stage for further analysis around the best time to carry out roadworks.
 ---
 
 ### Data Description
 
-The data for this project consists of seven files that provide valuable insights into population movements across the country. This includes telecommunications data from Spark and Vodafone, which is used to track population activity in the key areas of interest. Additionally, there are supporting documents containing important details about Statistical Area Level 2 (SA2) codes, which represent specific functional areas within New Zealand. These documents also link SA2 areas to their corresponding Territorial Authorities (TA names), allowing the data to focus specifically on the central business districts (CBDs) for analysis. 
+The data for this project consists of seven files that provide valuable insights into population movements across the country. 
+
+Telecommunication data, provided by Spark and Vodafone, refers to the number of cellphones present in an area in a certain hour of the day. This type of data is recorded over two weeks.  
+
+This includes telecommunications data from Spark and Vodafone, which is used to track population activity in the key areas of interest. Additionally, there are supporting documents containing important details about Statistical Area Level 2 (SA2) codes, which represent specific functional areas within New Zealand. These documents also link SA2 areas to their corresponding Territorial Authorities (TA names), allowing the data to focus specifically on the central business districts (CBDs) for analysis. Territorial Areas refer to geographical areas such as Wellington City, Auckland, Christchurch City etc. 
 
 ---
 
@@ -33,13 +38,13 @@ The data for this project consists of seven files that provide valuable insights
 
 To prepare the data for analysis, several essential preprocessing steps were conducted. This involved cleaning, standardizing and integrating data from various sources to ensure that the information is accurate, consistent, and focused on the Central Business Districts (CBDs) of Auckland, Wellington and Christchurch. 
 
-We addressed missing data and removed duplicate entries to maintain data integrity. Also, the geographic identifiers have been thoroughly verified to ensure they accurately link among the files required. This also made sure that the analysis remains aligned with your specific objectives. Following these steps, the data has been rigorously validated for accuracy, which made it ready for detailed analysis and providing actionable insights to answer the key questions outlined in this project. 
+We addressed missing data and removed duplicate entries to maintain data integrity. Also, the geographic identifiers (SA2 codes) have been thoroughly verified to ensure they accurately link among the files required. This also made sure that the analysis remains aligned with your specific objectives. Following these steps, the data has been rigorously validated for accuracy, which made it ready for detailed analysis and providing actionable insights to answer the key questions outlined in this project. 
 
 ---
 
 ### Exploratory Data Analysis
 
-Here are some visuals we have outputted for our data exploration. Here is the call for the dataframes we use for the analysis. 
+In here will be the overview of any key trends or insights discovered during initial data exploration.  
 
 **1. Comparison For the Daily Cell Data: Normal vs Holiday week**:
   
@@ -57,7 +62,6 @@ wlg_cbd <- readRDS(here("data", "assignment.WLG.RDS"))
 chc_cbd <- readRDS(here("data", "assignment.CHC.RDS"))
 cell_data <- readRDS(here("data", "assignment.celldata.RDS"))
 
-
 # Combine CBD SA2 codes from all regions
 cbd_sa2_codes <- bind_rows(
   akl_cbd %>% select(SA2_Code),
@@ -67,70 +71,81 @@ cbd_sa2_codes <- bind_rows(
 
 # Define the date ranges for normal and holiday weeks (8-day period)
 normal_week_start  <- as.POSIXct("2024-06-03 00:00:00", tz = "Pacific/Auckland")
-normal_week_stop   <- as.POSIXct("2024-06-10 23:59:59", tz = "Pacific/Auckland")
-holiday_week_start <- as.POSIXct("2024-06-11 00:00:00", tz = "Pacific/Auckland")
-holiday_week_stop  <- as.POSIXct("2024-06-18 23:59:59", tz = "Pacific/Auckland")
+normal_week_stop   <- as.POSIXct("2024-06-09 23:59:59", tz = "Pacific/Auckland")
+holiday_week_start <- as.POSIXct("2024-06-10 00:00:00", tz = "Pacific/Auckland")
+holiday_week_stop  <- as.POSIXct("2024-06-16 23:59:00", tz = "Pacific/Auckland")
+
+# Define the date range for the work week (2024-06-03 to 2024-06-09)
+work_week_start <- as.Date("2024-06-03", tz = "Pacific/Auckland")
+work_week_stop  <- as.Date("2024-06-09", tz = "Pacific/Auckland")
 
 # Convert the NZST column to just dates to avoid hourly data
 cell_data <- cell_data %>%
   mutate(date = as.Date(NZST, tz = "Pacific/Auckland"))
 
-# Filter for normal and holiday weeks and CBD regions, removing NA values in 'date' and 'sa2' columns
-normal_week_data <- cell_data %>%
-  filter(!is.na(date), !is.na(sa2), 
-         date >= as.Date(normal_week_start) & date <= as.Date(normal_week_stop),
+# Filter for the work week (June 3 to June 9) and CBD regions, removing NA values in 'date' and 'sa2' columns
+work_week_data <- cell_data %>%
+  filter(!is.na(date), !is.na(sa2),
+         date >= work_week_start & date <= work_week_stop,
          sa2 %in% cbd_sa2_codes$SA2_Code)
 
-holiday_week_data <- cell_data %>%
-  filter(!is.na(date), !is.na(sa2), 
-         date >= as.Date(holiday_week_start) & date <= as.Date(holiday_week_stop),
-         sa2 %in% cbd_sa2_codes$SA2_Code)
+# Summarize by date for the work week
+work_week_summary <- work_week_data %>%
+  group_by(date) %>%
+  summarize(total_sum = sum(sum), .groups = 'drop')
 
-# Create a "Day" column that represents Day 1 to Day 8 relative to the start of the week
-normal_week_data <- normal_week_data %>%
-  mutate(day = as.numeric(difftime(date, as.Date(normal_week_start), units = "days")) + 1)
-
-holiday_week_data <- holiday_week_data %>%
-  mutate(day = as.numeric(difftime(date, as.Date(holiday_week_start), units = "days")) + 1)
-
-# Summarize by day for normal and holiday weeks (no hourly aggregation)
-normal_week_summary <- normal_week_data %>%
-  group_by(day) %>%
-  summarize(total_sum = sum(sum)) %>%
-  mutate(week_type = "Normal Week")
-
-holiday_week_summary <- holiday_week_data %>%
-  group_by(day) %>%
-  summarize(total_sum = sum(sum)) %>%
-  mutate(week_type = "Holiday Week")
-
-# Combine both summaries, ensuring there are no NA values in 'day' and filter for days 2 to 5
-comparison_data <- bind_rows(normal_week_summary, holiday_week_summary) %>%
-  filter(!is.na(day) & day >= 2 & day <= 6)
-
-# Rename Day 2 to 5 as Day 1 to 5 and remove Day 6
-comparison_data <- comparison_data %>%
-  mutate(day = case_when(
-    day == 2 ~ 1,
-    day == 3 ~ 2,
-    day == 4 ~ 3,
-    day == 5 ~ 4,
-    day == 6 ~ 5
-  ))
-
-# Plot the histogram comparing the two weeks for the renamed days (Day 1 to Day 5)
-ggplot(comparison_data, aes(x = factor(day), y = total_sum, fill = week_type)) +
-  geom_bar(stat = "identity", position = "dodge", alpha = 0.7) +
-  labs(title = "Comparison of Daily Cell Data: Normal vs Holiday Week (Day 1 to Day 5)",
-       x = "Day",
-       y = "Total Cell Data Collected",
-       fill = "Week Type") +
+# Plot the bar chart for the work week by date (June 3 to June 9)
+ggplot(work_week_summary, aes(x = date, y = total_sum)) +
+  geom_bar(stat = "identity", fill = "steelblue", alpha = 0.7) +
+  labs(title = "Work Week Activity by Date in CBD Regions (June 3 to June 9)",
+       x = "Date",
+       y = "Total Cell Data Collected") +
   theme_minimal() +
-  scale_x_discrete(labels = paste("Day", 1:5)) +
-  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  scale_x_date(date_labels = "%b %d", date_breaks = "1 day")
 ```
 
-This is a comparison of how the cell data of the population is collected during the Holiday and School term period across the weekdays in all the CBD regions. There is an increase in the number of people active in the CBDs during the holidays than during the school term. Possibly that high school students, families and workers are all driving or travelling through the CBDs. Yet the difference between holiday and normal week are not strong. They are almost the same amount. A normal week would have workers coming to and from work, people taking buses, parents taking their children to school and back and other people making their own lives. We have included the five days of the week for the weekdays as they are significant as the weekdays could be highly more chances of cell data than the weekends. This gives an insight into whether it makes sense to plan roadworks in CBD areas, and which day is best to complete roadworks during the day.
+Holiday week: 
+
+```{r echo=FALSE}
+# Combine CBD SA2 codes from all regions
+cbd_sa2_codes <- bind_rows(
+  akl_cbd %>% select(SA2_Code),
+  wlg_cbd %>% select(SA2_Code),
+  chc_cbd %>% select(SA2_Code)
+) %>% distinct()
+
+# Define the date range for the holiday week (2024-06-11 to 2024-06-17)
+holiday_week_start <- as.Date("2024-06-10", tz = "Pacific/Auckland")
+holiday_week_stop  <- as.Date("2024-06-16", tz = "Pacific/Auckland")
+
+# Convert the NZST column to just dates to avoid hourly data
+cell_data <- cell_data %>%
+  mutate(date = as.Date(NZST, tz = "Pacific/Auckland"))
+
+# Filter for the holiday week (June 11 to June 17) and CBD regions, removing NA values in 'date' and 'sa2' columns
+holiday_week_data <- cell_data %>%
+  filter(!is.na(date), !is.na(sa2),
+         date >= holiday_week_start & date <= holiday_week_stop,
+         sa2 %in% cbd_sa2_codes$SA2_Code)
+
+# Summarize by date for the holiday week
+holiday_week_summary <- holiday_week_data %>%
+  group_by(date) %>%
+  summarize(total_sum = sum(sum), .groups = 'drop')
+
+# Plot the bar chart for the holiday week by date (June 11 to June 17)
+ggplot(holiday_week_summary, aes(x = date, y = total_sum)) +
+  geom_bar(stat = "identity", fill = "darkgreen", alpha = 0.7) +
+  labs(title = "Holiday Week Activity by Date in CBD Regions (June 11 to June 17)",
+       x = "Date",
+       y = "Total Cell Data Collected") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  scale_x_date(date_labels = "%b %d", date_breaks = "1 day")
+```
+
+Normal week: 
 
 **2. Daytime vs Nighttime**:
 
@@ -146,9 +161,9 @@ cbd_sa2_codes <- bind_rows(
 
 # Define the date ranges for normal and holiday weeks (for time range 00:00:00 - 12:00:00)
 normal_week_start  <- as.POSIXct("2024-06-03 00:00:00", tz = "Pacific/Auckland")
-normal_week_stop   <- as.POSIXct("2024-06-10 23:59:59", tz = "Pacific/Auckland")
-holiday_week_start <- as.POSIXct("2024-06-11 00:00:00", tz = "Pacific/Auckland")
-holiday_week_stop  <- as.POSIXct("2024-06-18 23:59:59", tz = "Pacific/Auckland")
+normal_week_stop   <- as.POSIXct("2024-06-09 23:59:59", tz = "Pacific/Auckland")
+holiday_week_start <- as.POSIXct("2024-06-10 00:00:00", tz = "Pacific/Auckland")
+holiday_week_stop  <- as.POSIXct("2024-06-16 23:59:59", tz = "Pacific/Auckland")
 
 # Filter for normal and holiday weeks and CBD regions, removing NA values in 'date' and 'sa2' columns
 normal_week_data <- cell_data %>%
@@ -261,7 +276,9 @@ During normal weeks, cell data collection exhibits a steady increase starting fr
 
 In contrast, during holiday weeks, the overall volume of cell data collected is lower. However, a similar pattern of activity is evident, with increased data collection observed during the same peak hours, albeit at reduced levels compared to normal weeks.
 
-**3. Differences between each CBD daily**:
+**3. Difference between CBD each week**:
+
+Holiday Week: 
 
 ```{r echo=FALSE, warning=FALSE}
 # Load required libraries
@@ -276,8 +293,8 @@ cbd_sa2_codes <- bind_rows(
 )
 
 # Define the date ranges for the holiday week
-holiday_week_start <- as.Date("2024-06-11", tz = "Pacific/Auckland")
-holiday_week_stop  <- as.Date("2024-06-18", tz = "Pacific/Auckland")
+holiday_week_start <- as.Date("2024-06-10", tz = "Pacific/Auckland")
+holiday_week_stop  <- as.Date("2024-06-16", tz = "Pacific/Auckland")
 
 # Convert the NZST column to just dates
 cell_data <- cell_data %>%
@@ -312,13 +329,98 @@ ggplot(holiday_week_summary, aes(x = day, y = total_sum, color = CBD, group = CB
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
 ```
   
+Normal Week: 
+
+```{r}
+## Line Graph for Work Week (Day 1 to Day 7)
+
+# Use here() to build the file paths
+akl_cbd <- readRDS(here("data", "assignment.AKL.RDS"))
+wlg_cbd <- readRDS(here("data", "assignment.WLG.RDS"))
+chc_cbd <- readRDS(here("data", "assignment.CHC.RDS"))
+cell_data <- readRDS(here("data", "assignment.celldata.RDS"))
+
+
+# Combine CBD SA2 codes from all regions
+cbd_sa2_codes <- bind_rows(
+  akl_cbd %>% select(SA2_Code),
+  wlg_cbd %>% select(SA2_Code),
+  chc_cbd %>% select(SA2_Code)
+) %>% distinct()
+
+# Combine CBD SA2 codes from all regions
+cbd_sa2_codes <- bind_rows(
+  akl_cbd %>% select(SA2_Code) %>% mutate(CBD = "Auckland"),
+  wlg_cbd %>% select(SA2_Code) %>% mutate(CBD = "Wellington"),
+  chc_cbd %>% select(SA2_Code) %>% mutate(CBD = "Christchurch")
+)
+
+# Define the date ranges for the work (normal) week
+work_week_start <- as.Date("2024-06-03", tz = "Pacific/Auckland")
+work_week_stop  <- as.Date("2024-06-09", tz = "Pacific/Auckland")
+
+# Convert the NZST column to just dates
+cell_data <- cell_data %>%
+  mutate(date = as.Date(NZST, tz = "Pacific/Auckland"))
+
+# Filter for the work week and the CBD regions, and join to add CBD information
+work_week_data <- cell_data %>%
+  filter(date >= work_week_start & date <= work_week_stop, 
+         sa2 %in% cbd_sa2_codes$SA2_Code) %>%
+  left_join(cbd_sa2_codes, by = c("sa2" = "SA2_Code"))
+
+# Create a "Day" column representing each day in the work week
+work_week_data <- work_week_data %>%
+  mutate(day = as.numeric(difftime(date, work_week_start, units = "days")) + 1)
+
+# Summarize the data by day and CBD (summing up the cell data for each CBD per day)
+work_week_summary <- work_week_data %>%
+  group_by(CBD, day) %>%
+  summarize(total_sum = sum(sum), .groups = 'drop')
+
+# Plot the line graph comparing the daily cell data for each CBD during the work week
+ggplot(work_week_summary, aes(x = day, y = total_sum, color = CBD, group = CBD)) +
+  geom_line(linewidth = 1.2) +  # Use linewidth for the line size
+  geom_point(size = 2) +
+  labs(title = "Daily Cell Data for Each CBD During the Work Week (Day 1 to Day 7)",
+       x = "Day of Work Week",
+       y = "Total Cell Data Collected",
+       color = "CBD") +
+  theme_minimal() +
+  scale_x_continuous(breaks = 1:7, labels = paste("Day", 1:7)) +
+  scale_y_continuous(labels = label_number(scale_cut = cut_short_scale())) +  # Format y-axis without scientific notation
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
+
 Here shows the line chart trend analysis for each CBD area during the holiday week. Wellingtons CBD is the lowest being less than 100k volume of cellphone data. It has a dip in the 5th day of the holiday week and onwards. While Wellington has one region in the CBD it has a small gap between Christchurch, with 3 CBDs. The pattern for the holiday week of Christchurch is not quite significant, which suggests that the cell data activity is stable. Auckland has the highest collection among the 3 CBDs. The data remains fairly consitent from day 1 to day 4, with a slight decrease till day 7, which could be explained by a reduction in activity towards the end of the week. 
+
+The graph observes the daily cell data collected for each CBD during the work week. Looking at the trend in Auckland, it starts with having quite stable activity just over 600K. By Day 5, there is a notable drop-in activity which could be due to having reduced activity around CBD that day. After which there is a sharp increase in activity by Day 7. Similar to the holiday week, Christchurch shows a stable level of activity except for the slight increase around Day 5 and Day 7. However, there is a gradual decline in activity during holidays in Wellington, while hitting its lowest point on Day 5 with no significant recovery.  
 
 ---
 
 ### Key Findings
 
-Using the visuals we have made, we can find key points and highlights that are most important.
+Using the visuals we have made along with an analysis, we can find key points and highlights that are most important.
+
+- **Higher cell activity during the holidays**: 
+
+Across the three CBD regions, cell activity is higher during the holiday week compared to the normal school term week. This could be because more families are moving around along with younger adults who are relieved from school along with the other population. 
+
+- **Consistent Patterns during normal weeks**: 
+
+During the school term, there is a peak between 06:00 till 12:00 and another in the late afternoon between 16:00 till 20:00 which corresponds to the time taken for one to commute to and from school. 
+
+- **Low activity in Wellington during the holidays**: 
+
+Wellington’s CBD showed a very low volume of cell data, despite being the holidays which show that the reduced activity is focused towards the end of the week. 
+
+- **Consistent activity in Christchurch**: 
+
+Among all the CBDs, Christchurch displayed the most stable pattern across both normal and holiday weeks with only minor fluctuatios which suggests that the activities are less dependent on the type of week. 
+
+- **Highest activity in Auckland**: 
+
+The Auckland CBD have the highest records in data cell activity, which shows that this is the busiest CBD among the 3. However, even then, Auckland sees reduced activity towards the end of both weeks, hinting a possibility of the population being aware of traffic and possible roadworks which is very inconvenient.   
 
 ---
 
