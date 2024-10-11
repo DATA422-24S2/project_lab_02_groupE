@@ -149,7 +149,7 @@ knitr::include_graphics(here("maps", "Auckland.png"))
 knitr::include_graphics(here("maps", "Christchurch.png"))
 ```
 
-```{r echo=FALSE, message=FALSE, out.width='50%'}
+```{r echo=FALSE, message=FALSE, out.width='80%'}
 knitr::include_graphics(here("maps", "Wellington.png"))
 ```
 
@@ -168,6 +168,16 @@ The purpose of these scripts is so that it creates a suitable environment that c
   **04_visualise**: This script uses each CBD dataframe created previously. A leaflet map is used here to create an interactive map using a dataset that contains coordinates found online. The shapefile data implemented from the previous 03_analys script to make ggplot maps for each CBD, with each area in the map containing their respective SA2 Codes. Example of function sourced: 000_wellington_cbd.R. 
 
 ---
+
+## Limitations/Future Improvements
+
+- The cellphone data is not sufficient to estimate the population density of a CBD. 
+- Provide more information about location, time etc to give a more accurate overview of population density. 
+- Giving traffic data of these areas could have helped understand activities in CBD in much more detail  
+- Giving the number of cell phones active in the specific regions would give better inference on the traffic and subsequent  
+- Giving the team more information about how the company safeguards their labor during such roadworks would help make better decisions for the company’s decision on the times to carry out roadworks. 
+- A possible improvement would be to work to isolate ‘quiet times’ across the CBD for weekdays, which also can promote   
+- Increase the range of time in which the data was collected e.g 3 Work weeks to increase detail of the data which can help the business reach a more informed decision. 
 
 ## Conclusion
 
