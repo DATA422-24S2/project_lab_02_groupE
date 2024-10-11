@@ -50,5 +50,5 @@ wellington_map_data <- right_join(shapefile_data, wellington_data, by = c("SA220
 wellington_cbd <- ggplot(data = wellington_map_data) +
   geom_sf() +
   geom_sf_text(aes(label = SA22023_V1), size = 3, color = "black") +
-  ggtitle("Map of Wellington Central (251400)") +
+  ggtitle("Map of Wellington Central") +
   theme_void()

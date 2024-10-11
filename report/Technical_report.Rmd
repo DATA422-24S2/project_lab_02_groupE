@@ -7,11 +7,13 @@ output:
   \Large Fulton Hogan Roadway Construction Analysis
   
   Technical Framework
-  \end{center}
+  \end{center} 
 
-**Authors**: Brayden Davies (74597743, bda79), David Ewing (82171165, dew59), Ann Benji (67936363, abe167), Matthew Madriaga (11720432, jma538) 
-
-**Date**: 11th October 2024
+  \begin{center}
+  Authors: Brayden Davies (74597743, bda79), David Ewing (82171165, dew59), Ann Benji (67936363, abe167), Matthew Madriaga (11720432, jma538) 
+  
+  Date: 11th October 2024
+  \end{center} 
 
 ---
 
@@ -53,25 +55,39 @@ Refer to Ewing, D. (2024). Narrative and debugging overview of cellphone data cl
 
 (20241010_Narrative_and_Debugging_Overview_of_Cellphone_Data_Cleaning_Functions.pdf)
 
+  **Initialisation Phase (00_initialise.R)**
+
+An initialisation script that sets up essential configurations and imports the libraries for the entire pipeline. The script sets up environment configurations, such as establishing paths, defining global variables, and importing libraries like dplyr, ggplot2, and vroom that are used throughout the process. 
+
+  **Importing Cell Data (001_import_celldata.R)**
+
+The import phase brings raw data into the R environment from sources like CSV files, RDS files, or Parquet files using utilities like read_csv(), read_rds(), or arrow::read_parquet() to import the data. It also includes data checks such as validating file existence and confirming that data is correctly formatted, with the expected number of columns and column names. 
+
+  **Overview of Functions in 002_clean_celldata.R**
+
+The functions in 002_clean_celldata.R are designed to clean and preprocess data from two vendors' cellphone datasets, each containing columns representing time, SA2 codes, and the number of calls on an hourly basis for two weeks. Given the numerous issues with NA and zero values, as well as multiple duplicate entries in the data, these functions are structured to handle cleaning, validation, and filtering in a stepwise manner. Below is a detailed description of each function along with their interactions as they are called in the overarching script run.R. 
+
 ----
 
 The following files performed are the subnational_pop_ests and sa2_2023 files.  
 
-**Read Phase (000_read_files_BD.R)** 
+  **Read Phase (000_read_files_BD.R)** 
 
-We have a code script that contains all the imported libraries needed for the pipeline. Once we have that we have a read files where it reads and writes out the whole two files. I created a function that I can easy use to call. Both files get read and it also checks whether or not the files does exist in the directory. Then writes the files and creates a dataframe for the overall data file. While not at the best of it, we then use the cleaning to proceed.  
+The functions read_sa2_2023 and read_subnational_pop create the necessary CSV files. The first input file sa2_2023.csv is read and dynamically named to the current date to ensure version control. It checks the existence the input file to prevent processing if the file is missing. Also, it removes any pre-existing RDS file with the same name. The SA2 data is further read into a tibble for easy manipulation and saved to an RDS file which is optimal for further processing. 
 
-**Clean Phase (002_clean_files_BD.R)** 
+Similarly, the second function reads subnational_pop_ests.csv has the same processes applied, with dynamic naming and output RDS file, checks if the file exists and avoids overwriting existing files. This data is eventually read into a tibble and saved as an RDS file.  
 
-The cleaning phase was to check any data quality issues that was in the two files. There was names that was invalid and not correct to define the columns, missing values that have NA's, duplicate data which were repetitive. The first process was to call the read files so that it knows what data file it needs to read and clean.  
+  **Clean Phase (002_clean_files_BD.R)** 
 
-  1. sa2_2023.csv Clean 
+The pipeline below saves the cleaned data to new CSV files. 
 
-The sa2_2023 had names that doesn't define the columns. The names were "Clasification report" and "...2". There rows that didn't need to be part of the final dataset such as the first 6. So we had to rename them to fit the columns. The names are "Code" which represents the code number corresponding to the region name. "Name" represents the name of the region. Then deleted the first 6 rows as they were not relevant to the dataset.  
+The cleaning phase involves checking for any data quality issues present in the two files. This includes identifying invalid and incorrect names used to define the columns, missing values that are marked as NA, and duplicate data that appears repetitively. This initial step is to read the files so that the script knows which data files have to be cleaned. 
 
-  2. subnational_pop_ests.csv Clean 
+The first input file, sa2_2023.csv, dynamically generates to ensure flexibility. New columns are defined above to give meaningful identifiers, which improves both readability and the overall structure of the dataset. The first 6 rows are skipped to read only the relevant fields. The cleaned dataset is saved as clean_sa2_2023_data.csv which can be used for further analysis. 
 
-The subnatinal_pop_ests had two duplicates that had the same meaning, but the duplicated column had NA all the way. Had to check if every Area to which is similar to sa2_code had a number and no other type of data. The columns needed to be deleted as they can go, so "Area" and "Observation value" were removed. The Year and Age variables had duplicates but decided to keep it for safety. Some of the variables were kept in case it needed to be used such as the Action and Age. For consistency, the name AREA_POPES_SUB_006 was renamed to "SA2_Code" to match the sa2_2023 data file. The type of data for SA2_Code was changed to integer since it needed to to match the other data files as they were converted to integers. Then for removing any non-integers were done to avoid errors. 
+The second input file, subnational_pop_ests.csv, is also dynamically generated to provide flexibility in handling population estimates data. The new column names are defined to improve interpretability and also filter out any incomplete or irrelevant data. Additionally, the numeric codes are standardized to ensure consistency across the other datasets. This final cleaned dataset is saved as clean_subnational_pop_data.csv for subsequent analysis. 
+
+This pipeline ensures that the above datasets are well – organized, with meaningful columns and only contain relevant information which is ready for further analysis. 
 
 ----
 
@@ -79,11 +95,11 @@ The following files performed is urban_rural_to_sa2_concord_2023.
 
 **Read Phase (000_initialise_AB.R)**
 
-This pipeline begins with loading two key libraries: readr and tidyverse to perform data reading and writing operations. Then, it captures the current system date to create a unique, time- stamped filename when saving the processed data. Then it reads the input CSV file to keep it in memory in case it is needed for further processing or analysis and written to a new file which omits row names to improve compatibility with other files. However, since most of the information was not required, further analysis of the file was halted. 
+Readr and tidyverse are installed to perform data reading and writing operations. It captures the current system data to create a unique, time- stamped filename when saving the processed data. Then it reads the input CSV file to keep it in memory in case it is needed for further processing or analysis and written to a new file which omits row names to improve compatibility with other files. However, since most of the information was not required, further analysis of the file was halted.  
 
 **Read_phase(000_read_CONCORD_AB.R)**
 
-This pipeline is read a CSV file "urban_rural_to_sa2_concord_2023.csv", along with a boolean to save the resulting data as a RDS file. The input and output file paths are constructed dynamically with the specified folder and filenames, which includes the date, ensuring that the output file is unique to the day it is created, helping with version control and avoids files not to be overwritten. It further checks that no operations are performed on missing files and removes existing RDS file of the same name, ensuring that outdated or incorrect files are not in the directory. Eventually, it extracts the column specification, which allows the user to inspect or work with the column types later during processing. The resulting dataset is saved as an RDS file, which is efficient for storing R data objects and often preferred during processing. 
+This pipeline is read a CSV file "urban_rural_to_sa2_concord_2023.csv", along with a boolean to save the resulting data as a RDS file. The input and output file paths are constructed dynamically with the folder and filenames, which includes the date, ensuring that the output file is unique to the day it is created, helping with version control and avoids files not to be overwritten. It further checks that no operations are performed on missing files and removes existing RDS file of the same name, ensuring that outdated or incorrect files are not in the directory. Eventually, it extracts the column specification, which allows the user to inspect or work with the column types later during processing. The resulting dataset is saved as an RDS file, which is efficient for storing R data objects and often preferred during processing. 
 
 ----
 
@@ -122,6 +138,42 @@ The polygon found in the previous step created a boundary that could be used to 
   **3. Creating a dataframe for the CBD**: 
   
 After finding the correct SA2 codes for each CBD, we create a dataframe for Auckland, Wellington and Christchurch CBD by filtering out data that wasn’t within the CBD boundaries. 
+
+---
+```{r echo=FALSE, message=FALSE, out.width='50%'}
+library(here)
+knitr::include_graphics(here("maps", "Auckland.png"))
+```
+
+```{r echo=FALSE, message=FALSE, out.width='50%'}
+knitr::include_graphics(here("maps", "Christchurch.png"))
+```
+
+```{r echo=FALSE, message=FALSE, out.width='50%'}
+knitr::include_graphics(here("maps", "Wellington.png"))
+```
+
+## Main RScripts 
+
+The purpose of these scripts is so that it creates a suitable environment that contains everything necessary for the project to fully function. These functions can all be ran by one rscript, ‘run.R’. These rscripts get ran sequentially. Each rscript requires some data from it’s predecessor, so it’s important that the previous rscript is ran before running anything else. For any sourced rscript, functions can be called from them so long as the function name is used when being called.  
+
+  **00_initialise**: Loads in required packages. By loading the required packages, we set up the environment for our project to run more smoothly. The packages installed are; dplyr, tools, arrow, broom, readr, lubridate. If these aren’t already in the environment they are installed. This file also offers conflict management for functions 
+
+  **01_import**: By using the initialise files mentioned earlier, we can read the required datasets for our project. This rscript calls all the rscripts who read files, e.g 000_initialise_MM.R, and executes their functions in this single rscript, retreiving the required data. This includes sa2_ta_concord_2023, urban_rural_to_indicator, subnational_pop_est, vf.parquet and sp_data.csv.gz. Importing the datasets allows for further analysis. We use source() to import functions and code from other scripts 
+
+  **02_clean**: This script is responsible for cleaning the data, removing any na values, duplicates and extra columns. By using e.g 002_clean_files_MM.R script it cleans the datasets that were previously imported which reduces chances of errors and improves analysis. 
+
+  **03_analyse**: This is used to produce datasets related each required CBD. For example, this file retrieves all the SA2 Codes relating to the Auckland CBD, creating a dataset for it. A shapefile is also read, which requires the ‘sf’ package, to be able to make maps. Cell data also gets analysed to help for visualisations. 
+
+  **04_visualise**: This script uses each CBD dataframe created previously. A leaflet map is used here to create an interactive map using a dataset that contains coordinates found online. The shapefile data implemented from the previous 03_analys script to make ggplot maps for each CBD, with each area in the map containing their respective SA2 Codes. Example of function sourced: 000_wellington_cbd.R. 
+
+---
+
+## Conclusion
+
+This report provides an analysis aimed to optimize roadwork scheduling in the CBDs of Auckland, Wellington, and Christchurch. Throughout the project, we had to process the data, tackling challenges such as missing values, duplicates and inconsistencies in column names to ensure data quality. By applying a cleaning method and validation, we created a foundation for our analysis. 
+
+The process of building a map of the CBD regions allowed us to visualize the areas impacted by roadworks and align them with telecommunications data. The geographical representation will assist Fulton Hogan in making informed decisions. Moving forward, it is recommended that Fulton Hogan continue to utilize this framework in future roadworks project. 
 
 ---
 
