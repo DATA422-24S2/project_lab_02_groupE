@@ -3,9 +3,11 @@ output:
   pdf_document: default
   html_document: default
 ---
-  **Fulton Hogan Roadway Construction Analysis**
-
-**Holiday vs Workweek**: Optimising Timing for Roadworks 
+  \begin{center}
+  \Large Fulton Hogan Roadway Construction Analysis
+  
+  Holiday vs Workweek: Optimising Timing for Roadworks 
+  \end{center}
 
 **Authors**: Brayden Davies (74597743, bda79), David Ewing (82171165, dew59), Ann Benji (67936363, abe167), Matthew Madriaga (11720432, jma538) 
 
