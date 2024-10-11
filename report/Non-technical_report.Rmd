@@ -446,15 +446,29 @@ The Auckland CBD have the highest records in data cell activity, which shows tha
 
   **1. Does it make sense to plan roadworks for school holidays in CBD areas?** 
   
+According to the data, planning roadworks on school holidays for CBD areas make sense. The bar charts show that there is more cellular data in a normal week than there is during a holiday which could indicate fewer people, traffic and disruptions if roadworks were to be planned for the school holidays. 
 
+By looking at the graph showing cell data for each hour of the day, we can see hours where cell data has lower values, meaning around this time there is not much activity. Looking at the Comparison of Cell Data 00:00 to 12:00 (Morning hours), the hours Hour 0 (12AM) – Hour 4 (4AM) are the times where there is the least activity, then from Hour 5 (5AM) the cellular traffic begins to pick up. For the Night hours (12:00 – 23:00), the data for holidays slowly begins to decline as the hour reaches 00:00. We can see that for both the graphs, the Holiday week hours remain well under the Normal/work week hours indicating that holidays are still the best time to plan roadworks for CBD’s. To be more specific, hours between Hour 0 and Hour 4 are ideal as it shows that the population density for CBDs around this time is much less dense compared to other hours of the day.  
+
+So, by choosing the Holiday weeks at an earlier time of the day, 00:00 – 04:00, it would be ideal since there would be less dangers, less safety hazards, roadworks wouldn’t impede traffic, and it may minimize any other costs relating to roadworks e.g accidental damage. 
 
   **2. Which days are best if roadworks must be completed during the day?**
 
+According to the visuals we can see that the weekends are the least amount of cell data in existence. The bar chart shows that even if it's high and not significantly different to the other days, they are the the best days to do roadworks. It would also be best for them to also do it when there is less activity involved in the CBD such as traffic congestion and people. The two weeks could also apply to which days are best as both weeks are different in their number of activities and congestion happening in the CBD regions.  
 
+Throughout the day the number of cell phone data is higher in the middle of the day than compared to the early mornings and end of the day or after work. If they want to complete the roadwork during the day, then the best time to do it during the weekends is the time after work. The bar chart shows the increase in the number of cell phone data as the day progresses, then decreases as the day approaches to the end. It would not be best to do and complete the roadworks at midday.  
 
   **3. Are there any geographical differences between CBDs we must be aware of?**
 
+Looking at the cell data activity across the Central Business Districts (CBDs) of Auckland, Wellington and Christchurch, the analysis shows distinct geographical differences that should be considered while implementing roadworks. 
 
+ From the line graphs, Auckland consistently demonstrates significantly higher volumes of cell data activity during both normal and holiday weeks which correlates to the population density within the city’s CBD. This contributes to the fact that Auckland is the largest city in New Zealand, with a higher concentration of businesses and commuters across the place.  
+
+In contrast, Christchurch has only moderate levels of cell data activity and only some minor fluctuations were observed throughout the week.  This pattern suggests that Christchurch city has a more consistent flow of activity which correlates with the regional characteristics of having a stable population, less than Auckland and more than Wellington. 
+
+Wellington has a smaller population, and a lesser pronounced economy compared to the above two cities which can be observed and concludes why it has the least cell data activity throughout both weeks. 
+
+These geographical differences can help you be aware of the local businesses and demographic characteristics of the city which helps you plan better for safer and necessary roadworks in these areas. 
 
 ---
 
