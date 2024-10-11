@@ -17,17 +17,17 @@ output:
 
 **Company: Baa Limited**
 
-This report, prepared for Fulton Hogan, analyses the optimal timing for roadway construction, comparing the impact of performing work during holidays versus the workweek. Using data on traffic patterns and project requirements, we aim to determine which option minimises disruptions and maximises efficiency. The findings will help inform decision-making for future roadworks, particularly in high-traffic areas. The decision is left to Fulton Hogan to ensure that their Health and Safety Policies are met.  
+This report, prepared for Fulton Hogan, analyses the optimal timing for roadway construction. We will compare the impact of performing work during holidays versus the Work week. Using cellular data from Spark and Vodafone, as well as following project requirements, we aim to determine which option minimises disruptions and maximises efficiency of  completing the roadworks. The findings will help inform decision-making for future roadworks, particularly in high-traffic areas. The decision is ultimately up to Fulton Hogan to ensure that their Health and Safety Policies are met.  
 
 ---
 
 ### Executive Summary
 
-  - The report, commissioned by Fulton Hogan, examines the optimal timing for conducting roadworks in the CBDs of Auckland, Wellington, and Christchurch. Using telecommunications data from Spark and Vodafone, we analyse cellphone activity for population density during holiday and normal workweeks, with the aim of identifying periods that minimise disruption and maximise efficiency.
+  - The report from Fulton Hogan examines the optimal timing for conducting roadworks in the Auckland, Wellington, and Christchurch central business district. Using telecommunications data from Spark and Vodafone, we analyse cellphone activity for population density during holiday and normal workweeks, with the aim of identifying periods that minimise disruption and maximise efficiency.
 
-  - Our findings indicate that population activity is consistently higher during normal workweeks, particularly in Auckland. Christchurch demonstrates stable activity across both weeks. Wellington exhibits notably lower activity during holiday periods.
+  - Our findings show that population activity is consistently higher during normal workweeks, particularly in Auckland. Christchurch demonstrates stable activity across both weeks. Wellington has notably lower activity during holiday periods.
 
-  - Key recommendations include scheduling roadworks towards the end of the week when activity levels decrease. Avoid peak hours, and considering Wellington's low holiday activity for potential works. This approach will help minimise the impact on traffic and ensure roadwork scheduling aligns with healthy and safety policies. 
+  - Key recommendations include scheduling roadworks towards the end of the week when activity levels decrease. Avoid peak hours, working at earlier times in the morning, and considering Wellington's low holiday activity for potential works. This approach will help minimise the impact on traffic and ensure roadwork scheduling aligns with healthy and safety policies. 
 
   - By leveraging this data-driven analysis, Fulton Hogan can make informed decisions on the timing of roadworks, ensuring the least disruption to businesses and the public while maintaining operational efficiency. 
 
@@ -37,7 +37,7 @@ This report, prepared for Fulton Hogan, analyses the optimal timing for roadway 
 
 Fulton Hogan plays a critical role in improving and maintaining roads, especially in high traffic central business districts (CBDs). However, roadworks result in higher traffic than usual causing a lot of traffic congestion daily, which affects the local economy. This report offers valuable insights to help Fulton Hogan, the key stakeholders and other councils to understand when these disruptions could be minimised.  
 
-By analysing cellphone data from the three key regions of interest, which are Auckland, Christchurch and Wellington, the report examines the population density across the three CBDs of the cities. By identifying how people commute across these areas during two specific periods, during school term breaks and school- term, we can visualise any population trends in these areas during these periods and lay the groundwork for further analysis around the optimal time to schedule roadworks.
+By analysing cellphone data from the three key regions being investigated are Auckland, Christchurch and Wellington, the report examines the population density across the three CBDs of the cities. By identifying how people commute across these areas during two specific periods, during school term breaks and school- term, we can visualise any population trends in these areas during the week periods and provide plans for further analysis around the optimal time to schedule roadworks.
 
 ---
 
@@ -146,11 +146,12 @@ Y-Axis: The total cell data collected refers to the total cell data detected wit
 X-Axis: The date represent the when the data was recorded. 
 Context: The bar chart data represents the data from all the CBD’s separated by the Normal/Work week and Holiday Week.
 
-The first bar chart represents the total cell data collected in CBD regions during the holiday week (June 10 to June 16). The data shows a high level of activity from June 10 to June 14, where each day collects around 900,000 data points. This suggests a steady flow of people and vehicles in these regions, despite it being a holiday week. A notable dip occurs on June 15, where the total cell data drops below 750,000, and this lower level of activity continues on June 16. The reduction in cell data during the weekend may indicate that fewer people are commuting to the CBD, perhaps due to holiday-specific travel patterns or reduced work-related activities. 
+The first bar chart shows the work week (June 3 to June 9), where the pattern of activity is somewhat similar in the earlier part of the week. Cell data collection remains consistent from June 3 to June 6, with a peak observed on June 7, where data collection reaches its highest point. However, this is followed by a significant drop on June 8 and June 9, where the total cell data collected is noticeably lower. This pattern reflects typical work-week behaviour, where activity is higher during weekdays and declines over the weekend as fewer people travel to the CBD for work or business purposes. 
 
-The second bar chart shows the work week (June 3 to June 9), where the pattern of activity is somewhat similar in the earlier part of the week. Cell data collection remains consistent from June 3 to June 6, with a peak observed on June 7, where data collection reaches its highest point. However, this is followed by a significant drop on June 8 and June 9, where the total cell data collected is noticeably lower. This pattern reflects typical work-week behaviour, where activity is higher during weekdays and declines over the weekend as fewer people travel to the CBD for work or business purposes. 
+The second bar chart represents the total cell data collected in CBD regions during the holiday week (June 10 to June 16). The data shows a lots of activity from June 10 to June 14, where each day collects around 900,000 cell data points. This suggests a steady flow of people in these regions, despite it being a holiday week. A notable dip occurs on June 15, where the total cell data drops below 750,000. This lower level of activity continues on June 16. The reduction in cell data during the weekend may indicate that fewer people are commuting to the CBD, perhaps due to travel patterns related to the holidays or reduced work-related activities. 
 
-When comparing the two charts, we can see that while both weeks show a decline in activity towards the end, the work week exhibits a more pronounced drop after June 7, suggesting a steeper reduction in commuting and movement over the weekend. In contrast, the holiday week shows a more gradual decline, with activity levels remaining relatively high until June 14, before a slight dip occurs on June 15 and 16. This indicates that during holidays, population movement in the CBD is more evenly distributed throughout the week, whereas in normal work weeks, activity is heavily concentrated on weekdays, with a sharp reduction by the weekend.  
+
+When comparing the two charts, we can see that while both weeks show a decline in activity towards the end, the work week drops after June 7, suggesting a steeper reduction in commuting and movement over the weekend. In contrast, the holiday week shows a more gradual decline, with activity levels remaining relatively high until June 14, before a slight dip occurs on June 15 and 16. This indicates that during holidays, population movement in the CBD is more evenly distributed throughout the week, whereas in normal work weeks, activity is heavily concentrated on weekdays, with a sharp reduction by the weekend.  
 
 **2. Daytime vs Nighttime**:
 
@@ -223,7 +224,7 @@ Y-Axis: The total cell data collected refers to the total cell data detected wit
 X-Axis: Represents the hour in a day 
 Context: Shows cell data across different hours of the day (12AM – 12PM). 
 
-This is the daytime comparison of cell data activities which show population in CBD regions in the morning 12am to 12pm. It can be seen that during the normal week there is a higher usage of cell data in the early hours which decreases compared to the holiday week. People are usually more active during specific times. In the normal week, people would use data mostly during these working hours, which is less in comparison to the holiday week. It is less use of data in the early morning as people are asleep and workers don’t work in the mornings.  
+This is the daytime comparison of cell data activities which show population in CBD regions in the morning 12AM to 12PM. It can be seen that during the normal week there is a higher usage of cell data in the early hours which decreases compared to the holiday week. People are usually more active during specific times. In the normal week, people would use data mostly during these working hours, which is less in comparison to the holiday week. It is less use of data in the early morning as people are asleep and workers don’t work in the mornings.  
 
 ```{r echo=FALSE}
 # Filter for normal and holiday weeks and CBD regions, removing NA values in 'date' and 'sa2' columns
@@ -343,7 +344,7 @@ Context: the line chart represents the trend for daily cell data collected for e
 
 The line graph above shows the geographical differences between Auckland, Christchurch and Wellington Central Business District for Cellphone data for each day of the week in the holidays. The placement of the line shows the number of people present in the CBD, being represented as cellphone data detected in the Central Business District. 
 
-Auckland appears at the top with just over 700,000 cell data detected throughout the Holiday week, showing a significantly higher population density for the Auckland Central Business District region. As we go along the graph, by Saturday day 6 the number of cell data dropped to around 650,000 devices. Christchurch is second, with a population of just under 200,000. This number remains stagnant through the week indicating no change in the number of people in the Christchurch CBD. Lastly, Wellington’s line looks to be stable until Day 5, where the cell data data drops, indicating the CBD is less active from around Day 6 – Day 7.
+Auckland appears at the top with just over 700,000 cell data detected throughout the Holiday week, showing a significantly higher population density for the Auckland Central Business District region. As we go along the graph, by Saturday day 6 the number of cell data dropped to around 650,000 records. Christchurch is second, with a population of just under 200,000. This number remains stagnant through the week indicating no change in the number of people in the Christchurch CBD. Lastly, Wellington’s line looks to be stable until Day 5, where the cell data data drops, indicating the CBD is less active from around Day 6 – Day 7.
 
 ```{r echo=FALSE, message=FALSE}
 ## Line Graph for Work Week (Day 1 to Day 7)
@@ -410,7 +411,7 @@ X-axis: The date represents the holiday week.
 Y-axis: the total cell data collected by each of the CBD regions.  
 Context: the line chart represents the trend for daily cell data collected for each CBD during the work week. 
 
-Similar to the analysis above, the line graph shows the geographical differences between the Central Business Districts and is indicative of the number of people present in the CBD that day, in a Work week. Auckland is up top with around 650,000 mobile phones present in the CBD area. The data is somewhat stable until Day 5, where the trend dips below 500,000 by Day 6, until slowly rising by Day 7. Christchurch data looks to be stable at just below 200,000 mobile devices, up until day 5 where the data slightly peaks. For Wellington, the trend is stable at just below 100,000 devices. 
+Similar to the analysis above, the line graph shows the geographical differences between the Central Business Districts and is indicative of the number of people present in the CBD that day, in a Work week. Auckland is up top with around 650,000 cell data present in the CBD area. The data is somewhat stable until Day 5, where the trend dips below 500,000 by Day 6, until slowly rising by Day 7. Christchurch data looks to be stable at just below 200,000 cell data records, up until day 5 where the data slightly peaks. For Wellington, the trend is stable at just below 100,000 devices. 
 
 Auckland has the highest population density again. The data follows a similar trend, however the line graph is placed at a lower position. This may be due to the fact because it’s a work week, the only people populating the CBD would be those with jobs inside the District. For Christchurch there is a slight peak by day 5, indicating a slight increase in the number of people present in the area. There is not a lot of changes for Wellington, meaning the number of people in the Wellington CBD is somewhat consistent throughout the week.  
 
@@ -486,15 +487,15 @@ Across all three CBDs, the data shows a clear increase in cell activity during p
 
 - **3. Wellington’s Low Activity During Holiday Weeks**: 
 
-Wellington exhibits significantly lower cell activity during holiday weeks, particularly after Friday. This indicates that the latter part of the holiday week may be an ideal time for roadworks, as it would have minimal impact on the city. We suggest that the company could consider scheduling works during this period, especially if the flexibility allows them to target quieter periods. However, they should take into account other operational factors, such as the availability of their workforce and equipment, before making a final decision. 
+Wellington shows significantly lower cell activity during holiday weeks, after Friday specifically. This indicates that the later part of the holiday week, Day 6 to Day 7, may be an ideal time for roadworks, as it would have minimal impact on the city. We suggest that the company could consider scheduling works around this time. However, they should take note of other operational factors, such as the availability of their workforce and equipment, before making a final decision. 
 
 - **4. Christchurch’s Consistent Activity Levels**: 
 
-Christchurch presents a relatively stable pattern of cell activity throughout both normal and holiday weeks, with only minor fluctuations. This consistency allows FH more flexibility in scheduling roadworks, as there is less variation in activity levels throughout the week. While the city shows stable patterns, FH may still want to avoid peak hours and remain mindful of slight increases in activity around Friday and Sunday. 
+Christchurch presents a relatively stable pattern of cell activity in both normal and holiday weeks, with only minor fluctuations. This consistency allows Fulton Hogan more flexibility in scheduling roadworks, as there is less variation in activity levels throughout the week. While the city shows stable patterns, Fulton Hogan may still want to avoid peak hours and remain mindful of slight increases in activity around Friday and Sunday. 
 
 - **5. Using Data to Inform Community and Business Engagement**: 
 
-The data suggests that activity in Auckland and Wellington tends to decline towards the end of both normal and holiday weeks. FH could use this information to engage with local communities and businesses, ensuring that any potential disruptions caused by roadworks are communicated effectively. By scheduling works during periods of reduced activity, FH could further mitigate the negative impact on traffic and the local economy, helping to maintain public support for the essential works. 
+The data suggests that activity in Auckland and Wellington tends to decline towards the end of both normal and holiday weeks. Fulton Hogan could use this information to engage with local communities and businesses, ensuring that any potential disruptions caused by roadworks are communicated effectively. By scheduling works during periods of reduced activity, Fulton Hogan could further mitigate the negative impact on traffic and the local economy, helping to maintain public support for the essential works. 
 
 ---
 
